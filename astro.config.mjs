@@ -15,7 +15,7 @@ export default defineConfig({
 				ru: { label: 'Русский', lang: 'ru' },
 			},
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPO' },
+				{ icon: 'github', label: 'GitHub', href: 'https://minusleto.github.io' },
 			],
 			sidebar: [
 				{
