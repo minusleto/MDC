@@ -6,50 +6,50 @@ description: "Effects/Scripted Effects — постройки, экономик�
 Все скриптовые эффекты автоматически создают тултипы — **не** локализуйте их вручную дополнительно.
 
 <a id="effectsscripted-effects"></a>
-## Effects/Scripted Effects
+## Эффекты / Скриптовые эффекты
 
 <a id="mdc-building-costs"></a>
-### MDC Building Costs
+### Стоимость построек MDC
 
-Each of the values for buildings that consume a building slot (i.e. Civilian Industry) has the building slot factored in.
+Для каждой постройки, которая занимает слот строительства (например, гражданская промышленность), стоимость уже учитывает сам слот строительства.
 
--- State Buildings:
+-- Постройки в регионах:
 
-- Civilian Industry (industrial_complex) - $7.50
-- Military Industry (arms_factory) - $7.50
-- Dockyard (dockyard) - $7.50
-- Offices (offices) - $12
-- Commercialized Agriculture District - $3.75
-- Infrastructure (infrastructure) - $3.50
-- Air Base (air_base) - $2.50
-- Sam Site (anti_air_building) - $3.25
-- Renewable Energy Infrastructure (synthetic_refinery) - $8.50
-- Fuel Silo (fuel_silo) - $3.00
-- Radar Station (radar_station) - $1.75
-- Network Infrastructure (internet_station) - $3.00
-- Missile Launch Site (rocket_site) - $3.00
-- Nuclear Reactor (nuclear_reactor) - $9.00
-- State-Wide Defensive Network (stronghold_network) - $8.00
-- Fossil Fuel Powerplant (fossil_powerplant) - $2.25
-- **Building Slots Minimum: $1.00 per slot**
+- Гражданская промышленность (industrial_complex) - $7.50
+- Военная промышленность (arms_factory) - $7.50
+- Верфь (dockyard) - $7.50
+- Офисы (offices) - $12
+- Коммерческий сельскохозяйственный район - $3.75
+- Инфраструктура (infrastructure) - $3.50
+- Авиабаза (air_base) - $2.50
+- ЗРК (anti_air_building) - $3.25
+- Инфраструктура возобновляемой энергетики (synthetic_refinery) - $8.50
+- Топливное хранилище (fuel_silo) - $3.00
+- Радарная станция (radar_station) - $1.75
+- Сетевая инфраструктура (internet_station) - $3.00
+- Пусковая площадка ракет (rocket_site) - $3.00
+- Ядерный реактор (nuclear_reactor) - $9.00
+- Региональная оборонительная сеть (stronghold_network) - $8.00
+- Электростанция на ископаемом топливе (fossil_powerplant) - $2.25
+- **Минимальная стоимость слота строительства: $1,00 за слот**
 
--- Provincial Buildings
+-- Провинциальные постройки
 
-- Naval Engineering Facility (naval_facility) - $15.00
-- Land Warfare Facility (land_facility) - $15.00
-- Aerodynamics & Avionics Facility (air_facility) - $15.00
-- Civilian R&D Facility (nuclear_facility) - $15.00
-- Naval Base (naval_base) - $0.50 per level
-- Land Fort (bunker) - $0.50 per level
-- Coastal Bunker (coastal_bunker) - $0.50 per level
-- Supply Hub (supply_node) - $2.50
-- Railways (rail_way) - $0.01 per province
+- Объект военно-морских исследований (naval_facility) - $15.00
+- Объект сухопутных исследований (land_facility) - $15.00
+- Объект аэродинамики и авионики (air_facility) - $15.00
+- Гражданский научно-исследовательский объект (nuclear_facility) - $15.00
+- Военно-морская база (naval_base) - $0.50 per level
+- Сухопутный форт (bunker) - $0.50 per level
+- Береговой бункер (coastal_bunker) - $0.50 per level
+- Узел снабжения (supply_node) - $2.50
+- Железные дороги (rail_way) - $0.01 per province
 
--- Resources:
+-- Ресурсы:
 
-Resources in MD translates to a 8 resources to one civilian factory. Therefore, if you were to add 1 steel it would cost the nation $0.938 Billion in MD standard. The below example illustrates how you should balance out resource costs.
+В MD 8 единиц ресурсов соответствуют одной гражданской фабрике. Поэтому добавление 1 единицы стали обойдётся стране в $0,938 млрд по стандарту MD. Пример ниже показывает, как следует балансировать стоимость ресурсов.
 
-Example:
+Пример:
 
 ```
 capital_scope = {
@@ -63,13 +63,13 @@ modify_treasury_effect = yes
 ```
 
 <a id="mdc-building-effects"></a>
-### MDC Building Effects
+### Эффекты построек MDC
 
-If you are lazy to calculate cost for common effects with buildings, you can check common\scripted_effects\00_scripted_effects.txt
+Если вам лень рассчитывать стоимость стандартных эффектов, связанных с постройками, можно посмотреть её в `common\scripted_effects\00_scripted_effects.txt`.
 
-State Scope effects requires to put the effect inside a state. If the building cannot be added into a state, it will be added to any random owned state.
+Эффекты уровня региона требуют размещения эффекта внутри региона. Если постройку нельзя добавить в указанный регион, она будет добавлена в любой случайный регион, принадлежащий стране.
 
-Example:
+Пример:
 
 ```
 117 = {
@@ -77,10 +77,10 @@ Example:
 }
 ```
 
-Also try to use as more as possible these effects.
+По возможности используйте эти эффекты как можно чаще.
 
 <a id="civilian-factory"></a>
-#### Civilian Factory
+#### Гражданская фабрика
 
 ```
 one_random_industrial_complex = yes #add 1 civ with slot and cost
@@ -96,7 +96,7 @@ four_state_industrial_complex = yes #add 4 civs with slot and cost in a predefin
 ```
 
 <a id="military-factory"></a>
-#### Military Factory
+#### Военная фабрика
 
 ```
 one_random_arms_factory = yes #add 1 military factory with slot and cost
@@ -112,7 +112,7 @@ four_state_arms_factory = yes #add 4 military factories with slot and cost in a 
 ```
 
 <a id="infrastructure"></a>
-#### Infrastructure
+#### Инфраструктура
 
 ```
 one_random_infrastructure = yes #add 1 infrastructure with cost
@@ -126,7 +126,7 @@ three_state_infrastructure = yes #add 3 infrastructure with cost in a predefined
 ```
 
 <a id="dockyards"></a>
-#### Dockyards
+#### Верфьs
 
 ```
 one_random_dockyard = yes #add 1 dockyard with slot and cost
@@ -138,9 +138,9 @@ two_state_dockyard = yes #add 2 dockyards with slot and cost in a predefined sta
 ```
 
 <a id="offices"></a>
-#### Offices
+#### Офисы
 
-The following also give a fossil fuel power plant.
+Следующие эффекты также дают электростанцию на ископаемом топливе.
 
 ```
 one_office_construction = yes #add 1 office construction with slot and cost
@@ -154,7 +154,7 @@ three_state_office_construction = yes #add 3 office constructions with slots and
 ```
 
 <a id="commercialized-agriculture-district"></a>
-#### Commercialized Agriculture District
+#### Коммерческий сельскохозяйственный район
 
 ```
 one_random_agriculture_district = yes #add 1 agriculture district construction with slot and cost
@@ -164,7 +164,7 @@ one_state_agriculture_district = yes #add 1 agriculture district construction wi
 ```
 
 <a id="air-bases-air_base"></a>
-#### Air bases (air_base)
+#### Авиабазы (air_base)
 
 ```
 one_air_base = yes #add 1 air base with cost
@@ -176,7 +176,7 @@ two_state_air_base = yes #add 2 air bases with cost in a predefined state
 ```
 
 <a id="network-infrastructure-internet_station"></a>
-#### Network Infrastructure (internet_station)
+#### Сетевая инфраструктура (internet_station)
 
 ```
 one_random_network_infrastructure = yes #add 1 network infrastructure with cost
@@ -188,7 +188,7 @@ two_state_network_infrastructure = yes #add 2 network infrastructure with cost i
 ```
 
 <a id="anti-air-sam-site-anti_air_building"></a>
-#### Anti Air | Sam Site (anti_air_building)
+#### ПВО | ЗРК (anti_air_building)
 
 ```
 one_anti_air = yes #add 1 anti air with cost
@@ -200,7 +200,7 @@ two_state_anti_air = yes #add 2 anti airs with cost in a predefined state
 ```
 
 <a id="radar-station-radar_station"></a>
-#### Radar Station (radar_station)
+#### Радарная станция (radar_station)
 
 ```
 one_radar_station = yes #add 1 radar station with cost
@@ -212,7 +212,7 @@ two_state_radar_station = yes #add 2 radar stations with cost in a predefined st
 ```
 
 <a id="synthetic-refinery-synthetic_refinery"></a>
-#### Synthetic refinery (synthetic_refinery)
+#### Синтетический НПЗ (synthetic_refinery)
 
 ```
 one_random_synthetic_refinery = yes #add 1 Synthetic refinery with slot and cost
@@ -226,7 +226,7 @@ three_state_synthetic_refinery = yes #add 3 Synthetic refineries with slot and c
 ```
 
 <a id="other-buildings"></a>
-#### Other buildings
+#### Другие постройки
 
 ```
 one_random_nuclear_reactor = yes #add 1 nuclear reactor with slot and cost
@@ -238,12 +238,12 @@ two_state_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost in a 
 ```
 
 <a id="mdc-economic-effects"></a>
-### MDC Economic Effects
+### Экономические эффекты MDC
 
-All scripted effects provided _automatically_ create tooltips for you. Do **NOT** localize additional tooltips.
+Все предоставленные скриптовые эффекты _автоматически_ создают для вас тултипы. **НЕ** локализуйте дополнительные тултипы.
 
 <a id="how-to-modify-treasury"></a>
-#### How to Modify Treasury
+#### Как изменить казну
 
 ```
 # - reduces the treasury
@@ -256,7 +256,7 @@ large_expenditure = yes
 ```
 
 <a id="other-economic-effects"></a>
-#### Other Economic Effects
+#### Другие экономические эффекты
 
 ```
 set_temp_variable = { debt_change = 0.1 }
@@ -285,7 +285,7 @@ flat_productivity_change_effect = yes
 ```
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-#### Guide on How To-Do Additional Income/Additional Expenses
+#### Руководство: дополнительные доходы / дополнительные расходы
 
 ```
 Step One: go to common/scripted_effects/00_money_system.txt
@@ -326,13 +326,13 @@ modifiers = {
 ```
 
 <a id="setremove-trade-agreement"></a>
-#### Set/Remove Trade Agreement
+#### Установить / удалить торговое соглашение
 
-Creates or removes a trade agreement
+Создаёт или удаляет торговое соглашение
 
-- sender_nation --- The nation sending the agreement
-- receiver_nation --- Nation retrieving the agreement
-- remove_agreement --- Optional (Set to 1)
+- sender_nation --- страна, отправляющая соглашение
+- receiver_nation --- страна, получающая соглашение
+- remove_agreement --- необязательный параметр (установить в 1)
 
 ```
 set_temp_variable = { receiver_nation = RAJ.id }
@@ -342,13 +342,13 @@ set_improved_trade_agreement = yes
 ```
 
 <a id="setremove-permanent-investment-targets"></a>
-#### Set/Remove Permanent Investment Targets
+#### Установить / удалить постоянные цели инвестиций
 
-Creates or removes adding_nation to another AI's investment pool
+Добавляет или удаляет adding_nation из инвестиционного пула другой страны под управлением ИИ
 
-- target_nation --- The nation sending the agreement
-- adding_nation --- Nation retrieving the agreement
-- remove_nation --- Optional (Set to 1)
+- target_nation --- страна, отправляющая соглашение
+- adding_nation --- страна, получающая соглашение
+- remove_nation --- необязательный параметр (установить в 1)
 
 ```
 set_temp_variable = { target_nation = RAJ.id }
@@ -358,9 +358,9 @@ change_permanent_investment_target = yes
 ```
 
 <a id="increasedecrease-economic-growth"></a>
-#### Increase/Decrease Economic Growth
+#### Увеличить / уменьшить экономический рост
 
-Increases or decreases the nation's current economic cycle
+Увеличивает или уменьшает текущий экономический цикл страны
 
 ```
 increase_economic_growth = yes
@@ -376,9 +376,9 @@ economic_boom = yes
 ```
 
 <a id="increasedecrease-bureaucracy-law"></a>
-#### Increase/Decrease Bureaucracy Law
+#### Увеличить / уменьшить закон о расходах на бюрократию
 
-Increases or decreases the nation's current Bureaucracy Spending Law
+Увеличивает или уменьшает текущий закон страны о расходах на бюрократию
 
 ```
 decrease_centralization = yes
@@ -391,9 +391,9 @@ increase_centralization_4 = yes
 ```
 
 <a id="increasedecrease-social-spending"></a>
-#### Increase/Decrease Social Spending
+#### Увеличить / уменьшить социальные расходы
 
-Increase or decreases the nation's current Social Spending Law
+Увеличивает или уменьшает текущий закон страны о социальных расходах
 
 ```
 increase_social_spending = yes
@@ -406,9 +406,9 @@ max_social_spending = yes
 ```
 
 <a id="increasedecrease-education-spending"></a>
-#### Increase/Decrease Education Spending
+#### Увеличить / уменьшить расходы на образование
 
-Increase or decreases the nation's current Education Spending Law
+Увеличивает или уменьшает текущий закон страны о расходах на здравоохранение
 
 ```
 increase_education_budget = yes
@@ -421,9 +421,9 @@ max_education_budget = yes
 ```
 
 <a id="increasedecrease-health-spending"></a>
-#### Increase/Decrease Health Spending
+#### Увеличить / уменьшить расходы на здравоохранение
 
-Increase or decreases the nation's current Education Spending Law
+Увеличивает или уменьшает текущий закон страны о расходах на здравоохранение
 
 ```
 increase_healthcare_budget = yes
@@ -436,9 +436,9 @@ max_healthcare_budget = yes
 ```
 
 <a id="increasedecrease-police-spending"></a>
-#### Increase/Decrease Police Spending
+#### Увеличить / уменьшить расходы на полицию
 
-Increase or decreases the nation's current Police Spending Law
+Увеличивает или уменьшает текущий закон страны о расходах на полицию
 
 ```
 increase_policing_budget = yes
@@ -450,9 +450,9 @@ decrease_policing_budget_2 = yes
 ```
 
 <a id="increasedecrease-trade-law"></a>
-#### Increase/Decrease Trade Law
+#### Увеличить / уменьшить торговый закон
 
-The following are for increasing and decreasing the "Trade Law" of your nation:
+Следующие эффекты используются для увеличения и уменьшения «Торгового закона» вашей страны:
 
 ```
 increase_exports = yes
@@ -462,9 +462,9 @@ set_exports_to_max = yes
 ```
 
 <a id="increasedecrease-military-spending-law"></a>
-#### Increase/Decrease Military Spending Law
+#### Увеличить / уменьшить закон о военных расходах
 
-The following are for increasing your military spending law.
+Следующие эффекты используются для увеличения закона о военных расходах.
 
 ```
 increase_military_spending = yes
@@ -474,9 +474,9 @@ sizeable_military_spending = yes # Sets your military spending to sizeable
 ```
 
 <a id="increasedecrease-migration-law"></a>
-#### Increase/Decrease Migration Law
+#### Увеличить / уменьшить закон о миграции
 
-The following are for increasing and decreasing your Migration and Border Regulations laws
+Следующие эффекты используются для увеличения и уменьшения законов о миграции и пограничном регулировании.
 
 ```
 increase_migration_law = yes
@@ -484,10 +484,10 @@ decrease_migration_law = yes
 ```
 
 <a id="mdc-internal-faction-effects"></a>
-### MDC Internal Faction Effects
+### Эффекты внутренних фракций MDC
 
 <a id="internal-factions-code-snippet"></a>
-#### Internal Factions Code Snippet
+#### Фрагмент кода внутренних фракций
 
 ```
 set_temp_variable = { temp_opinion = 5 }
@@ -500,7 +500,7 @@ change_industrial_conglomerates_opinion = yes
 ```
 
 <a id="internal-faction-breakdown"></a>
-#### Internal Faction Breakdown
+#### Разбор внутренних фракций
 
 ```
 # List of Factions sorted by category
@@ -519,7 +519,7 @@ change_industrial_conglomerates_opinion = yes
 ```
 
 <a id="available-faction-commands"></a>
-#### Available Faction Commands
+#### Доступные команды фракций
 
 - change_small_medium_business_owners_opinion
 - change_industrial_conglomerates_opinion
@@ -541,30 +541,30 @@ change_industrial_conglomerates_opinion = yes
 - change_isi_pakistan_opinion -- Pakistani Unique Intelligence Community
 - change_vevak_opinion -- Iranian Unique Intelligence Community
 - change_the_bazaar_opinion -- Iranian Unique Small Medium Business Owners
-- change_the_donju_opinion -- North Korean Oligarchs
+- change_the_donju_opinion -- North Korean Олигархи
 - change_saudi_royal_family_opinion -- Unique Faction for Gulf States
-- change_foreign_jihadis_opinion -- Unique Faction for Fascist States (Al-Shabaab i.e.)
+- change_foreign_jihadis_opinion -- Unique Faction for Fascist States (Al-Shabaab например,)
 - change_irgc_opinion -- Unique Faction for Iran
 - change_iranian_quds_force_opinion -- Unique Faction for Iranian Proxy States
 - change_chaebols_opinion -- Unique South Korean oligarchs
 - change_wall_street_opinion -- Unique American International Bankers
 
 <a id="mdc-influence-effects"></a>
-### MDC Influence Effects
+### Эффекты влияния MDC
 
 <a id="influence-action-examples"></a>
-#### Influence Action Examples
+#### Примеры действий влияния
 
-Percent Change is given in a whole number increment (i.e. 10 = 10%)
+Изменение в процентах задаётся целым числом (например, 10 = 10%).
 
-- Domestic Influence
+- Внутреннее влияние
 
 ```
 # set_temp_variable = { percent_change = +-x }
 change_domestic_influence_percentage = yes
 ```
 
-- Change Index Influencers
+- Изменение влияния участников рейтинга
 
 ```
 # set_temp_variable = { percent_change = +-x }
@@ -572,11 +572,11 @@ change_domestic_influence_percentage = yes
 change_current_influencer_index_percentage = yes
 ```
 
-- General Influence Change
--- Keep in mind if the 7th influencer has more influence then your percent_change the target nation will gain domestic influence instead of you gaining influence.
+- Общее изменение влияния
+-- Учтите: если 7-й участник рейтинга имеет больше влияния, чем ваш percent_change, целевая страна получит внутреннее влияние вместо того, чтобы влияние получили вы.
 
-i.e.
-7th Influencer has 5% influence and you are influencing by 3%. The target nation gains domestic influence instead.
+например,
+7-й участник имеет 5% влияния, а вы добавляете 3%. В таком случае целевая страна получает внутреннее влияние.
 
 ```
 # set_temp_variable = { percent_change = -+ x }
@@ -587,15 +587,15 @@ change_influence_percentage = yes
 ```
 
 <a id="mdc-political-effects"></a>
-### MDC Political Effects
+### Политические эффекты MDC
 
 <a id="code-snippet-to-add-party-popularity-to-subideologies"></a>
-#### Code Snippet to Add Party Popularity to Subideologies
+#### Фрагмент кода для добавления популярности партии субидеологиям
 
-- set_temp_variable = { party_index = X } #Index of party to be changed 0-23
+- set_temp_variable = { party_index = X } # Индекс изменяемой партии, 0–23
 - set_party_index_to_ruling_party = yes -- automatically sets index to ruling party
-- set_temp_variable = { party_popularity_increase = Y } #How much party popularity is changed, must be in decimals so 2% is 0.02
-- set_temp_variable = { temp_outlook_increase = Z } #OPTIONAL PARAMETER -- Must be in decimals so 2% is 0.02
+- set_temp_variable = { party_popularity_increase = Y } # Насколько изменяется популярность партии; значение задаётся десятичной дробью, поэтому 2% = 0.02
+- set_temp_variable = { temp_outlook_increase = Z } # НЕОБЯЗАТЕЛЬНЫЙ ПАРАМЕТР -- значение задаётся десятичной дробью, поэтому 2% = 0.02
 - add_relative_party_popularity = yes
 
 ```
@@ -605,36 +605,36 @@ set_temp_variable = { temp_outlook_increase = 0.10 } -- OPTIONAL
 add_relative_party_popularity = yes
 ```
 
-_**Modify Ruling Outlook Popularity:**_
+_**Изменение популярности правящей субидеологии:**_
 
-Purpose: Modifies the ruling outlook only by `arg_popularity`
+Назначение: изменяет только популярность правящей субидеологии на значение `arg_popularity`
 
 ```
 set_temp_variable = { arg_popularity = +- }
 add_ruling_outlook_popularity = yes
 ```
 
-_**Add a Party to Coalition**_
+_**Добавление партии в коалицию**_
 
-Purpose: Lightweight script to dynamically localize the addition of members into coalition.
+Назначение: лёгкий скрипт для динамической локализации добавления участников в коалицию.
 
 ```
 set_temp_variable = { add_col_one = 0-23 }
 add_coalition_members_effect = yes
 ```
 
-_**Remove a Party from Coalition**_
+_**Удаление партии из коалиции**_
 
-Purpose: Lightweight script to dynamically localize the removal of members into coalition.
+Назначение: лёгкий скрипт для динамической локализации удаления участников из коалиции.
 
 ```
 set_temp_variable = { remove_col_one = 0-23 }
 remove_coalition_members_effect = yes
 ```
 
-_**Set the Ruling Party Via Effect**_
+_**Установить правящую партию через эффект**_
 
-Purpose: Set the ruling party via scripted effect to some subideology. You need to still do the set_politics as I cannot parameterize it.
+Назначение: устанавливает правящую партию через скриптовый эффект на указанную субидеологию. При этом всё равно необходимо выполнить set_politics, поскольку этот параметр нельзя сделать динамическим.
 
 ```
 # set_temp_variable = { rul_party_temp = 0-23 }
@@ -652,25 +652,25 @@ set_politics = {
 }
 ```
 
-_**Modifying Election Threshold:**_
+_**Изменение избирательного порога:**_
 
-Purpose: Modifies the Election Threshold (minimum value a party needs to be considered for coalitions).
+Назначение: изменяет избирательный порог (минимальное значение, необходимое партии для рассмотрения в качестве участника коалиции).
 
 ```
 set_temp_variable = { threshold_change = 0.03 }
 modify_election_threshold = yes
 ```
 
-_**Allow/Ban Parties**_
+_**Разрешение / запрет партий**_
 
-Bans the provided party index for elections
+Запрещает указанный индекс партии для участия в выборах
 
 ```
 set_temp_variable = { party_index = 1-24 }
 ban_party_scripted_call = yes
 ```
 
-Allows the provided party index for elections
+Разрешает указанному индексу партии участвовать в выборах
 
 ```
 set_temp_variable = { party_index = 1-24 }
@@ -678,22 +678,22 @@ unban_party_scripted_call = yes
 ```
 
 ```
-set_country_flag = free_allow_parties # Set this if you don't want a PP cost
-set_partyall_allowed = yes # Allows all the parties
+set_country_flag = free_allow_parties # Установите это, если не хотите платить PP
+set_partyall_allowed = yes # Разрешает все партии
 ```
 
 ```
-set_country_flag = free_ban_parties # Set this if you don't want a PP cost
-set_partyall_banned = yes # Bans all the parties
+set_country_flag = free_ban_parties # Установите это, если не хотите платить PP
+set_partyall_banned = yes # Запрещает все партии
 ```
 
 <a id="counter-terror-effects"></a>
-### Counter Terror Effects
+### Эффекты борьбы с терроризмом
 
 <a id="radicalization-threat-level"></a>
-#### Radicalization / Threat Level
+#### Радикализация / уровень угрозы
 
-Only Counter Terror nations can use this. For a full list of tags go to common -> on_actions.txt and look for _ct_states.
+Использовать это могут только страны, участвующие в борьбе с терроризмом. Полный список тегов можно найти в `common -> on_actions.txt`, найдя `_ct_states`.
 
 ```
 set_temp_variable = { rad_change = -5 }
@@ -708,10 +708,10 @@ modify_terror_threat_effect = yes
 ```
 
 <a id="mdc-cartel-related-effects"></a>
-### MDC Cartel Related Effects
+### Эффекты, связанные с картелями MDC
 
 modify_cartel_variables_effect
-Purpose: Handles the macro for needing to change any cartel strength or cartel political influence
+Назначение: обрабатывает макрос для изменения силы картеля или его политического влияния
 set_temp_variable = { cart_strength_change = +- x }
 set_temp_variable = { cart_influence_change = +- x }
 
@@ -722,12 +722,12 @@ modify_cartel_variables_effect = yes
 ```
 
 <a id="mdc-european-union-effects"></a>
-### MDC European Union Effects
+### Эффекты Европейского союза MDC
 
 <a id="euroscepticism-effects"></a>
-#### Euroscepticism Effects
+#### Эффекты евроскептицизма
 
-To add/remove Euroscepticism all you need to do is:
+Чтобы добавить / убрать евроскептицизм, достаточно сделать следующее:
 
 ```
 set_temp_variable = { modify_eurosceptic = 0.05 }
@@ -735,22 +735,22 @@ set_temp_variable = { modify_eurosceptic_target = THIS }
 eurosceptic_change = yes
 ```
 
-"THIS" can use any of the following:
+«THIS» может обозначать любое из следующего:
 
 - THIS
 - ROOT
 - PREV
 - FROM
-- Any country tag (such as GER)
+- Любой тег страны (например, GER)
 
-For this effect to occur in _all_ current EU states:
+Чтобы этот эффект применялся ко _всем_ текущим странам ЕС:
 
 ```
 set_temp_variable = { modify_eurosceptic = -0.05 }
 EU_eurosceptic_change = yes
 ```
 
-And finally, for this effect to occur in _current_ and _potential_ EU member states:
+И наконец, чтобы этот эффект применялся к _текущим_ и _потенциальным_ членам ЕС:
 
 ```
 set_temp_variable = { modify_eurosceptic = -0.05 }
@@ -758,17 +758,17 @@ EU_potential_eurosceptic_change = yes
 ```
 
 <a id="energy-effects"></a>
-### Energy Effects
+### Энергетические эффекты
 
-Constructs enrichment facilities for the nation. It costs 25.00 per. The scripted effect handles the cost. Just input a number.
+Строит объекты по обогащению для страны. Каждый объект стоит 25,00. Скриптовый эффект сам обрабатывает стоимость — просто укажите число.
 
 ```
 set_temp_variable = { temp_change = 2 }
 build_enrichment_facilities_effect = yes
 ```
 
-Constructs a battery park as part of an effect. It costs 100.00 per unless you have
-modifiers to reduce or increase it.
+Строит аккумуляторный парк в рамках эффекта. Каждый парк стоит 100,00, если у вас нет
+модификаторов, изменяющих эту стоимость.
 
 ```
 set_temp_variable = { temp_change = 2 }
