@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://YOUR-GITHUB-USERNAME.github.io',
-	base: '/mdc-docs',
+	base: '/MDC',
 	integrations: [
 		starlight({
 			title: 'MDC Docs',
