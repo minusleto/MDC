@@ -1,16 +1,19 @@
 ---
 title: MDC Code Resource
-description: "Справочник по скриптовым модификаторам, эффектам и гайдам MDC (Millennium: Damaged Continuum)"
+description: "Справочник по коду Millennium: Damaged Continuum"
 ---
 
-Хаб по уникальным системам MDC (Millennium: Damaged Continuum) — форка Millennium Dawn Redux. Здесь собран справочник по кастомным модификаторам, скриптовым эффектам и гайдам для модостроения.
+Хаб по уникальным системам **Millennium: Damaged Continuum** — форка Millennium Dawn Redux.
 
 :::note
-Это адаптация вики-страницы [MD Code Resource](https://gitlab.com/Millennium_Dawn/Millennium_Dawn/-/wikis/Home/MD-Code-Resource) базового мода Millennium Dawn под MDC. Большинство модификаторов, эффектов и путей унаследовано напрямую от Millennium Dawn Redux, но часть значений (цены построек, пути файлов) могла разойтись — сверяйте с актуальным кодом репозитория MDC.
+Это адаптация MD Code Resource под MDC. Часть кода унаследована из Millennium Dawn/Redux, поэтому перед использованием сверяйте примеры с актуальной версией репозитория MDC.
 :::
 
-## Разделы
+## Навигация
 
-- **[Модификаторы](/mdc-docs/code-resource/modifiers/)** — Economic, Law, Migration, Influence, Energy, Political модификаторы, разложенные по категориям и подкатегориям
-- **[Скриптовые эффекты](/mdc-docs/code-resource/effects/)** — эффекты для построек, экономики, фракций, влияния, политики, ЕС, антитеррора и картелей
-- **[Гайды / How-To](/mdc-docs/code-resource/guides/)** — добавление субидеологий, исторические события (ETD), работа с переменными, уникальные terrain-фото
+- [🚀 Быстрый старт](./getting-started/) — scopes, triggers и variables
+- [📖 Эффекты](./effects/) — скриптовые эффекты MDC
+- [📐 Модификаторы](./modifiers/) — экономические, политические, энергетические и другие модификаторы
+- [🏗 Системы MDC](./systems/) — механики, характерные для MDC
+- [📚 Гайды](./guides/) — практические инструкции
+- [🔧 Справочник](./reference/) — единая точка входа в reference-разделы

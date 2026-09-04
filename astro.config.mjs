@@ -2,14 +2,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://minusleto.github.io',
 	base: '/MDC',
 	integrations: [
 		starlight({
 			title: 'MDC Docs',
-			description: 'Millennium: Damaged Continuum — справочник по модификаторам, эффектам и гайдам для модеров',
+			description: 'Millennium: Damaged Continuum — справочник по коду и моддингу',
 			defaultLocale: 'root',
 			locales: {
 				root: { label: 'Русский', lang: 'ru' },
@@ -19,12 +18,45 @@ export default defineConfig({
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/minusleto/MDC' },
 			],
 			sidebar: [
-				{
-					label: 'Code Resource',
-					translations: { en: 'Code Resource' },
-					items: [{ autogenerate: { directory: 'code-resource' } }],
-				},
+				{ label: 'Code Resource', translations: { en: 'Code Resource' }, items: [
+					{ label: 'Быстрый старт', translations: { en: 'Getting Started' }, items: [
+						{ label: 'Обзор', slug: 'code-resource/getting-started' },
+						{ label: 'Переменные', translations: { en: 'Variables' }, slug: 'code-resource/getting-started/variables' },
+						{ label: 'Scopes', slug: 'code-resource/getting-started/scopes' },
+						{ label: 'Triggers', slug: 'code-resource/getting-started/triggers' },
+					] },
+					{ label: 'Эффекты', translations: { en: 'Effects' }, items: [
+						{ label: 'Обзор', slug: 'code-resource/effects' },
+						{ label: 'Постройки', translations: { en: 'Buildings' }, slug: 'code-resource/effects/buildings' },
+						{ label: 'Экономика', translations: { en: 'Economy' }, slug: 'code-resource/effects/economy' },
+						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/effects/internal-factions' },
+						{ label: 'Иностранное влияние', translations: { en: 'Foreign Influence' }, slug: 'code-resource/effects/influence' },
+						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/effects/politics' },
+						{ label: 'Контртерроризм', translations: { en: 'Counter-Terrorism' }, slug: 'code-resource/effects/counter-terror' },
+						{ label: 'Картели', translations: { en: 'Cartels' }, slug: 'code-resource/effects/cartels' },
+						{ label: 'Европейский союз', translations: { en: 'European Union' }, slug: 'code-resource/effects/european-union' },
+						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/effects/energy' },
+					] },
+					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
+						{ label: 'Обзор', slug: 'code-resource/modifiers' },
+						{ label: 'Экономические', translations: { en: 'Economic' }, slug: 'code-resource/modifiers/economic' },
+						{ label: 'Законы', translations: { en: 'Laws' }, slug: 'code-resource/modifiers/laws' },
+						{ label: 'Миграция', translations: { en: 'Migration' }, slug: 'code-resource/modifiers/migration' },
+						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/modifiers/influence' },
+						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/modifiers/energy' },
+						{ label: 'Политика', translations: { en: 'Political' }, slug: 'code-resource/modifiers/political' },
+					] },
+					{ label: 'Системы MDC', translations: { en: 'MDC Systems' }, slug: 'code-resource/systems' },
+					{ label: 'Гайды', translations: { en: 'Guides' }, items: [
+						{ label: 'Обзор', slug: 'code-resource/guides' },
+						{ label: 'Субидеологии и партии', translations: { en: 'Subideologies & Parties' }, slug: 'code-resource/guides/subideologies' },
+						{ label: 'Исторические события', translations: { en: 'Historical Events' }, slug: 'code-resource/guides/historical-events' },
+						{ label: 'Переменные', translations: { en: 'Variables' }, slug: 'code-resource/guides/variables' },
+						{ label: 'Terrain-фото', translations: { en: 'Terrain Photos' }, slug: 'code-resource/guides/terrain-photos' },
+					] },
+					{ label: 'Справочник', translations: { en: 'Reference' }, slug: 'code-resource/reference' },
+				] },
 			],
-		}),
+		})
 	],
 });
