@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://YOUR-GITHUB-USERNAME.github.io',
+	site: ''https://minusleto.github.io',
 	base: '/MDC',
 	integrations: [
 		starlight({
