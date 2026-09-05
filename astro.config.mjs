@@ -63,7 +63,7 @@ export default defineConfig({
 						{ label: 'Субидеологии и партии', translations: { en: 'Subideologies & Parties' }, slug: 'code-resource/guides/subideologies' },
 						{ label: 'Исторические события', translations: { en: 'Historical Events' }, slug: 'code-resource/guides/historical-events' },
 						{ label: 'Переменные', translations: { en: 'Variables' }, slug: 'code-resource/guides/variables' },
-						{ label: 'Terrain-фото', translations: { en: 'Terrain Photos' }, slug: 'code-resource/guides/terrain-photos' },
+						{ label: 'Фотографии местности', translations: { en: 'Terrain Photos' }, slug: 'code-resource/guides/terrain-photos' },
 					] },
 					{ label: 'Справочник', translations: { en: 'Reference' }, slug: 'code-resource/reference' },
 				] },
