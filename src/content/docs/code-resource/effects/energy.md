@@ -3,17 +3,17 @@ title: Энергетика
 description: "Энергетические скриптовые эффекты"
 ---
 
-## Энергетические эффекты
+## Energy Effects
 
-Строит обогатительные объекты для страны. Стоимость — 25.00 за единицу. Скриптовый эффект сам обрабатывает стоимость. Просто укажите число.
+Constructs enrichment facilities for the nation. It costs 25.00 per. The scripted effect handles the cost. Just input a number.
 
 ```
 set_temp_variable = { temp_change = 2 }
 build_enrichment_facilities_effect = yes
 ```
 
-Строит аккумуляторный парк в рамках эффекта. Стоимость — 100.00 за единицу, если у вас нет
-модификаторов, уменьшающих или увеличивающих её.
+Constructs a battery park as part of an effect. It costs 100.00 per unless you have
+modifiers to reduce or increase it.
 
 ```
 set_temp_variable = { temp_change = 2 }

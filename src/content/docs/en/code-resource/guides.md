@@ -1,7 +1,11 @@
 ---
-title: Guides / How-To
-description: "Subideologies, historical events (ETD), variables, unique terrain photos"
+title: Гайды / How-To
+description: "Субидеологии, исторические события (ETD), переменные, уникальные terrain-фото"
 ---
+:::caution[Translation in progress]
+This page is still in Russian — the English translation hasn't been done yet.
+:::
+
 
 <a id="guideshow-to"></a>
 ## Guides/How-To

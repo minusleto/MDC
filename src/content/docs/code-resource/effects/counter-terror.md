@@ -3,12 +3,12 @@ title: Контртерроризм
 description: "Радикализация и уровень террористической угрозы"
 ---
 
-## Эффекты контртерроризма
+## Counter Terror Effects
 
 <a id="radicalization-threat-level"></a>
-### Радикализация / уровень угрозы
+### Radicalization / Threat Level
 
-Это могут использовать только страны Counter Terror. Полный список тегов можно найти в common -> on_actions.txt, ищите _ct_states.
+Only Counter Terror nations can use this. For a full list of tags go to common -> on_actions.txt and look for _ct_states.
 
 ```
 set_temp_variable = { rad_change = -5 }

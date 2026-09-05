@@ -3,23 +3,23 @@ title: Переменные
 description: "Базовая работа с переменными в скриптах"
 ---
 
-## Руководство по переменным
+## Variable Guide/Explanation
 
-Простые переменные и их разновидности позволяют реализовать множество интересных и полезных механик, которые невозможно (или сложно) сделать, используя только стандартные игровые значения. Переменные открывают огромные возможности для геймплея и дизайна, которые часто недооценивают в игре, где основной акцент сделан на военной составляющей.
+There are a ton interesting and fun things you can accomplish using simple variables and other forms of variables that arent entirely possible using only in-game values. Variables open up a whole new world in terms of gameplay and design that is normally undervalued in a game that its primary focus is the military aspect.
 
 <a id="basic-commands-for-variables"></a>
-### Основные команды для переменных
+### Basic Commands for Variables
 
-#set_variable = { var = example value = 1 } - устанавливает переменную (можно использовать в любом месте, где выполняется скрипт) в заданное значение и присваивает ей имя. Создаёт переменную, если её ещё не существует, ИЛИ задаёт новое значение, если она уже есть.
-#add_to_variable { var = example value = 1 } - более длинный способ прибавить к переменной значение; здесь просто прибавляется единица, и переменная становится равна 2.
-#subtract_from_variable { var = example value = 2 } - вычитает; в результате текущий скрипт получает значение 0.
+#set_variable = { var = example value = 1 } - Sets the Variable (can be used anywhere executing a script) to a value and also sets a variable with a name. Creates the variable if it doesnt exist before, OR sets it to a new value if already present somewhere.
+#add_to_variable { var = example value = 1 } - this is the long way of adding to a variable but it just adds one so now the variable is valued at 2.
+#subtract_from_variable { var = example value = 2 } - subtracts yields 0 from the current running script.
 
-В зависимости от ситуации переменные также можно умножать, делить, округлять и обрабатывать с помощью ряда других функций.
+You can also multiple, divide, round, and a few other functions depending on the situation you are using the variables.
 
 <a id="basic-setting-example"></a>
-### Пример базовой настройки:
+### Basic Setting Example:
 
-Пример:
+Example:
 
 ```
 	####American Economic Variables Pre-Set###
@@ -33,8 +33,8 @@ description: "Базовая работа с переменными в скри�
 	set_variable = { var = USA_strength_of_wall_street_var min = 0 }
 ```
 
-Переменные здесь задаются в историческом файле США и используются решениями и эффектами американской экономики, связанными с каждым фокусом, событием или решением этой экономической ветки. В `set_variable` здесь используются два новых параметра — `min` и `max`. Они задают соответственно минимально и максимально допустимые значения переменной.
+The variables here are set in the United States history file and used for the American Economy decisions and effects that occur with every one of the American economy focuses, events or decisions. There are two new topics here in the set_variable which is min and max. They simply set the max possible value and the minimum possible value for the given variable.
 
-Это базовый обзор переменных и самый простой способ начать ими пользоваться. Эти гибкие эффекты можно применять множеством способов как в отдельных системах, так и в обычных эффектах.
+This is a basic rundown of variables and the simplest way to begin and use them. There are many ways of using this flexible effects in both systems and in general effects.
 
 <a id="unique-terrain-photos-guide"></a>

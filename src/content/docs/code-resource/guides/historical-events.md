@@ -3,19 +3,19 @@ title: Исторические события (ETD)
 description: "Триггеры событий на точную историческую дату"
 ---
 
-## Исторические события / события с точной датой (ETD)
+## Historical Events/Exact Date Trigger (ETD) Events
 
-Путь к файлу: `common/scripted_effects/00_yearly_efffects`
+File Path: `common/scripted_effects/00_yearly_efffects`
 
-Исторические события для MD следует запускать через новую систему в common/scripted_effects/00_yearly_effects.txt
+Historical events for MD should be triggered using the new system in common/scripted_effects/00_yearly_effects.txt
 
-Это «контейнерные» эффекты, которые раз в год запускаются одной страной и триггерят весь исторический скриптовый контент для каждой страны. Событие можно разместить в двух местах: либо в эффекте «года», либо в эффекте on_startup в начале файла. Если вы хотите, чтобы событие срабатывало в 2000 году (или в 2017, если вам всё ещё нужна поддержка контента для этой стартовой даты) — добавьте событие в on_startup с указанием количества дней до срабатывания в первый игровой год. В остальных случаях, если вы хотите запустить событие в конкретном году, найдите нужный год и добавьте счётчики дней так же, как для обычного события.
+These are "container" effects triggered once a year by one country to trigger all historical scripted content for each country. You can put an event in two places, either in a "year" effect or in the on_startup effect at the top of the file. If you wish to have the event fire in 2000 (or 2017 if you still want content support for that start date). Add the event in the on-startup with the days until it should fire in the game's first year. Outside of that, if you wish to fire an event in a specific year, find the event and then add the day counters as you otherwise would for a normal event.
 
 ```
 MD_event_on_startup_events = {
-	if = { # Стартовая дата 2000 года
+	if = { # The 2000 start date
 		limit = { has_start_date < 2000.1.2 }
-		# События с известными датами, которые должны срабатывать при старте с 2000 года.
+		# Events with known dates that should fire with the 2000 start date.
 		CAM = {
 			country_event = { id = Cameroon.1 days = 50 random_days = 50 }
 		}

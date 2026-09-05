@@ -1,22 +1,26 @@
 ---
-title: Modifiers
-description: MDC Economic, Law, Migration, Influence, Energy and Political modifiers
+title: Модификаторы
+description: Economic, Law, Migration, Influence, Energy и Political модификаторы MDC
 ---
+:::caution[Translation in progress]
+This page is still in Russian — the English translation hasn't been done yet.
+:::
+
 
 <a id="modifiers"></a>
 ## Modifiers
 
-MDC modifiers follow standard HOI4 syntax, but include a lot of unique economic, political and energy systems.
+Модификаторы MDC следуют стандартному синтаксису HOI4, но включают много уникальных экономических, политических и энергетических систем.
 
 <a id="economic-modifiers"></a>
 ### Economic Modifiers
 
-Affect the economy, taxes, trade and productivity.
+Влияют на экономику, налоги, торговлю и производительность.
 
 <a id="general-economic"></a>
 #### General Economic
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Modifies the country's interest rate | This is whole number ( i.e. -1 ) |
 | `personnel_cost_multiplier_modifier` | Modifies the country's military wages | N/A |
@@ -49,7 +53,7 @@ Affect the economy, taxes, trade and productivity.
 <a id="exports-resources"></a>
 #### Exports & Resources
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `resource_export_multiplier_modifier` | Modifies the amount of money gained from all Resource Exports | N/A |
 | `oil_export_multiplier_modifier` | Modifies the amount of money gained from Fossil Fuel Exports | N/A |
@@ -62,7 +66,7 @@ Affect the economy, taxes, trade and productivity.
 <a id="industry-productivity"></a>
 #### Industry Productivity
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `agricolture_productivity_modifier` | Modifier to increase/decrease the productivity generate from agriculture | N/A |
 | `civilian_factories_productivity` | Modifier to increase/decrease the productivity generate from civilian factories | N/A |
@@ -73,7 +77,7 @@ Affect the economy, taxes, trade and productivity.
 <a id="industry-income-taxes"></a>
 #### Industry Income Taxes
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `office_park_income_tax_modifier` | Modifies the amount of money gained from Office Parks | N/A |
 | `agriculture_district_income_tax_modifier` | Modifies the amount of money gained from Commercialized Agriculture Districts | N/A |
@@ -85,7 +89,7 @@ Affect the economy, taxes, trade and productivity.
 <a id="campaign-costs"></a>
 #### Campaign Costs
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `salafist_outlook_campaign_cost_modifier` | Modifies the Salafi Indoctrination campaign decision monetary cost | N/A |
 | `nonaligned_outlook_campaign_cost_modifier` | Modifies the Non-Aligned campaign decision monetary cost | N/A |
@@ -97,7 +101,7 @@ Affect the economy, taxes, trade and productivity.
 <a id="investment-modifiers"></a>
 #### Investment Modifiers
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `investment_duration_modifier` | Modifies the duration of an outgoing International Investment project | N/A |
 | `receiving_investment_duration_modifier` | Modifies the duration of incoming International Investment projects | N/A |
@@ -109,7 +113,7 @@ Affect the economy, taxes, trade and productivity.
 <a id="workforce-labor"></a>
 #### Workforce & Labor
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `total_workforce_modifier` | Modifier to increase/decrease the amount of your workforce for buildings | N/A |
 | `high_unemployment_threshold_modifier` | Modifier to increase/decrease the limit before you suffer penalties from high unemployment | N/A |
@@ -120,16 +124,16 @@ Affect the economy, taxes, trade and productivity.
 <a id="upgrade-special-costs"></a>
 #### Upgrade & Special Costs
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Modifies the economic cycle upgrade cost | N/A |
 
 <a id="law-modifiers"></a>
 ### Law Modifiers
 
-Modify the cost (in political power, PP) of changing national laws.
+Модифицируют стоимость (в очках политической власти, PP) смены государственных законов.
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `expected_adm_modifier` | Modifier that increases/decreases the expected government spending on Bureau (Laws) | N/A |
 | `expected_police_modifier` | Modifier that increases/decreases the expected government spending on Police/Internal Security (Law) | N/A |
@@ -159,18 +163,18 @@ Modify the cost (in political power, PP) of changing national laws.
 <a id="migration-modifiers"></a>
 ### Migration Modifiers
 
-Affect population migration.
+Влияют на миграцию населения.
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `migration_rate_value_factor` | Modifier to increase/decrease the amount of net migration into your country | N/A |
 
 <a id="influence-modifiers"></a>
 ### Influence Modifiers
 
-Affect the Foreign Influence system.
+Влияют на систему иностранного влияния (Foreign Influence).
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `foreign_influence_modifier` | Modifier that increases the effectiveness of your influence actions | N/A |
 | `foreign_influence_defense_modifier` | Modifier that decreases the effectiveness of foreign influence actions in our country | N/A |
@@ -184,12 +188,12 @@ Affect the Foreign Influence system.
 <a id="energy-modifiers"></a>
 ### Energy Modifiers
 
-Govern energy production and consumption.
+Управляют производством и потреблением энергии.
 
 <a id="general-energy"></a>
 #### General Energy
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `energy_gain` | Modifies energy gain as a flat amount | 10 = 10 more energy gain |
 | `energy_gain_multiplier` | Modifies energy gain as a percentage, modifies all sources of energy gain | N/A |
@@ -201,7 +205,7 @@ Govern energy production and consumption.
 <a id="population-energy"></a>
 #### Population Energy
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `pop_energy_use_multiplier` | Modifies the amount of energy used by the population | N/A |
 | `non_electric_fuel_consumption_modifier` | Modifies the consumption of fuel by a countries population | N/A |
@@ -209,7 +213,7 @@ Govern energy production and consumption.
 <a id="fossil-fuels"></a>
 #### Fossil Fuels
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `fossil_pp_energy_generation_modifier` | Modifies the energy generated by a Fossil Fuel Powerplant | N/A |
 | `fossil_pp_fuel_consumption_modifier` | Modifies the consumption of fuel by Fossil Fuel Powerplant | N/A |
@@ -217,7 +221,7 @@ Govern energy production and consumption.
 <a id="nuclear-energy"></a>
 #### Nuclear Energy
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `nuclear_energy_generation_modifier` | Modifies energy generated by a Nuclear Reactor | N/A |
 | `nuclear_fuel_consumption_modifier` | Modifies the consumption of LEU fuel by Nuclear Reactors | N/A |
@@ -227,7 +231,7 @@ Govern energy production and consumption.
 <a id="renewable-infrastructure"></a>
 #### Renewable Infrastructure
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `hydroelectric_energy_storage` | Used for basic static energy use/storage for hydroelectric modifiers in a particular state | N/A |
 | `state_renewable_energy_generation_modifier` | Modifies the amount of State Renewable Energy Generation | N/A |
@@ -235,16 +239,16 @@ Govern energy production and consumption.
 <a id="battery-storage"></a>
 #### Battery & Storage
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `battery_park_construction_cost` | Modifies the cost of building a battery park | N/A |
 
 <a id="political-modifiers"></a>
 ### Political Modifiers
 
-Affect domestic politics (parties).
+Влияют на внутреннюю политику (партии).
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `popularity_attack_modifier` | Modifier that increases the effectiveness of attacking political parties in the political GUI | The modifier is not percentual. EX: popularity_attack_modifier = 2.0 for 2x damage |
 | `popularity_boost_modifier` | Modifier that increases the effectiveness of boosting political parties in the political GUI | The modifier is not percentual. EX: popularity_boost_modifier = 2.0 for 2x boost |

@@ -3,47 +3,47 @@ title: Постройки
 description: "Стоимость и скриптовые эффекты для зданий"
 ---
 
-## Стоимость построек MDC
+## MDC Building Costs
 
-Для каждой постройки, которая занимает слот строительства (например, гражданская промышленность), стоимость уже учитывает сам слот строительства.
+Each of the values for buildings that consume a building slot (i.e. Civilian Industry) has the building slot factored in.
 
--- Постройки в регионах:
+-- State Buildings:
 
-- Гражданская промышленность (industrial_complex) - $7.50
-- Военная промышленность (arms_factory) - $7.50
-- Верфь (dockyard) - $7.50
-- Офисы (offices) - $12
-- Коммерческий сельскохозяйственный район - $3.75
-- Инфраструктура (infrastructure) - $3.50
-- Авиабаза (air_base) - $2.50
-- ЗРК (anti_air_building) - $3.25
-- Инфраструктура возобновляемой энергетики (synthetic_refinery) - $8.50
-- Топливное хранилище (fuel_silo) - $3.00
-- Радарная станция (radar_station) - $1.75
-- Сетевая инфраструктура (internet_station) - $3.00
-- Пусковая площадка ракет (rocket_site) - $3.00
-- Ядерный реактор (nuclear_reactor) - $9.00
-- Региональная оборонительная сеть (stronghold_network) - $8.00
-- Электростанция на ископаемом топливе (fossil_powerplant) - $2.25
-- **Минимальная стоимость слота строительства: $1,00 за слот**
+- Civilian Industry (industrial_complex) - $7.50
+- Military Industry (arms_factory) - $7.50
+- Dockyard (dockyard) - $7.50
+- Offices (offices) - $12
+- Commercialized Agriculture District - $3.75
+- Infrastructure (infrastructure) - $3.50
+- Air Base (air_base) - $2.50
+- Sam Site (anti_air_building) - $3.25
+- Renewable Energy Infrastructure (synthetic_refinery) - $8.50
+- Fuel Silo (fuel_silo) - $3.00
+- Radar Station (radar_station) - $1.75
+- Network Infrastructure (internet_station) - $3.00
+- Missile Launch Site (rocket_site) - $3.00
+- Nuclear Reactor (nuclear_reactor) - $9.00
+- State-Wide Defensive Network (stronghold_network) - $8.00
+- Fossil Fuel Powerplant (fossil_powerplant) - $2.25
+- **Building Slots Minimum: $1.00 per slot**
 
--- Провинциальные постройки
+-- Provincial Buildings
 
-- Объект военно-морских исследований (naval_facility) - $15.00
-- Объект сухопутных исследований (land_facility) - $15.00
-- Объект аэродинамики и авионики (air_facility) - $15.00
-- Гражданский научно-исследовательский объект (nuclear_facility) - $15.00
-- Военно-морская база (naval_base) - $0.50 per level
-- Сухопутный форт (bunker) - $0.50 per level
-- Береговой бункер (coastal_bunker) - $0.50 per level
-- Узел снабжения (supply_node) - $2.50
-- Железные дороги (rail_way) - $0.01 per province
+- Naval Engineering Facility (naval_facility) - $15.00
+- Land Warfare Facility (land_facility) - $15.00
+- Aerodynamics & Avionics Facility (air_facility) - $15.00
+- Civilian R&D Facility (nuclear_facility) - $15.00
+- Naval Base (naval_base) - $0.50 per level
+- Land Fort (bunker) - $0.50 per level
+- Coastal Bunker (coastal_bunker) - $0.50 per level
+- Supply Hub (supply_node) - $2.50
+- Railways (rail_way) - $0.01 per province
 
--- Ресурсы:
+-- Resources:
 
-В MD 8 единиц ресурсов соответствуют одной гражданской фабрике. Поэтому добавление 1 единицы стали обойдётся стране в $0,938 млрд по стандарту MD. Пример ниже показывает, как следует балансировать стоимость ресурсов.
+Resources in MD translates to a 8 resources to one civilian factory. Therefore, if you were to add 1 steel it would cost the nation $0.938 Billion in MD standard. The below example illustrates how you should balance out resource costs.
 
-Пример:
+Example:
 
 ```
 capital_scope = {
@@ -59,13 +59,13 @@ modify_treasury_effect = yes
 <a id="mdc-building-effects"></a>
 
 
-## Эффекты построек MDC
+## MDC Building Effects
 
-Если вам лень рассчитывать стоимость стандартных эффектов, связанных с постройками, можно посмотреть её в `common\scripted_effects\00_scripted_effects.txt`.
+If you are lazy to calculate cost for common effects with buildings, you can check common\scripted_effects\00_scripted_effects.txt
 
-Эффекты уровня региона требуют размещения эффекта внутри региона. Если постройку нельзя добавить в указанный регион, она будет добавлена в любой случайный регион, принадлежащий стране.
+State Scope effects requires to put the effect inside a state. If the building cannot be added into a state, it will be added to any random owned state.
 
-Пример:
+Example:
 
 ```
 117 = {
@@ -73,164 +73,164 @@ modify_treasury_effect = yes
 }
 ```
 
-По возможности используйте эти эффекты как можно чаще.
+Also try to use as more as possible these effects.
 
 <a id="civilian-factory"></a>
-### Гражданская фабрика
+### Civilian Factory
 
 ```
-one_random_industrial_complex = yes #добавляет 1 гражданскую фабрику со слотом и стоимостью
-two_random_industrial_complex = yes #добавляет 2 гражданские фабрики со слотами и стоимостью
-three_random_industrial_complex = yes #добавляет 3 гражданские фабрики (2 в одном случайном регионе, 3-я — в другом) со слотами и стоимостью
-four_random_industrial_complex = yes #добавляет 4 гражданские фабрики (2 в одном случайном регионе, 2 — в другом) со слотами и стоимостью
+one_random_industrial_complex = yes #add 1 civ with slot and cost
+two_random_industrial_complex = yes #add 2 civs with slots and cost
+three_random_industrial_complex = yes #add 3 civs (2 in 1st random state and 3rd in another one) with slots and cost
+four_random_industrial_complex = yes #add 4 civs (2 in 1st random state and 2 in another one) with slots and cost
 
-~~Уровень региона~~
-one_state_industrial_complex = yes #добавляет 1 гражданскую фабрику со слотом и стоимостью в заданный регион
-two_state_industrial_complex = yes #добавляет 2 гражданские фабрики со слотом и стоимостью в заданный регион
-three_state_industrial_complex = yes #добавляет 3 гражданские фабрики со слотом и стоимостью в заданный регион
-four_state_industrial_complex = yes #добавляет 4 гражданские фабрики со слотом и стоимостью в заданный регион
+~~State Scope~~
+one_state_industrial_complex = yes #add 1 civ with slot and cost in a predefined state
+two_state_industrial_complex = yes #add 2 civs with slot and cost in a predefined state
+three_state_industrial_complex = yes #add 3 civs with slot and cost in a predefined state
+four_state_industrial_complex = yes #add 4 civs with slot and cost in a predefined state
 ```
 
 <a id="military-factory"></a>
-### Военная фабрика
+### Military Factory
 
 ```
-one_random_arms_factory = yes #добавляет 1 военную фабрику со слотом и стоимостью
-two_random_arms_factory = yes #добавляет 2 военные фабрики со слотами и стоимостью
-three_random_arms_factory = yes #добавляет 3 военные фабрики (2 в одном случайном регионе, 3-я — в другом) со слотами и стоимостью
-four_random_arms_factory = yes #добавляет 4 военные фабрики (2 в одном случайном регионе, 2 — в другом) со слотами и стоимостью
+one_random_arms_factory = yes #add 1 military factory with slot and cost
+two_random_arms_factory = yes #add 2 military factories with slots and cost
+three_random_arms_factory = yes #add 3 military factories (2 in 1st random state and 3rd in another one) with slots and cost
+four_random_arms_factory = yes #add 4 military factories (2 in 1st random state and 2 in another one) with slots and cost
 
-~~Уровень региона~~
-one_state_arms_factory = yes #добавляет 1 военную фабрику со слотом и стоимостью в заданный регион
-two_state_arms_factory = yes #добавляет 2 военные фабрики со слотом и стоимостью в заданный регион
-three_state_arms_factory = yes #добавляет 3 военные фабрики со слотом и стоимостью в заданный регион
-four_state_arms_factory = yes #добавляет 4 военные фабрики со слотом и стоимостью в заданный регион
+~~State Scope~~
+one_state_arms_factory = yes #add 1 military factory with slot and cost in a predefined state
+two_state_arms_factory = yes #add 2 military factories with slot and cost in a predefined state
+three_state_arms_factory = yes #add 3 military factories with slot and cost in a predefined state
+four_state_arms_factory = yes #add 4 military factories with slot and cost in a predefined state
 ```
 
 <a id="infrastructure"></a>
-### Инфраструктура
+### Infrastructure
 
 ```
-one_random_infrastructure = yes #добавляет 1 инфраструктуру со стоимостью
-two_random_infrastructure = yes #добавляет 2 инфраструктуры в 2 случайных регионах со стоимостью
-three_random_infrastructure = yes #добавляет 3 инфраструктуры в 3 случайных регионах со стоимостью
+one_random_infrastructure = yes #add 1 infrastructure with cost
+two_random_infrastructure = yes #add 2 infrastructure in 2 random states with cost
+three_random_infrastructure = yes #add 3 infrastructure in 3 random states with cost
 
-~~Уровень региона~~
-one_state_infrastructure = yes #добавляет 1 инфраструктуру со стоимостью в заданный регион
-two_state_infrastructure = yes #добавляет 2 инфраструктуры со стоимостью в заданный регион
-three_state_infrastructure = yes #добавляет 3 инфраструктуры со стоимостью в заданный регион
+~~State Scope~~
+one_state_infrastructure = yes #add 1 infrastructure with cost in a predefined state
+two_state_infrastructure = yes #add 2 infrastructure with cost in a predefined state
+three_state_infrastructure = yes #add 3 infrastructure with cost in a predefined state
 ```
 
 <a id="dockyards"></a>
-### Верфьs
+### Dockyards
 
 ```
-one_random_dockyard = yes #добавляет 1 верфь со слотом и стоимостью
-two_random_dockyards = yes #добавляет 2 верфи со слотами и стоимостью
+one_random_dockyard = yes #add 1 dockyard with slot and cost
+two_random_dockyards = yes #add 2 dockyards with slots and cost
 
-~~Уровень региона~~
-one_state_dockyard = yes #добавляет 1 верфь со слотом и стоимостью в заданный регион
-two_state_dockyard = yes #добавляет 2 верфи со слотом и стоимостью в заданный регион
+~~State Scope~~
+one_state_dockyard = yes #add 1 dockyard with slot and cost in a predefined state
+two_state_dockyard = yes #add 2 dockyards with slot and cost in a predefined state
 ```
 
 <a id="offices"></a>
-### Офисы
+### Offices
 
-Следующие эффекты также дают электростанцию на ископаемом топливе.
+The following also give a fossil fuel power plant.
 
 ```
-one_office_construction = yes #добавляет 1 офисный комплекс со слотом и стоимостью
-two_office_construction = yes #добавляет 2 офисных комплекса со слотами и стоимостью
-three_office_construction = yes #добавляет 3 офисных комплекса (2 в одном случайном регионе, 3-й — в другом) со слотами и стоимостью
+one_office_construction = yes #add 1 office construction with slot and cost
+two_office_construction = yes #add 2 office constructions with slots and cost
+three_office_construction = yes #add 3 office constructions (2 in 1st random state and 3rd in another one state) with slots and cost
 
-~~Уровень региона~~
-one_state_office_construction = yes #добавляет 1 офисный комплекс со слотом и стоимостью в заданный регион
-two_state_office_construction = yes #добавляет 2 офисных комплекса со слотами и стоимостью в заданный регион
-three_state_office_construction = yes #добавляет 3 офисных комплекса со слотами и стоимостью в заданный регион
+~~State Scope~~
+one_state_office_construction = yes #add 1 office construction with slot and cost in a predefined state
+two_state_office_construction = yes #add 2 office constructions with slots and cost in a predefined state
+three_state_office_construction = yes #add 3 office constructions with slots and cost in a predefined state
 ```
 
 <a id="commercialized-agriculture-district"></a>
-### Коммерческий сельскохозяйственный район
+### Commercialized Agriculture District
 
 ```
-one_random_agriculture_district = yes #добавляет 1 сельскохозяйственный район со слотом и стоимостью
+one_random_agriculture_district = yes #add 1 agriculture district construction with slot and cost
 
-~~Уровень региона~~
-one_state_agriculture_district = yes #добавляет 1 сельскохозяйственный район со слотом и стоимостью в заданный регион
+~~State Scope~~
+one_state_agriculture_district = yes #add 1 agriculture district construction with slot and cost in a predefined state
 ```
 
 <a id="air-bases-air_base"></a>
-### Авиабазы (air_base)
+### Air bases (air_base)
 
 ```
-one_air_base = yes #добавляет 1 авиабазу со стоимостью
-two_air_base = yes #добавляет 2 авиабазы в разных регионах со стоимостью
+one_air_base = yes #add 1 air base with cost
+two_air_base = yes #add 2 air bases in various states with cost
 
-~~Уровень региона~~
-one_state_air_base = yes #добавляет 1 авиабазу со стоимостью в заданный регион
-two_state_air_base = yes #добавляет 2 авиабазы со стоимостью в заданный регион
+~~State Scope~~
+one_state_air_base = yes #add 1 air base with cost in a predefined state
+two_state_air_base = yes #add 2 air bases with cost in a predefined state
 ```
 
 <a id="network-infrastructure-internet_station"></a>
-### Сетевая инфраструктура (internet_station)
+### Network Infrastructure (internet_station)
 
 ```
-one_random_network_infrastructure = yes #добавляет 1 сетевую инфраструктуру со стоимостью
-two_random_network_infrastructure = yes #добавляет 2 сетевые инфраструктуры в разных регионах со стоимостью
+one_random_network_infrastructure = yes #add 1 network infrastructure with cost
+two_random_network_infrastructure = yes #add 2 network infrastructure in various states with cost
 
-~~Уровень региона~~
-one_state_network_infrastructure = yes #добавляет 1 сетевую инфраструктуру со стоимостью в заданный регион
-two_state_network_infrastructure = yes #добавляет 2 сетевые инфраструктуры со стоимостью в заданный регион
+~~State Scope~~
+one_state_network_infrastructure = yes #add 1 network infrastructure with cost in a predefined state
+two_state_network_infrastructure = yes #add 2 network infrastructure with cost in a predefined state
 ```
 
 <a id="anti-air-sam-site-anti_air_building"></a>
-### ПВО | ЗРК (anti_air_building)
+### Anti Air | Sam Site (anti_air_building)
 
 ```
-one_anti_air = yes #добавляет 1 ПВО со стоимостью
-two_anti_air = yes #добавляет 2 ПВО в разных регионах со стоимостью
+one_anti_air = yes #add 1 anti air with cost
+two_anti_air = yes #add 2 anti airs in various states with cost
 
-~~Уровень региона~~
-one_state_anti_air = yes #добавляет 1 ПВО со стоимостью в заданный регион
-two_state_anti_air = yes #добавляет 2 ПВО со стоимостью в заданный регион
+~~State Scope~~
+one_state_anti_air = yes #add 1 anti air with cost in a predefined state
+two_state_anti_air = yes #add 2 anti airs with cost in a predefined state
 ```
 
 <a id="radar-station-radar_station"></a>
-### Радарная станция (radar_station)
+### Radar Station (radar_station)
 
 ```
-one_radar_station = yes #добавляет 1 радарную станцию со стоимостью
-two_radar_station = yes #добавляет 2 радарные станции в разных регионах со стоимостью
+one_radar_station = yes #add 1 radar station with cost
+two_radar_station = yes #add 2 radar stations in various states with cost
 
-~~Уровень региона~~
-one_state_radar_station = yes #добавляет 1 радарную станцию со стоимостью в заданный регион
-two_state_radar_station = yes #добавляет 2 радарные станции со стоимостью в заданный регион
+~~State Scope~~
+one_state_radar_station = yes #add 1 radar station with cost in a predefined state
+two_state_radar_station = yes #add 2 radar stations with cost in a predefined state
 ```
 
 <a id="synthetic-refinery-synthetic_refinery"></a>
-### Синтетический НПЗ (synthetic_refinery)
+### Synthetic refinery (synthetic_refinery)
 
 ```
-one_random_synthetic_refinery = yes #добавляет 1 синтетический НПЗ со слотом и стоимостью
-two_random_synthetic_refinery = yes #добавляет 2 синтетических НПЗ в разных регионах со слотами и стоимостью
-three_random_synthetic_refinery = yes #добавляет 3 синтетических НПЗ в разных регионах со слотами и стоимостью
+one_random_synthetic_refinery = yes #add 1 Synthetic refinery with slot and cost
+two_random_synthetic_refinery = yes #add 2 Synthetic refineries in various states with slots and cost
+three_random_synthetic_refinery = yes #add 3 Synthetic refineries in various states with slots and cost
 
-~~Уровень региона~~
-one_state_synthetic_refinery = yes #добавляет 1 синтетический НПЗ со слотом и стоимостью в заданный регион
-two_state_synthetic_refinery = yes #добавляет 2 синтетических НПЗ со слотом и стоимостью в заданный регион
-three_state_synthetic_refinery = yes #добавляет 3 синтетических НПЗ со слотом и стоимостью в заданный регион
+~~State Scope~~
+one_state_synthetic_refinery = yes #add 1 Synthetic refinery with slot and cost in a predefined state
+two_state_synthetic_refinery = yes #add 2 Synthetic refineries with slot and cost in a predefined state
+three_state_synthetic_refinery = yes #add 3 Synthetic refineries with slot and cost in a predefined state
 ```
 
 <a id="other-buildings"></a>
-### Другие постройки
+### Other buildings
 
 ```
-one_random_nuclear_reactor = yes #добавляет 1 ядерный реактор со слотом и стоимостью
-two_random_nuclear_reactor = yes #добавляет 2 ядерных реактора со слотом и стоимостью
+one_random_nuclear_reactor = yes #add 1 nuclear reactor with slot and cost
+two_random_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost
 
-~~Уровень региона~~
-one_state_nuclear_reactor = yes #добавляет 1 ядерный реактор со слотом и стоимостью в заданный регион
-two_state_nuclear_reactor = yes #добавляет 2 ядерных реактора со слотом и стоимостью в заданный регион
+~~State Scope~~
+one_state_nuclear_reactor = yes #add 1 nuclear reactor with slot and cost in a predefined state
+two_state_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost in a predefined state
 ```
 
 <a id="mdc-economic-effects"></a>

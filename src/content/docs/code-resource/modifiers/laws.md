@@ -3,33 +3,35 @@ title: Модификаторы законов
 description: ""
 ---
 
-## Модификаторы законов
+## Law Modifiers
 
 Модифицируют стоимость (в очках политической власти, PP) смены государственных законов.
 
 | Модификатор | Описание | Примечание |
 |---|---|---|
-| `expected_adm_modifier` | Изменяет ожидаемые государственные расходы на бюрократию (законы) | Н/Д |
-| `expected_police_modifier` | Изменяет ожидаемые государственные расходы на полицию/внутреннюю безопасность (закон) | Н/Д |
-| `expected_education_modifier` | Изменяет ожидаемые государственные расходы на образование (закон) | Н/Д |
-| `expected_healthcare_modifier` | Изменяет ожидаемые государственные расходы на здравоохранение (закон) | Н/Д |
-| `expected_welfare_modifier` | Изменяет ожидаемые государственные расходы на социальные расходы (закон) | Н/Д |
-| `expected_mil_modifier` | Изменяет ожидаемые государственные расходы на военные нужды (закон) | Н/Д |
-| `corruption_cost_factor` | Изменяет стоимость в политической власти изменения уровня коррупции | Н/Д |
-| `economic_cycles_cost_factor` | Изменяет стоимость в политической власти изменения экономического цикла | Н/Д |
-| `internal_factions_cost_factor` | Изменяет стоимость в политической власти изменения внутренних фракций | Н/Д |
-| `bureaucracy_cost_factor` | Изменяет стоимость в политической власти изменения расходов на бюрократию | Н/Д |
-| `Military_Spending_cost_factor` | Изменяет стоимость в политической власти изменения военных расходов | Н/Д |
-| `crime_fighting_cost_factor` | Изменяет стоимость в политической власти изменения расходов на полицию/внутреннюю безопасность | Н/Д |
-| `education_budget_cost_factor` | Изменяет стоимость в политической власти изменения расходов на образование | Н/Д |
-| `health_budget_cost_factor` | Изменяет стоимость в политической власти изменения расходов на здравоохранение | Н/Д |
-| `social_budget_cost_factor` | Изменяет стоимость в политической власти изменения социальных расходов | Н/Д |
-| `trade_laws_cost_factor` | Изменяет стоимость в политической власти изменения торгового закона | Н/Д |
-| `Conscription_Law_cost_factor` | Изменяет стоимость в политической власти изменения закона о призыве | Н/Д |
-| `Military_Status_Women_cost_factor` | Изменяет стоимость в политической власти изменения закона о военном статусе женщин | Н/Д |
-| `Foreign_Intervention_Law_cost_factor` | Изменяет стоимость в политической власти изменения закона о внешнем вмешательстве | Н/Д |
-| `Officer_Training_Law_cost_factor` | Изменяет стоимость в политической власти изменения закона о подготовке офицеров | Н/Д |
-| `materiel_manufacturer_cost_factor` | Изменяет стоимость в политической власти смены конструкторских компаний пехоты/прочего | Используется, если у вас не включено DLC Arms Against Tyranny. |
-| `tank_manufacturer_cost_factor` | Изменяет стоимость в политической власти смены конструкторских компаний бронетехники | Используется, если у вас не включено DLC Arms Against Tyranny. |
-| `aircraft_manufacturer_cost_factor` | Изменяет стоимость в политической власти смены конструкторских компаний авиации | Используется, если у вас не включено DLC Arms Against Tyranny. |
-| `naval_manufacturer_cost_factor` | Изменяет стоимость в политической власти смены конструкторских компаний флота | Используется, если у вас не включено DLC Arms Against Tyranny. |
+| `expected_adm_modifier` | Modifier that increases/decreases the expected government spending on Bureau (Laws) | N/A |
+| `expected_police_modifier` | Modifier that increases/decreases the expected government spending on Police/Internal Security (Law) | N/A |
+| `expected_education_modifier` | Modifier that increases/decreases the expected government spending on Education (Law) | N/A |
+| `expected_healthcare_modifier` | Modifier that increases/decreases the expected government spending on Healthcare (Law) | N/A |
+| `expected_welfare_modifier` | Modifier that increases/decreases the expected government spending on Social Spending (Law) | N/A |
+| `expected_mil_modifier` | Modifier that increases/decreases the expected government spending on Military (Law) | N/A |
+| `corruption_cost_factor` | Modifies the political power cost of changing Corruption | N/A |
+| `economic_cycles_cost_factor` | Modifies the political power cost of changing Economic Cycles | N/A |
+| `internal_factions_cost_factor` | Modifies the political power cost of changing Internal Factions | N/A |
+| `bureaucracy_cost_factor` | Modifies the political power cost of changing Bureaucracy Spending | N/A |
+| `Military_Spending_cost_factor` | Modifies the political power cost of changing Military Spending | N/A |
+| `crime_fighting_cost_factor` | Modifies the political power cost of changing Police/Internal Security Spending | N/A |
+| `education_budget_cost_factor` | Modifies the political power cost of changing Education Spending | N/A |
+| `health_budget_cost_factor` | Modifies the political power cost of changing Healthcare Spending | N/A |
+| `social_budget_cost_factor` | Modifies the political power cost of changing Welfare Spending | N/A |
+| `trade_laws_cost_factor` | Modifies the political power cost of changing Trade Law | N/A |
+| `Conscription_Law_cost_factor` | Modifies the political power cost of changing Conscription Law | N/A |
+| `Military_Status_Women_cost_factor` | Modifies the political power cost of changing Military Status of Women Law | N/A |
+| `Foreign_Intervention_Law_cost_factor` | Modifies the political power cost of changing Foreign Intervention Law | N/A |
+| `Officer_Training_Law_cost_factor` | Modifies the political power cost of changing Officer Training Law | N/A |
+| `materiel_manufacturer_cost_factor` | Modifies the political power cost of changing Infantry/Other Design Companies | This is used when you do not have Arms Against Tyranny enabled. |
+| `tank_manufacturer_cost_factor` | Modifies the political power cost of changing Armour Design Companies | This is used when you do not have Arms Against Tyranny enabled. |
+| `aircraft_manufacturer_cost_factor` | Modifies the political power cost of changing Aircraft Design Companies | This is used when you do not have Arms Against Tyranny enabled. |
+| `naval_manufacturer_cost_factor` | Modifies the political power cost of changing Naval Design Companies | This is used when you do not have Arms Against Tyranny enabled. |
+
+<a id="migration-modifiers"></a>

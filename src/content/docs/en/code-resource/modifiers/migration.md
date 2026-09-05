@@ -5,9 +5,9 @@ description: ""
 
 ## Migration Modifiers
 
-Affect population migration.
+Влияют на миграцию населения.
 
-| Modifier | Description | Note |
+| Модификатор | Описание | Примечание |
 |---|---|---|
 | `migration_rate_value_factor` | Modifier to increase/decrease the amount of net migration into your country | N/A |
 

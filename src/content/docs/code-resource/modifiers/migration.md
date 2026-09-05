@@ -3,10 +3,12 @@ title: Модификаторы миграции
 description: ""
 ---
 
-## Модификаторы миграции
+## Migration Modifiers
 
 Влияют на миграцию населения.
 
 | Модификатор | Описание | Примечание |
 |---|---|---|
-| `migration_rate_value_factor` | Изменяет чистый приток миграции в вашу страну | Н/Д |
+| `migration_rate_value_factor` | Modifier to increase/decrease the amount of net migration into your country | N/A |
+
+<a id="influence-modifiers"></a>

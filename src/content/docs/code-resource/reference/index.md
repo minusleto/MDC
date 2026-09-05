@@ -5,8 +5,8 @@ description: "Навигация по кодовой базе"
 
 ## Разделы
 
-- [Эффекты](../effects/)
-- [Модификаторы](../modifiers/)
+- [Effects](../effects/)
+- [Modifiers](../modifiers/)
 - [Triggers](../getting-started/triggers/)
-- [Переменные](../getting-started/variables/)
+- [Variables](../getting-started/variables/)
 - [Scopes](../getting-started/scopes/)

@@ -3,82 +3,82 @@ title: Субидеологии и партии
 description: "Добавление партий и субидеологий"
 ---
 
-## MDC: как добавить партии субидеологий
+## MDC How-To-Add Subideology Parties
 
-Добавление политических партий — отличный способ добавить нового колорита странам без больших затрат труда!
+Adding political parties is a great way to add new flavor to nations without a lot of work!
 
-Чтобы партии отображались в Millennium Dawn, нужно отредактировать несколько файлов.
+There are several files you need to edit to get the parties to show up in Millennium Dawn.
 
 - `common/scripted_lozalition/subideology_scripted_localization.txt`
 - `localisation/english/MD_subideology_parties_l_english.yml`
 - `interface/MD_parties_icons.gfx`
-- Иконки партий хранятся в `gfx/texticons/parties_icons/nation_name`
-- Кастомные лидеры хранятся в `common/scripted_effects/[TAG]_political_leaders.txt`
+- Party icons are stored in `gfx/texticons/parties_icons/nation_name`
+- Custom Leaders are stored in `common/scripted_effects/[TAG]_political_leaders.txt`
 
-Всё довольно просто, но нужно точно следовать тегам, как они написаны.
+It is fairly straightforward, but you will need to follow the tags exactly as they are written.
 
-Список слотов субидеологий:
+List of Subideology Slots:
 
-_ЭТИ СЛОТЫ НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ В КОНСОЛЬНЫХ КОМАНДАХ_
+_THESE CANNOT BE USED FOR CONSOLE COMMANDS_
 
 <a id="western"></a>
-### Западные
+### Western
 
-- Western_Autocracy - Прозападные автократы
-- conservatism - Консерваторы
-- liberalism - Либералы
-- socialism - Социал-демократы
+- Western_Autocracy - Pro-Western Autocrats
+- conservatism - Conservatives
+- liberalism - Liberals
+- socialism - Social Democrats
 
 <a id="emerging"></a>
-### Формирующиеся
+### Emerging
 
-- Communist-State - Формирующиеся коммунисты
-- anarchist_communism - Левый радикализм
-- Conservative - Реакционеры
-- Autocracy - Формирующиеся автократы
-- Mod_Vilayat_e_Faqih - Умеренные шиитские революционеры
-- Vilayat_e_Faqih - Радикальные шиитские революционеры
+- Communist-State - Emerging Communists
+- anarchist_communism - Left-Wing Radicalism
+- Conservative - Reactionaries
+- Autocracy - Emerging Autocrats
+- Mod_Vilayat_e_Faqih - Moderate Shiite Revolutionaries
+- Vilayat_e_Faqih - Hardline Shiite Revolutionaries
 
 <a id="salafism"></a>
-### Салафизм
+### Salafism
 
-- Kingdom - Ваххабитские монархисты
-- Caliphate - Салафитский джихадизм
+- Kingdom - Wahhabi Monarchist
+- Caliphate - Saafi Jihadism
 
 <a id="non-aligned"></a>
-### Неприсоединившиеся
+### Non-Aligned
 
-- Neutral_Muslim_Brotherhood - Умеренные исламисты
-- Neutral_Autocracy - Неприсоединившиеся автократы
-- Neutral_conservatism - Консерваторы
-- oligarchism - Олигархи
-- Neutral_Libertarian - Либертарианцы
-- Neutral_green - Зелёные
-- neutral_Social - Социал-демократы
-- Neutral_Communism - Коммунисты
+- Neutral_Muslim_Brotherhood - Moderate Islamist
+- Neutral_Autocracy - Non-Aligned Autocrats
+- Neutral_conservatism - Conservatives
+- oligarchism - Oligarchs
+- Neutral_Libertarian - Libertarians
+- Neutral_green - Greens
+- neutral_Social - Socialist Democrats
+- Neutral_Communism - Communists
 
 <a id="nationalist"></a>
-### Националисты
+### Nationalist
 
-- Nat_Populism - Правые популисты
-- Nat_Fascism - Фашисты
-- Nat_Autocracy - Военная хунта
-- Monarchist - Абсолютные монархисты
+- Nat_Populism - Right Wing Popluists
+- Nat_Fascism - Fascists
+- Nat_Autocracy - Military Junta
+- Monarchist - Absolutist Monarchist
 
-_**КАК ЭТО СДЕЛАТЬ**_
+_**THE HOW TO**_
 
-Для начала нужно определить политическую партию в MD_subideology_parties_l_english.yml. Здесь в качестве примера используется Армения. Пожалуйста, сохраняйте тот же стиль оформления, меняя только conservatism на нужную идеологию.
+To start you need to define the political party in the MD_subideology_parties_l_english.yml. Here we are using Armenia as our example. Please keep the same stylization here, where you only replace conservatism with the given ideologies.
 
-Следующий шаг — реализовать иконки в `interface/MD_parties_icons.gfx`. Сначала нужно сохранить иконки партий в формате .dds в `gfx/texticons/parties_icons/{tag}` — именно там хранится изображение иконки. Затем переходите к `interface/MD_parties_icons.gfx` и реализуйте их по аналогии с тысячами других примеров spriteType.
+The next place is to implement the icons in `interface/MD_parties_icons.gfx`. You must first save your party icons in .dds format in `gfx/texticons/parties_icons/{tag}`. This is where the image of the icon is stored. You then move onto `interface/MD_parties_icons.gfx` and implement them following the thousands of other spriteType examples.
 
-Когда эта часть готова, переходим к реализации ключей локализации. Отсюда мы переходим к файлу `common/scripted_localisation/subideology_scripted_localisation.txt`. Нужно добавить три отдельных ключа локализации. Первый — {subideology}_L, это название партии вместе с её иконкой. Второй — {subideology}_L_desc, где хранится описание, и наконец {subideology}_L_icon, где хранится иконка.
+Once you have completed that portion it is now time to move on to the implementation of the localization keys. From here, we move to the file `common/scripted_localisation/subideology_scripted_localisation.txt`. There are three places you need to add for the individual localization keys. The first is {subideology}_L which is the party's title with its icon. The second is {subideology}_L_desc where the description is stored, and finally, {subideology}_L_icon where the icon is stored.
 
-Если вы правильно выполнили эти шаги, ваши партии теперь должны корректно отображаться в игре. Вы можете добавить к ним любые условия, если хотите динамики. Примеры такой динамической реализации через другие триггеры есть у ARM, SPR и FRA.
+If you have done these steps correctly your parties should now be correctly displayed in the game. You can give these any kind of conditional if you want dynamics. ARM, SPR, and FRA all have examples of doing this dynamically using other triggers.
 
-Новые политические лидеры немного сложнее и требуют больше деталей для корректной настройки в игре. Для начала нужно сохранить портреты в `gfx/leaders/{tag}` в формате .dds или .tga. После этого переходим к `common/scripted_effects/{tag}_political_leaders.txt`.
+New political leaders are a bit more complicated and require some more details to ensure they are correctly configured in-game. To begin, you must have stored your portraits in `gfx/leaders/{tag}` in .dds format or .tga format. Once that is complete we then move on to `common/scripted_effects/{tag}_political_leaders.txt`.
 
-Есть несколько моментов, которые нужно учитывать. В зависимости от идеологии лидера, нужно задать её, заменив set_Nat_Autocracy на set_{subideology}. Это относит лидера к нужной субидеологии, к которой принадлежит конкретный персонаж. Единственное, что нужно добавить, если лидер не должен быть доступен после определённого условия или даты — это
-`if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #пропустить, если 2017`. Эта строка определяет, будет ли лидер пропущен в следующий раз, когда он должен прийти к власти.
+There are some notes to keep track of. Depending on the ideology of the leader, you need to set it by replacing the set_Nat_Autocracy with set_{subideology}. This classifies it to the proper sub ideology that a specific character belongs to. The only thing that needs to be added if a leader shouldn't be available after a certain condition or date is
+`if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #skip if 2017`. This line determines whether the leader is skipped the next time the leader comes to power.
 
 ```
 if = { limit = { has_country_flag = set_Nat_Autocracy }
@@ -96,7 +96,7 @@ if = { limit = { has_country_flag = set_Nat_Autocracy }
 			}
 
 			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { Nat_Autocracy_leader = 1 } }
-			if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #пропустить, если 2017
+			if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #skip if 2017
 		}
 		if = { limit = { check_variable = { Nat_Autocracy_leader = 1 } NOT = { check_variable = { b = 1 } } }
 			add_to_variable = { Nat_Autocracy_leader = 1 }

@@ -3,15 +3,15 @@ title: Экономика
 description: "Экономические скриптовые эффекты"
 ---
 
-## Экономические эффекты MDC
+## MDC Economic Effects
 
-Все предоставленные скриптовые эффекты _автоматически_ создают для вас тултипы. **НЕ** локализуйте дополнительные тултипы.
+All scripted effects provided _automatically_ create tooltips for you. Do **NOT** localize additional tooltips.
 
 <a id="how-to-modify-treasury"></a>
-### Как изменить казну
+### How to Modify Treasury
 
 ```
-# - уменьшает казну
+# - reduces the treasury
 set_temp_variable = { treasury_change = -10.00 }
 modify_treasury_effect = yes
 
@@ -21,7 +21,7 @@ large_expenditure = yes
 ```
 
 <a id="other-economic-effects"></a>
-### Другие экономические эффекты
+### Other Economic Effects
 
 ```
 set_temp_variable = { debt_change = 0.1 }
@@ -44,18 +44,18 @@ modify_population_tax_rate_effect = yes
 ```
 
 ```
-# - Изменяет производительность на фиксированную величину
+# - Adjusting the productivity of a number as a flat value
 set_temp_variable = { temp_productivity_change = 0.025 }
 flat_productivity_change_effect = yes
 ```
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Руководство: дополнительные доходы / дополнительные расходы
+### Guide on How To-Do Additional Income/Additional Expenses
 
 ```
-Шаг 1: перейдите в common/scripted_effects/00_money_system.txt
-Шаг 2: найдите calculate_additional_income_rate
-Шаг 3: в этом разделе должна быть отмеченная секция Country Specific. Добавьте код туда.
+Step One: go to common/scripted_effects/00_money_system.txt
+Step Two: look for calculate_additional_income_rate
+Step Three: In that section there should be a noted one that says Country Specific. Throw it in there.
 if = {
   limit = { original_tag = TAG  }
   if = {
@@ -64,25 +64,25 @@ if = {
     add_to_variable = { additional_income_rate = whatever_gain }
   }
 }
-Шаг 4: перейдите в common/scripted_localization/money_scripted_localization.txt. Место внутри файла особого значения не имеет.
+Step Four: go to common/scripted_localization/money_scripted_localization.txt. It doesn't really matter where you put it in here.
 defined_text = {
     name = additional_income_summary_whatever
     text = {
         trigger = { has_idea = whatever }
-        localization_key = "whatever_TT" #задаёт для этой сводки текст "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
+        localization_key = "whatever_TT" #define this summary "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
     }
     text = {
         trigger = { NOT = { has_idea = whatever } }
         localization_key = ""
     }
 }
-Шаг 5: перейдите в MD_money_l_english.yml (localisation/english). Найдите ADDITIONAL_INCOME_REVENUES_TOOLTIP
-Затем в конце (или в любом другом месте внутри) добавьте [additional_income_summary_whatever]
-Шаг 6: вернитесь в исходный файл идеи — теперь сумма должна отображаться в модификаторах spirits
+Step Five: go to MD_money_l_english.yml (localisation/english). Look up ADDITIONAL_INCOME_REVENUES_TOOLTIP
+Then at the end or somewhere in it just put [additional_income_summary_whatever]
+Step Six: Go back to your original idea file this should show you the amount in the spirits modifiers
 
-**ПРИМЕЧАНИЕ** Отображение переменных не будет работать в этом разделе. Вам нужно создать отдельный тултип, явно описывающий нужное значение, либо добавить локализацию в _desc идеи.
+**NOTE** Variable displays will not work in this section. You will need to create seperate tooltip that states expclitly what you want or added the localization into the _desc of the idea.
 
-Сделайте это в модификаторах:
+Do this in the modifiers:
 
 modifiers = {
   custom_modifier_tooltip = whatever_TT
@@ -91,13 +91,13 @@ modifiers = {
 ```
 
 <a id="setremove-trade-agreement"></a>
-### Установить / удалить торговое соглашение
+### Set/Remove Trade Agreement
 
-Создаёт или удаляет торговое соглашение
+Creates or removes a trade agreement
 
-- sender_nation --- страна, отправляющая соглашение
-- receiver_nation --- страна, получающая соглашение
-- remove_agreement --- необязательный параметр (установить в 1)
+- sender_nation --- The nation sending the agreement
+- receiver_nation --- Nation retrieving the agreement
+- remove_agreement --- Optional (Set to 1)
 
 ```
 set_temp_variable = { receiver_nation = RAJ.id }
@@ -107,13 +107,13 @@ set_improved_trade_agreement = yes
 ```
 
 <a id="setremove-permanent-investment-targets"></a>
-### Установить / удалить постоянные цели инвестиций
+### Set/Remove Permanent Investment Targets
 
-Добавляет или удаляет adding_nation из инвестиционного пула другой страны под управлением ИИ
+Creates or removes adding_nation to another AI's investment pool
 
-- target_nation --- страна, отправляющая соглашение
-- adding_nation --- страна, получающая соглашение
-- remove_nation --- необязательный параметр (установить в 1)
+- target_nation --- The nation sending the agreement
+- adding_nation --- Nation retrieving the agreement
+- remove_nation --- Optional (Set to 1)
 
 ```
 set_temp_variable = { target_nation = RAJ.id }
@@ -123,9 +123,9 @@ change_permanent_investment_target = yes
 ```
 
 <a id="increasedecrease-economic-growth"></a>
-### Увеличить / уменьшить экономический рост
+### Increase/Decrease Economic Growth
 
-Увеличивает или уменьшает текущий экономический цикл страны
+Increases or decreases the nation's current economic cycle
 
 ```
 increase_economic_growth = yes
@@ -141,9 +141,9 @@ economic_boom = yes
 ```
 
 <a id="increasedecrease-bureaucracy-law"></a>
-### Увеличить / уменьшить закон о расходах на бюрократию
+### Increase/Decrease Bureaucracy Law
 
-Увеличивает или уменьшает текущий закон страны о расходах на бюрократию
+Increases or decreases the nation's current Bureaucracy Spending Law
 
 ```
 decrease_centralization = yes
@@ -156,9 +156,9 @@ increase_centralization_4 = yes
 ```
 
 <a id="increasedecrease-social-spending"></a>
-### Увеличить / уменьшить социальные расходы
+### Increase/Decrease Social Spending
 
-Увеличивает или уменьшает текущий закон страны о социальных расходах
+Increase or decreases the nation's current Social Spending Law
 
 ```
 increase_social_spending = yes
@@ -171,9 +171,9 @@ max_social_spending = yes
 ```
 
 <a id="increasedecrease-education-spending"></a>
-### Увеличить / уменьшить расходы на образование
+### Increase/Decrease Education Spending
 
-Увеличивает или уменьшает текущий закон страны о расходах на образование
+Increase or decreases the nation's current Education Spending Law
 
 ```
 increase_education_budget = yes
@@ -186,9 +186,9 @@ max_education_budget = yes
 ```
 
 <a id="increasedecrease-health-spending"></a>
-### Увеличить / уменьшить расходы на здравоохранение
+### Increase/Decrease Health Spending
 
-Увеличивает или уменьшает текущий закон страны о расходах на здравоохранение
+Increase or decreases the nation's current Education Spending Law
 
 ```
 increase_healthcare_budget = yes
@@ -201,9 +201,9 @@ max_healthcare_budget = yes
 ```
 
 <a id="increasedecrease-police-spending"></a>
-### Увеличить / уменьшить расходы на полицию
+### Increase/Decrease Police Spending
 
-Увеличивает или уменьшает текущий закон страны о расходах на полицию
+Increase or decreases the nation's current Police Spending Law
 
 ```
 increase_policing_budget = yes
@@ -215,9 +215,9 @@ decrease_policing_budget_2 = yes
 ```
 
 <a id="increasedecrease-trade-law"></a>
-### Увеличить / уменьшить торговый закон
+### Increase/Decrease Trade Law
 
-Следующие эффекты используются для увеличения и уменьшения «Торгового закона» вашей страны:
+The following are for increasing and decreasing the "Trade Law" of your nation:
 
 ```
 increase_exports = yes
@@ -227,21 +227,21 @@ set_exports_to_max = yes
 ```
 
 <a id="increasedecrease-military-spending-law"></a>
-### Увеличить / уменьшить закон о военных расходах
+### Increase/Decrease Military Spending Law
 
-Следующие эффекты используются для увеличения закона о военных расходах.
+The following are for increasing your military spending law.
 
 ```
 increase_military_spending = yes
 decrease_military_spending = yes
 decrease_military_spending_2 = yes
-sizeable_military_spending = yes # Устанавливает военные расходы на уровень "значительные"
+sizeable_military_spending = yes # Sets your military spending to sizeable
 ```
 
 <a id="increasedecrease-migration-law"></a>
-### Увеличить / уменьшить закон о миграции
+### Increase/Decrease Migration Law
 
-Следующие эффекты используются для увеличения и уменьшения законов о миграции и пограничном регулировании.
+The following are for increasing and decreasing your Migration and Border Regulations laws
 
 ```
 increase_migration_law = yes

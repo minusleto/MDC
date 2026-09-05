@@ -3,42 +3,42 @@ title: Внутренние фракции
 description: "Эффекты и команды внутренних фракций"
 ---
 
-## Эффекты внутренних фракций MDC
+## MDC Internal Faction Effects
 
 <a id="internal-factions-code-snippet"></a>
-### Фрагмент кода внутренних фракций
+### Internal Factions Code Snippet
 
 ```
 set_temp_variable = { temp_opinion = 5 }
 change_small_medium_business_owners_opinion = yes
 
-Если вы хотите улучшить отношение industrial_conglomerates.
+If you want industrial_conglomerates opinion to be improved.
 
 set_temp_variable = { temp_opinion = 5 }
 change_industrial_conglomerates_opinion = yes
 ```
 
 <a id="internal-faction-breakdown"></a>
-### Разбор внутренних фракций
+### Internal Faction Breakdown
 
 ```
-# Список фракций по категориям
+# List of Factions sorted by category
 # ----------------------------------
-# Экономический тип: Small & Medium Business Owners, International Bankers, Fossil Fuel Industry
+# Economic Type: Small & Medium Business Owners, International Bankers, Fossil Fuel Industry
 # Industrial Conglomerates, Oligarchs
 #
-# Милитаристский: Maritime Industry, Military-Industrial Complex, The Military, Intelligence Community
+# Militaristic: Maritime Industry, Military-Industrial Complex, The Military, Intelligence Community
 #
-# Особые интересы: Labour Unions, Landowners, Farmers, Communist Cadres
+# Special Interest: Labour Unions, Landowners, Farmers, Communist Cadres
 #
-# Религиозные фракции: Wahhabi Ulema, The Ulema, The Clergy, The Priesthood
+# Religious Factions: Wahhabi Ulema, The Ulema, The Clergy, The Priesthood
 #
-# Специфичные для конкретной страны: The Donju, The Bazaar, Saudi Royal Family, IRGC, Iranian Quds Force,
+# Nation Specific: The Donju, The Bazaar, Saudi Royal Family, IRGC, Iranian Quds Force,
 # Foreign Jihadis, VEVAK, Chaebols, Wall Street, ISI Pakistan
 ```
 
 <a id="available-faction-commands"></a>
-### Доступные команды фракций
+### Available Faction Commands
 
 - change_small_medium_business_owners_opinion
 - change_industrial_conglomerates_opinion
@@ -57,15 +57,15 @@ change_industrial_conglomerates_opinion = yes
 - change_the_wahabi_ulema_opinion
 - change_the_military_opinion
 - change_intelligence_community_opinion
-- change_isi_pakistan_opinion -- уникальная разведка Пакистана
-- change_vevak_opinion -- уникальная разведка Ирана
-- change_the_bazaar_opinion -- уникальные малые/средние предприниматели Ирана
-- change_the_donju_opinion -- олигархи Северной Кореи
-- change_saudi_royal_family_opinion -- уникальная фракция для стран Персидского залива
-- change_foreign_jihadis_opinion -- уникальная фракция для фашистских государств (например, «Аш-Шабаб»)
-- change_irgc_opinion -- уникальная фракция для Ирана
-- change_iranian_quds_force_opinion -- уникальная фракция для иранских прокси-государств
-- change_chaebols_opinion -- уникальные южнокорейские олигархи (чеболи)
-- change_wall_street_opinion -- уникальные американские международные банкиры
+- change_isi_pakistan_opinion -- Pakistani Unique Intelligence Community
+- change_vevak_opinion -- Iranian Unique Intelligence Community
+- change_the_bazaar_opinion -- Iranian Unique Small Medium Business Owners
+- change_the_donju_opinion -- North Korean Oligarchs
+- change_saudi_royal_family_opinion -- Unique Faction for Gulf States
+- change_foreign_jihadis_opinion -- Unique Faction for Fascist States (Al-Shabaab i.e.)
+- change_irgc_opinion -- Unique Faction for Iran
+- change_iranian_quds_force_opinion -- Unique Faction for Iranian Proxy States
+- change_chaebols_opinion -- Unique South Korean oligarchs
+- change_wall_street_opinion -- Unique American International Bankers
 
 <a id="mdc-influence-effects"></a>

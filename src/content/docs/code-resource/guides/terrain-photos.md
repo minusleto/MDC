@@ -3,18 +3,18 @@ title: Уникальные фотографии terrain
 description: "Добавление уникальных фотографий городов и провинций"
 ---
 
-## Гайд по уникальным фотографиям terrain
+## Unique Terrain Photos Guide
 
 <a id="step-one-create-a-suitable-image-size-put-it-in-a-folder"></a>
-### Шаг первый: подготовьте изображение нужного размера и поместите его в папку
+### Step One: Create a Suitable Image Size & Put it in a Folder
 
-Фотографии terrain должны быть размером 413x70px. Подобрав и подогнав изображение по размеру, сохраните его в формате DDS. Затем поместите фотографии в \mod\Millennium_Dawn\gfx\interface\terrain.
+Terrain photos need to be 413x70px in size. After selecting your image and sizing it, save the image as DDS. Then drop your photos in \mod\Millennium_Dawn\gfx\interface\terrain.
 
 <a id="step-two-edit-md_terrain_citiesgfx-code"></a>
-### Шаг второй: отредактируйте код MD_terrain_cities.gfx
+### Step Two: Edit MD_terrain_cities.gfx Code
 
-Путь к файлу: `Millennium_Dawn\gfx\interface\terrain`
-Далее нужно указать игре загрузить ваш новый .dds файл. Соответствующий код находится в файле MD_terrain_cities.gfx, в папке Millennium_Dawn\interface\MD_terrain_cities.gfx. Запись выглядит так:
+File Path: `Millennium_Dawn\gfx\interface\terrain`
+Then you need to tell the game to load your new .dds file. The code can be found in this file MD_terrain_cities.gfx found in this folder Millennium_Dawn\interface\MD_terrain_cities.gfx. The entry looks like this:
 
 ```
 spriteType = {
@@ -25,10 +25,10 @@ spriteType = {
 ```
 
 <a id="step-three-edit-countrystateviewgui-code"></a>
-### Шаг третий: отредактируйте код countrystateview.gui
+### Step Three: Edit countrystateview.gui Code
 
-Путь к файлу: `countrystateview.gui`
-Далее нужно создать запись в той же папке, в файле countrystateview.gui. Запись выглядит так:
+File Path: `countrystateview.gui`
+From there, you need to create an entry in the same folder in this file: countrystateview.gui. The entry looks like this
 
 ```
 iconType = {
@@ -39,23 +39,23 @@ iconType = {
 ```
 
 <a id="step-four-edit-01_province_modifiers-code"></a>
-### Шаг четвёртый: отредактируйте код 01_province_modifiers
+### Step Four: Edit 01_province_modifiers Code
 
-Путь к файлу: Millennium_Dawn\common\modifiers, файл 01_province_modifiers.txt
-После этого нужны ещё две вещи: 1. Добавить пустой модификатор (то, что будет «прикреплено» к вашей провинции). 2. Указать игре прикрепить этот модификатор к провинции при старте игры. Пустые модификаторы можно найти здесь:
+File Path: Millennium_Dawn\common\modifiers in this file: 01_province_modifiers.txt
+With all that done, you need two more things. 1. Add an empty modifier (the thing that will stick to your province) 2. Tell the game to attach your modifier to the province at game start. Empty modifiers can be found here:
 
 ```
 terrain_brussels = { }
 ```
 
 <a id="step-five-edit-00_startup_effectstxt-code"></a>
-### Шаг пятый: отредактируйте код 00_startup_effects.txt
+### Step Five: Edit 00_startup_effects.txt Code
 
-Этот этап самый трудоёмкий с точки зрения кода, поскольку он определяет, на каких точках карты появятся добавляемые вами фотографии terrain. Рекомендуется держать открытыми одновременно игру и редактор кода (например, Visual Studio Code) — на одном экране код, на другом запущена игра. Все ID регионов можно узнать через debug-режим или введя в консоли команду `Tdebug`.
+This phase is the most code intensive, because it adjusts which map points will have the terrain photos that you will add, it is advised to have the game and an editing tool (like Visual Studio Code) open, where one screen contains the code and the other runs the game. You can find all state ID's through debug mode, or typing `Tdebug` in the console command.
 
-Путь к файлу: `Millennium_Dawn\common\scripted_effects\00_startup_effects.txt`
-И наконец, чтобы это появлялось при старте игры, перейдите сюда: Millennium_Dawn\common\scripted_effects, файл 00_startup_effects.txt
-Вот запись для Брюсселя:
+File Path: `Millennium_Dawn\common\scripted_effects\00_startup_effects.txt`
+And finally to make it spawn at game start, go here: Millennium_Dawn\common\scripted_effects in this file: 00_startup_effects.txt
+You'll find this entry for Brussels:
 
 ```
 50 = {
@@ -70,6 +70,6 @@ terrain_brussels = { }
 }
 ```
 
-50 — это ID региона (state), того уровня, на котором вы размещаете авиабазы и подобное; 516 — это точный ID провинции внутри этого региона.
+50 is the state ID, the level at which you place airbases and stuff like that, 516 is the accurate province within that state.
 
-По всем дополнительным вопросам пишите в личные сообщения [@AngriestBird](https://gitlab.com/AngriestBird) в Discord.
+Any additional questions please DM [@AngriestBird](https://gitlab.com/AngriestBird) on Discord.

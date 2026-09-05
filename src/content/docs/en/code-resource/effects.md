@@ -1,9 +1,13 @@
 ---
-title: Scripted Effects
-description: "Effects/Scripted Effects — buildings, economy, factions, influence, politics, EU, counter-terror, cartels"
+title: Скриптовые эффекты
+description: "Effects/Scripted Effects — постройки, экономика, фракции, влияние, политика, ЕС, антитеррор, картели"
 ---
+:::caution[Translation in progress]
+This page is still in Russian — the English translation hasn't been done yet.
+:::
 
-All scripted effects automatically create tooltips — do **not** localize them manually as well.
+
+Все скриптовые эффекты автоматически создают тултипы — **не** локализуйте их вручную дополнительно.
 
 <a id="effectsscripted-effects"></a>
 ## Effects/Scripted Effects
