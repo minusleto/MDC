@@ -1,18 +1,16 @@
 ---
 title: Effects
-description: "MDC scripted effects grouped by purpose"
+description: "Reference for MDC scripted effects."
 ---
-
-# Effects
-
-Reference for MDC scripted effects.
 
 ## Sections
 
-- **[Construction](./construction/)** — buildings and construction.
-- **[Economy](./economy/)** — treasury, income, spending, trade, and growth.
-- **[Politics](./politics/)** — parties, popularity, and political changes.
-- **[Foreign Policy](./foreign-policy/)** — foreign influence and international mechanics.
-- **[Society](./society/)** — social systems and spending.
-
-Unique MDC mechanics are grouped under **[MDC Systems](../systems/)**.
+- [Buildings](./buildings/) — Building costs and scripted building effects
+- [Economy](./economy/) — Economic scripted effects
+- [Internal Factions](./internal-factions/) — Internal faction effects and commands
+- [Foreign Influence](./influence/) — Foreign Influence system effects
+- [Politics](./politics/) — Political effects and party management
+- [Counter-Terrorism](./counter-terror/) — Radicalization and terrorist threat effects
+- [Cartels](./cartels/) — Cartel system effects
+- [European Union](./european-union/) — EU and Euroscepticism effects
+- [Energy](./energy/) — Energy scripted effects

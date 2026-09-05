@@ -1,6 +1,6 @@
 ---
 title: Модификаторы влияния
-description: "Модификаторы иностранного влияния."
+description: ""
 ---
 
 ## Модификаторы влияния
@@ -9,11 +9,11 @@ description: "Модификаторы иностранного влияния."
 
 | Модификатор | Описание | Примечание |
 |---|---|---|
-| `foreign_influence_modifier` | Изменяет эффективность ваших действий влияния | Н/Д |
-| `foreign_influence_defense_modifier` | Снижает эффективность действий иностранного влияния в нашей стране | Н/Д |
-| `foreign_influence_auto_influence_cap_modifier` | Увеличивает количество доступных слотов авто-влияния страны | Н/Д |
-| `influence_coup_modifier` | Изменяет вероятность успеха переворота | Н/Д |
-| `foreign_influence_continent_modifier` | Изменяет эффективность иностранного влияния на других континентах | Этот модификатор является отрицательным. |
-| `foreign_influence_home_continent_modifier` | Изменяет эффективность иностранного влияния на наших родных континентах | Этот модификатор является отрицательным. |
-| `foreign_influence_monthly_domestic_independence_gain_modifier` | Увеличивает ежемесячный прирост внутренней независимости | Н/Д |
-| `foreign_influence_monthly_domestic_independence_gain_factor` | Изменяет эффективность иностранного влияния на других континентах | Увеличивает ежемесячный прирост внутренней независимости на этот коэффициент |
+| `foreign_influence_modifier` | Меняет эффективность действий влияния | Н/Д |
+| `foreign_influence_defense_modifier` | Снижает эффективность влияния на нас | Н/Д |
+| `foreign_influence_auto_influence_cap_modifier` | Увеличивает слоты авто-влияния | Н/Д |
+| `influence_coup_modifier` | Меняет вероятность успеха переворота | Н/Д |
+| `foreign_influence_continent_modifier` | Меняет эффективность влияния на других континентах | Модификатор отрицательный |
+| `foreign_influence_home_continent_modifier` | Меняет эффективность влияния на родных континентах | Модификатор отрицательный |
+| `foreign_influence_monthly_domestic_independence_gain_modifier` | Увеличивает ежемес. прирост независимости | Н/Д |
+| `foreign_influence_monthly_domestic_independence_gain_factor` | Коэффициент к приросту независимости | Н/Д |
