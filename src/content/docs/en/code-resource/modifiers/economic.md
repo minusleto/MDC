@@ -5,12 +5,12 @@ description: ""
 
 ## Economic Modifiers
 
-Влияют на экономику, налоги, торговлю и производительность.
+Affect the economy, taxes, trade and productivity.
 
 <a id="general-economic"></a>
 ### General Economic
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Modifies the country's interest rate | This is whole number ( i.e. -1 ) |
 | `personnel_cost_multiplier_modifier` | Modifies the country's military wages | N/A |
@@ -43,7 +43,7 @@ description: ""
 <a id="exports-resources"></a>
 ### Exports & Resources
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `resource_export_multiplier_modifier` | Modifies the amount of money gained from all Resource Exports | N/A |
 | `oil_export_multiplier_modifier` | Modifies the amount of money gained from Fossil Fuel Exports | N/A |
@@ -56,7 +56,7 @@ description: ""
 <a id="industry-productivity"></a>
 ### Industry Productivity
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `agricolture_productivity_modifier` | Modifier to increase/decrease the productivity generate from agriculture | N/A |
 | `civilian_factories_productivity` | Modifier to increase/decrease the productivity generate from civilian factories | N/A |
@@ -67,7 +67,7 @@ description: ""
 <a id="industry-income-taxes"></a>
 ### Industry Income Taxes
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `office_park_income_tax_modifier` | Modifies the amount of money gained from Office Parks | N/A |
 | `agriculture_district_income_tax_modifier` | Modifies the amount of money gained from Commercialized Agriculture Districts | N/A |
@@ -79,7 +79,7 @@ description: ""
 <a id="campaign-costs"></a>
 ### Campaign Costs
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `salafist_outlook_campaign_cost_modifier` | Modifies the Salafi Indoctrination campaign decision monetary cost | N/A |
 | `nonaligned_outlook_campaign_cost_modifier` | Modifies the Non-Aligned campaign decision monetary cost | N/A |
@@ -91,7 +91,7 @@ description: ""
 <a id="investment-modifiers"></a>
 ### Investment Modifiers
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `investment_duration_modifier` | Modifies the duration of an outgoing International Investment project | N/A |
 | `receiving_investment_duration_modifier` | Modifies the duration of incoming International Investment projects | N/A |
@@ -103,7 +103,7 @@ description: ""
 <a id="workforce-labor"></a>
 ### Workforce & Labor
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `total_workforce_modifier` | Modifier to increase/decrease the amount of your workforce for buildings | N/A |
 | `high_unemployment_threshold_modifier` | Modifier to increase/decrease the limit before you suffer penalties from high unemployment | N/A |
@@ -114,7 +114,7 @@ description: ""
 <a id="upgrade-special-costs"></a>
 ### Upgrade & Special Costs
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Modifies the economic cycle upgrade cost | N/A |
 

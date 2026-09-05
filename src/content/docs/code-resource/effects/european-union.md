@@ -3,12 +3,12 @@ title: Европейский союз
 description: "Эффекты Евросоюза и евроскептицизма"
 ---
 
-## MDC European Union Effects
+## Эффекты Европейского союза MDC
 
 <a id="euroscepticism-effects"></a>
-### Euroscepticism Effects
+### Эффекты евроскептицизма
 
-To add/remove Euroscepticism all you need to do is:
+Чтобы добавить/убрать евроскептицизм, достаточно:
 
 ```
 set_temp_variable = { modify_eurosceptic = 0.05 }
@@ -16,22 +16,22 @@ set_temp_variable = { modify_eurosceptic_target = THIS }
 eurosceptic_change = yes
 ```
 
-"THIS" can use any of the following:
+Вместо "THIS" можно использовать любое из следующего:
 
 - THIS
 - ROOT
 - PREV
 - FROM
-- Any country tag (such as GER)
+- Любой тег страны (например, GER)
 
-For this effect to occur in _all_ current EU states:
+Чтобы этот эффект применился ко _всем_ текущим странам ЕС:
 
 ```
 set_temp_variable = { modify_eurosceptic = -0.05 }
 EU_eurosceptic_change = yes
 ```
 
-And finally, for this effect to occur in _current_ and _potential_ EU member states:
+И наконец, чтобы эффект применился к _текущим_ и _потенциальным_ членам ЕС:
 
 ```
 set_temp_variable = { modify_eurosceptic = -0.05 }

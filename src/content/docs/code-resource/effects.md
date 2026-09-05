@@ -83,58 +83,58 @@ modify_treasury_effect = yes
 #### Гражданская фабрика
 
 ```
-one_random_industrial_complex = yes #add 1 civ with slot and cost
-two_random_industrial_complex = yes #add 2 civs with slots and cost
-three_random_industrial_complex = yes #add 3 civs (2 in 1st random state and 3rd in another one) with slots and cost
-four_random_industrial_complex = yes #add 4 civs (2 in 1st random state and 2 in another one) with slots and cost
+one_random_industrial_complex = yes #добавляет 1 гражданскую фабрику со слотом и стоимостью
+two_random_industrial_complex = yes #добавляет 2 гражданские фабрики со слотами и стоимостью
+three_random_industrial_complex = yes #добавляет 3 гражданские фабрики (2 в одном случайном регионе, 3-я — в другом) со слотами и стоимостью
+four_random_industrial_complex = yes #добавляет 4 гражданские фабрики (2 в одном случайном регионе, 2 — в другом) со слотами и стоимостью
 
-~~State Scope~~
-one_state_industrial_complex = yes #add 1 civ with slot and cost in a predefined state
-two_state_industrial_complex = yes #add 2 civs with slot and cost in a predefined state
-three_state_industrial_complex = yes #add 3 civs with slot and cost in a predefined state
-four_state_industrial_complex = yes #add 4 civs with slot and cost in a predefined state
+~~Уровень региона~~
+one_state_industrial_complex = yes #добавляет 1 гражданскую фабрику со слотом и стоимостью в заданный регион
+two_state_industrial_complex = yes #добавляет 2 гражданские фабрики со слотом и стоимостью в заданный регион
+three_state_industrial_complex = yes #добавляет 3 гражданские фабрики со слотом и стоимостью в заданный регион
+four_state_industrial_complex = yes #добавляет 4 гражданские фабрики со слотом и стоимостью в заданный регион
 ```
 
 <a id="military-factory"></a>
 #### Военная фабрика
 
 ```
-one_random_arms_factory = yes #add 1 military factory with slot and cost
-two_random_arms_factory = yes #add 2 military factories with slots and cost
-three_random_arms_factory = yes #add 3 military factories (2 in 1st random state and 3rd in another one) with slots and cost
-four_random_arms_factory = yes #add 4 military factories (2 in 1st random state and 2 in another one) with slots and cost
+one_random_arms_factory = yes #добавляет 1 военную фабрику со слотом и стоимостью
+two_random_arms_factory = yes #добавляет 2 военные фабрики со слотами и стоимостью
+three_random_arms_factory = yes #добавляет 3 военные фабрики (2 в одном случайном регионе, 3-я — в другом) со слотами и стоимостью
+four_random_arms_factory = yes #добавляет 4 военные фабрики (2 в одном случайном регионе, 2 — в другом) со слотами и стоимостью
 
-~~State Scope~~
-one_state_arms_factory = yes #add 1 military factory with slot and cost in a predefined state
-two_state_arms_factory = yes #add 2 military factories with slot and cost in a predefined state
-three_state_arms_factory = yes #add 3 military factories with slot and cost in a predefined state
-four_state_arms_factory = yes #add 4 military factories with slot and cost in a predefined state
+~~Уровень региона~~
+one_state_arms_factory = yes #добавляет 1 военную фабрику со слотом и стоимостью в заданный регион
+two_state_arms_factory = yes #добавляет 2 военные фабрики со слотом и стоимостью в заданный регион
+three_state_arms_factory = yes #добавляет 3 военные фабрики со слотом и стоимостью в заданный регион
+four_state_arms_factory = yes #добавляет 4 военные фабрики со слотом и стоимостью в заданный регион
 ```
 
 <a id="infrastructure"></a>
 #### Инфраструктура
 
 ```
-one_random_infrastructure = yes #add 1 infrastructure with cost
-two_random_infrastructure = yes #add 2 infrastructure in 2 random states with cost
-three_random_infrastructure = yes #add 3 infrastructure in 3 random states with cost
+one_random_infrastructure = yes #добавляет 1 инфраструктуру со стоимостью
+two_random_infrastructure = yes #добавляет 2 инфраструктуры в 2 случайных регионах со стоимостью
+three_random_infrastructure = yes #добавляет 3 инфраструктуры в 3 случайных регионах со стоимостью
 
-~~State Scope~~
-one_state_infrastructure = yes #add 1 infrastructure with cost in a predefined state
-two_state_infrastructure = yes #add 2 infrastructure with cost in a predefined state
-three_state_infrastructure = yes #add 3 infrastructure with cost in a predefined state
+~~Уровень региона~~
+one_state_infrastructure = yes #добавляет 1 инфраструктуру со стоимостью в заданный регион
+two_state_infrastructure = yes #добавляет 2 инфраструктуры со стоимостью в заданный регион
+three_state_infrastructure = yes #добавляет 3 инфраструктуры со стоимостью в заданный регион
 ```
 
 <a id="dockyards"></a>
 #### Верфьs
 
 ```
-one_random_dockyard = yes #add 1 dockyard with slot and cost
-two_random_dockyards = yes #add 2 dockyards with slots and cost
+one_random_dockyard = yes #добавляет 1 верфь со слотом и стоимостью
+two_random_dockyards = yes #добавляет 2 верфи со слотами и стоимостью
 
-~~State Scope~~
-one_state_dockyard = yes #add 1 dockyard with slot and cost in a predefined state
-two_state_dockyard = yes #add 2 dockyards with slot and cost in a predefined state
+~~Уровень региона~~
+one_state_dockyard = yes #добавляет 1 верфь со слотом и стоимостью в заданный регион
+two_state_dockyard = yes #добавляет 2 верфи со слотом и стоимостью в заданный регион
 ```
 
 <a id="offices"></a>
@@ -143,98 +143,98 @@ two_state_dockyard = yes #add 2 dockyards with slot and cost in a predefined sta
 Следующие эффекты также дают электростанцию на ископаемом топливе.
 
 ```
-one_office_construction = yes #add 1 office construction with slot and cost
-two_office_construction = yes #add 2 office constructions with slots and cost
-three_office_construction = yes #add 3 office constructions (2 in 1st random state and 3rd in another one state) with slots and cost
+one_office_construction = yes #добавляет 1 офисный комплекс со слотом и стоимостью
+two_office_construction = yes #добавляет 2 офисных комплекса со слотами и стоимостью
+three_office_construction = yes #добавляет 3 офисных комплекса (2 в одном случайном регионе, 3-й — в другом) со слотами и стоимостью
 
-~~State Scope~~
-one_state_office_construction = yes #add 1 office construction with slot and cost in a predefined state
-two_state_office_construction = yes #add 2 office constructions with slots and cost in a predefined state
-three_state_office_construction = yes #add 3 office constructions with slots and cost in a predefined state
+~~Уровень региона~~
+one_state_office_construction = yes #добавляет 1 офисный комплекс со слотом и стоимостью в заданный регион
+two_state_office_construction = yes #добавляет 2 офисных комплекса со слотами и стоимостью в заданный регион
+three_state_office_construction = yes #добавляет 3 офисных комплекса со слотами и стоимостью в заданный регион
 ```
 
 <a id="commercialized-agriculture-district"></a>
 #### Коммерческий сельскохозяйственный район
 
 ```
-one_random_agriculture_district = yes #add 1 agriculture district construction with slot and cost
+one_random_agriculture_district = yes #добавляет 1 сельскохозяйственный район со слотом и стоимостью
 
-~~State Scope~~
-one_state_agriculture_district = yes #add 1 agriculture district construction with slot and cost in a predefined state
+~~Уровень региона~~
+one_state_agriculture_district = yes #добавляет 1 сельскохозяйственный район со слотом и стоимостью в заданный регион
 ```
 
 <a id="air-bases-air_base"></a>
 #### Авиабазы (air_base)
 
 ```
-one_air_base = yes #add 1 air base with cost
-two_air_base = yes #add 2 air bases in various states with cost
+one_air_base = yes #добавляет 1 авиабазу со стоимостью
+two_air_base = yes #добавляет 2 авиабазы в разных регионах со стоимостью
 
-~~State Scope~~
-one_state_air_base = yes #add 1 air base with cost in a predefined state
-two_state_air_base = yes #add 2 air bases with cost in a predefined state
+~~Уровень региона~~
+one_state_air_base = yes #добавляет 1 авиабазу со стоимостью в заданный регион
+two_state_air_base = yes #добавляет 2 авиабазы со стоимостью в заданный регион
 ```
 
 <a id="network-infrastructure-internet_station"></a>
 #### Сетевая инфраструктура (internet_station)
 
 ```
-one_random_network_infrastructure = yes #add 1 network infrastructure with cost
-two_random_network_infrastructure = yes #add 2 network infrastructure in various states with cost
+one_random_network_infrastructure = yes #добавляет 1 сетевую инфраструктуру со стоимостью
+two_random_network_infrastructure = yes #добавляет 2 сетевые инфраструктуры в разных регионах со стоимостью
 
-~~State Scope~~
-one_state_network_infrastructure = yes #add 1 network infrastructure with cost in a predefined state
-two_state_network_infrastructure = yes #add 2 network infrastructure with cost in a predefined state
+~~Уровень региона~~
+one_state_network_infrastructure = yes #добавляет 1 сетевую инфраструктуру со стоимостью в заданный регион
+two_state_network_infrastructure = yes #добавляет 2 сетевые инфраструктуры со стоимостью в заданный регион
 ```
 
 <a id="anti-air-sam-site-anti_air_building"></a>
 #### ПВО | ЗРК (anti_air_building)
 
 ```
-one_anti_air = yes #add 1 anti air with cost
-two_anti_air = yes #add 2 anti airs in various states with cost
+one_anti_air = yes #добавляет 1 ПВО со стоимостью
+two_anti_air = yes #добавляет 2 ПВО в разных регионах со стоимостью
 
-~~State Scope~~
-one_state_anti_air = yes #add 1 anti air with cost in a predefined state
-two_state_anti_air = yes #add 2 anti airs with cost in a predefined state
+~~Уровень региона~~
+one_state_anti_air = yes #добавляет 1 ПВО со стоимостью в заданный регион
+two_state_anti_air = yes #добавляет 2 ПВО со стоимостью в заданный регион
 ```
 
 <a id="radar-station-radar_station"></a>
 #### Радарная станция (radar_station)
 
 ```
-one_radar_station = yes #add 1 radar station with cost
-two_radar_station = yes #add 2 radar stations in various states with cost
+one_radar_station = yes #добавляет 1 радарную станцию со стоимостью
+two_radar_station = yes #добавляет 2 радарные станции в разных регионах со стоимостью
 
-~~State Scope~~
-one_state_radar_station = yes #add 1 radar station with cost in a predefined state
-two_state_radar_station = yes #add 2 radar stations with cost in a predefined state
+~~Уровень региона~~
+one_state_radar_station = yes #добавляет 1 радарную станцию со стоимостью в заданный регион
+two_state_radar_station = yes #добавляет 2 радарные станции со стоимостью в заданный регион
 ```
 
 <a id="synthetic-refinery-synthetic_refinery"></a>
 #### Синтетический НПЗ (synthetic_refinery)
 
 ```
-one_random_synthetic_refinery = yes #add 1 Synthetic refinery with slot and cost
-two_random_synthetic_refinery = yes #add 2 Synthetic refineries in various states with slots and cost
-three_random_synthetic_refinery = yes #add 3 Synthetic refineries in various states with slots and cost
+one_random_synthetic_refinery = yes #добавляет 1 синтетический НПЗ со слотом и стоимостью
+two_random_synthetic_refinery = yes #добавляет 2 синтетических НПЗ в разных регионах со слотами и стоимостью
+three_random_synthetic_refinery = yes #добавляет 3 синтетических НПЗ в разных регионах со слотами и стоимостью
 
-~~State Scope~~
-one_state_synthetic_refinery = yes #add 1 Synthetic refinery with slot and cost in a predefined state
-two_state_synthetic_refinery = yes #add 2 Synthetic refineries with slot and cost in a predefined state
-three_state_synthetic_refinery = yes #add 3 Synthetic refineries with slot and cost in a predefined state
+~~Уровень региона~~
+one_state_synthetic_refinery = yes #добавляет 1 синтетический НПЗ со слотом и стоимостью в заданный регион
+two_state_synthetic_refinery = yes #добавляет 2 синтетических НПЗ со слотом и стоимостью в заданный регион
+three_state_synthetic_refinery = yes #добавляет 3 синтетических НПЗ со слотом и стоимостью в заданный регион
 ```
 
 <a id="other-buildings"></a>
 #### Другие постройки
 
 ```
-one_random_nuclear_reactor = yes #add 1 nuclear reactor with slot and cost
-two_random_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost
+one_random_nuclear_reactor = yes #добавляет 1 ядерный реактор со слотом и стоимостью
+two_random_nuclear_reactor = yes #добавляет 2 ядерных реактора со слотом и стоимостью
 
-~~State Scope~~
-one_state_nuclear_reactor = yes #add 1 nuclear reactor with slot and cost in a predefined state
-two_state_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost in a predefined state
+~~Уровень региона~~
+one_state_nuclear_reactor = yes #добавляет 1 ядерный реактор со слотом и стоимостью в заданный регион
+two_state_nuclear_reactor = yes #добавляет 2 ядерных реактора со слотом и стоимостью в заданный регион
 ```
 
 <a id="mdc-economic-effects"></a>
@@ -246,7 +246,7 @@ two_state_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost in a 
 #### Как изменить казну
 
 ```
-# - reduces the treasury
+# - уменьшает казну
 set_temp_variable = { treasury_change = -10.00 }
 modify_treasury_effect = yes
 
@@ -279,7 +279,7 @@ modify_population_tax_rate_effect = yes
 ```
 
 ```
-# - Adjusting the productivity of a number as a flat value
+# - Изменяет производительность на фиксированную величину
 set_temp_variable = { temp_productivity_change = 0.025 }
 flat_productivity_change_effect = yes
 ```
@@ -288,9 +288,9 @@ flat_productivity_change_effect = yes
 #### Руководство: дополнительные доходы / дополнительные расходы
 
 ```
-Step One: go to common/scripted_effects/00_money_system.txt
-Step Two: look for calculate_additional_income_rate
-Step Three: In that section there should be a noted one that says Country Specific. Throw it in there.
+Шаг 1: перейдите в common/scripted_effects/00_money_system.txt
+Шаг 2: найдите calculate_additional_income_rate
+Шаг 3: в этом разделе должна быть отмеченная секция Country Specific. Добавьте код туда.
 if = {
   limit = { original_tag = TAG  }
   if = {
@@ -299,25 +299,25 @@ if = {
     add_to_variable = { additional_income_rate = whatever_gain }
   }
 }
-Step Four: go to common/scripted_localization/money_scripted_localization.txt. It doesn't really matter where you put it in here.
+Шаг 4: перейдите в common/scripted_localization/money_scripted_localization.txt. Место внутри файла особого значения не имеет.
 defined_text = {
     name = additional_income_summary_whatever
     text = {
         trigger = { has_idea = whatever }
-        localization_key = "whatever_TT" #define this summary "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
+        localization_key = "whatever_TT" #задаёт для этой сводки текст "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
     }
     text = {
         trigger = { NOT = { has_idea = whatever } }
         localization_key = ""
     }
 }
-Step Five: go to MD_money_l_english.yml (localisation/english). Look up ADDITIONAL_INCOME_REVENUES_TOOLTIP
-Then at the end or somewhere in it just put [additional_income_summary_whatever]
-Step Six: Go back to your original idea file this should show you the amount in the spirits modifiers
+Шаг 5: перейдите в MD_money_l_english.yml (localisation/english). Найдите ADDITIONAL_INCOME_REVENUES_TOOLTIP
+Затем в конце (или в любом другом месте внутри) добавьте [additional_income_summary_whatever]
+Шаг 6: вернитесь в исходный файл идеи — теперь сумма должна отображаться в модификаторах spirits
 
-**NOTE** Variable displays will not work in this section. You will need to create seperate tooltip that states expclitly what you want or added the localization into the _desc of the idea.
+**ПРИМЕЧАНИЕ** Отображение переменных не будет работать в этом разделе. Вам нужно создать отдельный тултип, явно описывающий нужное значение, либо добавить локализацию в _desc идеи.
 
-Do this in the modifiers:
+Сделайте это в модификаторах:
 
 modifiers = {
   custom_modifier_tooltip = whatever_TT
@@ -470,7 +470,7 @@ set_exports_to_max = yes
 increase_military_spending = yes
 decrease_military_spending = yes
 decrease_military_spending_2 = yes
-sizeable_military_spending = yes # Sets your military spending to sizeable
+sizeable_military_spending = yes # Устанавливает военные расходы на уровень "значительные"
 ```
 
 <a id="increasedecrease-migration-law"></a>
@@ -493,7 +493,7 @@ decrease_migration_law = yes
 set_temp_variable = { temp_opinion = 5 }
 change_small_medium_business_owners_opinion = yes
 
-If you want industrial_conglomerates opinion to be improved.
+Если вы хотите улучшить отношение industrial_conglomerates.
 
 set_temp_variable = { temp_opinion = 5 }
 change_industrial_conglomerates_opinion = yes
@@ -503,18 +503,18 @@ change_industrial_conglomerates_opinion = yes
 #### Разбор внутренних фракций
 
 ```
-# List of Factions sorted by category
+# Список фракций по категориям
 # ----------------------------------
-# Economic Type: Small & Medium Business Owners, International Bankers, Fossil Fuel Industry
+# Экономический тип: Small & Medium Business Owners, International Bankers, Fossil Fuel Industry
 # Industrial Conglomerates, Oligarchs
 #
-# Militaristic: Maritime Industry, Military-Industrial Complex, The Military, Intelligence Community
+# Милитаристский: Maritime Industry, Military-Industrial Complex, The Military, Intelligence Community
 #
-# Special Interest: Labour Unions, Landowners, Farmers, Communist Cadres
+# Особые интересы: Labour Unions, Landowners, Farmers, Communist Cadres
 #
-# Religious Factions: Wahhabi Ulema, The Ulema, The Clergy, The Priesthood
+# Религиозные фракции: Wahhabi Ulema, The Ulema, The Clergy, The Priesthood
 #
-# Nation Specific: The Donju, The Bazaar, Saudi Royal Family, IRGC, Iranian Quds Force,
+# Специфичные для конкретной страны: The Donju, The Bazaar, Saudi Royal Family, IRGC, Iranian Quds Force,
 # Foreign Jihadis, VEVAK, Chaebols, Wall Street, ISI Pakistan
 ```
 
@@ -538,16 +538,16 @@ change_industrial_conglomerates_opinion = yes
 - change_the_wahabi_ulema_opinion
 - change_the_military_opinion
 - change_intelligence_community_opinion
-- change_isi_pakistan_opinion -- Pakistani Unique Intelligence Community
-- change_vevak_opinion -- Iranian Unique Intelligence Community
-- change_the_bazaar_opinion -- Iranian Unique Small Medium Business Owners
-- change_the_donju_opinion -- North Korean Олигархи
-- change_saudi_royal_family_opinion -- Unique Faction for Gulf States
-- change_foreign_jihadis_opinion -- Unique Faction for Fascist States (Al-Shabaab например,)
-- change_irgc_opinion -- Unique Faction for Iran
-- change_iranian_quds_force_opinion -- Unique Faction for Iranian Proxy States
-- change_chaebols_opinion -- Unique South Korean oligarchs
-- change_wall_street_opinion -- Unique American International Bankers
+- change_isi_pakistan_opinion -- уникальная разведка Пакистана
+- change_vevak_opinion -- уникальная разведка Ирана
+- change_the_bazaar_opinion -- уникальные малые/средние предприниматели Ирана
+- change_the_donju_opinion -- олигархи Северной Кореи
+- change_saudi_royal_family_opinion -- уникальная фракция для стран Персидского залива
+- change_foreign_jihadis_opinion -- уникальная фракция для фашистских государств (например, «Аш-Шабаб»)
+- change_irgc_opinion -- уникальная фракция для Ирана
+- change_iranian_quds_force_opinion -- уникальная фракция для иранских прокси-государств
+- change_chaebols_opinion -- уникальные южнокорейские олигархи (чеболи)
+- change_wall_street_opinion -- уникальные американские международные банкиры
 
 <a id="mdc-influence-effects"></a>
 ### Эффекты влияния MDC
@@ -582,7 +582,7 @@ change_current_influencer_index_percentage = yes
 # set_temp_variable = { percent_change = -+ x }
 # set_temp_variable = { tag_index = SCOPE }
 # set_temp_variable = { influence_target = SCOPE }
-# Supported Scope: FROM, ROOT, PREV, TAG
+# Поддерживаемые скоупы: FROM, ROOT, PREV, TAG
 change_influence_percentage = yes
 ```
 
@@ -593,7 +593,7 @@ change_influence_percentage = yes
 #### Фрагмент кода для добавления популярности партии субидеологиям
 
 - set_temp_variable = { party_index = X } # Индекс изменяемой партии, 0–23
-- set_party_index_to_ruling_party = yes -- automatically sets index to ruling party
+- set_party_index_to_ruling_party = yes -- автоматически устанавливает индекс правящей партии
 - set_temp_variable = { party_popularity_increase = Y } # Насколько изменяется популярность партии; значение задаётся десятичной дробью, поэтому 2% = 0.02
 - set_temp_variable = { temp_outlook_increase = Z } # НЕОБЯЗАТЕЛЬНЫЙ ПАРАМЕТР -- значение задаётся десятичной дробью, поэтому 2% = 0.02
 - add_relative_party_popularity = yes
@@ -601,7 +601,7 @@ change_influence_percentage = yes
 ```
 set_temp_variable = { party_index = 2 }
 set_temp_variable = { party_popularity_increase = 0.10 }
-set_temp_variable = { temp_outlook_increase = 0.10 } -- OPTIONAL
+set_temp_variable = { temp_outlook_increase = 0.10 } -- НЕОБЯЗАТЕЛЬНО
 add_relative_party_popularity = yes
 ```
 
@@ -638,11 +638,11 @@ _**Установить правящую партию через эффект**_
 
 ```
 # set_temp_variable = { rul_party_temp = 0-23 }
-# set_temp_variable = { col_one = 0 - 23 }  -- Optional: This sets the first coalition member
-# set_temp_variable = { col_two = 0 - 23 }  -- Optional: This sets the second coalition member
-# set_temp_variable = { col_three = 0 - 23 }  -- Optional: This sets the third coalition member
-# set_temp_variable = { change_leader_temp = 0-1 } -- Optional: If you do not want to change the ruling leader then set this value to 1
-# It's imperative you put the set_politics second! Else it doesn't properly update the set_party_name
+# set_temp_variable = { col_one = 0 - 23 }  -- Необязательно: задаёт первого участника коалиции
+# set_temp_variable = { col_two = 0 - 23 }  -- Необязательно: задаёт второго участника коалиции
+# set_temp_variable = { col_three = 0 - 23 }  -- Необязательно: задаёт третьего участника коалиции
+# set_temp_variable = { change_leader_temp = 0-1 } -- Необязательно: если вы не хотите менять правящего лидера, задайте это значение = 1
+# Обязательно поставьте set_politics вторым! Иначе set_party_name не обновится корректно
 
 set_temp_variable = { rul_party_temp = 20 }
 change_ruling_party_effect = yes

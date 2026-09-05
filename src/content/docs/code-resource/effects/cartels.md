@@ -3,10 +3,10 @@ title: Картели
 description: "Эффекты системы картелей"
 ---
 
-## MDC Cartel Related Effects
+## Эффекты, связанные с картелями MDC
 
 modify_cartel_variables_effect
-Purpose: Handles the macro for needing to change any cartel strength or cartel political influence
+Назначение: обрабатывает макрос для изменения силы картеля или его политического влияния
 set_temp_variable = { cart_strength_change = +- x }
 set_temp_variable = { cart_influence_change = +- x }
 
