@@ -26,7 +26,6 @@ description: ""
 | `conversion_cost_mil_to_civ_factor` | Меняет цену конверсии военных фабрик в гражданские | Н/Д |
 | `production_oil_factor` | Меняет прирост синтетической нефти | Н/Д |
 | `nuclear_production_factor` | Меняет скорость производства ядерного оружия | Н/Д |
-| `surrender_limit` | Меняет % столиц/ВП, которые нужно потерять для капитуляции | Н/Д |
 
 <a id="general-economic"></a>
 ### Общие экономические
@@ -54,6 +53,20 @@ description: ""
 | `country_productivity_growth_modifier` | То же самое, на уровне страны | Н/Д |
 | `international_market_income_modifier` | Меняет доход от продажи снаряжения на рынке | Н/Д |
 | `international_market_purchase_modifier` | Меняет стоимость покупки снаряжения на рынке | Н/Д |
+
+<a id="inflation"></a>
+### Инфляция
+
+Все значения в процентах: 1 = +100%.
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `inflation_multiplier_modifier` | Модификатор инфляции | 1 = +100% |
+| `inflation_defence_multiplier_modifier` | Модификатор защиты от инфляции | 1 = +100% |
+| `inflation_from_dept_multiplier_modifier` | Влияние долга на инфляцию | 1 = +100% |
+| `inflation_from_export_multiplier_modifier` | Влияние экспорта на инфляцию | 1 = +100% |
+| `treasury_to_gdp_inflation_multiplier_modifier` | Влияние казны на инфляцию | 1 = +100% |
+| `base_inflation_percent_modifier` | Модификатор базовой инфляции | 1 = +100% |
 
 <a id="exports-resources"></a>
 ### Экспорт и ресурсы

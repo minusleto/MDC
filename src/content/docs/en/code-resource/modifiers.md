@@ -32,7 +32,6 @@ Affect the economy, taxes, trade and productivity.
 | `conversion_cost_mil_to_civ_factor` | Modifies the cost of converting military factories to civilian | N/A |
 | `production_oil_factor` | Modifies synthetic oil gain | N/A |
 | `nuclear_production_factor` | Modifies nuclear weapon production speed | N/A |
-| `surrender_limit` | Modifies the % of capitals/VPs that must be lost to force surrender | N/A |
 
 <a id="general-economic"></a>
 #### General Economic
@@ -60,6 +59,20 @@ Affect the economy, taxes, trade and productivity.
 | `country_productivity_growth_modifier` | Country level modifier increase/decrease the productivity growth of a state | N/A |
 | `international_market_income_modifier` | Modifier to increase/decrease the amount of money gained from selling equipment on the international market | N/A |
 | `international_market_purchase_modifier` | Modifier to increase/decrease the cost of buying equipment from the international market | N/A |
+
+<a id="inflation"></a>
+#### Inflation
+
+All values are percentages: 1 = +100%.
+
+| Modifier | Description | Note |
+|---|---|---|
+| `inflation_multiplier_modifier` | Inflation modifier | 1 = +100% |
+| `inflation_defence_multiplier_modifier` | Inflation defense modifier | 1 = +100% |
+| `inflation_from_dept_multiplier_modifier` | Effect of debt on inflation | 1 = +100% |
+| `inflation_from_export_multiplier_modifier` | Effect of exports on inflation | 1 = +100% |
+| `treasury_to_gdp_inflation_multiplier_modifier` | Effect of treasury on inflation | 1 = +100% |
+| `base_inflation_percent_modifier` | Base inflation modifier | 1 = +100% |
 
 <a id="exports-resources"></a>
 #### Exports & Resources
@@ -323,4 +336,5 @@ Basics. Unit/combat-specific modifiers are separate, coming later.
 | `weekly_casualties_war_support` | War support from weekly casualties | N/A |
 | `weekly_convoys_war_support` | War support from sunk convoys | N/A |
 | `weekly_bombing_war_support` | War support from enemy bombing of our states | N/A |
+| `surrender_limit` | Modifies the % of capitals/VPs that must be lost to force surrender | N/A |
 
