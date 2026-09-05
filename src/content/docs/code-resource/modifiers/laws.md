@@ -7,6 +7,9 @@ description: ""
 
 Модифицируют стоимость (в очках политической власти, PP) смены государственных законов.
 
+<a id="expected-spending"></a>
+### Ожидаемые расходы
+
 | Модификатор | Описание | Примечание |
 |---|---|---|
 | `expected_adm_modifier` | Меняет ожидаемые расходы на бюрократию (закон) | Н/Д |
@@ -15,6 +18,12 @@ description: ""
 | `expected_healthcare_modifier` | Меняет ожидаемые расходы на здравоохранение (закон) | Н/Д |
 | `expected_welfare_modifier` | Меняет ожидаемые соц. расходы (закон) | Н/Д |
 | `expected_mil_modifier` | Меняет ожидаемые военные расходы (закон) | Н/Д |
+
+<a id="law-change-costs"></a>
+### Стоимость смены законов
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
 | `corruption_cost_factor` | Меняет цену PP смены уровня коррупции | Н/Д |
 | `economic_cycles_cost_factor` | Меняет цену PP смены экон. цикла | Н/Д |
 | `internal_factions_cost_factor` | Меняет цену PP смены внутр. фракций | Н/Д |
@@ -29,6 +38,12 @@ description: ""
 | `Military_Status_Women_cost_factor` | Меняет цену PP смены закона о статусе женщин | Н/Д |
 | `Foreign_Intervention_Law_cost_factor` | Меняет цену PP смены закона о вмешательстве | Н/Д |
 | `Officer_Training_Law_cost_factor` | Меняет цену PP смены закона о подготовке офицеров | Н/Д |
+
+<a id="manufacturer-change-costs"></a>
+### Смена военных производителей
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
 | `materiel_manufacturer_cost_factor` | Меняет цену PP смены конструкторов пехоты | Только без DLC Arms Against Tyranny |
 | `tank_manufacturer_cost_factor` | Меняет цену PP смены конструкторов бронетехники | Только без DLC Arms Against Tyranny |
 | `aircraft_manufacturer_cost_factor` | Меняет цену PP смены конструкторов авиации | Только без DLC Arms Against Tyranny |
