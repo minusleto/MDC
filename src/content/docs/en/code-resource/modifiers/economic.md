@@ -5,12 +5,12 @@ description: ""
 
 ## Economic Modifiers
 
-Влияют на экономику, налоги, торговлю и производительность.
+Affect the economy, taxes, trade and productivity.
 
 <a id="general-economic"></a>
 ### General Economic
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Modifies the country's interest rate | This is whole number ( i.e. -1 ) |
 | `personnel_cost_multiplier_modifier` | Modifies the country's military wages | N/A |
@@ -25,15 +25,9 @@ description: ""
 | `social_cost_multiplier_modifier` | Modifies the country's welfare spending cost | N/A |
 | `tax_rate_change_multiplier_modifier` | Modifies the tax rate law change pp cost | N/A |
 | `projects_cost_modifier` | Modifies the economic projects (the project section in the Economic Preview tab) | N/A |
-| `civ_facs_worker_requirement_modifier` | Modifies the number of workers required by a Civilian Factory | N/A |
-| `mil_facs_worker_requirement_modifier` | Modifies the number of workers required by a Military Factory and Dockyard | N/A |
-| `offices_worker_requirement_modifier` | Modifies the number of workers required by an Office Park | N/A |
-| `agriculture_district_worker_requirement_modifier` | Modifies the number of workers required by Commercialized Agriculture Districts | N/A |
-| `buildings_worker_requirement_modifier` | Modifies the number of workers required by all buildings | N/A |
 | `tax_gain_multiplier_modifier` | Modifies the amount of money gained from all taxes (Population and Corporate) | N/A |
 | `population_tax_income_multiplier_modifier` | Modifies the amount of money gained from population taxes | N/A |
 | `corporate_tax_income_multiplier_modifier` | Modifies the amount of money gained from corporate taxes | N/A |
-| `return_on_investment_modifier` | Modifies the return rate on International Investment | 0.02 will add 2% to your ROI rate |
 | `productivity_growth_modifier` | Modifies the productivity growth of a nation | Keep this small or else it quickly snowballs |
 | `state_productivity_growth_modifier` | State level modifier to increase/decrease the productivity growth of a state | N/A |
 | `country_productivity_growth_modifier` | Country level modifier increase/decrease the productivity growth of a state | N/A |
@@ -43,7 +37,7 @@ description: ""
 <a id="exports-resources"></a>
 ### Exports & Resources
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `resource_export_multiplier_modifier` | Modifies the amount of money gained from all Resource Exports | N/A |
 | `oil_export_multiplier_modifier` | Modifies the amount of money gained from Fossil Fuel Exports | N/A |
@@ -52,11 +46,12 @@ description: ""
 | `tungsten_export_multiplier_modifier` | Modifies the amount of money gained from Technology Metal Exports | N/A |
 | `chromium_export_multiplier_modifier` | Modifies the amount of money gained from Precious Metal Exports | N/A |
 | `rubber_export_multiplier_modifier` | Modifies the amount of money gained from Rubber Exports | N/A |
+| `gdp_from_resource_sector_modifier` | Modifier to increase/decrease the gdp from the resource sector | N/A |
 
 <a id="industry-productivity"></a>
 ### Industry Productivity
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `agricolture_productivity_modifier` | Modifier to increase/decrease the productivity generate from agriculture | N/A |
 | `civilian_factories_productivity` | Modifier to increase/decrease the productivity generate from civilian factories | N/A |
@@ -67,7 +62,7 @@ description: ""
 <a id="industry-income-taxes"></a>
 ### Industry Income Taxes
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `office_park_income_tax_modifier` | Modifies the amount of money gained from Office Parks | N/A |
 | `agriculture_district_income_tax_modifier` | Modifies the amount of money gained from Commercialized Agriculture Districts | N/A |
@@ -79,7 +74,7 @@ description: ""
 <a id="campaign-costs"></a>
 ### Campaign Costs
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `salafist_outlook_campaign_cost_modifier` | Modifies the Salafi Indoctrination campaign decision monetary cost | N/A |
 | `nonaligned_outlook_campaign_cost_modifier` | Modifies the Non-Aligned campaign decision monetary cost | N/A |
@@ -91,7 +86,7 @@ description: ""
 <a id="investment-modifiers"></a>
 ### Investment Modifiers
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `investment_duration_modifier` | Modifies the duration of an outgoing International Investment project | N/A |
 | `receiving_investment_duration_modifier` | Modifies the duration of incoming International Investment projects | N/A |
@@ -99,22 +94,27 @@ description: ""
 | `receiving_investment_cost_modifier` | Modifies the cost of incoming International Investment projects | N/A |
 | `internal_investments_pp_cost_modifier` | Modifier to increase/decrease the amount of political power spent on Internal Investments | N/A |
 | `internal_investments_money_cost_modifier` | MModifier to increase/decrease the amount of money spent on Internal Investments | N/A |
+| `return_on_investment_modifier` | Modifies the return rate on International Investment | 0.02 will add 2% to your ROI rate |
 
 <a id="workforce-labor"></a>
 ### Workforce & Labor
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `total_workforce_modifier` | Modifier to increase/decrease the amount of your workforce for buildings | N/A |
 | `high_unemployment_threshold_modifier` | Modifier to increase/decrease the limit before you suffer penalties from high unemployment | N/A |
 | `agriculture_workers_modifier` | Modifies the number of workers required by agriculture | N/A |
 | `resource_sector_workers_modifier` | Modifies the number of workers required by the resource sectors | N/A |
-| `gdp_from_resource_sector_modifier` | Modifier to increase/decrease the gdp from the resource sector | N/A |
+| `civ_facs_worker_requirement_modifier` | Modifies the number of workers required by a Civilian Factory | N/A |
+| `mil_facs_worker_requirement_modifier` | Modifies the number of workers required by a Military Factory and Dockyard | N/A |
+| `offices_worker_requirement_modifier` | Modifies the number of workers required by an Office Park | N/A |
+| `agriculture_district_worker_requirement_modifier` | Modifies the number of workers required by Commercialized Agriculture Districts | N/A |
+| `buildings_worker_requirement_modifier` | Modifies the number of workers required by all buildings | N/A |
 
 <a id="upgrade-special-costs"></a>
 ### Upgrade & Special Costs
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Modifies the economic cycle upgrade cost | N/A |
 

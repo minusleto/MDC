@@ -28,7 +28,7 @@ _ЭТИ СЛОТЫ НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ В КОНСОЛЬНЫХ
 <a id="western"></a>
 #### Западные
 
-- Западные_Autocracy - Прозападные автократы
+- Western_Autocracy - Прозападные автократы
 - conservatism - Консерваторы
 - liberalism - Либералы
 - socialism - Социал-демократы
@@ -82,7 +82,7 @@ _**КАК ЭТО СДЕЛАТЬ**_
 Новые политические лидеры немного сложнее и требуют дополнительных настроек, чтобы корректно работать в игре. Для начала сохраните их портреты в `gfx/leaders/{tag}` в формате .dds или .tga. После этого перейдите к `common/scripted_effects/{tag}_political_leaders.txt`.
 
 Есть несколько важных моментов. В зависимости от идеологии лидера нужно заменить `set_Nat_Autocracy` на `set_{subideology}`. Это определяет правильную субидеологию, к которой относится персонаж. Если лидер не должен быть доступен после определённого условия или даты, необходимо добавить:
-`if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #skip if 2017`. This line determines whether the leader is skipped the next time the leader comes to power.
+`if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #пропустить, если 2017`. Эта строка определяет, будет ли лидер пропущен в следующий раз, когда он должен прийти к власти.
 
 ```
 if = { limit = { has_country_flag = set_Nat_Autocracy }
@@ -100,7 +100,7 @@ if = { limit = { has_country_flag = set_Nat_Autocracy }
 			}
 
 			if = { limit = { has_country_flag = do_not_retire } subtract_from_variable = { Nat_Autocracy_leader = 1 } }
-			if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #skip if 2017
+			if = { limit = { date < 2016.1.2 } set_temp_variable = { b = 1 } } #пропустить, если 2017
 		}
 		if = { limit = { check_variable = { Nat_Autocracy_leader = 1 } NOT = { check_variable = { b = 1 } } }
 			add_to_variable = { Nat_Autocracy_leader = 1 }
@@ -163,9 +163,9 @@ trigger_year_2067_events = {
 <a id="basic-commands-for-variables"></a>
 #### Основные команды для переменных
 
-#set_variable = { var = example value = 1 } - Sets the Variable (can be used anywhere executing a script) to a value and also sets a variable with a name. Creates the variable if it doesnt exist before, OR sets it to a new value if already present somewhere.
-#add_to_variable { var = example value = 1 } - this is the long way of adding to a variable but it just adds one so now the variable is valued at 2.
-#subtract_from_variable { var = example value = 2 } - subtracts yields 0 from the current running script.
+#set_variable = { var = example value = 1 } - устанавливает переменную (можно использовать в любом месте, где выполняется скрипт) в заданное значение и присваивает ей имя. Создаёт переменную, если её ещё не существует, ИЛИ задаёт новое значение, если она уже есть.
+#add_to_variable { var = example value = 1 } - более длинный способ прибавить к переменной значение; здесь просто прибавляется единица, и переменная становится равна 2.
+#subtract_from_variable { var = example value = 2 } - вычитает; в результате текущий скрипт получает значение 0.
 
 В зависимости от ситуации переменные также можно умножать, делить, округлять и обрабатывать с помощью ряда других функций.
 
@@ -229,7 +229,7 @@ iconType = {
 <a id="step-four-edit-01_province_modifiers-code"></a>
 #### Шаг 4: измените код 01_province_modifiers
 
-Путь к файлу: Millennium_Dawn\common\modifiers in this file: 01_province_modifiers.txt
+Путь к файлу: Millennium_Dawn\common\modifiers, файл 01_province_modifiers.txt
 После этого нужно сделать ещё две вещи: 1. добавить пустой модификатор (тот, который будет прикреплён к провинции); 2. указать игре прикрепить модификатор к провинции при старте. Пустые модификаторы находятся здесь:
 
 ```

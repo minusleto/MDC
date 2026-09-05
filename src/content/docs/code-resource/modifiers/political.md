@@ -3,11 +3,11 @@ title: Политические модификаторы
 description: ""
 ---
 
-## Political Modifiers
+## Политические модификаторы
 
 Влияют на внутреннюю политику (партии).
 
 | Модификатор | Описание | Примечание |
 |---|---|---|
-| `popularity_attack_modifier` | Modifier that increases the effectiveness of attacking political parties in the political GUI | The modifier is not percentual. EX: popularity_attack_modifier = 2.0 for 2x damage |
-| `popularity_boost_modifier` | Modifier that increases the effectiveness of boosting political parties in the political GUI | The modifier is not percentual. EX: popularity_boost_modifier = 2.0 for 2x boost |
+| `popularity_attack_modifier` | Изменяет эффективность атак на политические партии в политическом интерфейсе | Модификатор не является процентным. Например: popularity_attack_modifier = 2.0 означает в 2 раза больше урона |
+| `popularity_boost_modifier` | Изменяет эффективность поддержки политических партий в политическом интерфейсе | Модификатор не является процентным. Например: popularity_boost_modifier = 2.0 означает поддержку в 2 раза сильнее |

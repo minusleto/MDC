@@ -5,9 +5,9 @@ description: ""
 
 ## Law Modifiers
 
-Модифицируют стоимость (в очках политической власти, PP) смены государственных законов.
+Modify the cost (in political power, PP) of changing national laws.
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `expected_adm_modifier` | Modifier that increases/decreases the expected government spending on Bureau (Laws) | N/A |
 | `expected_police_modifier` | Modifier that increases/decreases the expected government spending on Police/Internal Security (Law) | N/A |

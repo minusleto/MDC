@@ -5,9 +5,9 @@ description: ""
 
 ## Influence Modifiers
 
-Влияют на систему иностранного влияния (Foreign Influence).
+Affect the Foreign Influence system.
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `foreign_influence_modifier` | Modifier that increases the effectiveness of your influence actions | N/A |
 | `foreign_influence_defense_modifier` | Modifier that decreases the effectiveness of foreign influence actions in our country | N/A |

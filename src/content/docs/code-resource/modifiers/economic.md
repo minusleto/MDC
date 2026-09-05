@@ -25,15 +25,9 @@ description: ""
 | `social_cost_multiplier_modifier` | Изменяет расходы на социальное обеспечение | Н/Д |
 | `tax_rate_change_multiplier_modifier` | Изменяет стоимость смены налоговой ставки в очках политической власти | Н/Д |
 | `projects_cost_modifier` | Изменяет стоимость экономических проектов (раздел проектов во вкладке «Обзор экономики») | Н/Д |
-| `civ_facs_worker_requirement_modifier` | Изменяет количество работников, необходимое для гражданской фабрики | Н/Д |
-| `mil_facs_worker_requirement_modifier` | Изменяет количество работников, необходимое для военной фабрики и верфи | Н/Д |
-| `offices_worker_requirement_modifier` | Изменяет количество работников, необходимое для офисного комплекса | Н/Д |
-| `agriculture_district_worker_requirement_modifier` | Изменяет количество работников, необходимое для коммерческих сельскохозяйственных районов | Н/Д |
-| `buildings_worker_requirement_modifier` | Изменяет количество работников, необходимое для всех построек | Н/Д |
 | `tax_gain_multiplier_modifier` | Изменяет доход от всех налогов (население и корпорации) | Н/Д |
 | `population_tax_income_multiplier_modifier` | Изменяет доход от налогов с населения | Н/Д |
 | `corporate_tax_income_multiplier_modifier` | Изменяет доход от корпоративных налогов | Н/Д |
-| `return_on_investment_modifier` | Изменяет норму доходности международных инвестиций | 0,02 добавляет 2% к норме доходности инвестиций |
 | `productivity_growth_modifier` | Изменяет рост производительности страны | Держите значение небольшим, иначе эффект быстро начнёт накапливаться |
 | `state_productivity_growth_modifier` | Модификатор уровня региона, увеличивающий/уменьшающий рост производительности региона | Н/Д |
 | `country_productivity_growth_modifier` | Модификатор уровня страны, увеличивающий/уменьшающий рост производительности региона | Н/Д |
@@ -52,6 +46,7 @@ description: ""
 | `tungsten_export_multiplier_modifier` | Изменяет доход от экспорта технологических металлов | Н/Д |
 | `chromium_export_multiplier_modifier` | Изменяет доход от экспорта драгоценных металлов | Н/Д |
 | `rubber_export_multiplier_modifier` | Изменяет доход от экспорта каучука | Н/Д |
+| `gdp_from_resource_sector_modifier` | Изменяет ВВП, получаемый из ресурсного сектора | Н/Д |
 
 <a id="industry-productivity"></a>
 ### Производительность промышленности
@@ -99,6 +94,7 @@ description: ""
 | `receiving_investment_cost_modifier` | Изменяет стоимость входящих проектов международных инвестиций | Н/Д |
 | `internal_investments_pp_cost_modifier` | Изменяет количество политической власти, расходуемой на внутренние инвестиции | Н/Д |
 | `internal_investments_money_cost_modifier` | Изменяет количество денег, расходуемых на внутренние инвестиции | Н/Д |
+| `return_on_investment_modifier` | Изменяет норму доходности международных инвестиций | 0,02 добавляет 2% к норме доходности инвестиций |
 
 <a id="workforce-labor"></a>
 ### Рабочая сила и труд
@@ -109,7 +105,11 @@ description: ""
 | `high_unemployment_threshold_modifier` | Изменяет порог, после которого высокая безработица начинает давать штрафы | Н/Д |
 | `agriculture_workers_modifier` | Изменяет количество работников, необходимое сельскому хозяйству | Н/Д |
 | `resource_sector_workers_modifier` | Изменяет количество работников, необходимое ресурсным секторам | Н/Д |
-| `gdp_from_resource_sector_modifier` | Изменяет ВВП, получаемый из ресурсного сектора | Н/Д |
+| `civ_facs_worker_requirement_modifier` | Изменяет количество работников, необходимое для гражданской фабрики | Н/Д |
+| `mil_facs_worker_requirement_modifier` | Изменяет количество работников, необходимое для военной фабрики и верфи | Н/Д |
+| `offices_worker_requirement_modifier` | Изменяет количество работников, необходимое для офисного комплекса | Н/Д |
+| `agriculture_district_worker_requirement_modifier` | Изменяет количество работников, необходимое для коммерческих сельскохозяйственных районов | Н/Д |
+| `buildings_worker_requirement_modifier` | Изменяет количество работников, необходимое для всех построек | Н/Д |
 
 <a id="upgrade-special-costs"></a>
 ### Стоимость улучшений и специальных действий

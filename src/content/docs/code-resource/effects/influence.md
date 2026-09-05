@@ -3,21 +3,21 @@ title: Иностранное влияние
 description: "Эффекты системы Foreign Influence"
 ---
 
-## MDC Influence Effects
+## Эффекты влияния MDC
 
 <a id="influence-action-examples"></a>
-### Influence Action Examples
+### Примеры действий влияния
 
-Percent Change is given in a whole number increment (i.e. 10 = 10%)
+Процентное изменение задаётся целым числом (например, 10 = 10%)
 
-- Domestic Influence
+- Внутреннее влияние (Domestic Influence)
 
 ```
 # set_temp_variable = { percent_change = +-x }
 change_domestic_influence_percentage = yes
 ```
 
-- Change Index Influencers
+- Изменение индекса влияющих сторон
 
 ```
 # set_temp_variable = { percent_change = +-x }
@@ -25,17 +25,17 @@ change_domestic_influence_percentage = yes
 change_current_influencer_index_percentage = yes
 ```
 
-- General Influence Change
--- Keep in mind if the 7th influencer has more influence then your percent_change the target nation will gain domestic influence instead of you gaining influence.
+- Общее изменение влияния
+-- Учтите: если у 7-го влияющего больше влияния, чем ваш percent_change, целевая страна получит прирост внутреннего влияния вместо того, чтобы влияние получили вы.
 
-i.e.
-7th Influencer has 5% influence and you are influencing by 3%. The target nation gains domestic influence instead.
+Например:
+у 7-го влияющего 5% влияния, а вы влияете на 3%. В этом случае целевая страна получает прирост внутреннего влияния вместо вас.
 
 ```
 # set_temp_variable = { percent_change = -+ x }
 # set_temp_variable = { tag_index = SCOPE }
 # set_temp_variable = { influence_target = SCOPE }
-# Supported Scope: FROM, ROOT, PREV, TAG
+# Поддерживаемые скоупы: FROM, ROOT, PREV, TAG
 change_influence_percentage = yes
 ```
 

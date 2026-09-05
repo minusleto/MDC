@@ -1,26 +1,22 @@
 ---
-title: Модификаторы
-description: Economic, Law, Migration, Influence, Energy и Political модификаторы MDC
+title: Modifiers
+description: MDC Economic, Law, Migration, Influence, Energy and Political modifiers
 ---
-:::caution[Translation in progress]
-This page is still in Russian — the English translation hasn't been done yet.
-:::
-
 
 <a id="modifiers"></a>
 ## Modifiers
 
-Модификаторы MDC следуют стандартному синтаксису HOI4, но включают много уникальных экономических, политических и энергетических систем.
+MDC modifiers follow standard HOI4 syntax, but include a lot of unique economic, political and energy systems.
 
 <a id="economic-modifiers"></a>
 ### Economic Modifiers
 
-Влияют на экономику, налоги, торговлю и производительность.
+Affect the economy, taxes, trade and productivity.
 
 <a id="general-economic"></a>
 #### General Economic
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Modifies the country's interest rate | This is whole number ( i.e. -1 ) |
 | `personnel_cost_multiplier_modifier` | Modifies the country's military wages | N/A |
@@ -35,15 +31,9 @@ This page is still in Russian — the English translation hasn't been done yet.
 | `social_cost_multiplier_modifier` | Modifies the country's welfare spending cost | N/A |
 | `tax_rate_change_multiplier_modifier` | Modifies the tax rate law change pp cost | N/A |
 | `projects_cost_modifier` | Modifies the economic projects (the project section in the Economic Preview tab) | N/A |
-| `civ_facs_worker_requirement_modifier` | Modifies the number of workers required by a Civilian Factory | N/A |
-| `mil_facs_worker_requirement_modifier` | Modifies the number of workers required by a Military Factory and Dockyard | N/A |
-| `offices_worker_requirement_modifier` | Modifies the number of workers required by an Office Park | N/A |
-| `agriculture_district_worker_requirement_modifier` | Modifies the number of workers required by Commercialized Agriculture Districts | N/A |
-| `buildings_worker_requirement_modifier` | Modifies the number of workers required by all buildings | N/A |
 | `tax_gain_multiplier_modifier` | Modifies the amount of money gained from all taxes (Population and Corporate) | N/A |
 | `population_tax_income_multiplier_modifier` | Modifies the amount of money gained from population taxes | N/A |
 | `corporate_tax_income_multiplier_modifier` | Modifies the amount of money gained from corporate taxes | N/A |
-| `return_on_investment_modifier` | Modifies the return rate on International Investment | 0.02 will add 2% to your ROI rate |
 | `productivity_growth_modifier` | Modifies the productivity growth of a nation | Keep this small or else it quickly snowballs |
 | `state_productivity_growth_modifier` | State level modifier to increase/decrease the productivity growth of a state | N/A |
 | `country_productivity_growth_modifier` | Country level modifier increase/decrease the productivity growth of a state | N/A |
@@ -53,7 +43,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="exports-resources"></a>
 #### Exports & Resources
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `resource_export_multiplier_modifier` | Modifies the amount of money gained from all Resource Exports | N/A |
 | `oil_export_multiplier_modifier` | Modifies the amount of money gained from Fossil Fuel Exports | N/A |
@@ -62,11 +52,12 @@ This page is still in Russian — the English translation hasn't been done yet.
 | `tungsten_export_multiplier_modifier` | Modifies the amount of money gained from Technology Metal Exports | N/A |
 | `chromium_export_multiplier_modifier` | Modifies the amount of money gained from Precious Metal Exports | N/A |
 | `rubber_export_multiplier_modifier` | Modifies the amount of money gained from Rubber Exports | N/A |
+| `gdp_from_resource_sector_modifier` | Modifier to increase/decrease the gdp from the resource sector | N/A |
 
 <a id="industry-productivity"></a>
 #### Industry Productivity
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `agricolture_productivity_modifier` | Modifier to increase/decrease the productivity generate from agriculture | N/A |
 | `civilian_factories_productivity` | Modifier to increase/decrease the productivity generate from civilian factories | N/A |
@@ -77,7 +68,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="industry-income-taxes"></a>
 #### Industry Income Taxes
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `office_park_income_tax_modifier` | Modifies the amount of money gained from Office Parks | N/A |
 | `agriculture_district_income_tax_modifier` | Modifies the amount of money gained from Commercialized Agriculture Districts | N/A |
@@ -89,7 +80,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="campaign-costs"></a>
 #### Campaign Costs
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `salafist_outlook_campaign_cost_modifier` | Modifies the Salafi Indoctrination campaign decision monetary cost | N/A |
 | `nonaligned_outlook_campaign_cost_modifier` | Modifies the Non-Aligned campaign decision monetary cost | N/A |
@@ -101,7 +92,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="investment-modifiers"></a>
 #### Investment Modifiers
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `investment_duration_modifier` | Modifies the duration of an outgoing International Investment project | N/A |
 | `receiving_investment_duration_modifier` | Modifies the duration of incoming International Investment projects | N/A |
@@ -109,31 +100,36 @@ This page is still in Russian — the English translation hasn't been done yet.
 | `receiving_investment_cost_modifier` | Modifies the cost of incoming International Investment projects | N/A |
 | `internal_investments_pp_cost_modifier` | Modifier to increase/decrease the amount of political power spent on Internal Investments | N/A |
 | `internal_investments_money_cost_modifier` | MModifier to increase/decrease the amount of money spent on Internal Investments | N/A |
+| `return_on_investment_modifier` | Modifies the return rate on International Investment | 0.02 will add 2% to your ROI rate |
 
 <a id="workforce-labor"></a>
 #### Workforce & Labor
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `total_workforce_modifier` | Modifier to increase/decrease the amount of your workforce for buildings | N/A |
 | `high_unemployment_threshold_modifier` | Modifier to increase/decrease the limit before you suffer penalties from high unemployment | N/A |
 | `agriculture_workers_modifier` | Modifies the number of workers required by agriculture | N/A |
 | `resource_sector_workers_modifier` | Modifies the number of workers required by the resource sectors | N/A |
-| `gdp_from_resource_sector_modifier` | Modifier to increase/decrease the gdp from the resource sector | N/A |
+| `civ_facs_worker_requirement_modifier` | Modifies the number of workers required by a Civilian Factory | N/A |
+| `mil_facs_worker_requirement_modifier` | Modifies the number of workers required by a Military Factory and Dockyard | N/A |
+| `offices_worker_requirement_modifier` | Modifies the number of workers required by an Office Park | N/A |
+| `agriculture_district_worker_requirement_modifier` | Modifies the number of workers required by Commercialized Agriculture Districts | N/A |
+| `buildings_worker_requirement_modifier` | Modifies the number of workers required by all buildings | N/A |
 
 <a id="upgrade-special-costs"></a>
 #### Upgrade & Special Costs
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Modifies the economic cycle upgrade cost | N/A |
 
 <a id="law-modifiers"></a>
 ### Law Modifiers
 
-Модифицируют стоимость (в очках политической власти, PP) смены государственных законов.
+Modify the cost (in political power, PP) of changing national laws.
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `expected_adm_modifier` | Modifier that increases/decreases the expected government spending on Bureau (Laws) | N/A |
 | `expected_police_modifier` | Modifier that increases/decreases the expected government spending on Police/Internal Security (Law) | N/A |
@@ -163,18 +159,18 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="migration-modifiers"></a>
 ### Migration Modifiers
 
-Влияют на миграцию населения.
+Affect population migration.
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `migration_rate_value_factor` | Modifier to increase/decrease the amount of net migration into your country | N/A |
 
 <a id="influence-modifiers"></a>
 ### Influence Modifiers
 
-Влияют на систему иностранного влияния (Foreign Influence).
+Affect the Foreign Influence system.
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `foreign_influence_modifier` | Modifier that increases the effectiveness of your influence actions | N/A |
 | `foreign_influence_defense_modifier` | Modifier that decreases the effectiveness of foreign influence actions in our country | N/A |
@@ -188,12 +184,12 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="energy-modifiers"></a>
 ### Energy Modifiers
 
-Управляют производством и потреблением энергии.
+Govern energy production and consumption.
 
 <a id="general-energy"></a>
 #### General Energy
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `energy_gain` | Modifies energy gain as a flat amount | 10 = 10 more energy gain |
 | `energy_gain_multiplier` | Modifies energy gain as a percentage, modifies all sources of energy gain | N/A |
@@ -205,7 +201,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="population-energy"></a>
 #### Population Energy
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `pop_energy_use_multiplier` | Modifies the amount of energy used by the population | N/A |
 | `non_electric_fuel_consumption_modifier` | Modifies the consumption of fuel by a countries population | N/A |
@@ -213,7 +209,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="fossil-fuels"></a>
 #### Fossil Fuels
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `fossil_pp_energy_generation_modifier` | Modifies the energy generated by a Fossil Fuel Powerplant | N/A |
 | `fossil_pp_fuel_consumption_modifier` | Modifies the consumption of fuel by Fossil Fuel Powerplant | N/A |
@@ -221,7 +217,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="nuclear-energy"></a>
 #### Nuclear Energy
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `nuclear_energy_generation_modifier` | Modifies energy generated by a Nuclear Reactor | N/A |
 | `nuclear_fuel_consumption_modifier` | Modifies the consumption of LEU fuel by Nuclear Reactors | N/A |
@@ -231,7 +227,7 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="renewable-infrastructure"></a>
 #### Renewable Infrastructure
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `hydroelectric_energy_storage` | Used for basic static energy use/storage for hydroelectric modifiers in a particular state | N/A |
 | `state_renewable_energy_generation_modifier` | Modifies the amount of State Renewable Energy Generation | N/A |
@@ -239,16 +235,16 @@ This page is still in Russian — the English translation hasn't been done yet.
 <a id="battery-storage"></a>
 #### Battery & Storage
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `battery_park_construction_cost` | Modifies the cost of building a battery park | N/A |
 
 <a id="political-modifiers"></a>
 ### Political Modifiers
 
-Влияют на внутреннюю политику (партии).
+Affect domestic politics (parties).
 
-| Модификатор | Описание | Примечание |
+| Modifier | Description | Note |
 |---|---|---|
 | `popularity_attack_modifier` | Modifier that increases the effectiveness of attacking political parties in the political GUI | The modifier is not percentual. EX: popularity_attack_modifier = 2.0 for 2x damage |
 | `popularity_boost_modifier` | Modifier that increases the effectiveness of boosting political parties in the political GUI | The modifier is not percentual. EX: popularity_boost_modifier = 2.0 for 2x boost |
