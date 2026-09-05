@@ -38,6 +38,11 @@ Modify the cost (in political power, PP) of changing national laws.
 | `Military_Status_Women_cost_factor` | Modifies the political power cost of changing Military Status of Women Law | N/A |
 | `Foreign_Intervention_Law_cost_factor` | Modifies the political power cost of changing Foreign Intervention Law | N/A |
 | `Officer_Training_Law_cost_factor` | Modifies the political power cost of changing Officer Training Law | N/A |
+| `censorship_laws_cost_factor` | Modifies the political power cost of changing Censorship Law | N/A |
+| `right_assembly_cost_factor` | Modifies the political power cost of changing Freedom of Assembly Law | N/A |
+| `internet_law_cost_factor` | Modifies the political power cost of changing Internet Law | N/A |
+| `lgbt_laws_cost_factor` | Modifies the political power cost of changing LGBT Law | N/A |
+| `freedom_trade_unions_cost_factor` | Modifies the political power cost of changing Freedom of Trade Unions Law | N/A |
 
 <a id="manufacturer-change-costs"></a>
 ### Manufacturer Change Costs

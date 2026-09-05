@@ -53,6 +53,7 @@ description: ""
 | `country_productivity_growth_modifier` | То же самое, на уровне страны | Н/Д |
 | `international_market_income_modifier` | Меняет доход от продажи снаряжения на рынке | Н/Д |
 | `international_market_purchase_modifier` | Меняет стоимость покупки снаряжения на рынке | Н/Д |
+| `production_speed_civil_bunker_factor` | Меняет скорость строительства гражданских бункеров | В процентах |
 
 <a id="inflation"></a>
 ### Инфляция
@@ -105,6 +106,31 @@ description: ""
 | `civilian_industry_tax_modifier` | Меняет доход от гражданской промышленности | Н/Д |
 | `agriculture_tax_modifier` | Меняет доход от сельского хозяйства | Н/Д |
 
+<a id="small-businesses"></a>
+### Малый бизнес
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `small_businesses_tax_modifier` | Множитель максимальных налогов с малого бизнеса | Н/Д |
+| `small_businesses_productivity_modifier` | Прибавляет ВВП, который генерирует малый бизнес | Н/Д |
+| `small_businesses_workers_modifier` | Прибавляет % работников малого бизнеса | Н/Д |
+
+<a id="companies-branches"></a>
+### Компании и филиалы
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `companies_workers_ammount_modifier` | Сколько рабочих мест даёт конкретная компания | Прописывается в идее компании |
+| `companies_salary_modifier` | Зарплата конкретной компании (% от ВВП/ДН) | Прописывается в идее компании |
+| `branches_workers_ammount_modifier` | Сколько рабочих мест даёт конкретный филиал | Прописывается в идее филиала |
+| `branches_salary_modifier` | Зарплата конкретного филиала (% от ВВП/ДН) | Прописывается в идее филиала |
+| `companies_salary_multiplier_modifier` | Меняет зарплату всех компаний | В процентах |
+| `branches_salary_multiplier_modifier` | Меняет зарплату всех филиалов | В процентах |
+| `companies_workers_ammount_multiplier_modifier` | Меняет число работников всех компаний | В процентах |
+| `branches_workers_ammount_multiplier_modifier` | Меняет число работников всех филиалов | В процентах |
+| `companies_tax_gain_multiplier_modifier` | Меняет налоги с компаний | + или − в процентах |
+| `branches_tax_gain_multiplier_modifier` | Меняет налоги с филиалов | + или − в процентах |
+
 <a id="campaign-costs"></a>
 ### Стоимость кампаний
 
@@ -151,3 +177,6 @@ description: ""
 | Модификатор | Описание | Примечание |
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Меняет стоимость улучшения экон. цикла | Н/Д |
+| `leased_civilian_factories_cost_modifier` | Меняет стоимость аренды гражданских фабрик | + или − в процентах |
+| `leased_military_factories_cost_modifier` | Меняет стоимость аренды военных фабрик | + или − в процентах |
+| `leased_dockyards_cost_modifier` | Меняет стоимость аренды верфей | + или − в процентах |

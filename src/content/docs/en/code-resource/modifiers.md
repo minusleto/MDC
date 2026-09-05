@@ -59,6 +59,7 @@ Affect the economy, taxes, trade and productivity.
 | `country_productivity_growth_modifier` | Country level modifier increase/decrease the productivity growth of a state | N/A |
 | `international_market_income_modifier` | Modifier to increase/decrease the amount of money gained from selling equipment on the international market | N/A |
 | `international_market_purchase_modifier` | Modifier to increase/decrease the cost of buying equipment from the international market | N/A |
+| `production_speed_civil_bunker_factor` | Modifies civilian bunker construction speed | Percentage |
 
 <a id="inflation"></a>
 #### Inflation
@@ -111,6 +112,31 @@ All values are percentages: 1 = +100%.
 | `civilian_industry_tax_modifier` | Modifies the amount of money gained from Civilian Industry | N/A |
 | `agriculture_tax_modifier` | Modifies the amount of money gained from Agriculture | N/A |
 
+<a id="small-businesses"></a>
+#### Small Businesses
+
+| Modifier | Description | Note |
+|---|---|---|
+| `small_businesses_tax_modifier` | Multiplier for the maximum tax small businesses can pay | N/A |
+| `small_businesses_productivity_modifier` | Adds to the GDP small businesses can generate | N/A |
+| `small_businesses_workers_modifier` | Adds to the % of small business workers | N/A |
+
+<a id="companies-branches"></a>
+#### Companies & Branches
+
+| Modifier | Description | Note |
+|---|---|---|
+| `companies_workers_ammount_modifier` | How many jobs a specific company provides | Set in the company's idea |
+| `companies_salary_modifier` | A specific company's salary (% of GDP/NI) | Set in the company's idea |
+| `branches_workers_ammount_modifier` | How many jobs a specific branch provides | Set in the branch's idea |
+| `branches_salary_modifier` | A specific branch's salary (% of GDP/NI) | Set in the branch's idea |
+| `companies_salary_multiplier_modifier` | Modifies the salary of all companies | Percentage |
+| `branches_salary_multiplier_modifier` | Modifies the salary of all branches | Percentage |
+| `companies_workers_ammount_multiplier_modifier` | Modifies the number of workers across all companies | Percentage |
+| `branches_workers_ammount_multiplier_modifier` | Modifies the number of workers across all branches | Percentage |
+| `companies_tax_gain_multiplier_modifier` | Modifies tax income from companies | + or − percentage |
+| `branches_tax_gain_multiplier_modifier` | Modifies tax income from branches | + or − percentage |
+
 <a id="campaign-costs"></a>
 #### Campaign Costs
 
@@ -157,6 +183,9 @@ All values are percentages: 1 = +100%.
 | Modifier | Description | Note |
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Modifies the economic cycle upgrade cost | N/A |
+| `leased_civilian_factories_cost_modifier` | Modifies the cost of leased civilian factories | + or − percentage |
+| `leased_military_factories_cost_modifier` | Modifies the cost of leased military factories | + or − percentage |
+| `leased_dockyards_cost_modifier` | Modifies the cost of leased dockyards | + or − percentage |
 
 <a id="law-modifiers"></a>
 ### Law Modifiers
@@ -194,6 +223,11 @@ Modify the cost (in political power, PP) of changing national laws.
 | `Military_Status_Women_cost_factor` | Modifies the political power cost of changing Military Status of Women Law | N/A |
 | `Foreign_Intervention_Law_cost_factor` | Modifies the political power cost of changing Foreign Intervention Law | N/A |
 | `Officer_Training_Law_cost_factor` | Modifies the political power cost of changing Officer Training Law | N/A |
+| `censorship_laws_cost_factor` | Modifies the political power cost of changing Censorship Law | N/A |
+| `right_assembly_cost_factor` | Modifies the political power cost of changing Freedom of Assembly Law | N/A |
+| `internet_law_cost_factor` | Modifies the political power cost of changing Internet Law | N/A |
+| `lgbt_laws_cost_factor` | Modifies the political power cost of changing LGBT Law | N/A |
+| `freedom_trade_unions_cost_factor` | Modifies the political power cost of changing Freedom of Trade Unions Law | N/A |
 
 <a id="manufacturer-change-costs"></a>
 #### Manufacturer Change Costs
@@ -337,4 +371,12 @@ Basics. Unit/combat-specific modifiers are separate, coming later.
 | `weekly_convoys_war_support` | War support from sunk convoys | N/A |
 | `weekly_bombing_war_support` | War support from enemy bombing of our states | N/A |
 | `surrender_limit` | Modifies the % of capitals/VPs that must be lost to force surrender | N/A |
+
+<a id="military-bases"></a>
+#### Military Bases
+
+| Modifier | Description | Note |
+|---|---|---|
+| `military_bases_leader_modifier` | Buff a specific leader gets from military bases | + or − percentage |
+| `military_bases_country_modifier` | Buff all of the country's leaders get from military bases | + or − percentage |
 
