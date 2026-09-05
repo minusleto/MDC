@@ -7,6 +7,27 @@ description: ""
 
 Affect the economy, taxes, trade and productivity.
 
+<a id="vanilla"></a>
+### Vanilla
+
+| Modifier | Description | Note |
+|---|---|---|
+| `monthly_population` | Modifies monthly population growth in states | N/A |
+| `consumer_goods_factor` | Modifies the share of factories used for consumer goods | Stacks multiplicatively, see HOI4 wiki |
+| `local_resources_factor` | Modifies the efficiency of local resource gathering | N/A |
+| `research_speed_factor` | Modifies research speed | N/A |
+| `industrial_capacity_factory` | Modifies military factory output | N/A |
+| `industrial_capacity_dockyard` | Modifies dockyard output | N/A |
+| `production_speed_buildings_factor` | Modifies the construction speed of all buildings | N/A |
+| `industry_repair_factor` | Modifies building repair speed | N/A |
+| `global_building_slots` | Modifies the number of building slots in all states | N/A |
+| `global_building_slots_factor` | Same, as a percentage | N/A |
+| `conversion_cost_civ_to_mil_factor` | Modifies the cost of converting civilian factories to military | N/A |
+| `conversion_cost_mil_to_civ_factor` | Modifies the cost of converting military factories to civilian | N/A |
+| `production_oil_factor` | Modifies synthetic oil gain | N/A |
+| `nuclear_production_factor` | Modifies nuclear weapon production speed | N/A |
+| `surrender_limit` | Modifies the % of capitals/VPs that must be lost to force surrender | N/A |
+
 <a id="general-economic"></a>
 ### General Economic
 

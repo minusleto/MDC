@@ -45,6 +45,7 @@ export default defineConfig({
 						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/modifiers/influence' },
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/modifiers/energy' },
 						{ label: 'Политика', translations: { en: 'Political' }, slug: 'code-resource/modifiers/political' },
+						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/modifiers/military' },
 					] },
 					{ label: 'Системы MDC', translations: { en: 'MDC Systems' }, slug: 'code-resource/systems' },
 					{ label: 'Гайды', translations: { en: 'Guides' }, items: [

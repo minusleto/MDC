@@ -13,6 +13,27 @@ description: Economic, Law, Migration, Influence, Energy и Political модиф
 
 Влияют на экономику, налоги, торговлю и производительность.
 
+<a id="vanilla"></a>
+#### Ванильные
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `monthly_population` | Меняет ежемесячный прирост населения в регионах | Н/Д |
+| `consumer_goods_factor` | Меняет долю фабрик под потребительские товары | Складывается мультипликативно, см. вики HOI4 |
+| `local_resources_factor` | Меняет эффективность добычи ресурсов на месте | Н/Д |
+| `research_speed_factor` | Меняет скорость исследований | Н/Д |
+| `industrial_capacity_factory` | Меняет выпуск военных фабрик | Н/Д |
+| `industrial_capacity_dockyard` | Меняет выпуск верфей | Н/Д |
+| `production_speed_buildings_factor` | Меняет скорость строительства всех построек | Н/Д |
+| `industry_repair_factor` | Меняет скорость починки построек | Н/Д |
+| `global_building_slots` | Меняет число слотов построек во всех регионах | Н/Д |
+| `global_building_slots_factor` | То же самое, в процентах | Н/Д |
+| `conversion_cost_civ_to_mil_factor` | Меняет цену конверсии гражд. фабрик в военные | Н/Д |
+| `conversion_cost_mil_to_civ_factor` | Меняет цену конверсии военных фабрик в гражданские | Н/Д |
+| `production_oil_factor` | Меняет прирост синтетической нефти | Н/Д |
+| `nuclear_production_factor` | Меняет скорость производства ядерного оружия | Н/Д |
+| `surrender_limit` | Меняет % столиц/ВП, которые нужно потерять для капитуляции | Н/Д |
+
 <a id="general-economic"></a>
 #### Общие экономические
 
@@ -257,23 +278,23 @@ description: Economic, Law, Migration, Influence, Energy и Political модиф
 <a id="political-modifiers"></a>
 ### Политические модификаторы
 
-Влияют на внутреннюю политику (партии). 🕹️ — ванильный модификатор HOI4, без значка — специфичный для MDC.
+Влияют на внутреннюю политику (партии).
 
 <a id="vanilla"></a>
 #### Ванильные
 
 | Модификатор | Описание | Примечание |
 |---|---|---|
-| 🕹️ `political_power_gain` | Дневной прирост политической власти | Н/Д |
-| 🕹️ `political_power_factor` | Дневной прирост политической власти (%) | Н/Д |
-| 🕹️ `political_power_cost` | Дневная трата политической власти | Н/Д |
-| 🕹️ `stability_factor` | Меняет стабильность | Н/Д |
-| 🕹️ `stability_weekly` | Еженедельный прирост стабильности | Н/Д |
-| 🕹️ `stability_weekly_factor` | Еженедельный прирост стабильности (%) | Н/Д |
-| 🕹️ `party_popularity_stability_factor` | Стабильность от популярности правящей партии | Н/Д |
-| 🕹️ `drift_defence_factor` | Защита от идеологического дрейфа | Н/Д |
-| 🕹️ `<ideology>_drift` | Дневной дрейф указанной идеологии | Например `communism_drift` |
-| 🕹️ `<ideology>_acceptance` | Готовность ИИ принять указанную идеологию | Например `fascism_acceptance` |
+| `political_power_gain` | Дневной прирост политической власти | Н/Д |
+| `political_power_factor` | Дневной прирост политической власти (%) | Н/Д |
+| `political_power_cost` | Дневная трата политической власти | Н/Д |
+| `stability_factor` | Меняет стабильность | Н/Д |
+| `stability_weekly` | Еженедельный прирост стабильности | Н/Д |
+| `stability_weekly_factor` | Еженедельный прирост стабильности (%) | Н/Д |
+| `party_popularity_stability_factor` | Стабильность от популярности правящей партии | Н/Д |
+| `drift_defence_factor` | Защита от идеологического дрейфа | Н/Д |
+| `<ideology>_drift` | Дневной дрейф указанной идеологии | Например `communism_drift` |
+| `<ideology>_acceptance` | Готовность ИИ принять указанную идеологию | Например `fascism_acceptance` |
 
 <a id="mdc"></a>
 #### MDC
@@ -283,19 +304,23 @@ description: Economic, Law, Migration, Influence, Energy и Political модиф
 | `popularity_attack_modifier` | Меняет эффективность атак на партии в политическом интерфейсе | Не процент: 2.0 = урон ×2 |
 | `popularity_boost_modifier` | Меняет эффективность поддержки партий в политическом интерфейсе | Не процент: 2.0 = поддержка ×2 |
 
-<a id="military"></a>
-#### Военные
+<a id="military-modifiers"></a>
+### Военные модификаторы
 
 Базовые. Модификаторы конкретных юнитов/боя — отдельно, дальше.
 
+<a id="vanilla-military"></a>
+#### Ванильные
+
 | Модификатор | Описание | Примечание |
 |---|---|---|
-| 🕹️ `war_support_factor` | Меняет военную поддержку | Н/Д |
-| 🕹️ `war_support_weekly` | Еженедельный прирост военной поддержки | Н/Д |
-| 🕹️ `war_support_weekly_factor` | Еженедельный прирост военной поддержки (%) | Н/Д |
-| 🕹️ `war_stability_factor` | Штраф стабильности от нахождения в состоянии войны | Н/Д |
-| 🕹️ `offensive_war_stability_factor` | Штраф стабильности за участие в наступательной войне | Н/Д |
-| 🕹️ `defensive_war_stability_factor` | Штраф стабильности за участие в оборонительной войне | Н/Д |
-| 🕹️ `weekly_casualties_war_support` | Военная поддержка от еженедельных потерь | Н/Д |
-| 🕹️ `weekly_convoys_war_support` | Военная поддержка от потопленных конвоев | Н/Д |
-| 🕹️ `weekly_bombing_war_support` | Военная поддержка от бомбёжек наших регионов | Н/Д |
+| `war_support_factor` | Меняет военную поддержку | Н/Д |
+| `war_support_weekly` | Еженедельный прирост военной поддержки | Н/Д |
+| `war_support_weekly_factor` | Еженедельный прирост военной поддержки (%) | Н/Д |
+| `war_stability_factor` | Штраф стабильности от нахождения в состоянии войны | Н/Д |
+| `offensive_war_stability_factor` | Штраф стабильности за участие в наступательной войне | Н/Д |
+| `defensive_war_stability_factor` | Штраф стабильности за участие в оборонительной войне | Н/Д |
+| `weekly_casualties_war_support` | Военная поддержка от еженедельных потерь | Н/Д |
+| `weekly_convoys_war_support` | Военная поддержка от потопленных конвоев | Н/Д |
+| `weekly_bombing_war_support` | Военная поддержка от бомбёжек наших регионов | Н/Д |
+
