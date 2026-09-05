@@ -1,15 +1,14 @@
 ---
 title: MDC Systems
-description: "Unique MDC gameplay systems"
+description: "Unique game systems and mechanics of Millennium: Damaged Continuum"
 ---
 
-## Systems
+# MDC Systems
 
-- [Economy](../effects/economy/)
-- [Foreign Influence](../effects/influence/)
-- [Internal Factions](../effects/internal-factions/)
-- [Energy](../effects/energy/)
-- [Cartels](../effects/cartels/)
-- [European Union](../effects/european-union/)
-- [Counter-Terrorism](../effects/counter-terror/)
-- [Politics](../effects/politics/)
+Mechanics that are better documented separately from ordinary effects and modifiers.
+
+- [Internal Factions](./internal-factions/) — internal interest groups.
+- [Terrorism](./terrorism/) — radicalization and terrorist threat.
+- [Cartels](./cartels/) — cartel strength and political influence.
+- [European Union](./european-union/) — EU and Euroscepticism.
+- [Energy](./energy/) — energy facilities and related effects.

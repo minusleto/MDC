@@ -1,5 +1,5 @@
 ---
-title: MDC Code Resource
+title: MDC — справочник по коду
 description: "Справочник по коду Millennium: Damaged Continuum"
 ---
 
