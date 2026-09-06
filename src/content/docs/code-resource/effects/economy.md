@@ -3,11 +3,12 @@ title: Экономика
 description: "Экономические скриптовые эффекты"
 ---
 
-## Экономические эффекты MDC
+Все предоставленные скриптовые эффекты _автоматически_ создают для вас тултипы. **НЕ** локализуйте дополнительные тултипы.
 
-<a id="how-to-modify-treasury"></a>
+<a id="basic-effects"></a>
 ## Базовые эффекты
 
+<a id="treasury"></a>
 ### Казна
 
 Поменять казну на произвольную сумму:
@@ -32,29 +33,32 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
-<a id="change-debt"></a>
+<a id="debt"></a>
 ### Долги
+
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-<a id="change-investment"></a>
+<a id="investments"></a>
 ### Инвестиции
+
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
-<a id="corporate-tax"></a>
-### Корпоративный налог
+<a id="taxes"></a>
+### Налоги
+
+**Корпоративный налог**
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
-<a id="population-tax"></a>
-### Подоходный налог
+**Подоходный налог**
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
@@ -62,13 +66,124 @@ modify_population_tax_rate_effect = yes
 
 <a id="productivity"></a>
 ### Производительность
+
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
+<a id="capitalization"></a>
+### Капитализация
+
+Изменяет капитализацию страны
+
+```
+set_temp_variable = { modify_capitalization = 0.010 }
+modify_capitalization_support = yes
+```
+
+
+<a id="base-inflation"></a>
+### Базовая инфляция
+
+Изменяет базовую инфляцию страны
+
+```
+set_temp_variable = { base_inflation_percent_change = 1.0 }
+modify_base_inflation_effect = yes
+```
+
+
+<a id="increasedecrease-economic-growth"></a>
+### Экономический рост
+
+Увеличивает или уменьшает текущий экономический цикл страны
+
+```
+increase_economic_growth = yes
+decrease_economic_growth = yes
+increase_two_level_economic_growth = yes
+decrease_two_level_economic_growth = yes
+depression = yes
+recession = yes
+stagnation = yes
+stable_growth = yes
+fast_growth = yes
+economic_boom = yes
+```
+
+<a id="economic-agreements"></a>
+## Экономические соглашения
+
+<a id="setremove-trade-agreement"></a>
+### Торговое соглашение
+
+Создаёт или удаляет торговое соглашение
+
+- sender_nation --- страна, отправляющая соглашение
+- receiver_nation --- страна, получающая соглашение
+- remove_agreement --- необязательный параметр (установить в 1)
+
+```
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_improved_trade_agreement = yes
+
+```
+
+<a id="setremove-mutual-investment-treaty"></a>
+### Взаимный инвестиционный договор
+
+Создаёт или удаляет взаимный инвестиционный договор.
+
+- `sender_nation` — страна, отправляющая соглашение
+- `receiver_nation` — страна, получающая соглашение
+- `remove_treaty` — необязательный параметр (установить в 1 для отмены)
+
+```
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_mutual_investment_treaty = yes
+```
+
+Для отмены:
+
+```
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_temp_variable = { remove_treaty = 1 }
+set_mutual_investment_treaty = yes
+```
+
+Торговое соглашение и взаимный инвестиционный договор можно использовать одновременно.
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_improved_trade_agreement = yes
+set_mutual_investment_treaty = yes
+```
+
+<a id="setremove-permanent-investment-targets"></a>
+### Постоянные цели инвестиций
+
+Добавляет или удаляет adding_nation из инвестиционного пула другой страны под управлением ИИ
+
+- target_nation --- страна, отправляющая соглашение
+- adding_nation --- страна, получающая соглашение
+- remove_nation --- необязательный параметр (установить в 1)
+
+```
+set_temp_variable = { target_nation = RAJ.id }
+set_temp_variable = { adding_nation = SIN.id }
+change_permanent_investment_target = yes
+
+```
+
+<a id="other"></a>
 ## Другое
 
+<a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
 ### Доп. доходы и расходы
 
 ```
