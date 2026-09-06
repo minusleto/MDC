@@ -74,46 +74,16 @@ set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
-<a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Доп. доходы и расходы
+<a id="capitalization"></a>
+### Капитализация
+
+Изменяет капитализацию страны и позволяет изменить поддержку капитализации:
 
 ```
-Шаг 1: перейдите в common/scripted_effects/00_money_system.txt
-Шаг 2: найдите calculate_additional_income_rate
-Шаг 3: в этом разделе должна быть отмеченная секция Country Specific. Добавьте код туда.
-if = {
-  limit = { original_tag = TAG  }
-  if = {
-    limit = { has_idea = whatever }
-    set_variable = { whatever_gain = 0.05 }
-    add_to_variable = { additional_income_rate = whatever_gain }
-  }
-}
-Шаг 4: перейдите в common/scripted_localization/money_scripted_localization.txt. Место внутри файла особого значения не имеет.
-defined_text = {
-    name = additional_income_summary_whatever
-    text = {
-        trigger = { has_idea = whatever }
-        localization_key = "whatever_TT" #задаёт для этой сводки текст "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
-    }
-    text = {
-        trigger = { NOT = { has_idea = whatever } }
-        localization_key = ""
-    }
-}
-Шаг 5: перейдите в MD_money_l_english.yml (localisation/english). Найдите ADDITIONAL_INCOME_REVENUES_TOOLTIP
-Затем в конце (или в любом другом месте внутри) добавьте [additional_income_summary_whatever]
-Шаг 6: вернитесь в исходный файл идеи — теперь сумма должна отображаться в модификаторах spirits
-
-**ПРИМЕЧАНИЕ** Отображение переменных не будет работать в этом разделе. Вам нужно создать отдельный тултип, явно описывающий нужное значение, либо добавить локализацию в _desc идеи.
-
-Сделайте это в модификаторах:
-
-modifiers = {
-  custom_modifier_tooltip = whatever_TT
-}
-
+set_temp_variable = { modify_capitalization = 0.010 }
+modify_capitalization_support = yes
 ```
+
 
 <a id="economic-agreements"></a>
 ## Экономические соглашения
@@ -199,4 +169,45 @@ stagnation = yes
 stable_growth = yes
 fast_growth = yes
 economic_boom = yes
+```
+
+<a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
+### Доп. доходы и расходы
+
+```
+Шаг 1: перейдите в common/scripted_effects/00_money_system.txt
+Шаг 2: найдите calculate_additional_income_rate
+Шаг 3: в этом разделе должна быть отмеченная секция Country Specific. Добавьте код туда.
+if = {
+  limit = { original_tag = TAG  }
+  if = {
+    limit = { has_idea = whatever }
+    set_variable = { whatever_gain = 0.05 }
+    add_to_variable = { additional_income_rate = whatever_gain }
+  }
+}
+Шаг 4: перейдите в common/scripted_localization/money_scripted_localization.txt. Место внутри файла особого значения не имеет.
+defined_text = {
+    name = additional_income_summary_whatever
+    text = {
+        trigger = { has_idea = whatever }
+        localization_key = "whatever_TT" #задаёт для этой сводки текст "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
+    }
+    text = {
+        trigger = { NOT = { has_idea = whatever } }
+        localization_key = ""
+    }
+}
+Шаг 5: перейдите в MD_money_l_english.yml (localisation/english). Найдите ADDITIONAL_INCOME_REVENUES_TOOLTIP
+Затем в конце (или в любом другом месте внутри) добавьте [additional_income_summary_whatever]
+Шаг 6: вернитесь в исходный файл идеи — теперь сумма должна отображаться в модификаторах spirits
+
+**ПРИМЕЧАНИЕ** Отображение переменных не будет работать в этом разделе. Вам нужно создать отдельный тултип, явно описывающий нужное значение, либо добавить локализацию в _desc идеи.
+
+Сделайте это в модификаторах:
+
+modifiers = {
+  custom_modifier_tooltip = whatever_TT
+}
+
 ```

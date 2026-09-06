@@ -74,46 +74,16 @@ set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
-<a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Additional Income/Expenses
+<a id="capitalization"></a>
+### Capitalization
+
+Changes the country's capitalization and allows capitalization support to be modified:
 
 ```
-Step One: go to common/scripted_effects/00_money_system.txt
-Step Two: look for calculate_additional_income_rate
-Step Three: In that section there should be a noted one that says Country Specific. Throw it in there.
-if = {
-  limit = { original_tag = TAG  }
-  if = {
-    limit = { has_idea = whatever }
-    set_variable = { whatever_gain = 0.05 }
-    add_to_variable = { additional_income_rate = whatever_gain }
-  }
-}
-Step Four: go to common/scripted_localization/money_scripted_localization.txt. It doesn't really matter where you put it in here.
-defined_text = {
-    name = additional_income_summary_whatever
-    text = {
-        trigger = { has_idea = whatever }
-        localization_key = "whatever_TT" #define this summary "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
-    }
-    text = {
-        trigger = { NOT = { has_idea = whatever } }
-        localization_key = ""
-    }
-}
-Step Five: go to MD_money_l_english.yml (localisation/english). Look up ADDITIONAL_INCOME_REVENUES_TOOLTIP
-Then at the end or somewhere in it just put [additional_income_summary_whatever]
-Step Six: Go back to your original idea file this should show you the amount in the spirits modifiers
-
-**NOTE** Variable displays will not work in this section. You will need to create seperate tooltip that states expclitly what you want or added the localization into the _desc of the idea.
-
-Do this in the modifiers:
-
-modifiers = {
-  custom_modifier_tooltip = whatever_TT
-}
-
+set_temp_variable = { modify_capitalization = 0.010 }
+modify_capitalization_support = yes
 ```
+
 
 <a id="economic-agreements"></a>
 ## Economic Agreements
@@ -199,4 +169,45 @@ stagnation = yes
 stable_growth = yes
 fast_growth = yes
 economic_boom = yes
+```
+
+<a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
+### Additional Income/Expenses
+
+```
+Step One: go to common/scripted_effects/00_money_system.txt
+Step Two: look for calculate_additional_income_rate
+Step Three: In that section there should be a noted one that says Country Specific. Throw it in there.
+if = {
+  limit = { original_tag = TAG  }
+  if = {
+    limit = { has_idea = whatever }
+    set_variable = { whatever_gain = 0.05 }
+    add_to_variable = { additional_income_rate = whatever_gain }
+  }
+}
+Step Four: go to common/scripted_localization/money_scripted_localization.txt. It doesn't really matter where you put it in here.
+defined_text = {
+    name = additional_income_summary_whatever
+    text = {
+        trigger = { has_idea = whatever }
+        localization_key = "whatever_TT" #define this summary "$$[?whatever_gain|+3] from §Y$whatever$§!\n"
+    }
+    text = {
+        trigger = { NOT = { has_idea = whatever } }
+        localization_key = ""
+    }
+}
+Step Five: go to MD_money_l_english.yml (localisation/english). Look up ADDITIONAL_INCOME_REVENUES_TOOLTIP
+Then at the end or somewhere in it just put [additional_income_summary_whatever]
+Step Six: Go back to your original idea file this should show you the amount in the spirits modifiers
+
+**NOTE** Variable displays will not work in this section. You will need to create seperate tooltip that states expclitly what you want or added the localization into the _desc of the idea.
+
+Do this in the modifiers:
+
+modifiers = {
+  custom_modifier_tooltip = whatever_TT
+}
+
 ```
