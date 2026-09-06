@@ -114,10 +114,7 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 <hr/>
 
 <a id="weapons"></a>
-## Weapons
-
-<a id="weapons-law"></a>
-### Weapons Law
+## Weapons Law
 
 | Effect | Tier |
 |---|---|
