@@ -4,9 +4,9 @@ export const onRequest = defineRouteMiddleware((context) => {
 	const { starlightRoute } = context.locals;
 
 	if (starlightRoute.id.endsWith('code-resource/effects/economy')) {
-		const toc = starlightRoute.toc;
-		if (toc?.items[0]?.text === 'Overview' || toc?.items[0]?.text === 'Обзор') {
-			toc.items = toc.items.slice(1);
+		const overviewLink = starlightRoute.toc?.items[0];
+		if (overviewLink?.text === 'Overview' || overviewLink?.text === 'Обзор') {
+			starlightRoute.toc?.items.shift();
 		}
 	}
 });

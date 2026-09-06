@@ -1,6 +1,12 @@
 ---
 title: Экономика
 description: "Экономические скриптовые эффекты"
+head:
+  - tag: style
+    content: |
+      .sl-markdown-content > h2:first-child {
+        margin-top: 1.5rem;
+      }
 ---
 
 

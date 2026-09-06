@@ -21,6 +21,7 @@ export default defineConfig({
 				baseUrl: 'https://github.com/minusleto/MDC/edit/main/',
 			},
 			lastUpdated: true,
+			routeMiddleware: './src/route-middleware.ts',
 			sidebar: [
 				{ label: 'Code Resource', translations: { en: 'Code Resource' }, items: [
 					{ label: 'Быстрый старт', translations: { en: 'Getting Started' }, items: [
