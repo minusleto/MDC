@@ -3,15 +3,10 @@ title: Economy
 description: "Economic scripted effects"
 ---
 
-## MDC Economic Effects
+### Basic Effects
 
-All scripted effects provided _automatically_ create tooltips for you. Do **NOT** localize additional tooltips.
-
-<a id="basic-effects"></a>
-## Basic Effects
-
-<a id="treasury"></a>
-### Treasury
+<a id="how-to-modify-treasury"></a>
+#### Treasury
 
 Change the treasury by a custom amount:
 
@@ -35,71 +30,55 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
-<a id="debt"></a>
-### Debt
-
+<a id="change-debt"></a>
+#### Debt
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-<a id="investments"></a>
-### Investments
-
+<a id="change-investment"></a>
+#### Investment
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
-<a id="taxes"></a>
-### Taxes
-
-**Corporate Tax**
+<a id="corporate-tax"></a>
+#### Corporate Tax
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
-**Population Tax**
+<a id="population-tax"></a>
+#### Population Tax
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
 <a id="productivity"></a>
-### Productivity
-
+#### Productivity
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
 <a id="capitalization"></a>
-### Capitalization
+#### Capitalization
 
-Changes the country's capitalization:
+Changes the country's capitalization.
 
 ```
 set_temp_variable = { modify_capitalization = 0.010 }
 modify_capitalization_support = yes
 ```
 
+<a id="economic-growth"></a>
+#### Economic Growth
 
-<a id="base-inflation"></a>
-### Base Inflation
-
-Changes the country's base inflation:
-
-```
-set_temp_variable = { base_inflation_percent_change = 1.0 }
-modify_base_inflation_effect = yes
-```
-
-
-<a id="increasedecrease-economic-growth"></a>
-### Economic Growth
-
-Increases or decreases the nation's current economic cycle
+Increases or decreases the nation's current economic cycle.
 
 ```
 increase_economic_growth = yes
@@ -114,50 +93,47 @@ fast_growth = yes
 economic_boom = yes
 ```
 
-<a id="economic-agreements"></a>
-## Economic Agreements
+<a id="base-inflation"></a>
+#### Base Inflation
+
+```
+set_temp_variable = { base_inflation_percent_change = 1.0 }
+modify_base_inflation_effect = yes
+```
+
+### Economic Agreements
 
 <a id="setremove-trade-agreement"></a>
-### Trade Agreement
+#### Trade Agreement
 
-Creates or removes a trade agreement
+Creates or removes a trade agreement.
 
 - sender_nation --- The nation sending the agreement
-- receiver_nation --- Nation retrieving the agreement
+- receiver_nation --- The nation receiving the agreement
 - remove_agreement --- Optional (Set to 1)
 
 ```
 set_temp_variable = { receiver_nation = RAJ.id }
 set_temp_variable = { sender_nation = SIN.id }
 set_improved_trade_agreement = yes
-
 ```
 
 <a id="setremove-mutual-investment-treaty"></a>
-### Mutual Investment Treaty
+#### Mutual Investment Treaty
 
 Creates or removes a mutual investment treaty.
 
-- `sender_nation` — nation sending the agreement
-- `receiver_nation` — nation receiving the agreement
-- `remove_treaty` — optional parameter (set to 1 to cancel)
+- sender_nation --- The nation sending the agreement
+- receiver_nation --- The nation receiving the agreement
+- remove_treaty --- Optional (Set to 1)
 
 ```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
 set_mutual_investment_treaty = yes
 ```
 
-To cancel it:
-
-```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
-set_temp_variable = { remove_treaty = 1 }
-set_mutual_investment_treaty = yes
-```
-
-The improved trade agreement and mutual investment treaty can be used at the same time.
+The trade agreement and mutual investment treaty can be used simultaneously:
 
 ```
 set_temp_variable = { receiver_nation = BRA.id }
@@ -166,27 +142,34 @@ set_improved_trade_agreement = yes
 set_mutual_investment_treaty = yes
 ```
 
-<a id="setremove-permanent-investment-targets"></a>
-### Permanent Investment Targets
+To remove the mutual investment treaty:
 
-Creates or removes adding_nation to another AI's investment pool
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_temp_variable = { remove_treaty = 1 }
+set_mutual_investment_treaty = yes
+```
+
+<a id="setremove-permanent-investment-targets"></a>
+#### Permanent Investment Targets
+
+Adds or removes adding_nation from another AI-controlled country's investment pool.
 
 - target_nation --- The nation sending the agreement
-- adding_nation --- Nation retrieving the agreement
+- adding_nation --- The nation receiving the agreement
 - remove_nation --- Optional (Set to 1)
 
 ```
 set_temp_variable = { target_nation = RAJ.id }
 set_temp_variable = { adding_nation = SIN.id }
 change_permanent_investment_target = yes
-
 ```
 
-<a id="other"></a>
-## Other
+### Other
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Additional Income/Expenses
+#### Additional Income/Expenses
 
 ```
 Step One: go to common/scripted_effects/00_money_system.txt
@@ -214,14 +197,13 @@ defined_text = {
 }
 Step Five: go to MD_money_l_english.yml (localisation/english). Look up ADDITIONAL_INCOME_REVENUES_TOOLTIP
 Then at the end or somewhere in it just put [additional_income_summary_whatever]
-Step Six: Go back to your original idea file this should show you the amount in the spirits modifiers
+Step Six: Go back to your original idea file. This should show you the amount in the spirits modifiers.
 
-**NOTE** Variable displays will not work in this section. You will need to create seperate tooltip that states expclitly what you want or added the localization into the _desc of the idea.
+**NOTE** Variable displays will not work in this section. You will need to create a separate tooltip that explicitly states what you want or add the localization into the _desc of the idea.
 
 Do this in the modifiers:
 
 modifiers = {
   custom_modifier_tooltip = whatever_TT
 }
-
 ```

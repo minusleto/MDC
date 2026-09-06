@@ -3,15 +3,10 @@ title: Экономика
 description: "Экономические скриптовые эффекты"
 ---
 
-## Экономические эффекты MDC
+### Базовые эффекты
 
-Все предоставленные скриптовые эффекты _автоматически_ создают для вас тултипы. **НЕ** локализуйте дополнительные тултипы.
-
-<a id="basic-effects"></a>
-## Базовые эффекты
-
-<a id="treasury"></a>
-### Казна
+<a id="how-to-modify-treasury"></a>
+#### Казна
 
 Поменять казну на произвольную сумму:
 
@@ -35,69 +30,53 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
-<a id="debt"></a>
-### Долги
-
+<a id="change-debt"></a>
+#### Долги
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-<a id="investments"></a>
-### Инвестиции
-
+<a id="change-investment"></a>
+#### Инвестиции
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
-<a id="taxes"></a>
-### Налоги
-
-**Корпоративный налог**
+<a id="corporate-tax"></a>
+#### Корпоративный налог
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
-**Подоходный налог**
+<a id="population-tax"></a>
+#### Подоходный налог
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
 <a id="productivity"></a>
-### Производительность
-
+#### Производительность
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
 <a id="capitalization"></a>
-### Капитализация
+#### Капитализация
 
-Изменяет капитализацию страны:
+Изменяет капитализацию страны.
 
 ```
 set_temp_variable = { modify_capitalization = 0.010 }
 modify_capitalization_support = yes
 ```
 
-
-<a id="base-inflation"></a>
-### Базовая инфляция
-
-Изменяет базовую инфляцию страны:
-
-```
-set_temp_variable = { base_inflation_percent_change = 1.0 }
-modify_base_inflation_effect = yes
-```
-
-
-<a id="increasedecrease-economic-growth"></a>
-### Экономический рост
+<a id="economic-growth"></a>
+#### Экономический рост
 
 Увеличивает или уменьшает текущий экономический цикл страны
 
@@ -114,13 +93,20 @@ fast_growth = yes
 economic_boom = yes
 ```
 
-<a id="economic-agreements"></a>
-## Экономические соглашения
+<a id="base-inflation"></a>
+#### Базовая инфляция
+
+```
+set_temp_variable = { base_inflation_percent_change = 1.0 }
+modify_base_inflation_effect = yes
+```
+
+### Экономические соглашения
 
 <a id="setremove-trade-agreement"></a>
-### Торговое соглашение
+#### Торговое соглашение
 
-Создаёт или удаляет торговое соглашение
+Создаёт или удаляет торговое соглашение.
 
 - sender_nation --- страна, отправляющая соглашение
 - receiver_nation --- страна, получающая соглашение
@@ -130,34 +116,24 @@ economic_boom = yes
 set_temp_variable = { receiver_nation = RAJ.id }
 set_temp_variable = { sender_nation = SIN.id }
 set_improved_trade_agreement = yes
-
 ```
 
 <a id="setremove-mutual-investment-treaty"></a>
-### Взаимный инвестиционный договор
+#### Взаимный инвестиционный договор
 
 Создаёт или удаляет взаимный инвестиционный договор.
 
-- `sender_nation` — страна, отправляющая соглашение
-- `receiver_nation` — страна, получающая соглашение
-- `remove_treaty` — необязательный параметр (установить в 1 для отмены)
+- sender_nation --- страна, отправляющая соглашение
+- receiver_nation --- страна, получающая соглашение
+- remove_treaty --- необязательный параметр (установить в 1)
 
 ```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
 set_mutual_investment_treaty = yes
 ```
 
-Для отмены:
-
-```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
-set_temp_variable = { remove_treaty = 1 }
-set_mutual_investment_treaty = yes
-```
-
-Торговое соглашение и взаимный инвестиционный договор можно использовать одновременно.
+Торговое соглашение и взаимный инвестиционный договор можно использовать одновременно:
 
 ```
 set_temp_variable = { receiver_nation = BRA.id }
@@ -166,10 +142,19 @@ set_improved_trade_agreement = yes
 set_mutual_investment_treaty = yes
 ```
 
-<a id="setremove-permanent-investment-targets"></a>
-### Постоянные цели инвестиций
+Для отмены взаимного инвестиционного договора:
 
-Добавляет или удаляет adding_nation из инвестиционного пула другой страны под управлением ИИ
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_temp_variable = { remove_treaty = 1 }
+set_mutual_investment_treaty = yes
+```
+
+<a id="setremove-permanent-investment-targets"></a>
+#### Постоянные цели инвестиций
+
+Добавляет или удаляет adding_nation из инвестиционного пула другой страны под управлением ИИ.
 
 - target_nation --- страна, отправляющая соглашение
 - adding_nation --- страна, получающая соглашение
@@ -179,14 +164,12 @@ set_mutual_investment_treaty = yes
 set_temp_variable = { target_nation = RAJ.id }
 set_temp_variable = { adding_nation = SIN.id }
 change_permanent_investment_target = yes
-
 ```
 
-<a id="other"></a>
-## Другое
+### Другое
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Доп. доходы и расходы
+#### Доп. доходы и расходы
 
 ```
 Шаг 1: перейдите в common/scripted_effects/00_money_system.txt
@@ -223,5 +206,4 @@ defined_text = {
 modifiers = {
   custom_modifier_tooltip = whatever_TT
 }
-
 ```
