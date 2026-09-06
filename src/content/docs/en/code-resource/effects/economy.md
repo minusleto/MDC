@@ -3,8 +3,6 @@ title: Economy
 description: "Economic scripted effects"
 ---
 
-All scripted effects provided _automatically_ create tooltips for you. Do **NOT** localize additional tooltips.
-
 <a id="basic-effects"></a>
 ## Basic Effects
 
