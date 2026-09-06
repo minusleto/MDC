@@ -104,25 +104,23 @@ set_partyall_banned = yes # Bans all the parties
 ```
 
 <a id="counter-terror-effects"></a>
+## Protests
 
-### Protests
+### Protest Strength
 
-<a id="protest-strength"></a>
-#### Protest Strength
-
-Changes protest strength. The variable has a maximum value of 100.
+Changes protest strength. The maximum value of the variable is 100.
 
 ```
 set_temp_variable = { protest_strength_change = 10 }
 modify_protest_effect = yes
 ```
 
-<a id="protest-radicalisation"></a>
-#### Protest Radicalisation
+### Protest Radicalisation
 
-Changes protest radicalisation. The variable has a maximum value of 10.
+Changes protest radicalisation. The maximum value of the variable is 10. Values above 10 have no meaningful effect.
 
 ```
 set_temp_variable = { protest_radicalisation_change = -10 }
 modify_protest_radicalisation_effect = yes
 ```
+

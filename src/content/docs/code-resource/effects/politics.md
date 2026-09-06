@@ -104,11 +104,9 @@ set_partyall_banned = yes # Запрещает все партии
 ```
 
 <a id="counter-terror-effects"></a>
+## Протесты
 
-### Протесты
-
-<a id="protest-strength"></a>
-#### Сила протестов
+### Сила протестов
 
 Изменяет силу протестов. Максимальное значение переменной — 100.
 
@@ -117,12 +115,12 @@ set_temp_variable = { protest_strength_change = 10 }
 modify_protest_effect = yes
 ```
 
-<a id="protest-radicalisation"></a>
-#### Радикализация протестов
+### Радикализация протестов
 
-Изменяет радикализацию протестов. Максимальное значение переменной — 10.
+Изменяет радикализацию протестов. Максимальное значение переменной — 10. Значения выше 10 не имеют смысла.
 
 ```
 set_temp_variable = { protest_radicalisation_change = -10 }
 modify_protest_radicalisation_effect = yes
 ```
+

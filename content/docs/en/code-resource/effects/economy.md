@@ -5,18 +5,10 @@ description: "Economic scripted effects"
 
 ## MDC Economic Effects
 
-All scripted effects provided _automatically_ create tooltips for you. Do **NOT** localize additional tooltips.
-
-<a id="basic-economic-effects"></a>
-### Basic Effects
-
-<a id="basic-effects"></a>
-#### Basic
-
 <a id="how-to-modify-treasury"></a>
-##### How to Modify Treasury
+### How to Modify Treasury
 
-Change the treasury by a custom amount:
+Change the treasury by a custom amount: +-
 
 ```
 set_temp_variable = { treasury_change = 10.00 }
@@ -125,42 +117,6 @@ Creates or removes a trade agreement
 set_temp_variable = { receiver_nation = RAJ.id }
 set_temp_variable = { sender_nation = SIN.id }
 set_improved_trade_agreement = yes
-
-```
-
-<a id="setremove-mutual-investment-treaty"></a>
-#### Mutual Investment Treaty
-
-Creates or removes a mutual investment treaty. It can be used together with `set_improved_trade_agreement = yes`.
-
-- sender_nation --- The nation sending the treaty
-- receiver_nation --- Nation receiving the treaty
-- remove_treaty --- Optional (Set to 1 to remove the treaty)
-
-```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_mutual_investment_treaty = yes
-
-```
-
-To remove the treaty:
-
-```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_temp_variable = { remove_treaty = 1 }
-set_mutual_investment_treaty = yes
-
-```
-
-Both economic agreements can be used at the same time:
-
-```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_improved_trade_agreement = yes
-set_mutual_investment_treaty = yes
 
 ```
 

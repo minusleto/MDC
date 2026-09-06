@@ -3,12 +3,12 @@ title: Economy
 description: "Economic scripted effects"
 ---
 
-### Basic Effects
+## MDC Economic Effects
 
 <a id="how-to-modify-treasury"></a>
-#### Treasury
+### How to Modify Treasury
 
-Change the treasury by a custom amount:
+Change the treasury by a custom amount: +-
 
 ```
 set_temp_variable = { treasury_change = 10.00 }
@@ -30,146 +30,46 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
+<a id="other-economic-effects"></a>
+### Other Economic Effects
+
 <a id="change-debt"></a>
-#### Debt
+### Change Debt
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
 <a id="change-investment"></a>
-#### Investment
+### Change Investment
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
 <a id="corporate-tax"></a>
-#### Corporate Tax
+### Corporate Tax
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
 <a id="population-tax"></a>
-#### Population Tax
+### Population Tax
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
 <a id="productivity"></a>
-#### Productivity
+### Productivity
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
-<a id="capitalization"></a>
-#### Capitalization
-
-Changes the country's capitalization.
-
-```
-set_temp_variable = { modify_capitalization = 0.010 }
-modify_capitalization_support = yes
-```
-
-<a id="economic-growth"></a>
-#### Economic Growth
-
-Increases or decreases the nation's current economic cycle.
-
-```
-increase_economic_growth = yes
-decrease_economic_growth = yes
-increase_two_level_economic_growth = yes
-decrease_two_level_economic_growth = yes
-depression = yes
-recession = yes
-stagnation = yes
-stable_growth = yes
-fast_growth = yes
-economic_boom = yes
-```
-
-<a id="base-inflation"></a>
-#### Base Inflation
-
-```
-set_temp_variable = { base_inflation_percent_change = 1.0 }
-modify_base_inflation_effect = yes
-```
-
-### Economic Agreements
-
-<a id="setremove-trade-agreement"></a>
-#### Trade Agreement
-
-Creates or removes a trade agreement.
-
-- sender_nation --- The nation sending the agreement
-- receiver_nation --- The nation receiving the agreement
-- remove_agreement --- Optional (Set to 1)
-
-```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
-set_improved_trade_agreement = yes
-```
-
-<a id="setremove-mutual-investment-treaty"></a>
-#### Mutual Investment Treaty
-
-Creates or removes a mutual investment treaty.
-
-- sender_nation --- The nation sending the agreement
-- receiver_nation --- The nation receiving the agreement
-- remove_treaty --- Optional (Set to 1)
-
-```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_mutual_investment_treaty = yes
-```
-
-The trade agreement and mutual investment treaty can be used simultaneously:
-
-```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_improved_trade_agreement = yes
-set_mutual_investment_treaty = yes
-```
-
-To remove the mutual investment treaty:
-
-```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_temp_variable = { remove_treaty = 1 }
-set_mutual_investment_treaty = yes
-```
-
-<a id="setremove-permanent-investment-targets"></a>
-#### Permanent Investment Targets
-
-Adds or removes adding_nation from another AI-controlled country's investment pool.
-
-- target_nation --- The nation sending the agreement
-- adding_nation --- The nation receiving the agreement
-- remove_nation --- Optional (Set to 1)
-
-```
-set_temp_variable = { target_nation = RAJ.id }
-set_temp_variable = { adding_nation = SIN.id }
-change_permanent_investment_target = yes
-```
-
-### Other
-
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-#### Additional Income/Expenses
+### Additional Income/Expenses
 
 ```
 Step One: go to common/scripted_effects/00_money_system.txt
@@ -197,13 +97,32 @@ defined_text = {
 }
 Step Five: go to MD_money_l_english.yml (localisation/english). Look up ADDITIONAL_INCOME_REVENUES_TOOLTIP
 Then at the end or somewhere in it just put [additional_income_summary_whatever]
-Step Six: Go back to your original idea file. This should show you the amount in the spirits modifiers.
+Step Six: Go back to your original idea file this should show you the amount in the spirits modifiers
 
-**NOTE** Variable displays will not work in this section. You will need to create a separate tooltip that explicitly states what you want or add the localization into the _desc of the idea.
+**NOTE** Variable displays will not work in this section. You will need to create seperate tooltip that states expclitly what you want or added the localization into the _desc of the idea.
 
 Do this in the modifiers:
 
 modifiers = {
   custom_modifier_tooltip = whatever_TT
 }
+
+```
+
+<a id="increasedecrease-economic-growth"></a>
+### Economic Growth
+
+Increases or decreases the nation's current economic cycle
+
+```
+increase_economic_growth = yes
+decrease_economic_growth = yes
+increase_two_level_economic_growth = yes
+decrease_two_level_economic_growth = yes
+depression = yes
+recession = yes
+stagnation = yes
+stable_growth = yes
+fast_growth = yes
+economic_boom = yes
 ```
