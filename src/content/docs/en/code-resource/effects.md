@@ -688,26 +688,33 @@ set_partyall_banned = yes # Bans all the parties
 ```
 
 <a id="counter-terror-effects"></a>
-### Counter Terror Effects
+### Terrorism Effects
 
-<a id="radicalization-threat-level"></a>
-#### Radicalization / Threat Level
+#### Terrorism Support
 
-Only Counter Terror nations can use this. For a full list of tags go to common -> on_actions.txt and look for _ct_states.
+Available only for the following tags.
 
-```
-set_temp_variable = { rad_change = -5 }
-modify_radicalization_effect = yes
+**Communist:** `ITA`, `GER`, `NOR`, `CZE`, `HUN`, `AUS`  
+**Other terrorist:** `SYR`, `IRQ`, `SAU`, `UAE`, `EGY`, `NIG`, `ALG`, `TUN`, `TAJ`, `ING`, `KBK`, `KCC`, `DAG`, `CHE`, `ARW`
 
-```
-
-```
-set_temp_variable = { threat_change = 2 }
-modify_terror_threat_effect = yes
-
+```txt
+set_temp_variable = { modify_terrorism = 1 }
+modify_terrorism_support = yes
 ```
 
-<a id="mdc-cartel-related-effects"></a>
+Terrorism support is capped at `100`.
+
+#### Terrorist Activity Accumulation
+
+```txt
+add_to_variable = { terrorism_mana = 10 }
+clamp_variable = {
+    var = terrorism_mana
+    min = 1
+    max = 100
+}
+```
+
 ### MDC Cartel Related Effects
 
 modify_cartel_variables_effect
