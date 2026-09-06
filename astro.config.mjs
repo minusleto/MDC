@@ -17,6 +17,10 @@ export default defineConfig({
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/minusleto/MDC' },
 			],
+			editLink: {
+				baseUrl: 'https://github.com/minusleto/MDC/edit/main/',
+			},
+			lastUpdated: true,
 			sidebar: [
 				{ label: 'Code Resource', translations: { en: 'Code Resource' }, items: [
 					{ label: 'Быстрый старт', translations: { en: 'Getting Started' }, items: [
@@ -41,7 +45,7 @@ export default defineConfig({
 					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/modifiers' },
 						{ label: 'Экономические', translations: { en: 'Economic' }, slug: 'code-resource/modifiers/economic' },
-						{ label: 'Законы', translations: { en: 'Laws' }, slug: 'code-resource/modifiers/laws' },
+						{ label: 'Модификаторы законов', translations: { en: 'Law Modifiers' }, slug: 'code-resource/modifiers/laws' },
 						{ label: 'Миграция', translations: { en: 'Migration' }, slug: 'code-resource/modifiers/migration' },
 						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/modifiers/influence' },
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/modifiers/energy' },

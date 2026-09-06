@@ -11,3 +11,4 @@ description: "Reference for MDC modifiers."
 - [Influence Modifiers](./influence/)
 - [Energy Modifiers](./energy/)
 - [Political Modifiers](./political/)
+- [Military Modifiers](./military/)

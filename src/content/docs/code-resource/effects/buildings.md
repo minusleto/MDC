@@ -76,7 +76,7 @@ modify_treasury_effect = yes
 По возможности используйте эти эффекты как можно чаще.
 
 <a id="civilian-factory"></a>
-### Гражданская фабрика
+**Гражданская фабрика**
 
 ```
 one_random_industrial_complex = yes #добавляет 1 гражданскую фабрику со слотом и стоимостью
@@ -92,7 +92,7 @@ four_state_industrial_complex = yes #добавляет 4 гражданские
 ```
 
 <a id="military-factory"></a>
-### Военная фабрика
+**Военная фабрика**
 
 ```
 one_random_arms_factory = yes #добавляет 1 военную фабрику со слотом и стоимостью
@@ -108,7 +108,7 @@ four_state_arms_factory = yes #добавляет 4 военные фабрик�
 ```
 
 <a id="infrastructure"></a>
-### Инфраструктура
+**Инфраструктура**
 
 ```
 one_random_infrastructure = yes #добавляет 1 инфраструктуру со стоимостью
@@ -122,7 +122,7 @@ three_state_infrastructure = yes #добавляет 3 инфраструкту�
 ```
 
 <a id="dockyards"></a>
-### Верфьs
+**Верфи**
 
 ```
 one_random_dockyard = yes #добавляет 1 верфь со слотом и стоимостью
@@ -134,7 +134,7 @@ two_state_dockyard = yes #добавляет 2 верфи со слотом и �
 ```
 
 <a id="offices"></a>
-### Офисы
+**Офисы**
 
 Следующие эффекты также дают электростанцию на ископаемом топливе.
 
@@ -150,7 +150,7 @@ three_state_office_construction = yes #добавляет 3 офисных ко�
 ```
 
 <a id="commercialized-agriculture-district"></a>
-### Коммерческий сельскохозяйственный район
+**Коммерческий сельскохозяйственный район**
 
 ```
 one_random_agriculture_district = yes #добавляет 1 сельскохозяйственный район со слотом и стоимостью
@@ -160,7 +160,7 @@ one_state_agriculture_district = yes #добавляет 1 сельскохоз�
 ```
 
 <a id="air-bases-air_base"></a>
-### Авиабазы (air_base)
+**Авиабазы (air_base)**
 
 ```
 one_air_base = yes #добавляет 1 авиабазу со стоимостью
@@ -172,7 +172,7 @@ two_state_air_base = yes #добавляет 2 авиабазы со стоим�
 ```
 
 <a id="network-infrastructure-internet_station"></a>
-### Сетевая инфраструктура (internet_station)
+**Сетевая инфраструктура (internet_station)**
 
 ```
 one_random_network_infrastructure = yes #добавляет 1 сетевую инфраструктуру со стоимостью
@@ -184,7 +184,7 @@ two_state_network_infrastructure = yes #добавляет 2 сетевые ин
 ```
 
 <a id="anti-air-sam-site-anti_air_building"></a>
-### ПВО | ЗРК (anti_air_building)
+**ПВО | ЗРК (anti_air_building)**
 
 ```
 one_anti_air = yes #добавляет 1 ПВО со стоимостью
@@ -196,7 +196,7 @@ two_state_anti_air = yes #добавляет 2 ПВО со стоимостью 
 ```
 
 <a id="radar-station-radar_station"></a>
-### Радарная станция (radar_station)
+**Радарная станция (radar_station)**
 
 ```
 one_radar_station = yes #добавляет 1 радарную станцию со стоимостью
@@ -208,7 +208,7 @@ two_state_radar_station = yes #добавляет 2 радарные станц�
 ```
 
 <a id="synthetic-refinery-synthetic_refinery"></a>
-### Синтетический НПЗ (synthetic_refinery)
+**Синтетический НПЗ (synthetic_refinery)**
 
 ```
 one_random_synthetic_refinery = yes #добавляет 1 синтетический НПЗ со слотом и стоимостью
@@ -222,7 +222,7 @@ three_state_synthetic_refinery = yes #добавляет 3 синтетичес�
 ```
 
 <a id="other-buildings"></a>
-### Другие постройки
+**Другие постройки**
 
 ```
 one_random_nuclear_reactor = yes #добавляет 1 ядерный реактор со слотом и стоимостью

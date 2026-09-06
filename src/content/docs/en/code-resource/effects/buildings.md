@@ -76,7 +76,7 @@ Example:
 Also try to use as more as possible these effects.
 
 <a id="civilian-factory"></a>
-### Civilian Factory
+**Civilian Factory**
 
 ```
 one_random_industrial_complex = yes #add 1 civ with slot and cost
@@ -92,7 +92,7 @@ four_state_industrial_complex = yes #add 4 civs with slot and cost in a predefin
 ```
 
 <a id="military-factory"></a>
-### Military Factory
+**Military Factory**
 
 ```
 one_random_arms_factory = yes #add 1 military factory with slot and cost
@@ -108,7 +108,7 @@ four_state_arms_factory = yes #add 4 military factories with slot and cost in a 
 ```
 
 <a id="infrastructure"></a>
-### Infrastructure
+**Infrastructure**
 
 ```
 one_random_infrastructure = yes #add 1 infrastructure with cost
@@ -122,7 +122,7 @@ three_state_infrastructure = yes #add 3 infrastructure with cost in a predefined
 ```
 
 <a id="dockyards"></a>
-### Dockyards
+**Dockyards**
 
 ```
 one_random_dockyard = yes #add 1 dockyard with slot and cost
@@ -134,7 +134,7 @@ two_state_dockyard = yes #add 2 dockyards with slot and cost in a predefined sta
 ```
 
 <a id="offices"></a>
-### Offices
+**Offices**
 
 The following also give a fossil fuel power plant.
 
@@ -150,7 +150,7 @@ three_state_office_construction = yes #add 3 office constructions with slots and
 ```
 
 <a id="commercialized-agriculture-district"></a>
-### Commercialized Agriculture District
+**Commercialized Agriculture District**
 
 ```
 one_random_agriculture_district = yes #add 1 agriculture district construction with slot and cost
@@ -160,7 +160,7 @@ one_state_agriculture_district = yes #add 1 agriculture district construction wi
 ```
 
 <a id="air-bases-air_base"></a>
-### Air bases (air_base)
+**Air bases (air_base)**
 
 ```
 one_air_base = yes #add 1 air base with cost
@@ -172,7 +172,7 @@ two_state_air_base = yes #add 2 air bases with cost in a predefined state
 ```
 
 <a id="network-infrastructure-internet_station"></a>
-### Network Infrastructure (internet_station)
+**Network Infrastructure (internet_station)**
 
 ```
 one_random_network_infrastructure = yes #add 1 network infrastructure with cost
@@ -184,7 +184,7 @@ two_state_network_infrastructure = yes #add 2 network infrastructure with cost i
 ```
 
 <a id="anti-air-sam-site-anti_air_building"></a>
-### Anti Air | Sam Site (anti_air_building)
+**Anti Air | Sam Site (anti_air_building)**
 
 ```
 one_anti_air = yes #add 1 anti air with cost
@@ -196,7 +196,7 @@ two_state_anti_air = yes #add 2 anti airs with cost in a predefined state
 ```
 
 <a id="radar-station-radar_station"></a>
-### Radar Station (radar_station)
+**Radar Station (radar_station)**
 
 ```
 one_radar_station = yes #add 1 radar station with cost
@@ -208,7 +208,7 @@ two_state_radar_station = yes #add 2 radar stations with cost in a predefined st
 ```
 
 <a id="synthetic-refinery-synthetic_refinery"></a>
-### Synthetic refinery (synthetic_refinery)
+**Synthetic refinery (synthetic_refinery)**
 
 ```
 one_random_synthetic_refinery = yes #add 1 Synthetic refinery with slot and cost
@@ -222,7 +222,7 @@ three_state_synthetic_refinery = yes #add 3 Synthetic refineries with slot and c
 ```
 
 <a id="other-buildings"></a>
-### Other buildings
+**Other buildings**
 
 ```
 one_random_nuclear_reactor = yes #add 1 nuclear reactor with slot and cost
