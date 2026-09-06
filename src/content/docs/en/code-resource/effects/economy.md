@@ -32,42 +32,101 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
-<a id="other-economic-effects"></a>
-### Other Economic Effects
+<a id="basic-economic-effects"></a>
+### Basic Effects
 
-<a id="change-debt"></a>
-### Change Debt
+<a id="how-to-modify-debt"></a>
+**How to Change Debt**
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-<a id="change-investment"></a>
-### Change Investment
+<a id="how-to-modify-investment"></a>
+**How to Change International Investment**
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
+<a id="productivity"></a>
+**Change Productivity (flat value)**
+```
+set_temp_variable = { temp_productivity_change = 25.0 }
+flat_productivity_change_effect = yes
+```
+
+<a id="tax-changes"></a>
+### Tax Changes
+
 <a id="corporate-tax"></a>
-### Corporate Tax
+**Change Corporate Tax Rate**
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
 <a id="population-tax"></a>
-### Population Tax
+**Change Population Tax Rate**
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
-<a id="productivity"></a>
-### Productivity
+<a id="economic-agreements"></a>
+### Economic Agreements
+
+<a id="setremove-trade-agreement"></a>
+**Trade Agreement**
+
+Creates or removes a trade agreement.
+
+- sender_nation --- The nation sending the agreement
+- receiver_nation --- The nation receiving the agreement
+- remove_agreement --- Optional (set to 1)
+
 ```
-set_temp_variable = { temp_productivity_change = 25.0 }
-flat_productivity_change_effect = yes
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_improved_trade_agreement = yes
+```
+
+<a id="setremove-mutual-investment-treaty"></a>
+**Investment Agreement**
+
+Creates or removes a mutual investment treaty.
+
+- sender_nation --- The nation sending the agreement
+- receiver_nation --- The nation receiving the agreement
+
+```
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_mutual_investment_treaty = yes
+```
+
+Trade and investment agreements can be used simultaneously.
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_improved_trade_agreement = yes
+set_mutual_investment_treaty = yes
+```
+
+<a id="setremove-permanent-investment-targets"></a>
+### Permanent Investment Targets
+
+Creates or removes adding_nation from another AI-controlled nation's investment pool.
+
+- target_nation --- The nation receiving the investment target
+- adding_nation --- The nation being added to the investment pool
+- remove_nation --- Optional (set to 1)
+
+```
+set_temp_variable = { target_nation = RAJ.id }
+set_temp_variable = { adding_nation = SIN.id }
+change_permanent_investment_target = yes
 ```
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>

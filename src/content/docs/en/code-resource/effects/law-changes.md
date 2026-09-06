@@ -1,6 +1,6 @@
 ---
 title: Law Changes
-description: "Effects for changing laws: civil freedoms (censorship, assembly, internet, religion, LGBT, trade unions), demographics and birth policy, weapons, economic laws (basic effects, taxes, agreements, spending, trade, migration, bureaucracy)"
+description: "Effects for changing laws: civil freedoms (censorship, assembly, internet, religion, LGBT, trade unions), demographics and birth policy, weapons, economic laws (spending, trade, migration, bureaucracy)"
 ---
 
 ## Law Changes
@@ -127,40 +127,7 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 <a id="economic-laws"></a>
 ## Economic Laws
 
-Laws and effects governing treasury, debt, investment, taxes, economic agreements, government spending, trade, military spending, and migration.
-
-<a id="basic-economic-effects"></a>
-### Basic Effects
-
-Basic economic effects related to treasury, debt, and investment.
-
-> The current file does not contain separate `set_*` effects for treasury, debt, or investment, so no effect names are added here without a source.
-
-<a id="tax-changes"></a>
-### Tax Changes
-
-Tax laws: income tax and corporate tax.
-
-> The current file does not contain separate effects for changing income and corporate taxes.
-
-<a id="economic-agreements"></a>
-### Economic Agreements
-
-Economic agreements between countries. The trade and investment agreements can be used together.
-
-| Effect | Application |
-|---|---|
-| `set_improved_trade_agreement = yes` | Set an improved trade agreement |
-| `set_mutual_investment_treaty = yes` | Set a mutual investment treaty |
-
-Example of using both together:
-
-```text
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_improved_trade_agreement = yes
-set_mutual_investment_treaty = yes
-```
+Laws that govern government spending (bureaucracy, social spending, education, healthcare, policing budgets), plus the trade, military spending, and migration laws.
 
 <a id="bureaucracy-law"></a>
 ### Bureaucracy
