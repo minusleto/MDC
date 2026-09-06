@@ -35,38 +35,43 @@ large_expenditure = yes
 <a id="other-economic-effects"></a>
 ### Other Economic Effects
 
-**How to Change Debt**
+<a id="change-debt"></a>
+### Change Debt
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-**How to Change International Investment**
+<a id="change-investment"></a>
+### Change Investment
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
-**Change Corporate Tax Rate**
+<a id="corporate-tax"></a>
+### Corporate Tax
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
-**Change Population Tax Rate**
+<a id="population-tax"></a>
+### Population Tax
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
-**Change Productivity (flat value)**
+<a id="productivity"></a>
+### Productivity
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Guide on How To-Do Additional Income/Additional Expenses
+### Additional Income/Expenses
 
 ```
 Step One: go to common/scripted_effects/00_money_system.txt
@@ -107,7 +112,7 @@ modifiers = {
 ```
 
 <a id="setremove-trade-agreement"></a>
-### Set/Remove Trade Agreement
+### Trade Agreement
 
 Creates or removes a trade agreement
 
@@ -139,7 +144,7 @@ change_permanent_investment_target = yes
 ```
 
 <a id="increasedecrease-economic-growth"></a>
-### Increase/Decrease Economic Growth
+### Economic Growth
 
 Increases or decreases the nation's current economic cycle
 

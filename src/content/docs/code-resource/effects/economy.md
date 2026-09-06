@@ -35,38 +35,43 @@ large_expenditure = yes
 <a id="other-economic-effects"></a>
 ### Другие экономические эффекты
 
-**Как изменить долг**
+<a id="change-debt"></a>
+### Как изменить долг
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-**Как изменить международные инвестиции**
+<a id="change-investment"></a>
+### Как изменить инвестиции
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
-**Изменить корпоративный налог**
+<a id="corporate-tax"></a>
+### Корпоративный налог
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
-**Изменить подоходный налог**
+<a id="population-tax"></a>
+### Подоходный налог
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
-**Изменить производительность (фикс. значение)**
+<a id="productivity"></a>
+### Производительность
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Руководство: дополнительные доходы / дополнительные расходы
+### Доп. доходы и расходы
 
 ```
 Шаг 1: перейдите в common/scripted_effects/00_money_system.txt
@@ -107,7 +112,7 @@ modifiers = {
 ```
 
 <a id="setremove-trade-agreement"></a>
-### Установить / удалить торговое соглашение
+### Торговое соглашение
 
 Создаёт или удаляет торговое соглашение
 
@@ -139,7 +144,7 @@ change_permanent_investment_target = yes
 ```
 
 <a id="increasedecrease-economic-growth"></a>
-### Увеличить / уменьшить экономический рост
+### Экономический рост
 
 Увеличивает или уменьшает текущий экономический цикл страны
 
