@@ -10,14 +10,12 @@ All scripted effects provided _automatically_ create tooltips for you. Do **NOT*
 <a id="how-to-modify-treasury"></a>
 ### How to Modify Treasury
 
-Reduces the treasury by a custom amount:
+Change the treasury by a custom amount: +-
 
 ```
 set_temp_variable = { treasury_change = -10.00 }
 modify_treasury_effect = yes
 ```
-
-Preset expenditures, each a single flat effect sized as % of GDP:
 
 **Small Expenditure** — 0.2% of GDP
 ```
@@ -37,29 +35,33 @@ large_expenditure = yes
 <a id="other-economic-effects"></a>
 ### Other Economic Effects
 
+**How to Change Debt**
 ```
-set_temp_variable = { debt_change = 0.1 }
+set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
+**How to Change International Investment**
 ```
-set_temp_variable = { int_investment_change = 0.1 }
+set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
+**Change Corporate Tax Rate**
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
+**Change Population Tax Rate**
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
+**Change Productivity (flat value)**
 ```
-# - Adjusting the productivity of a number as a flat value
-set_temp_variable = { temp_productivity_change = 0.025 }
+set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
@@ -121,7 +123,7 @@ set_improved_trade_agreement = yes
 ```
 
 <a id="setremove-permanent-investment-targets"></a>
-### Set/Remove Permanent Investment Targets
+### Permanent Investment Targets
 
 Creates or removes adding_nation to another AI's investment pool
 

@@ -10,26 +10,24 @@ description: "Экономические скриптовые эффекты"
 <a id="how-to-modify-treasury"></a>
 ### Как изменить казну
 
-Уменьшает казну на произвольную сумму:
+Поменять казну на произвольную сумму: +-
 
 ```
 set_temp_variable = { treasury_change = -10.00 }
 modify_treasury_effect = yes
 ```
 
-Готовые расходы — каждый одиночный эффект с фиксированным размером в % от ВВП:
-
-**Малый расход (Small Expenditure)** — 0.2% ВВП
+**Малый расход** — 0.2% ВВП
 ```
 small_expenditure = yes
 ```
 
-**Средний расход (Medium Expenditure)** — 0.4% ВВП
+**Средний расход** — 0.4% ВВП
 ```
 medium_expenditure = yes
 ```
 
-**Крупный расход (Large Expenditure)** — 0.6% ВВП
+**Крупный расход** — 0.6% ВВП
 ```
 large_expenditure = yes
 ```
@@ -37,29 +35,33 @@ large_expenditure = yes
 <a id="other-economic-effects"></a>
 ### Другие экономические эффекты
 
+**Как изменить долг**
 ```
-set_temp_variable = { debt_change = 0.1 }
+set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
+**Как изменить международные инвестиции**
 ```
-set_temp_variable = { int_investment_change = 0.1 }
+set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
+**Изменить корпоративный налог**
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
+**Изменить подоходный налог**
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
+**Изменить производительность (фикс. значение)**
 ```
-# - Изменяет производительность на фиксированную величину
-set_temp_variable = { temp_productivity_change = 0.025 }
+set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
@@ -121,7 +123,7 @@ set_improved_trade_agreement = yes
 ```
 
 <a id="setremove-permanent-investment-targets"></a>
-### Установить / удалить постоянные цели инвестиций
+### Постоянные цели инвестиций
 
 Добавляет или удаляет adding_nation из инвестиционного пула другой страны под управлением ИИ
 
