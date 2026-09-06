@@ -140,11 +140,6 @@ fast_growth = yes
 economic_boom = yes
 ```
 
-<a id="laws-moved"></a>
-### Law-related effects — moved
-
-Law change effects (bureaucracy/centralization, social spending, education, healthcare, policing, trade law, military spending, migration law), along with civil freedom, demographics and weapons laws, are now collected on a dedicated page:
-
-- [Law Changes](/en/code-resource/effects/freedom-laws)
+```
 
 <a id="mdc-internal-faction-effects"></a>
