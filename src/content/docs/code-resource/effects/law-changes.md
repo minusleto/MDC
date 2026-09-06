@@ -126,110 +126,94 @@ description: "Эффекты смены законов: гражданские �
 
 Законы, регулирующие государственные расходы (бюджет на бюрократию, соцсферу, образование, здравоохранение, полицию), а также торговый, военный и миграционный законы.
 
-<a id="increasedecrease-bureaucracy-law"></a>
-### Увеличить / уменьшить закон о расходах на бюрократию
+<a id="bureaucracy-law"></a>
+**Бюрократия / Централизация**
 
-Увеличивает или уменьшает текущий закон страны о расходах на бюрократию
+| Эффект | Применение |
+|---|---|
+| `decrease_centralization = yes` | Уменьшить централизацию |
+| `decrease_centralization_2 = yes` | Уменьшить централизацию (уровень 2) |
+| `decrease_centralization_3 = yes` | Уменьшить централизацию (уровень 3) |
+| `increase_centralization = yes` | Увеличить централизацию |
+| `increase_centralization_2 = yes` | Увеличить централизацию (уровень 2) |
+| `increase_centralization_3 = yes` | Увеличить централизацию (уровень 3) |
+| `increase_centralization_4 = yes` | Увеличить централизацию (максимум) |
 
-```
-decrease_centralization = yes
-decrease_centralization_2 = yes
-decrease_centralization_3 = yes
-increase_centralization = yes
-increase_centralization_2 = yes
-increase_centralization_3 = yes
-increase_centralization_4 = yes
-```
+<a id="education-spending"></a>
+**Образование**
 
-<a id="increasedecrease-social-spending"></a>
-### Увеличить / уменьшить социальные расходы
+| Эффект | Применение |
+|---|---|
+| `increase_education_budget = yes` | Увеличить расходы на образование |
+| `increase_education_budget_2 = yes` | Увеличить расходы на образование (уровень 2) |
+| `increase_education_budget_3 = yes` | Увеличить расходы на образование (уровень 3) |
+| `increase_education_budget_4 = yes` | Увеличить расходы на образование (максимум) |
+| `decrease_education_budget = yes` | Уменьшить расходы на образование |
+| `decrease_education_budget_2 = yes` | Уменьшить расходы на образование (уровень 2) |
+| `max_education_budget = yes` | Установить максимальные расходы на образование |
 
-Увеличивает или уменьшает текущий закон страны о социальных расходах
+<a id="healthcare-spending"></a>
+**Здравоохранение**
 
-```
-increase_social_spending = yes
-increase_social_spending_2 = yes
-increase_social_spending_3 = yes
-increase_social_spending_4 = yes
-decrease_social_spending = yes
-decrease_social_spending_2 = yes
-max_social_spending = yes
-```
+| Эффект | Применение |
+|---|---|
+| `increase_healthcare_budget = yes` | Увеличить расходы на здравоохранение |
+| `increase_healthcare_budget_2 = yes` | Увеличить расходы на здравоохранение (уровень 2) |
+| `increase_healthcare_budget_3 = yes` | Увеличить расходы на здравоохранение (уровень 3) |
+| `increase_healthcare_budget_4 = yes` | Увеличить расходы на здравоохранение (максимум) |
+| `decrease_healthcare_budget = yes` | Уменьшить расходы на здравоохранение |
+| `decrease_healthcare_budget_2 = yes` | Уменьшить расходы на здравоохранение (уровень 2) |
+| `max_healthcare_budget = yes` | Установить максимальные расходы на здравоохранение |
 
-<a id="increasedecrease-education-spending"></a>
-### Увеличить / уменьшить расходы на образование
+<a id="social-spending"></a>
+**Социальные расходы**
 
-Увеличивает или уменьшает текущий закон страны о расходах на образование
+| Эффект | Применение |
+|---|---|
+| `increase_social_spending = yes` | Увеличить социальные расходы |
+| `increase_social_spending_2 = yes` | Увеличить социальные расходы (уровень 2) |
+| `increase_social_spending_3 = yes` | Увеличить социальные расходы (уровень 3) |
+| `increase_social_spending_4 = yes` | Увеличить социальные расходы (максимум) |
+| `decrease_social_spending = yes` | Уменьшить социальные расходы |
+| `decrease_social_spending_2 = yes` | Уменьшить социальные расходы (уровень 2) |
+| `max_social_spending = yes` | Установить максимальные социальные расходы |
 
-```
-increase_education_budget = yes
-increase_education_budget_2 = yes
-increase_education_budget_3 = yes
-increase_education_budget_4 = yes
-decrease_education_budget = yes
-decrease_education_budget_2 = yes
-max_education_budget = yes
-```
+<a id="policing-spending"></a>
+**Полиция**
 
-<a id="increasedecrease-health-spending"></a>
-### Увеличить / уменьшить расходы на здравоохранение
+| Эффект | Применение |
+|---|---|
+| `increase_policing_budget = yes` | Увеличить расходы на полицию |
+| `increase_policing_budget_2 = yes` | Увеличить расходы на полицию (уровень 2) |
+| `increase_policing_budget_3 = yes` | Увеличить расходы на полицию (уровень 3) |
+| `increase_policing_budget_4 = yes` | Увеличить расходы на полицию (максимум) |
+| `decrease_policing_budget = yes` | Уменьшить расходы на полицию |
+| `decrease_policing_budget_2 = yes` | Уменьшить расходы на полицию (уровень 2) |
 
-Увеличивает или уменьшает текущий закон страны о расходах на здравоохранение
+<a id="trade-law"></a>
+**Торговый закон**
 
-```
-increase_healthcare_budget = yes
-increase_healthcare_budget_2 = yes
-increase_healthcare_budget_3 = yes
-increase_healthcare_budget_4 = yes
-decrease_healthcare_budget = yes
-decrease_healthcare_budget_2 = yes
-max_healthcare_budget = yes
-```
+| Эффект | Применение |
+|---|---|
+| `increase_exports = yes` | Увеличить экспорт / торговый закон |
+| `decrease_exports = yes` | Уменьшить экспорт / торговый закон |
+| `set_exports_to_min = yes` | Установить экспорт на минимум |
+| `set_exports_to_max = yes` | Установить экспорт на максимум |
 
-<a id="increasedecrease-police-spending"></a>
-### Увеличить / уменьшить расходы на полицию
+<a id="military-spending-law"></a>
+**Военные расходы**
 
-Увеличивает или уменьшает текущий закон страны о расходах на полицию
+| Эффект | Применение |
+|---|---|
+| `increase_military_spending = yes` | Увеличить военные расходы |
+| `decrease_military_spending = yes` | Уменьшить военные расходы |
+| `decrease_military_spending_2 = yes` | Уменьшить военные расходы (уровень 2) |
+| `sizeable_military_spending = yes` | Установить значительные военные расходы |
 
-```
-increase_policing_budget = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_4 = yes
-decrease_policing_budget = yes
-decrease_policing_budget_2 = yes
-```
+<a id="migration-law"></a>
+**Миграционный закон**
 
-<a id="increasedecrease-trade-law"></a>
-### Увеличить / уменьшить торговый закон
-
-Следующие эффекты используются для увеличения и уменьшения «Торгового закона» вашей страны:
-
-```
-increase_exports = yes
-decrease_exports = yes
-set_exports_to_min = yes
-set_exports_to_max = yes
-```
-
-<a id="increasedecrease-military-spending-law"></a>
-### Увеличить / уменьшить закон о военных расходах
-
-Следующие эффекты используются для увеличения закона о военных расходах.
-
-```
-increase_military_spending = yes
-decrease_military_spending = yes
-decrease_military_spending_2 = yes
-sizeable_military_spending = yes # Устанавливает военные расходы на уровень "значительные"
-```
-
-<a id="increasedecrease-migration-law"></a>
-### Увеличить / уменьшить закон о миграции
-
-Следующие эффекты используются для увеличения и уменьшения законов о миграции и пограничном регулировании.
-
-```
-increase_migration_law = yes
-decrease_migration_law = yes
-```
+| Эффект | Применение |
+|---|---|
+| `increase_migration_law = yes` | Смягчить миграционный закон |
+| `decrease_migration_law = yes` | Ужесточить миграционный закон |

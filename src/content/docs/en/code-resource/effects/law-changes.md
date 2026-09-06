@@ -126,110 +126,94 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 
 Laws that govern government spending (bureaucracy, social spending, education, healthcare, policing budgets), plus the trade, military spending, and migration laws.
 
-<a id="increasedecrease-bureaucracy-law"></a>
-### Increase/Decrease Bureaucracy Law
+<a id="bureaucracy-law"></a>
+**Bureaucracy / Centralisation**
 
-Increases or decreases the nation's current Bureaucracy Spending Law
+| Effect | Application |
+|---|---|
+| `decrease_centralization = yes` | Decrease centralisation |
+| `decrease_centralization_2 = yes` | Decrease centralisation (level 2) |
+| `decrease_centralization_3 = yes` | Decrease centralisation (level 3) |
+| `increase_centralization = yes` | Increase centralisation |
+| `increase_centralization_2 = yes` | Increase centralisation (level 2) |
+| `increase_centralization_3 = yes` | Increase centralisation (level 3) |
+| `increase_centralization_4 = yes` | Increase centralisation (max) |
 
-```
-decrease_centralization = yes
-decrease_centralization_2 = yes
-decrease_centralization_3 = yes
-increase_centralization = yes
-increase_centralization_2 = yes
-increase_centralization_3 = yes
-increase_centralization_4 = yes
-```
+<a id="education-spending"></a>
+**Education**
 
-<a id="increasedecrease-social-spending"></a>
-### Increase/Decrease Social Spending
+| Effect | Application |
+|---|---|
+| `increase_education_budget = yes` | Increase education spending |
+| `increase_education_budget_2 = yes` | Increase education spending (level 2) |
+| `increase_education_budget_3 = yes` | Increase education spending (level 3) |
+| `increase_education_budget_4 = yes` | Increase education spending (max) |
+| `decrease_education_budget = yes` | Decrease education spending |
+| `decrease_education_budget_2 = yes` | Decrease education spending (level 2) |
+| `max_education_budget = yes` | Maximise education spending |
 
-Increase or decreases the nation's current Social Spending Law
+<a id="healthcare-spending"></a>
+**Healthcare**
 
-```
-increase_social_spending = yes
-increase_social_spending_2 = yes
-increase_social_spending_3 = yes
-increase_social_spending_4 = yes
-decrease_social_spending = yes
-decrease_social_spending_2 = yes
-max_social_spending = yes
-```
+| Effect | Application |
+|---|---|
+| `increase_healthcare_budget = yes` | Increase healthcare spending |
+| `increase_healthcare_budget_2 = yes` | Increase healthcare spending (level 2) |
+| `increase_healthcare_budget_3 = yes` | Increase healthcare spending (level 3) |
+| `increase_healthcare_budget_4 = yes` | Increase healthcare spending (max) |
+| `decrease_healthcare_budget = yes` | Decrease healthcare spending |
+| `decrease_healthcare_budget_2 = yes` | Decrease healthcare spending (level 2) |
+| `max_healthcare_budget = yes` | Maximise healthcare spending |
 
-<a id="increasedecrease-education-spending"></a>
-### Increase/Decrease Education Spending
+<a id="social-spending"></a>
+**Social Spending**
 
-Increase or decreases the nation's current Education Spending Law
+| Effect | Application |
+|---|---|
+| `increase_social_spending = yes` | Increase social spending |
+| `increase_social_spending_2 = yes` | Increase social spending (level 2) |
+| `increase_social_spending_3 = yes` | Increase social spending (level 3) |
+| `increase_social_spending_4 = yes` | Increase social spending (max) |
+| `decrease_social_spending = yes` | Decrease social spending |
+| `decrease_social_spending_2 = yes` | Decrease social spending (level 2) |
+| `max_social_spending = yes` | Maximise social spending |
 
-```
-increase_education_budget = yes
-increase_education_budget_2 = yes
-increase_education_budget_3 = yes
-increase_education_budget_4 = yes
-decrease_education_budget = yes
-decrease_education_budget_2 = yes
-max_education_budget = yes
-```
+<a id="policing-spending"></a>
+**Policing**
 
-<a id="increasedecrease-health-spending"></a>
-### Increase/Decrease Health Spending
+| Effect | Application |
+|---|---|
+| `increase_policing_budget = yes` | Increase policing spending |
+| `increase_policing_budget_2 = yes` | Increase policing spending (level 2) |
+| `increase_policing_budget_3 = yes` | Increase policing spending (level 3) |
+| `increase_policing_budget_4 = yes` | Increase policing spending (max) |
+| `decrease_policing_budget = yes` | Decrease policing spending |
+| `decrease_policing_budget_2 = yes` | Decrease policing spending (level 2) |
 
-Increase or decreases the nation's current Healthcare Spending Law
+<a id="trade-law"></a>
+**Trade Law**
 
-```
-increase_healthcare_budget = yes
-increase_healthcare_budget_2 = yes
-increase_healthcare_budget_3 = yes
-increase_healthcare_budget_4 = yes
-decrease_healthcare_budget = yes
-decrease_healthcare_budget_2 = yes
-max_healthcare_budget = yes
-```
+| Effect | Application |
+|---|---|
+| `increase_exports = yes` | Increase exports / trade law |
+| `decrease_exports = yes` | Decrease exports / trade law |
+| `set_exports_to_min = yes` | Set exports to minimum |
+| `set_exports_to_max = yes` | Set exports to maximum |
 
-<a id="increasedecrease-police-spending"></a>
-### Increase/Decrease Police Spending
+<a id="military-spending-law"></a>
+**Military Spending**
 
-Increase or decreases the nation's current Police Spending Law
+| Effect | Application |
+|---|---|
+| `increase_military_spending = yes` | Increase military spending |
+| `decrease_military_spending = yes` | Decrease military spending |
+| `decrease_military_spending_2 = yes` | Decrease military spending (level 2) |
+| `sizeable_military_spending = yes` | Set sizeable military spending |
 
-```
-increase_policing_budget = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_4 = yes
-decrease_policing_budget = yes
-decrease_policing_budget_2 = yes
-```
+<a id="migration-law"></a>
+**Migration Law**
 
-<a id="increasedecrease-trade-law"></a>
-### Increase/Decrease Trade Law
-
-The following are for increasing and decreasing the "Trade Law" of your nation:
-
-```
-increase_exports = yes
-decrease_exports = yes
-set_exports_to_min = yes
-set_exports_to_max = yes
-```
-
-<a id="increasedecrease-military-spending-law"></a>
-### Increase/Decrease Military Spending Law
-
-The following are for increasing your military spending law.
-
-```
-increase_military_spending = yes
-decrease_military_spending = yes
-decrease_military_spending_2 = yes
-sizeable_military_spending = yes # Sets your military spending to sizeable
-```
-
-<a id="increasedecrease-migration-law"></a>
-### Increase/Decrease Migration Law
-
-The following are for increasing and decreasing your Migration and Border Regulations laws
-
-```
-increase_migration_law = yes
-decrease_migration_law = yes
-```
+| Effect | Application |
+|---|---|
+| `increase_migration_law = yes` | Loosen migration law |
+| `decrease_migration_law = yes` | Tighten migration law |
