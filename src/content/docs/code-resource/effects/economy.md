@@ -77,13 +77,42 @@ flat_productivity_change_effect = yes
 <a id="capitalization"></a>
 ### Капитализация
 
-Изменяет капитализацию страны и позволяет изменить поддержку капитализации:
+Изменяет капитализацию страны:
 
 ```
 set_temp_variable = { modify_capitalization = 0.010 }
 modify_capitalization_support = yes
 ```
 
+
+<a id="base-inflation"></a>
+### Базовая инфляция
+
+Изменяет базовую инфляцию страны:
+
+```
+set_temp_variable = { base_inflation_percent_change = 1.0 }
+modify_base_inflation_effect = yes
+```
+
+
+<a id="increasedecrease-economic-growth"></a>
+### Экономический рост
+
+Увеличивает или уменьшает текущий экономический цикл страны
+
+```
+increase_economic_growth = yes
+decrease_economic_growth = yes
+increase_two_level_economic_growth = yes
+decrease_two_level_economic_growth = yes
+depression = yes
+recession = yes
+stagnation = yes
+stable_growth = yes
+fast_growth = yes
+economic_boom = yes
+```
 
 <a id="economic-agreements"></a>
 ## Экономические соглашения
@@ -153,23 +182,8 @@ change_permanent_investment_target = yes
 
 ```
 
-<a id="increasedecrease-economic-growth"></a>
-### Экономический рост
-
-Увеличивает или уменьшает текущий экономический цикл страны
-
-```
-increase_economic_growth = yes
-decrease_economic_growth = yes
-increase_two_level_economic_growth = yes
-decrease_two_level_economic_growth = yes
-depression = yes
-recession = yes
-stagnation = yes
-stable_growth = yes
-fast_growth = yes
-economic_boom = yes
-```
+<a id="other"></a>
+## Другое
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
 ### Доп. доходы и расходы

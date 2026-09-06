@@ -77,13 +77,42 @@ flat_productivity_change_effect = yes
 <a id="capitalization"></a>
 ### Capitalization
 
-Changes the country's capitalization and allows capitalization support to be modified:
+Changes the country's capitalization:
 
 ```
 set_temp_variable = { modify_capitalization = 0.010 }
 modify_capitalization_support = yes
 ```
 
+
+<a id="base-inflation"></a>
+### Base Inflation
+
+Changes the country's base inflation:
+
+```
+set_temp_variable = { base_inflation_percent_change = 1.0 }
+modify_base_inflation_effect = yes
+```
+
+
+<a id="increasedecrease-economic-growth"></a>
+### Economic Growth
+
+Increases or decreases the nation's current economic cycle
+
+```
+increase_economic_growth = yes
+decrease_economic_growth = yes
+increase_two_level_economic_growth = yes
+decrease_two_level_economic_growth = yes
+depression = yes
+recession = yes
+stagnation = yes
+stable_growth = yes
+fast_growth = yes
+economic_boom = yes
+```
 
 <a id="economic-agreements"></a>
 ## Economic Agreements
@@ -153,23 +182,8 @@ change_permanent_investment_target = yes
 
 ```
 
-<a id="increasedecrease-economic-growth"></a>
-### Economic Growth
-
-Increases or decreases the nation's current economic cycle
-
-```
-increase_economic_growth = yes
-decrease_economic_growth = yes
-increase_two_level_economic_growth = yes
-decrease_two_level_economic_growth = yes
-depression = yes
-recession = yes
-stagnation = yes
-stable_growth = yes
-fast_growth = yes
-economic_boom = yes
-```
+<a id="other"></a>
+## Other
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
 ### Additional Income/Expenses
