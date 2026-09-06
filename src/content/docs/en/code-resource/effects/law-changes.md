@@ -101,6 +101,12 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 | `set_encourage_birth = yes` | Encourage Birth |
 | `set_no_birth_control = yes` | No Birth Control |
 | `set_discourage_birth = yes` | Discourage Birth |
+
+<a id="abortion-policy"></a>
+**Abortion Policy**
+
+| Effect | Tier |
+|---|---|
 | `set_ban_abortion = yes` | Ban Abortion |
 | `set_no_abortion_control = yes` | No Abortion Restrictions |
 | `set_encourage_abortion = yes` | Encourage Abortion Access |

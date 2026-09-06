@@ -101,6 +101,12 @@ description: "Эффекты смены законов: гражданские �
 | `set_encourage_birth = yes` | Поощрение рождаемости |
 | `set_no_birth_control = yes` | Отсутствие контроля рождаемости |
 | `set_discourage_birth = yes` | Сдерживание рождаемости |
+
+<a id="abortion-policy"></a>
+**Политика абортов**
+
+| Эффект | Уровень |
+|---|---|
 | `set_ban_abortion = yes` | Запрет абортов |
 | `set_no_abortion_control = yes` | Отсутствие ограничений на аборты |
 | `set_encourage_abortion = yes` | Свободный доступ к абортам |
