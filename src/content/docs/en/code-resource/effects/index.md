@@ -10,6 +10,7 @@ description: "Reference for MDC scripted effects."
 - [Internal Factions](./internal-factions/) — Internal faction effects and commands
 - [Foreign Influence](./influence/) — Foreign Influence system effects
 - [Politics](./politics/) — Political effects and party management
+- [Freedom Laws](./freedom-laws/) — Censorship, assembly, internet, religion, LGBT, trade unions
 - [Counter-Terrorism](./counter-terror/) — Radicalization and terrorist threat effects
 - [Cartels](./cartels/) — Cartel system effects
 - [European Union](./european-union/) — EU and Euroscepticism effects

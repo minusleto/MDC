@@ -163,6 +163,7 @@ All values are percentages: 1 = +100%.
 |---|---|---|
 | `total_workforce_modifier` | Modifier to increase/decrease the amount of your workforce for buildings | N/A |
 | `high_unemployment_threshold_modifier` | Modifier to increase/decrease the limit before you suffer penalties from high unemployment | N/A |
+| `base_unemployment_modifier` | Base unemployment modifier | E.g. -0.05 = 5% less impact |
 | `agriculture_workers_modifier` | Modifies the number of workers required by agriculture | N/A |
 | `resource_sector_workers_modifier` | Modifies the number of workers required by the resource sectors | N/A |
 | `civ_facs_worker_requirement_modifier` | Modifies the number of workers required by a Civilian Factory | N/A |

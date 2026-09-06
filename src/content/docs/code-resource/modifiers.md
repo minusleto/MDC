@@ -169,6 +169,7 @@ description: Economic, Law, Migration, Influence, Energy и Political модиф
 |---|---|---|
 | `total_workforce_modifier` | Меняет размер рабочей силы для строительства | Н/Д |
 | `high_unemployment_threshold_modifier` | Меняет порог штрафа за высокую безработицу | Н/Д |
+| `base_unemployment_modifier` | Модификатор базовой безработицы | Например -0,05 = влияние на 5% меньше |
 | `agriculture_workers_modifier` | Меняет число работников для сельского хозяйства | Н/Д |
 | `resource_sector_workers_modifier` | Меняет число работников для ресурсных секторов | Н/Д |
 | `civ_facs_worker_requirement_modifier` | Меняет число работников для гражд. фабрики | Н/Д |
@@ -350,6 +351,7 @@ description: Economic, Law, Migration, Influence, Energy и Political модиф
 |---|---|---|
 | `popularity_attack_modifier` | Меняет эффективность атак на партии в политическом интерфейсе | Не процент: 2.0 = урон ×2 |
 | `popularity_boost_modifier` | Меняет эффективность поддержки партий в политическом интерфейсе | Не процент: 2.0 = поддержка ×2 |
+| `protests_drift_modifier` | Модификатор скорости роста протестов | Например -0,05 = рост на 5% медленнее. Итоговый рост округляется |
 
 <a id="military-modifiers"></a>
 ### Военные модификаторы

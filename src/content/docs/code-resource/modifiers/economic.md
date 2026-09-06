@@ -163,6 +163,7 @@ description: ""
 |---|---|---|
 | `total_workforce_modifier` | Меняет размер рабочей силы для строительства | Н/Д |
 | `high_unemployment_threshold_modifier` | Меняет порог штрафа за высокую безработицу | Н/Д |
+| `base_unemployment_modifier` | Модификатор базовой безработицы | Например -0,05 = влияние на 5% меньше |
 | `agriculture_workers_modifier` | Меняет число работников для сельского хозяйства | Н/Д |
 | `resource_sector_workers_modifier` | Меняет число работников для ресурсных секторов | Н/Д |
 | `civ_facs_worker_requirement_modifier` | Меняет число работников для гражд. фабрики | Н/Д |
