@@ -7,13 +7,19 @@ description: "Economic scripted effects"
 
 All scripted effects provided _automatically_ create tooltips for you. Do **NOT** localize additional tooltips.
 
-<a id="how-to-modify-treasury"></a>
-### How to Modify Treasury
+<a id="basic-economic-effects"></a>
+### Basic Effects
 
-Change the treasury by a custom amount: +-
+<a id="basic-effects"></a>
+#### Basic
+
+<a id="how-to-modify-treasury"></a>
+##### How to Modify Treasury
+
+Change the treasury by a custom amount:
 
 ```
-set_temp_variable = { treasury_change = -10.00 }
+set_temp_variable = { treasury_change = 10.00 }
 modify_treasury_effect = yes
 ```
 
@@ -32,25 +38,22 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
-<a id="basic-economic-effects"></a>
-### Basic Effects
-
-<a id="how-to-modify-debt"></a>
-**How to Change Debt**
+<a id="change-debt"></a>
+#### Change Debt
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-<a id="how-to-modify-investment"></a>
-**How to Change International Investment**
+<a id="change-investment"></a>
+#### Change Investment
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
 <a id="productivity"></a>
-**Change Productivity (flat value)**
+#### Productivity
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
@@ -60,73 +63,17 @@ flat_productivity_change_effect = yes
 ### Tax Changes
 
 <a id="corporate-tax"></a>
-**Change Corporate Tax Rate**
+#### Corporate Tax
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
 <a id="population-tax"></a>
-**Change Population Tax Rate**
+#### Population Tax
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
-```
-
-<a id="economic-agreements"></a>
-### Economic Agreements
-
-<a id="setremove-trade-agreement"></a>
-**Trade Agreement**
-
-Creates or removes a trade agreement.
-
-- sender_nation --- The nation sending the agreement
-- receiver_nation --- The nation receiving the agreement
-- remove_agreement --- Optional (set to 1)
-
-```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
-set_improved_trade_agreement = yes
-```
-
-<a id="setremove-mutual-investment-treaty"></a>
-**Investment Agreement**
-
-Creates or removes a mutual investment treaty.
-
-- sender_nation --- The nation sending the agreement
-- receiver_nation --- The nation receiving the agreement
-
-```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
-set_mutual_investment_treaty = yes
-```
-
-Trade and investment agreements can be used simultaneously.
-
-```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
-set_improved_trade_agreement = yes
-set_mutual_investment_treaty = yes
-```
-
-<a id="setremove-permanent-investment-targets"></a>
-### Permanent Investment Targets
-
-Creates or removes adding_nation from another AI-controlled nation's investment pool.
-
-- target_nation --- The nation receiving the investment target
-- adding_nation --- The nation being added to the investment pool
-- remove_nation --- Optional (set to 1)
-
-```
-set_temp_variable = { target_nation = RAJ.id }
-set_temp_variable = { adding_nation = SIN.id }
-change_permanent_investment_target = yes
 ```
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
@@ -170,8 +117,11 @@ modifiers = {
 
 ```
 
+<a id="economic-agreements"></a>
+### Economic Agreements
+
 <a id="setremove-trade-agreement"></a>
-### Trade Agreement
+#### Trade Agreement
 
 Creates or removes a trade agreement
 
@@ -183,6 +133,42 @@ Creates or removes a trade agreement
 set_temp_variable = { receiver_nation = RAJ.id }
 set_temp_variable = { sender_nation = SIN.id }
 set_improved_trade_agreement = yes
+
+```
+
+<a id="setremove-mutual-investment-treaty"></a>
+#### Mutual Investment Treaty
+
+Creates or removes a mutual investment treaty. It can be used together with `set_improved_trade_agreement = yes`.
+
+- sender_nation --- The nation sending the treaty
+- receiver_nation --- Nation receiving the treaty
+- remove_treaty --- Optional (Set to 1 to remove the treaty)
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_mutual_investment_treaty = yes
+
+```
+
+To remove the treaty:
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_temp_variable = { remove_treaty = 1 }
+set_mutual_investment_treaty = yes
+
+```
+
+Both economic agreements can be used at the same time:
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_improved_trade_agreement = yes
+set_mutual_investment_treaty = yes
 
 ```
 

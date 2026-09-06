@@ -7,13 +7,19 @@ description: "Экономические скриптовые эффекты"
 
 Все предоставленные скриптовые эффекты _автоматически_ создают для вас тултипы. **НЕ** локализуйте дополнительные тултипы.
 
-<a id="how-to-modify-treasury"></a>
-### Как изменить казну
+<a id="basic-economic-effects"></a>
+### Базовые эффекты
 
-Поменять казну на произвольную сумму: +-
+<a id="basic-effects"></a>
+#### Базовые
+
+<a id="how-to-modify-treasury"></a>
+##### Как изменить казну
+
+Поменять казну на произвольную сумму:
 
 ```
-set_temp_variable = { treasury_change = -10.00 }
+set_temp_variable = { treasury_change = 10.00 }
 modify_treasury_effect = yes
 ```
 
@@ -119,6 +125,42 @@ modifiers = {
 set_temp_variable = { receiver_nation = RAJ.id }
 set_temp_variable = { sender_nation = SIN.id }
 set_improved_trade_agreement = yes
+
+```
+
+<a id="setremove-mutual-investment-treaty"></a>
+#### Взаимный инвестиционный договор
+
+Создаёт или удаляет взаимный инвестиционный договор. Может использоваться одновременно с `set_improved_trade_agreement = yes`.
+
+- sender_nation --- страна, отправляющая договор
+- receiver_nation --- страна, получающая договор
+- remove_treaty --- необязательный параметр (установить в 1 для отмены договора)
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_mutual_investment_treaty = yes
+
+```
+
+Чтобы отменить договор:
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_temp_variable = { remove_treaty = 1 }
+set_mutual_investment_treaty = yes
+
+```
+
+Оба экономических соглашения можно использовать одновременно:
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_improved_trade_agreement = yes
+set_mutual_investment_treaty = yes
 
 ```
 
