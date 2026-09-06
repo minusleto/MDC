@@ -32,7 +32,7 @@ export default defineConfig({
 						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/effects/internal-factions' },
 						{ label: 'Иностранное влияние', translations: { en: 'Foreign Influence' }, slug: 'code-resource/effects/influence' },
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/effects/politics' },
-						{ label: 'Свобода законов', translations: { en: 'Freedom Laws' }, slug: 'code-resource/effects/freedom-laws' },
+						{ label: 'Смена законов', translations: { en: 'Law Changes' }, slug: 'code-resource/effects/freedom-laws' },
 						{ label: 'Контртерроризм', translations: { en: 'Counter-Terrorism' }, slug: 'code-resource/effects/counter-terror' },
 						{ label: 'Картели', translations: { en: 'Cartels' }, slug: 'code-resource/effects/cartels' },
 						{ label: 'Европейский союз', translations: { en: 'European Union' }, slug: 'code-resource/effects/european-union' },

@@ -1,11 +1,23 @@
 ---
-title: Freedom Laws
-description: "Effects for switching tiers in the civil freedoms system (censorship, assembly, internet, religion, LGBT, trade unions, demographics, birth policy, weapons law)"
+title: Law Changes
+description: "Effects for changing laws: civil freedoms (censorship, assembly, internet, religion, LGBT, trade unions), demographics and birth policy, weapons, economic laws (spending, trade, migration, bureaucracy)"
 ---
 
-## Freedom Laws System Effects
+## Law Changes
 
-Each category is an idea group with several tiers. The matching `set_*` effect switches the country to that tier and, if it's already there, grants a one-time bonus (PP/stability/popularity).
+Each category below is an idea group with several tiers. The matching `set_*` effect switches the country to that tier and, if it's already there, grants a one-time bonus (PP/stability/popularity). The `increase_*` / `decrease_*` effects shift the law one tier up or down the scale.
+
+### Contents
+
+- [Civil Freedom Laws](#civil-freedom-laws)
+- [Demographics and Birth Policy](#demographics-and-birth)
+- [Weapons](#weapons)
+- [Economic Laws](#economic-laws)
+
+<hr/>
+
+<a id="civil-freedom-laws"></a>
+## Civil Freedom Laws
 
 <a id="censorship-laws"></a>
 ### Censorship (censorship_laws)
@@ -67,8 +79,13 @@ Each category is an idea group with several tiers. The matching `set_*` effect s
 | `set_gov_unions = yes` | State Unions |
 | `set_ban_unions = yes` | Trade Unions Banned |
 
+<hr/>
+
+<a id="demographics-and-birth"></a>
+## Demographics and Birth Policy
+
 <a id="demographics"></a>
-### Demographics (population pyramid)
+### Population Pyramid
 
 | Effect | Tier |
 |---|---|
@@ -88,6 +105,11 @@ Each category is an idea group with several tiers. The matching `set_*` effect s
 | `set_no_abortion_control = yes` | No Abortion Restrictions |
 | `set_encourage_abortion = yes` | Encourage Abortion Access |
 
+<hr/>
+
+<a id="weapons"></a>
+## Weapons
+
 <a id="weapons-law"></a>
 ### Weapons Law
 
@@ -96,3 +118,118 @@ Each category is an idea group with several tiers. The matching `set_*` effect s
 | `set_ban_weapons = yes` | Ban Weapons |
 | `set_allow_weapons = yes` | Allow Private Ownership |
 | `set_regulate_weapons = yes` | Regulate Weapons |
+
+<hr/>
+
+<a id="economic-laws"></a>
+## Economic Laws
+
+These effects used to live on the "Economy" page — moved here since they are laws (idea groups with tiers), not general economic effects.
+
+<a id="increasedecrease-bureaucracy-law"></a>
+### Increase/Decrease Bureaucracy Law
+
+Increases or decreases the nation's current Bureaucracy Spending Law
+
+```
+decrease_centralization = yes
+decrease_centralization_2 = yes
+decrease_centralization_3 = yes
+increase_centralization = yes
+increase_centralization_2 = yes
+increase_centralization_3 = yes
+increase_centralization_4 = yes
+```
+
+<a id="increasedecrease-social-spending"></a>
+### Increase/Decrease Social Spending
+
+Increase or decreases the nation's current Social Spending Law
+
+```
+increase_social_spending = yes
+increase_social_spending_2 = yes
+increase_social_spending_3 = yes
+increase_social_spending_4 = yes
+decrease_social_spending = yes
+decrease_social_spending_2 = yes
+max_social_spending = yes
+```
+
+<a id="increasedecrease-education-spending"></a>
+### Increase/Decrease Education Spending
+
+Increase or decreases the nation's current Education Spending Law
+
+```
+increase_education_budget = yes
+increase_education_budget_2 = yes
+increase_education_budget_3 = yes
+increase_education_budget_4 = yes
+decrease_education_budget = yes
+decrease_education_budget_2 = yes
+max_education_budget = yes
+```
+
+<a id="increasedecrease-health-spending"></a>
+### Increase/Decrease Health Spending
+
+Increase or decreases the nation's current Healthcare Spending Law
+
+```
+increase_healthcare_budget = yes
+increase_healthcare_budget_2 = yes
+increase_healthcare_budget_3 = yes
+increase_healthcare_budget_4 = yes
+decrease_healthcare_budget = yes
+decrease_healthcare_budget_2 = yes
+max_healthcare_budget = yes
+```
+
+<a id="increasedecrease-police-spending"></a>
+### Increase/Decrease Police Spending
+
+Increase or decreases the nation's current Police Spending Law
+
+```
+increase_policing_budget = yes
+increase_policing_budget_2 = yes
+increase_policing_budget_2 = yes
+increase_policing_budget_4 = yes
+decrease_policing_budget = yes
+decrease_policing_budget_2 = yes
+```
+
+<a id="increasedecrease-trade-law"></a>
+### Increase/Decrease Trade Law
+
+The following are for increasing and decreasing the "Trade Law" of your nation:
+
+```
+increase_exports = yes
+decrease_exports = yes
+set_exports_to_min = yes
+set_exports_to_max = yes
+```
+
+<a id="increasedecrease-military-spending-law"></a>
+### Increase/Decrease Military Spending Law
+
+The following are for increasing your military spending law.
+
+```
+increase_military_spending = yes
+decrease_military_spending = yes
+decrease_military_spending_2 = yes
+sizeable_military_spending = yes # Sets your military spending to sizeable
+```
+
+<a id="increasedecrease-migration-law"></a>
+### Increase/Decrease Migration Law
+
+The following are for increasing and decreasing your Migration and Border Regulations laws
+
+```
+increase_migration_law = yes
+decrease_migration_law = yes
+```

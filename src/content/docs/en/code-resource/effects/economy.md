@@ -140,112 +140,11 @@ fast_growth = yes
 economic_boom = yes
 ```
 
-<a id="increasedecrease-bureaucracy-law"></a>
-### Increase/Decrease Bureaucracy Law
+<a id="laws-moved"></a>
+### Law-related effects — moved
 
-Increases or decreases the nation's current Bureaucracy Spending Law
+Law change effects (bureaucracy/centralization, social spending, education, healthcare, policing, trade law, military spending, migration law), along with civil freedom, demographics and weapons laws, are now collected on a dedicated page:
 
-```
-decrease_centralization = yes
-decrease_centralization_2 = yes
-decrease_centralization_3 = yes
-increase_centralization = yes
-increase_centralization_2 = yes
-increase_centralization_3 = yes
-increase_centralization_4 = yes
-```
-
-<a id="increasedecrease-social-spending"></a>
-### Increase/Decrease Social Spending
-
-Increase or decreases the nation's current Social Spending Law
-
-```
-increase_social_spending = yes
-increase_social_spending_2 = yes
-increase_social_spending_3 = yes
-increase_social_spending_4 = yes
-decrease_social_spending = yes
-decrease_social_spending_2 = yes
-max_social_spending = yes
-```
-
-<a id="increasedecrease-education-spending"></a>
-### Increase/Decrease Education Spending
-
-Increase or decreases the nation's current Education Spending Law
-
-```
-increase_education_budget = yes
-increase_education_budget_2 = yes
-increase_education_budget_3 = yes
-increase_education_budget_4 = yes
-decrease_education_budget = yes
-decrease_education_budget_2 = yes
-max_education_budget = yes
-```
-
-<a id="increasedecrease-health-spending"></a>
-### Increase/Decrease Health Spending
-
-Increase or decreases the nation's current Education Spending Law
-
-```
-increase_healthcare_budget = yes
-increase_healthcare_budget_2 = yes
-increase_healthcare_budget_3 = yes
-increase_healthcare_budget_4 = yes
-decrease_healthcare_budget = yes
-decrease_healthcare_budget_2 = yes
-max_healthcare_budget = yes
-```
-
-<a id="increasedecrease-police-spending"></a>
-### Increase/Decrease Police Spending
-
-Increase or decreases the nation's current Police Spending Law
-
-```
-increase_policing_budget = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_4 = yes
-decrease_policing_budget = yes
-decrease_policing_budget_2 = yes
-```
-
-<a id="increasedecrease-trade-law"></a>
-### Increase/Decrease Trade Law
-
-The following are for increasing and decreasing the "Trade Law" of your nation:
-
-```
-increase_exports = yes
-decrease_exports = yes
-set_exports_to_min = yes
-set_exports_to_max = yes
-```
-
-<a id="increasedecrease-military-spending-law"></a>
-### Increase/Decrease Military Spending Law
-
-The following are for increasing your military spending law.
-
-```
-increase_military_spending = yes
-decrease_military_spending = yes
-decrease_military_spending_2 = yes
-sizeable_military_spending = yes # Sets your military spending to sizeable
-```
-
-<a id="increasedecrease-migration-law"></a>
-### Increase/Decrease Migration Law
-
-The following are for increasing and decreasing your Migration and Border Regulations laws
-
-```
-increase_migration_law = yes
-decrease_migration_law = yes
-```
+- [Law Changes](/en/code-resource/effects/freedom-laws)
 
 <a id="mdc-internal-faction-effects"></a>

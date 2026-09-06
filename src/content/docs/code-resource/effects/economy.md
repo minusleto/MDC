@@ -140,112 +140,11 @@ fast_growth = yes
 economic_boom = yes
 ```
 
-<a id="increasedecrease-bureaucracy-law"></a>
-### Увеличить / уменьшить закон о расходах на бюрократию
+<a id="laws-moved"></a>
+### Законы о расходах и другие законы — перенесены
 
-Увеличивает или уменьшает текущий закон страны о расходах на бюрократию
+Эффекты изменения законов (бюрократия/централизация, социальные расходы, образование, здравоохранение, полиция, торговый закон, военные расходы, миграционный закон), а также законы о гражданских свободах, демографии и оружии теперь собраны на отдельной странице:
 
-```
-decrease_centralization = yes
-decrease_centralization_2 = yes
-decrease_centralization_3 = yes
-increase_centralization = yes
-increase_centralization_2 = yes
-increase_centralization_3 = yes
-increase_centralization_4 = yes
-```
-
-<a id="increasedecrease-social-spending"></a>
-### Увеличить / уменьшить социальные расходы
-
-Увеличивает или уменьшает текущий закон страны о социальных расходах
-
-```
-increase_social_spending = yes
-increase_social_spending_2 = yes
-increase_social_spending_3 = yes
-increase_social_spending_4 = yes
-decrease_social_spending = yes
-decrease_social_spending_2 = yes
-max_social_spending = yes
-```
-
-<a id="increasedecrease-education-spending"></a>
-### Увеличить / уменьшить расходы на образование
-
-Увеличивает или уменьшает текущий закон страны о расходах на образование
-
-```
-increase_education_budget = yes
-increase_education_budget_2 = yes
-increase_education_budget_3 = yes
-increase_education_budget_4 = yes
-decrease_education_budget = yes
-decrease_education_budget_2 = yes
-max_education_budget = yes
-```
-
-<a id="increasedecrease-health-spending"></a>
-### Увеличить / уменьшить расходы на здравоохранение
-
-Увеличивает или уменьшает текущий закон страны о расходах на здравоохранение
-
-```
-increase_healthcare_budget = yes
-increase_healthcare_budget_2 = yes
-increase_healthcare_budget_3 = yes
-increase_healthcare_budget_4 = yes
-decrease_healthcare_budget = yes
-decrease_healthcare_budget_2 = yes
-max_healthcare_budget = yes
-```
-
-<a id="increasedecrease-police-spending"></a>
-### Увеличить / уменьшить расходы на полицию
-
-Увеличивает или уменьшает текущий закон страны о расходах на полицию
-
-```
-increase_policing_budget = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_4 = yes
-decrease_policing_budget = yes
-decrease_policing_budget_2 = yes
-```
-
-<a id="increasedecrease-trade-law"></a>
-### Увеличить / уменьшить торговый закон
-
-Следующие эффекты используются для увеличения и уменьшения «Торгового закона» вашей страны:
-
-```
-increase_exports = yes
-decrease_exports = yes
-set_exports_to_min = yes
-set_exports_to_max = yes
-```
-
-<a id="increasedecrease-military-spending-law"></a>
-### Увеличить / уменьшить закон о военных расходах
-
-Следующие эффекты используются для увеличения закона о военных расходах.
-
-```
-increase_military_spending = yes
-decrease_military_spending = yes
-decrease_military_spending_2 = yes
-sizeable_military_spending = yes # Устанавливает военные расходы на уровень "значительные"
-```
-
-<a id="increasedecrease-migration-law"></a>
-### Увеличить / уменьшить закон о миграции
-
-Следующие эффекты используются для увеличения и уменьшения законов о миграции и пограничном регулировании.
-
-```
-increase_migration_law = yes
-decrease_migration_law = yes
-```
+- [Смена законов](/code-resource/effects/freedom-laws)
 
 <a id="mdc-internal-faction-effects"></a>
