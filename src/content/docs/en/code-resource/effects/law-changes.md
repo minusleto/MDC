@@ -12,7 +12,7 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 - [Civil Freedom Laws](#civil-freedom-laws)
 - [Demographics and Birth Policy](#demographics-and-birth)
 - [Weapons](#weapons)
-- [Spending and Other Economic Laws](#economic-laws)
+- [Economic Laws](#economic-laws)
 
 <hr/>
 
@@ -128,12 +128,12 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 <hr/>
 
 <a id="economic-laws"></a>
-## Spending and Other Economic Laws
+## Economic Laws
 
 Laws that govern government spending (bureaucracy, social spending, education, healthcare, policing budgets), plus the trade, military spending, and migration laws.
 
 <a id="bureaucracy-law"></a>
-**Bureaucracy / Centralisation**
+### Bureaucracy
 
 | Effect | Application |
 |---|---|
@@ -146,7 +146,7 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `increase_centralization_4 = yes` | Increase centralisation (max) |
 
 <a id="education-spending"></a>
-**Education**
+### Education
 
 | Effect | Application |
 |---|---|
@@ -159,7 +159,7 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `max_education_budget = yes` | Maximise education spending |
 
 <a id="healthcare-spending"></a>
-**Healthcare**
+### Healthcare
 
 | Effect | Application |
 |---|---|
@@ -172,7 +172,7 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `max_healthcare_budget = yes` | Maximise healthcare spending |
 
 <a id="social-spending"></a>
-**Social Spending**
+### Social Spending
 
 | Effect | Application |
 |---|---|
@@ -185,7 +185,7 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `max_social_spending = yes` | Maximise social spending |
 
 <a id="policing-spending"></a>
-**Policing**
+### Policing
 
 | Effect | Application |
 |---|---|
@@ -197,7 +197,7 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `decrease_policing_budget_2 = yes` | Decrease policing spending (level 2) |
 
 <a id="trade-law"></a>
-**Trade Law**
+### Trade
 
 | Effect | Application |
 |---|---|
@@ -207,7 +207,7 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `set_exports_to_max = yes` | Set exports to maximum |
 
 <a id="military-spending-law"></a>
-**Military Spending**
+### Military Spending
 
 | Effect | Application |
 |---|---|
@@ -217,7 +217,7 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `sizeable_military_spending = yes` | Set sizeable military spending |
 
 <a id="migration-law"></a>
-**Migration Law**
+### Migration
 
 | Effect | Application |
 |---|---|
