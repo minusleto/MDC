@@ -38,11 +38,17 @@ description: ""
 | `Military_Status_Women_cost_factor` | Меняет цену PP смены закона о статусе женщин | Н/Д |
 | `Foreign_Intervention_Law_cost_factor` | Меняет цену PP смены закона о вмешательстве | Н/Д |
 | `Officer_Training_Law_cost_factor` | Меняет цену PP смены закона о подготовке офицеров | Н/Д |
-| `censorship_laws_cost_factor` | Меняет цену PP смены закона о цензуре | Н/Д |
+
+#### Стоимость смены законов о свободе
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `censorship_laws_cost_factor` | Меняет цену PP смены закона о свободе слова / цензуре | Н/Д |
 | `right_assembly_cost_factor` | Меняет цену PP смены закона о свободе собраний | Н/Д |
-| `internet_law_cost_factor` | Меняет цену PP смены закона об интернете | Н/Д |
-| `lgbt_laws_cost_factor` | Меняет цену PP смены закона о ЛГБТ | Н/Д |
+| `internet_law_cost_factor` | Меняет цену PP смены закона о свободе интернета | Н/Д |
+| `lgbt_laws_cost_factor` | Меняет цену PP смены закона о правах ЛГБТ | Н/Д |
 | `freedom_trade_unions_cost_factor` | Меняет цену PP смены закона о свободе профсоюзов | Н/Д |
+| `salary_law_cost_factor` | Меняет цену PP смены закона о МРОТ | Н/Д |
 
 <a id="manufacturer-change-costs"></a>
 ### Смена военных производителей
