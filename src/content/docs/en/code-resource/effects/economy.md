@@ -10,13 +10,27 @@ All scripted effects provided _automatically_ create tooltips for you. Do **NOT*
 <a id="how-to-modify-treasury"></a>
 ### How to Modify Treasury
 
+Reduces the treasury by a custom amount:
+
 ```
-# - reduces the treasury
 set_temp_variable = { treasury_change = -10.00 }
 modify_treasury_effect = yes
+```
 
+Preset expenditures, each a single flat effect sized as % of GDP:
+
+**Small Expenditure** — 0.2% of GDP
+```
 small_expenditure = yes
+```
+
+**Medium Expenditure** — 0.4% of GDP
+```
 medium_expenditure = yes
+```
+
+**Large Expenditure** — 0.6% of GDP
+```
 large_expenditure = yes
 ```
 

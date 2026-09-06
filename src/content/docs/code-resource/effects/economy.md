@@ -10,13 +10,27 @@ description: "Экономические скриптовые эффекты"
 <a id="how-to-modify-treasury"></a>
 ### Как изменить казну
 
+Уменьшает казну на произвольную сумму:
+
 ```
-# - уменьшает казну
 set_temp_variable = { treasury_change = -10.00 }
 modify_treasury_effect = yes
+```
 
+Готовые расходы — каждый одиночный эффект с фиксированным размером в % от ВВП:
+
+**Малый расход (Small Expenditure)** — 0.2% ВВП
+```
 small_expenditure = yes
+```
+
+**Средний расход (Medium Expenditure)** — 0.4% ВВП
+```
 medium_expenditure = yes
+```
+
+**Крупный расход (Large Expenditure)** — 0.6% ВВП
+```
 large_expenditure = yes
 ```
 
