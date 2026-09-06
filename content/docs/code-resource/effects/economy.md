@@ -7,14 +7,11 @@ description: "Экономические скриптовые эффекты"
 
 Все предоставленные скриптовые эффекты _автоматически_ создают для вас тултипы. **НЕ** локализуйте дополнительные тултипы.
 
-<a id="basic-economic-effects"></a>
-### Базовые эффекты
-
 <a id="basic-effects"></a>
-#### Базовые
+## Базовые эффекты
 
-<a id="how-to-modify-treasury"></a>
-##### Как изменить казну
+<a id="treasury"></a>
+### Казна
 
 Поменять казну на произвольную сумму:
 
@@ -38,41 +35,47 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
-<a id="other-economic-effects"></a>
-### Другие экономические эффекты
+<a id="debt"></a>
+### Долги
 
-**Как изменить долг**
 ```
 set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-**Как изменить международные инвестиции**
+<a id="investments"></a>
+### Инвестиции
+
 ```
 set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
-**Изменить корпоративный налог**
+<a id="taxes"></a>
+### Налоги
+
+**Корпоративный налог**
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
-**Изменить подоходный налог**
+**Подоходный налог**
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
-**Изменить производительность (фикс. значение)**
+<a id="productivity"></a>
+### Производительность
+
 ```
 set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-### Руководство: дополнительные доходы / дополнительные расходы
+### Доп. доходы и расходы
 
 ```
 Шаг 1: перейдите в common/scripted_effects/00_money_system.txt
@@ -112,8 +115,11 @@ modifiers = {
 
 ```
 
+<a id="economic-agreements"></a>
+## Экономические соглашения
+
 <a id="setremove-trade-agreement"></a>
-### Установить / удалить торговое соглашение
+### Торговое соглашение
 
 Создаёт или удаляет торговое соглашение
 
@@ -129,39 +135,36 @@ set_improved_trade_agreement = yes
 ```
 
 <a id="setremove-mutual-investment-treaty"></a>
-#### Взаимный инвестиционный договор
+### Взаимный инвестиционный договор
 
-Создаёт или удаляет взаимный инвестиционный договор. Может использоваться одновременно с `set_improved_trade_agreement = yes`.
+Создаёт или удаляет взаимный инвестиционный договор.
 
-- sender_nation --- страна, отправляющая договор
-- receiver_nation --- страна, получающая договор
-- remove_treaty --- необязательный параметр (установить в 1 для отмены договора)
+- `sender_nation` — страна, отправляющая соглашение
+- `receiver_nation` — страна, получающая соглашение
+- `remove_treaty` — необязательный параметр (установить в 1 для отмены)
 
 ```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
 set_mutual_investment_treaty = yes
-
 ```
 
-Чтобы отменить договор:
+Для отмены:
 
 ```
-set_temp_variable = { receiver_nation = BRA.id }
-set_temp_variable = { sender_nation = POR.id }
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
 set_temp_variable = { remove_treaty = 1 }
 set_mutual_investment_treaty = yes
-
 ```
 
-Оба экономических соглашения можно использовать одновременно:
+Торговое соглашение и взаимный инвестиционный договор можно использовать одновременно.
 
 ```
 set_temp_variable = { receiver_nation = BRA.id }
 set_temp_variable = { sender_nation = POR.id }
 set_improved_trade_agreement = yes
 set_mutual_investment_treaty = yes
-
 ```
 
 <a id="setremove-permanent-investment-targets"></a>
@@ -181,7 +184,7 @@ change_permanent_investment_target = yes
 ```
 
 <a id="increasedecrease-economic-growth"></a>
-### Увеличить / уменьшить экономический рост
+### Экономический рост
 
 Увеличивает или уменьшает текущий экономический цикл страны
 
@@ -197,7 +200,3 @@ stable_growth = yes
 fast_growth = yes
 economic_boom = yes
 ```
-
-```
-
-<a id="mdc-internal-faction-effects"></a>
