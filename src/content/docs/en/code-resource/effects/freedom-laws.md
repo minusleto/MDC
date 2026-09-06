@@ -1,6 +1,6 @@
 ---
 title: Freedom Laws
-description: "Effects for switching tiers in the civil freedoms system (censorship, assembly, internet, religion, LGBT, trade unions)"
+description: "Effects for switching tiers in the civil freedoms system (censorship, assembly, internet, religion, LGBT, trade unions, demographics, birth policy, weapons law)"
 ---
 
 ## Freedom Laws System Effects
@@ -66,3 +66,33 @@ Each category is an idea group with several tiers. The matching `set_*` effect s
 | `set_free_unions = yes` | Free Trade Unions |
 | `set_gov_unions = yes` | State Unions |
 | `set_ban_unions = yes` | Trade Unions Banned |
+
+<a id="demographics"></a>
+### Demographics (population pyramid)
+
+| Effect | Tier |
+|---|---|
+| `set_population_pyramid_1 = yes` | Growing Population Pyramid |
+| `set_population_pyramid_2 = yes` | Stable Population Pyramid |
+| `set_population_pyramid_3 = yes` | Shrinking Population Pyramid |
+
+<a id="birth-policy"></a>
+### Birth Policy
+
+| Effect | Tier |
+|---|---|
+| `set_encourage_birth = yes` | Encourage Birth |
+| `set_no_birth_control = yes` | No Birth Control |
+| `set_discourage_birth = yes` | Discourage Birth |
+| `set_ban_abortion = yes` | Ban Abortion |
+| `set_no_abortion_control = yes` | No Abortion Restrictions |
+| `set_encourage_abortion = yes` | Encourage Abortion Access |
+
+<a id="weapons-law"></a>
+### Weapons Law
+
+| Effect | Tier |
+|---|---|
+| `set_ban_weapons = yes` | Ban Weapons |
+| `set_allow_weapons = yes` | Allow Private Ownership |
+| `set_regulate_weapons = yes` | Regulate Weapons |
