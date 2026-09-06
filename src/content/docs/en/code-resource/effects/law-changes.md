@@ -85,7 +85,7 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 ## Demographics and Birth Policy
 
 <a id="demographics"></a>
-**Population Pyramid**
+### Population Pyramid
 
 | Effect | Tier |
 |---|---|
@@ -94,7 +94,7 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 | `set_population_pyramid_3 = yes` | Shrinking Population Pyramid |
 
 <a id="birth-policy"></a>
-**Birth Policy**
+### Birth Policy
 
 | Effect | Tier |
 |---|---|
@@ -103,7 +103,7 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 | `set_discourage_birth = yes` | Discourage Birth |
 
 <a id="abortion-policy"></a>
-**Abortion Policy**
+### Abortion Policy
 
 | Effect | Tier |
 |---|---|
@@ -117,7 +117,7 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 ## Weapons
 
 <a id="weapons-law"></a>
-**Weapons Law**
+### Weapons Law
 
 | Effect | Tier |
 |---|---|

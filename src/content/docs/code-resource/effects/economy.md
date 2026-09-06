@@ -160,7 +160,3 @@ stable_growth = yes
 fast_growth = yes
 economic_boom = yes
 ```
-
-```
-
-<a id="mdc-internal-faction-effects"></a>
