@@ -1,25 +1,37 @@
 ---
-title: Контртерроризм
-description: "Радикализация и уровень террористической угрозы"
+title: Терроризм
+description: "Поддержка терроризма и накопление террористической активности"
 ---
 
-## Эффекты контртерроризма
+## Эффекты терроризма
 
-<a id="radicalization-threat-level"></a>
-### Радикализация / уровень угрозы
+<a id="terrorism-support"></a>
+### Поддержка терроризма
 
-Это могут использовать только страны Counter Terror. Полный список тегов можно найти в common -> on_actions.txt, ищите _ct_states.
+Доступно только для указанных тегов.
 
+**Коммунистические:** `ITA`, `GER`, `NOR`, `CZE`, `HUN`, `AUS`  
+**Другие террористические:** `SYR`, `IRQ`, `SAU`, `UAE`, `EGY`, `NIG`, `ALG`, `TUN`, `TAJ`, `ING`, `KBK`, `KCC`, `DAG`, `CHE`, `ARW`
+
+```txt
+set_temp_variable = { modify_terrorism = 1 }
+modify_terrorism_support = yes
 ```
-set_temp_variable = { rad_change = -5 }
-modify_radicalization_effect = yes
 
-```
+Поддержка терроризма ограничена значением `100`.
 
-```
-set_temp_variable = { threat_change = 2 }
-modify_terror_threat_effect = yes
+<a id="terrorism-mana"></a>
+### Накопление террористической активности
 
+Изменяет накопление террористической активности страны.
+
+```txt
+add_to_variable = { terrorism_mana = 10 }
+clamp_variable = {
+    var = terrorism_mana
+    min = 1
+    max = 100
+}
 ```
 
 <a id="mdc-cartel-related-effects"></a>
