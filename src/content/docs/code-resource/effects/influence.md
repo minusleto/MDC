@@ -38,5 +38,3 @@ change_current_influencer_index_percentage = yes
 # Поддерживаемые скоупы: FROM, ROOT, PREV, TAG
 change_influence_percentage = yes
 ```
-
-<a id="mdc-political-effects"></a>

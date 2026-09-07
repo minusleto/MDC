@@ -1,6 +1,6 @@
 ---
 title: Energy Modifiers
-description: ""
+description: "Modifiers for energy consumption, fossil fuel extraction, nuclear and renewable energy"
 ---
 
 ## Energy Modifiers

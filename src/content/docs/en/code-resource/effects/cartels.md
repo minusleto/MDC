@@ -15,5 +15,3 @@ set_temp_variable = { cart_strength_change = 2 }
 set_temp_variable = { cart_influence_change = 2 }
 modify_cartel_variables_effect = yes
 ```
-
-<a id="mdc-european-union-effects"></a>

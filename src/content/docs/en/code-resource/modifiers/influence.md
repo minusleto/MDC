@@ -1,6 +1,6 @@
 ---
 title: Influence Modifiers
-description: ""
+description: "Modifiers for foreign influence effectiveness and domestic independence gain"
 ---
 
 ## Influence Modifiers

@@ -232,5 +232,3 @@ two_random_nuclear_reactor = yes #добавляет 2 ядерных реакт
 one_state_nuclear_reactor = yes #добавляет 1 ядерный реактор со слотом и стоимостью в заданный регион
 two_state_nuclear_reactor = yes #добавляет 2 ядерных реактора со слотом и стоимостью в заданный регион
 ```
-
-<a id="mdc-economic-effects"></a>

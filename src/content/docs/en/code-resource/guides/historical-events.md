@@ -35,5 +35,3 @@ trigger_year_2067_events = {
 	}
 }
 ```
-
-<a id="variable-guideexplanation"></a>

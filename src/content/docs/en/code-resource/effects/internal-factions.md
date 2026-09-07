@@ -67,5 +67,3 @@ change_industrial_conglomerates_opinion = yes
 - change_iranian_quds_force_opinion -- Unique Faction for Iranian Proxy States
 - change_chaebols_opinion -- Unique South Korean oligarchs
 - change_wall_street_opinion -- Unique American International Bankers
-
-<a id="mdc-influence-effects"></a>

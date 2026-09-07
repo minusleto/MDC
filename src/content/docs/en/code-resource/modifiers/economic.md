@@ -1,6 +1,6 @@
 ---
 title: Economic Modifiers
-description: ""
+description: "Modifiers for economic growth, inflation, taxes, exports, company branches, and upgrade costs"
 ---
 
 ## Economic Modifiers

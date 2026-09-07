@@ -232,5 +232,3 @@ two_random_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost
 one_state_nuclear_reactor = yes #add 1 nuclear reactor with slot and cost in a predefined state
 two_state_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost in a predefined state
 ```
-
-<a id="mdc-economic-effects"></a>

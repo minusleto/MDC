@@ -22,4 +22,6 @@ modify_terror_threat_effect = yes
 
 ```
 
-<a id="mdc-cartel-related-effects"></a>
+:::note
+These are effects for Counter Terror countries responding to the threat. Effects for countries that support terrorism are described in [Terrorism](../../effects/terrorism/).
+:::

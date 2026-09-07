@@ -1,6 +1,6 @@
 ---
 title: Political Modifiers
-description: ""
+description: "Modifiers for stability, ideology, political power, and protests"
 ---
 
 <a id="vanilla"></a>

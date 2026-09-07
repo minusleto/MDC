@@ -37,5 +37,3 @@ And finally, for this effect to occur in _current_ and _potential_ EU member sta
 set_temp_variable = { modify_eurosceptic = -0.05 }
 EU_potential_eurosceptic_change = yes
 ```
-
-<a id="energy-effects"></a>

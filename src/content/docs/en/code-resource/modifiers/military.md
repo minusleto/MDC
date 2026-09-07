@@ -1,6 +1,6 @@
 ---
 title: Military Modifiers
-description: ""
+description: "Modifiers for military bases and their effect on leaders"
 ---
 
 ## Military Modifiers

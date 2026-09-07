@@ -67,5 +67,3 @@ change_industrial_conglomerates_opinion = yes
 - change_iranian_quds_force_opinion -- уникальная фракция для иранских прокси-государств
 - change_chaebols_opinion -- уникальные южнокорейские олигархи (чеболи)
 - change_wall_street_opinion -- уникальные американские международные банкиры
-
-<a id="mdc-influence-effects"></a>

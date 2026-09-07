@@ -38,5 +38,3 @@ i.e.
 # Supported Scope: FROM, ROOT, PREV, TAG
 change_influence_percentage = yes
 ```
-
-<a id="mdc-political-effects"></a>

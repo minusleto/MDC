@@ -36,5 +36,3 @@ Example:
 The variables here are set in the United States history file and used for the American Economy decisions and effects that occur with every one of the American economy focuses, events or decisions. There are two new topics here in the set_variable which is min and max. They simply set the max possible value and the minimum possible value for the given variable.
 
 This is a basic rundown of variables and the simplest way to begin and use them. There are many ways of using this flexible effects in both systems and in general effects.
-
-<a id="unique-terrain-photos-guide"></a>

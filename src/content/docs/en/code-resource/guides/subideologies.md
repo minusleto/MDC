@@ -116,5 +116,3 @@ if = { limit = { has_country_flag = set_Nat_Autocracy }
 		}
 	}
 ```
-
-<a id="historical-eventsexact-date-trigger-etd-events"></a>

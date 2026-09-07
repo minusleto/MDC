@@ -37,5 +37,3 @@ EU_eurosceptic_change = yes
 set_temp_variable = { modify_eurosceptic = -0.05 }
 EU_potential_eurosceptic_change = yes
 ```
-
-<a id="energy-effects"></a>

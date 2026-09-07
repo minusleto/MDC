@@ -1,6 +1,6 @@
 ---
 title: Law Modifiers
-description: ""
+description: "Modifiers for the cost of changing laws, including freedom laws and arms manufacturers"
 ---
 
 ## Law Modifiers

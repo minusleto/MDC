@@ -7,5 +7,5 @@ description: "Practical MDC modding guides."
 
 - [Subideologies & Parties](./subideologies/) — Adding parties and subideologies
 - [Historical Events (ETD)](./historical-events/) — Exact-date event triggers
-- [Variables](./variables/) — Basic variable usage in scripts
+- [Variables](../getting-started/variables/) — Basic variable usage in scripts (see the Getting Started section)
 - [Unique Terrain Photos](./terrain-photos/) — Adding unique city and province terrain photos

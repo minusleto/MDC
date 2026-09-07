@@ -1,6 +1,6 @@
 ---
 title: Migration Modifiers
-description: ""
+description: "Modifiers for migration rate and the share of migrant workforce"
 ---
 
 ## Migration Modifiers
