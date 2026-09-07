@@ -33,6 +33,24 @@ Affect the economy, taxes, trade and productivity.
 | Modifier | Description | Note |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Modifies the country's interest rate | This is whole number ( i.e. -1 ) |
+| `tax_rate_change_multiplier_modifier` | Modifies the tax rate law change pp cost | N/A |
+| `projects_cost_modifier` | Modifies the economic projects (the project section in the Economic Preview tab) | N/A |
+| `tax_gain_multiplier_modifier` | Modifies the amount of money gained from all taxes (Population and Corporate) | N/A |
+| `population_tax_income_multiplier_modifier` | Modifies the amount of money gained from population taxes | N/A |
+| `corporate_tax_income_multiplier_modifier` | Modifies the amount of money gained from corporate taxes | N/A |
+| `productivity_growth_modifier` | Modifies the productivity growth of a nation | Keep this small or else it quickly snowballs |
+| `country_productivity_growth_modifier` | Same, but explicitly at country level | N/A |
+| `international_market_income_modifier` | Modifier to increase/decrease the amount of money gained from selling equipment on the international market | N/A |
+| `international_market_purchase_modifier` | Modifier to increase/decrease the cost of buying equipment from the international market | N/A |
+| `production_speed_civil_bunker_factor` | Modifies civilian bunker construction speed | Percentage |
+
+<a id="spending-cost-multipliers"></a>
+### Spending Cost Multipliers
+
+Multipliers on the country's ongoing spending (not to be confused with the PP cost of changing a law — see `laws.md`).
+
+| Modifier | Description | Note |
+|---|---|---|
 | `personnel_cost_multiplier_modifier` | Modifies the country's military wages | N/A |
 | `army_personnel_cost_multiplier_modifier` | Modifies the country's land forces wages | N/A |
 | `navy_personnel_cost_multiplier_modifier` | Modifies the country's naval forces wages | N/A |
@@ -43,17 +61,14 @@ Affect the economy, taxes, trade and productivity.
 | `education_cost_multiplier_modifier` | Modifies the country's internal security spending cost | N/A |
 | `health_cost_multiplier_modifier` | Modifies the country's health care spending cost | N/A |
 | `social_cost_multiplier_modifier` | Modifies the country's welfare spending cost | N/A |
-| `tax_rate_change_multiplier_modifier` | Modifies the tax rate law change pp cost | N/A |
-| `projects_cost_modifier` | Modifies the economic projects (the project section in the Economic Preview tab) | N/A |
-| `tax_gain_multiplier_modifier` | Modifies the amount of money gained from all taxes (Population and Corporate) | N/A |
-| `population_tax_income_multiplier_modifier` | Modifies the amount of money gained from population taxes | N/A |
-| `corporate_tax_income_multiplier_modifier` | Modifies the amount of money gained from corporate taxes | N/A |
-| `productivity_growth_modifier` | Modifies the productivity growth of a nation | Keep this small or else it quickly snowballs |
+| `border_control_multiplier_modifier` | Modifies the country's migration control spending cost | N/A |
+
+<a id="state-level-modifiers"></a>
+### State-level Modifiers
+
+| Modifier | Description | Note |
+|---|---|---|
 | `state_productivity_growth_modifier` | State level modifier to increase/decrease the productivity growth of a state | N/A |
-| `country_productivity_growth_modifier` | Country level modifier increase/decrease the productivity growth of a state | N/A |
-| `international_market_income_modifier` | Modifier to increase/decrease the amount of money gained from selling equipment on the international market | N/A |
-| `international_market_purchase_modifier` | Modifier to increase/decrease the cost of buying equipment from the international market | N/A |
-| `production_speed_civil_bunker_factor` | Modifies civilian bunker construction speed | Percentage |
 
 <a id="inflation"></a>
 ### Inflation

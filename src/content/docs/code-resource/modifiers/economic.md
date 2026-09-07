@@ -33,6 +33,24 @@ description: ""
 | Модификатор | Описание | Примечание |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Меняет процентную ставку страны | Целое число (например, -1) |
+| `tax_rate_change_multiplier_modifier` | Меняет цену смены налоговой ставки в PP | Н/Д |
+| `projects_cost_modifier` | Меняет стоимость экономических проектов | Н/Д |
+| `tax_gain_multiplier_modifier` | Меняет доход от всех налогов | Н/Д |
+| `population_tax_income_multiplier_modifier` | Меняет доход от налогов с населения | Н/Д |
+| `corporate_tax_income_multiplier_modifier` | Меняет доход от корпоративных налогов | Н/Д |
+| `productivity_growth_modifier` | Меняет рост производительности страны | Держите значение небольшим — эффект накапливается |
+| `country_productivity_growth_modifier` | То же самое, но явно на уровне страны | Н/Д |
+| `international_market_income_modifier` | Меняет доход от продажи снаряжения на рынке | Н/Д |
+| `international_market_purchase_modifier` | Меняет стоимость покупки снаряжения на рынке | Н/Д |
+| `production_speed_civil_bunker_factor` | Меняет скорость строительства гражданских бункеров | В процентах |
+
+<a id="spending-cost-multipliers"></a>
+### Стоимость обслуживания (расходы)
+
+Множители текущих расходов страны (не путать со стоимостью смены закона в PP — см. `laws.md`).
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
 | `personnel_cost_multiplier_modifier` | Меняет расходы на военные зарплаты | Н/Д |
 | `army_personnel_cost_multiplier_modifier` | Меняет расходы на зарплаты армии | Н/Д |
 | `navy_personnel_cost_multiplier_modifier` | Меняет расходы на зарплаты флота | Н/Д |
@@ -43,17 +61,14 @@ description: ""
 | `education_cost_multiplier_modifier` | Меняет расходы на образование | Н/Д |
 | `health_cost_multiplier_modifier` | Меняет расходы на здравоохранение | Н/Д |
 | `social_cost_multiplier_modifier` | Меняет расходы на соцобеспечение | Н/Д |
-| `tax_rate_change_multiplier_modifier` | Меняет цену смены налоговой ставки в PP | Н/Д |
-| `projects_cost_modifier` | Меняет стоимость экономических проектов | Н/Д |
-| `tax_gain_multiplier_modifier` | Меняет доход от всех налогов | Н/Д |
-| `population_tax_income_multiplier_modifier` | Меняет доход от налогов с населения | Н/Д |
-| `corporate_tax_income_multiplier_modifier` | Меняет доход от корпоративных налогов | Н/Д |
-| `productivity_growth_modifier` | Меняет рост производительности страны | Держите значение небольшим — эффект накапливается |
-| `state_productivity_growth_modifier` | То же самое, на уровне региона | Н/Д |
-| `country_productivity_growth_modifier` | То же самое, на уровне страны | Н/Д |
-| `international_market_income_modifier` | Меняет доход от продажи снаряжения на рынке | Н/Д |
-| `international_market_purchase_modifier` | Меняет стоимость покупки снаряжения на рынке | Н/Д |
-| `production_speed_civil_bunker_factor` | Меняет скорость строительства гражданских бункеров | В процентах |
+| `border_control_multiplier_modifier` | Меняет расходы на контроль миграции | Н/Д |
+
+<a id="state-level-modifiers"></a>
+### Модификаторы уровня региона (state)
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `state_productivity_growth_modifier` | Рост производительности на уровне региона | Н/Д |
 
 <a id="inflation"></a>
 ### Инфляция
