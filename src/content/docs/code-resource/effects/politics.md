@@ -103,7 +103,7 @@ set_country_flag = free_ban_parties # Задайте это, если не хо�
 set_partyall_banned = yes # Запрещает все партии
 ```
 
-<a id="counter-terror-effects"></a>
+<a id="protests"></a>
 ## Протесты
 
 ### Сила протестов

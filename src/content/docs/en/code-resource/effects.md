@@ -3,12 +3,11 @@ title: Scripted Effects
 description: "Effects/Scripted Effects — buildings, economy, factions, influence, politics, EU, counter-terror, cartels"
 ---
 
+<a id="effectsscripted-effects"></a>
+## Effects / Scripted Effects
+
 All scripted effects automatically create tooltips — do **not** localize them manually as well.
 
-<a id="effectsscripted-effects"></a>
-## Effects/Scripted Effects
-
-<a id="mdc-building-costs"></a>
 ### MDC Building Costs
 
 Each of the values for buildings that consume a building slot (i.e. Civilian Industry) has the building slot factored in.
@@ -63,6 +62,8 @@ modify_treasury_effect = yes
 ```
 
 <a id="mdc-building-effects"></a>
+
+
 ### MDC Building Effects
 
 If you are lazy to calculate cost for common effects with buildings, you can check common\scripted_effects\00_scripted_effects.txt
@@ -238,54 +239,187 @@ two_state_nuclear_reactor = yes #add 2 nuclear reactors with slot and cost in a 
 ```
 
 <a id="mdc-economic-effects"></a>
-### MDC Economic Effects
 
-All scripted effects provided _automatically_ create tooltips for you. Do **NOT** localize additional tooltips.
+<a id="basic-effects"></a>
+### Basic Effects
 
-<a id="how-to-modify-treasury"></a>
-#### How to Modify Treasury
+<a id="treasury"></a>
+#### Treasury
+
+Change the treasury by a custom amount:
 
 ```
-# - reduces the treasury
-set_temp_variable = { treasury_change = -10.00 }
+set_temp_variable = { treasury_change = 10.00 }
 modify_treasury_effect = yes
+```
 
+**Small Expenditure** — 0.2% of GDP
+```
 small_expenditure = yes
+```
+
+**Medium Expenditure** — 0.4% of GDP
+```
 medium_expenditure = yes
+```
+
+**Large Expenditure** — 0.6% of GDP
+```
 large_expenditure = yes
 ```
 
-<a id="other-economic-effects"></a>
-#### Other Economic Effects
+<a id="debt"></a>
+#### Debt
 
 ```
-set_temp_variable = { debt_change = 0.1 }
+set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
+<a id="investments"></a>
+#### Investments
+
 ```
-set_temp_variable = { int_investment_change = 0.1 }
+set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
+<a id="taxes"></a>
+#### Taxes
+
+**Corporate Tax**
 ```
 set_temp_variable = { corp_change = 2 }
 modify_corporate_tax_rate_effect = yes
 ```
 
+**Population Tax**
 ```
 set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
+<a id="productivity"></a>
+#### Productivity
+
 ```
-# - Adjusting the productivity of a number as a flat value
-set_temp_variable = { temp_productivity_change = 0.025 }
+set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
+<a id="capitalization"></a>
+#### Capitalization
+
+Changes the country's capitalization:
+
+```
+set_temp_variable = { modify_capitalization = 0.010 }
+modify_capitalization_support = yes
+```
+
+
+<a id="base-inflation"></a>
+#### Base Inflation
+
+Changes the country's base inflation:
+
+```
+set_temp_variable = { base_inflation_percent_change = 1.0 }
+modify_base_inflation_effect = yes
+```
+
+
+<a id="increasedecrease-economic-growth"></a>
+#### Economic Growth
+
+Increases or decreases the nation's current economic cycle
+
+```
+increase_economic_growth = yes
+decrease_economic_growth = yes
+increase_two_level_economic_growth = yes
+decrease_two_level_economic_growth = yes
+depression = yes
+recession = yes
+stagnation = yes
+stable_growth = yes
+fast_growth = yes
+economic_boom = yes
+```
+
+<a id="economic-agreements"></a>
+### Economic Agreements
+
+<a id="setremove-trade-agreement"></a>
+#### Trade Agreement
+
+Creates or removes a trade agreement
+
+- sender_nation --- The nation sending the agreement
+- receiver_nation --- Nation retrieving the agreement
+- remove_agreement --- Optional (Set to 1)
+
+```
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_improved_trade_agreement = yes
+
+```
+
+<a id="setremove-mutual-investment-treaty"></a>
+#### Mutual Investment Treaty
+
+Creates or removes a mutual investment treaty.
+
+- `sender_nation` — nation sending the agreement
+- `receiver_nation` — nation receiving the agreement
+- `remove_treaty` — optional parameter (set to 1 to cancel)
+
+```
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_mutual_investment_treaty = yes
+```
+
+To cancel it:
+
+```
+set_temp_variable = { receiver_nation = RAJ.id }
+set_temp_variable = { sender_nation = SIN.id }
+set_temp_variable = { remove_treaty = 1 }
+set_mutual_investment_treaty = yes
+```
+
+The improved trade agreement and mutual investment treaty can be used at the same time.
+
+```
+set_temp_variable = { receiver_nation = BRA.id }
+set_temp_variable = { sender_nation = POR.id }
+set_improved_trade_agreement = yes
+set_mutual_investment_treaty = yes
+```
+
+<a id="setremove-permanent-investment-targets"></a>
+#### Permanent Investment Targets
+
+Creates or removes adding_nation to another AI's investment pool
+
+- target_nation --- The nation sending the agreement
+- adding_nation --- Nation retrieving the agreement
+- remove_nation --- Optional (Set to 1)
+
+```
+set_temp_variable = { target_nation = RAJ.id }
+set_temp_variable = { adding_nation = SIN.id }
+change_permanent_investment_target = yes
+
+```
+
+<a id="other"></a>
+### Other
+
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
-#### Guide on How To-Do Additional Income/Additional Expenses
+#### Additional Income/Expenses
 
 ```
 Step One: go to common/scripted_effects/00_money_system.txt
@@ -325,165 +459,6 @@ modifiers = {
 
 ```
 
-<a id="setremove-trade-agreement"></a>
-#### Set/Remove Trade Agreement
-
-Creates or removes a trade agreement
-
-- sender_nation --- The nation sending the agreement
-- receiver_nation --- Nation retrieving the agreement
-- remove_agreement --- Optional (Set to 1)
-
-```
-set_temp_variable = { receiver_nation = RAJ.id }
-set_temp_variable = { sender_nation = SIN.id }
-set_improved_trade_agreement = yes
-
-```
-
-<a id="setremove-permanent-investment-targets"></a>
-#### Set/Remove Permanent Investment Targets
-
-Creates or removes adding_nation to another AI's investment pool
-
-- target_nation --- The nation sending the agreement
-- adding_nation --- Nation retrieving the agreement
-- remove_nation --- Optional (Set to 1)
-
-```
-set_temp_variable = { target_nation = RAJ.id }
-set_temp_variable = { adding_nation = SIN.id }
-change_permanent_investment_target = yes
-
-```
-
-<a id="increasedecrease-economic-growth"></a>
-#### Increase/Decrease Economic Growth
-
-Increases or decreases the nation's current economic cycle
-
-```
-increase_economic_growth = yes
-decrease_economic_growth = yes
-increase_two_level_economic_growth = yes
-decrease_two_level_economic_growth = yes
-depression = yes
-recession = yes
-stagnation = yes
-stable_growth = yes
-fast_growth = yes
-economic_boom = yes
-```
-
-<a id="increasedecrease-bureaucracy-law"></a>
-#### Increase/Decrease Bureaucracy Law
-
-Increases or decreases the nation's current Bureaucracy Spending Law
-
-```
-decrease_centralization = yes
-decrease_centralization_2 = yes
-decrease_centralization_3 = yes
-increase_centralization = yes
-increase_centralization_2 = yes
-increase_centralization_3 = yes
-increase_centralization_4 = yes
-```
-
-<a id="increasedecrease-social-spending"></a>
-#### Increase/Decrease Social Spending
-
-Increase or decreases the nation's current Social Spending Law
-
-```
-increase_social_spending = yes
-increase_social_spending_2 = yes
-increase_social_spending_3 = yes
-increase_social_spending_4 = yes
-decrease_social_spending = yes
-decrease_social_spending_2 = yes
-max_social_spending = yes
-```
-
-<a id="increasedecrease-education-spending"></a>
-#### Increase/Decrease Education Spending
-
-Increase or decreases the nation's current Education Spending Law
-
-```
-increase_education_budget = yes
-increase_education_budget_2 = yes
-increase_education_budget_3 = yes
-increase_education_budget_4 = yes
-decrease_education_budget = yes
-decrease_education_budget_2 = yes
-max_education_budget = yes
-```
-
-<a id="increasedecrease-health-spending"></a>
-#### Increase/Decrease Health Spending
-
-Increase or decreases the nation's current Education Spending Law
-
-```
-increase_healthcare_budget = yes
-increase_healthcare_budget_2 = yes
-increase_healthcare_budget_3 = yes
-increase_healthcare_budget_4 = yes
-decrease_healthcare_budget = yes
-decrease_healthcare_budget_2 = yes
-max_healthcare_budget = yes
-```
-
-<a id="increasedecrease-police-spending"></a>
-#### Increase/Decrease Police Spending
-
-Increase or decreases the nation's current Police Spending Law
-
-```
-increase_policing_budget = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_2 = yes
-increase_policing_budget_4 = yes
-decrease_policing_budget = yes
-decrease_policing_budget_2 = yes
-```
-
-<a id="increasedecrease-trade-law"></a>
-#### Increase/Decrease Trade Law
-
-The following are for increasing and decreasing the "Trade Law" of your nation:
-
-```
-increase_exports = yes
-decrease_exports = yes
-set_exports_to_min = yes
-set_exports_to_max = yes
-```
-
-<a id="increasedecrease-military-spending-law"></a>
-#### Increase/Decrease Military Spending Law
-
-The following are for increasing your military spending law.
-
-```
-increase_military_spending = yes
-decrease_military_spending = yes
-decrease_military_spending_2 = yes
-sizeable_military_spending = yes # Sets your military spending to sizeable
-```
-
-<a id="increasedecrease-migration-law"></a>
-#### Increase/Decrease Migration Law
-
-The following are for increasing and decreasing your Migration and Border Regulations laws
-
-```
-increase_migration_law = yes
-decrease_migration_law = yes
-```
-
-<a id="mdc-internal-faction-effects"></a>
 ### MDC Internal Faction Effects
 
 <a id="internal-factions-code-snippet"></a>
@@ -550,6 +525,7 @@ change_industrial_conglomerates_opinion = yes
 - change_wall_street_opinion -- Unique American International Bankers
 
 <a id="mdc-influence-effects"></a>
+
 ### MDC Influence Effects
 
 <a id="influence-action-examples"></a>
@@ -587,6 +563,7 @@ change_influence_percentage = yes
 ```
 
 <a id="mdc-political-effects"></a>
+
 ### MDC Political Effects
 
 <a id="code-snippet-to-add-party-popularity-to-subideologies"></a>
@@ -687,12 +664,33 @@ set_country_flag = free_ban_parties # Set this if you don't want a PP cost
 set_partyall_banned = yes # Bans all the parties
 ```
 
-<a id="counter-terror-effects"></a>
+<a id="protests"></a>
+### Protests
+
+#### Protest Strength
+
+Changes protest strength. The maximum value of the variable is 100.
+
+```
+set_temp_variable = { protest_strength_change = 10 }
+modify_protest_effect = yes
+```
+
+#### Protest Radicalisation
+
+Changes protest radicalisation. The maximum value of the variable is 10. Values above 10 have no meaningful effect.
+
+```
+set_temp_variable = { protest_radicalisation_change = -10 }
+modify_protest_radicalisation_effect = yes
+```
+
 ### Terrorism Effects
 
+<a id="terrorism-support"></a>
 #### Terrorism Support
 
-Available only for the following tags.
+Available only for the listed tags.
 
 **Communist:** `ITA`, `GER`, `NOR`, `CZE`, `HUN`, `AUS`  
 **Other terrorist:** `SYR`, `IRQ`, `SAU`, `UAE`, `EGY`, `NIG`, `ALG`, `TUN`, `TAJ`, `ING`, `KBK`, `KCC`, `DAG`, `CHE`, `ARW`
@@ -704,7 +702,10 @@ modify_terrorism_support = yes
 
 Terrorism support is capped at `100`.
 
+<a id="terrorism-mana"></a>
 #### Terrorist Activity Accumulation
+
+Changes the country's terrorist activity accumulation.
 
 ```txt
 add_to_variable = { terrorism_mana = 10 }
@@ -714,6 +715,8 @@ clamp_variable = {
     max = 100
 }
 ```
+
+<a id="mdc-cartel-related-effects"></a>
 
 ### MDC Cartel Related Effects
 
@@ -729,6 +732,7 @@ modify_cartel_variables_effect = yes
 ```
 
 <a id="mdc-european-union-effects"></a>
+
 ### MDC European Union Effects
 
 <a id="euroscepticism-effects"></a>
@@ -765,6 +769,7 @@ EU_potential_eurosceptic_change = yes
 ```
 
 <a id="energy-effects"></a>
+
 ### Energy Effects
 
 Constructs enrichment facilities for the nation. It costs 25.00 per. The scripted effect handles the cost. Just input a number.
@@ -782,10 +787,21 @@ set_temp_variable = { temp_change = 2 }
 build_battery_park_effect = yes
 ```
 
-<a id="freedom-laws-effects"></a>
-### Freedom Laws Effects
+### Law Changes
 
-Each category is an idea group with several tiers. The matching `set_*` effect switches the country to that tier and, if it's already there, grants a one-time bonus (PP/stability/popularity).
+Each category below is an idea group with several tiers. The matching `set_*` effect switches the country to that tier and, if it's already there, grants a one-time bonus (PP/stability/popularity). The `increase_*` / `decrease_*` effects shift the law one tier up or down the scale.
+
+#### Contents
+
+- [Civil Freedom Laws](#civil-freedom-laws)
+- [Demographics and Birth Policy](#demographics-and-birth)
+- [Weapons](#weapons)
+- [Economic Laws](#economic-laws)
+
+<hr/>
+
+<a id="civil-freedom-laws"></a>
+### Civil Freedom Laws
 
 <a id="censorship-laws"></a>
 #### Censorship (censorship_laws)
@@ -846,3 +862,145 @@ Each category is an idea group with several tiers. The matching `set_*` effect s
 | `set_free_unions = yes` | Free Trade Unions |
 | `set_gov_unions = yes` | State Unions |
 | `set_ban_unions = yes` | Trade Unions Banned |
+
+<hr/>
+
+<a id="demographics-and-birth"></a>
+### Demographics and Birth Policy
+
+<a id="demographics"></a>
+#### Population Pyramid
+
+| Effect | Tier |
+|---|---|
+| `set_population_pyramid_1 = yes` | Growing Population Pyramid |
+| `set_population_pyramid_2 = yes` | Stable Population Pyramid |
+| `set_population_pyramid_3 = yes` | Shrinking Population Pyramid |
+
+<a id="birth-policy"></a>
+#### Birth Policy
+
+| Effect | Tier |
+|---|---|
+| `set_encourage_birth = yes` | Encourage Birth |
+| `set_no_birth_control = yes` | No Birth Control |
+| `set_discourage_birth = yes` | Discourage Birth |
+
+<a id="abortion-policy"></a>
+#### Abortion Policy
+
+| Effect | Tier |
+|---|---|
+| `set_ban_abortion = yes` | Ban Abortion |
+| `set_no_abortion_control = yes` | No Abortion Restrictions |
+| `set_encourage_abortion = yes` | Encourage Abortion Access |
+
+<hr/>
+
+<a id="weapons"></a>
+### Weapons Law
+
+| Effect | Tier |
+|---|---|
+| `set_ban_weapons = yes` | Ban Weapons |
+| `set_allow_weapons = yes` | Allow Private Ownership |
+| `set_regulate_weapons = yes` | Regulate Weapons |
+
+<hr/>
+
+<a id="economic-laws"></a>
+### Economic Laws
+
+Laws that govern government spending (bureaucracy, social spending, education, healthcare, policing budgets), plus the trade, military spending, and migration laws.
+
+<a id="bureaucracy-law"></a>
+#### Bureaucracy
+
+| Effect | Application |
+|---|---|
+| `decrease_centralization = yes` | Decrease centralisation |
+| `decrease_centralization_2 = yes` | Decrease centralisation (level 2) |
+| `decrease_centralization_3 = yes` | Decrease centralisation (level 3) |
+| `increase_centralization = yes` | Increase centralisation |
+| `increase_centralization_2 = yes` | Increase centralisation (level 2) |
+| `increase_centralization_3 = yes` | Increase centralisation (level 3) |
+| `increase_centralization_4 = yes` | Increase centralisation (max) |
+
+<a id="education-spending"></a>
+#### Education
+
+| Effect | Application |
+|---|---|
+| `increase_education_budget = yes` | Increase education spending |
+| `increase_education_budget_2 = yes` | Increase education spending (level 2) |
+| `increase_education_budget_3 = yes` | Increase education spending (level 3) |
+| `increase_education_budget_4 = yes` | Increase education spending (max) |
+| `decrease_education_budget = yes` | Decrease education spending |
+| `decrease_education_budget_2 = yes` | Decrease education spending (level 2) |
+| `max_education_budget = yes` | Maximise education spending |
+
+<a id="healthcare-spending"></a>
+#### Healthcare
+
+| Effect | Application |
+|---|---|
+| `increase_healthcare_budget = yes` | Increase healthcare spending |
+| `increase_healthcare_budget_2 = yes` | Increase healthcare spending (level 2) |
+| `increase_healthcare_budget_3 = yes` | Increase healthcare spending (level 3) |
+| `increase_healthcare_budget_4 = yes` | Increase healthcare spending (max) |
+| `decrease_healthcare_budget = yes` | Decrease healthcare spending |
+| `decrease_healthcare_budget_2 = yes` | Decrease healthcare spending (level 2) |
+| `max_healthcare_budget = yes` | Maximise healthcare spending |
+
+<a id="social-spending"></a>
+#### Social Spending
+
+| Effect | Application |
+|---|---|
+| `increase_social_spending = yes` | Increase social spending |
+| `increase_social_spending_2 = yes` | Increase social spending (level 2) |
+| `increase_social_spending_3 = yes` | Increase social spending (level 3) |
+| `increase_social_spending_4 = yes` | Increase social spending (max) |
+| `decrease_social_spending = yes` | Decrease social spending |
+| `decrease_social_spending_2 = yes` | Decrease social spending (level 2) |
+| `max_social_spending = yes` | Maximise social spending |
+
+<a id="policing-spending"></a>
+#### Policing
+
+| Effect | Application |
+|---|---|
+| `increase_policing_budget = yes` | Increase policing spending |
+| `increase_policing_budget_2 = yes` | Increase policing spending (level 2) |
+| `increase_policing_budget_3 = yes` | Increase policing spending (level 3) |
+| `increase_policing_budget_4 = yes` | Increase policing spending (max) |
+| `decrease_policing_budget = yes` | Decrease policing spending |
+| `decrease_policing_budget_2 = yes` | Decrease policing spending (level 2) |
+
+<a id="trade-law"></a>
+#### Trade
+
+| Effect | Application |
+|---|---|
+| `increase_exports = yes` | Increase exports / trade law |
+| `decrease_exports = yes` | Decrease exports / trade law |
+| `set_exports_to_min = yes` | Set exports to minimum |
+| `set_exports_to_max = yes` | Set exports to maximum |
+
+<a id="military-spending-law"></a>
+#### Military Spending
+
+| Effect | Application |
+|---|---|
+| `increase_military_spending = yes` | Increase military spending |
+| `decrease_military_spending = yes` | Decrease military spending |
+| `decrease_military_spending_2 = yes` | Decrease military spending (level 2) |
+| `sizeable_military_spending = yes` | Set sizeable military spending |
+
+<a id="migration-law"></a>
+#### Migration
+
+| Effect | Application |
+|---|---|
+| `increase_migration_law = yes` | Loosen migration law |
+| `decrease_migration_law = yes` | Tighten migration law |

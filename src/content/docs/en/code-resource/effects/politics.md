@@ -103,7 +103,7 @@ set_country_flag = free_ban_parties # Set this if you don't want a PP cost
 set_partyall_banned = yes # Bans all the parties
 ```
 
-<a id="counter-terror-effects"></a>
+<a id="protests"></a>
 ## Protests
 
 ### Protest Strength
