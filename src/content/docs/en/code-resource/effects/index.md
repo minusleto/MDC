@@ -15,3 +15,4 @@ description: "Reference for MDC scripted effects."
 - [Cartels](./cartels/) — Cartel system effects
 - [European Union](./european-union/) — EU and Euroscepticism effects
 - [Energy](./energy/) — Energy scripted effects
+- [Departments & Companies](./companies/) — Tooltips for new departments, companies, and branches

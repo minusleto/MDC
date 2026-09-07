@@ -42,6 +42,7 @@ export default defineConfig({
 						{ label: 'Картели', translations: { en: 'Cartels' }, slug: 'code-resource/effects/cartels' },
 						{ label: 'Европейский союз', translations: { en: 'European Union' }, slug: 'code-resource/effects/european-union' },
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/effects/energy' },
+						{ label: 'Департаменты и компании', translations: { en: 'Departments & Companies' }, slug: 'code-resource/effects/companies' },
 					] },
 					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/modifiers' },
