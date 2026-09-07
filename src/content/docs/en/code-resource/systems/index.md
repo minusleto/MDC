@@ -11,5 +11,5 @@ description: "Unique MDC gameplay systems"
 - [Energy](../effects/energy/)
 - [Cartels](../effects/cartels/)
 - [European Union](../effects/european-union/)
-- [Terrorism](../effects/terrorism/)
+- [Counter-Terrorism](../effects/counter-terror/)
 - [Politics](../effects/politics/)

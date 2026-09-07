@@ -11,5 +11,5 @@ description: "Уникальные игровые системы MDC"
 - [Энергетика](../effects/energy/)
 - [Картели](../effects/cartels/)
 - [Европейский союз](../effects/european-union/)
-- [Терроризм](../effects/terrorism/)
+- [Контртерроризм](../effects/counter-terror/)
 - [Политика](../effects/politics/)
