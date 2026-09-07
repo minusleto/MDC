@@ -3,15 +3,11 @@ title: Political Modifiers
 description: ""
 ---
 
-## Political Modifiers
-
-Affect domestic politics (parties).
-
 <a id="vanilla"></a>
-### Vanilla
+## Vanilla
 
 <a id="political-power"></a>
-#### Political Power
+### Political Power
 
 | Modifier | Description | Note |
 |---|---|---|
@@ -20,7 +16,7 @@ Affect domestic politics (parties).
 | `political_power_cost` | Daily political power cost | N/A |
 
 <a id="stability"></a>
-#### Stability
+### Stability
 
 | Modifier | Description | Note |
 |---|---|---|
@@ -30,7 +26,7 @@ Affect domestic politics (parties).
 | `party_popularity_stability_factor` | Stability gained from ruling party's popularity | N/A |
 
 <a id="ideology"></a>
-#### Ideology
+### Ideology
 
 | Modifier | Description | Note |
 |---|---|---|
@@ -47,10 +43,19 @@ Affect domestic politics (parties).
 | `nationalist_acceptance` | AI willingness to accept the nationalist outlook | N/A |
 
 <a id="mdc"></a>
-### MDC
+## MDC
+
+<a id="party-popularity"></a>
+### Party Popularity
 
 | Modifier | Description | Note |
 |---|---|---|
 | `popularity_attack_modifier` | Modifier that increases the effectiveness of attacking political parties in the political GUI | The modifier is not percentual. EX: popularity_attack_modifier = 2.0 for 2x damage |
 | `popularity_boost_modifier` | Modifier that increases the effectiveness of boosting political parties in the political GUI | The modifier is not percentual. EX: popularity_boost_modifier = 2.0 for 2x boost |
+
+<a id="protests"></a>
+### Protests
+
+| Modifier | Description | Note |
+|---|---|---|
 | `protests_drift_modifier` | Modifies how fast protests grow | E.g. -0.05 = 5% slower growth. The final growth value is rounded |
