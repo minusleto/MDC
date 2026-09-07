@@ -1,6 +1,6 @@
 ---
 title: Scripted Effects
-description: "Effects/Scripted Effects — buildings, economy, factions, influence, politics, EU, counter-terror, cartels"
+description: "Effects/Scripted Effects — buildings, economy, factions, influence, politics, EU, terrorism, cartels"
 ---
 
 <a id="effectsscripted-effects"></a>

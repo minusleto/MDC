@@ -1,6 +1,6 @@
 ---
 title: Скриптовые эффекты
-description: "Effects/Scripted Effects — постройки, экономика, фракции, влияние, политика, ЕС, антитеррор, картели"
+description: "Effects/Scripted Effects — постройки, экономика, фракции, влияние, политика, ЕС, терроризм, картели"
 ---
 
 <a id="effectsscripted-effects"></a>
