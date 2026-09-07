@@ -10,5 +10,7 @@ description: ""
 | Модификатор | Описание | Примечание |
 |---|---|---|
 | `migration_rate_value_factor` | Меняет чистый приток миграции | Н/Д |
+| `base_migration_rate_value` | Базовое значение темпа миграции | Н/Д |
+| `maximum_migration_rate_value` | Максимальное значение темпа миграции | Н/Д |
 | `migrant_workforce_modifier` | Изменяет долю работников-мигрантов | Н/Д |
 | `maximum_migrant_workforce_percent_modifier` | Изменяет максимальную долю работников-мигрантов | Н/Д |
