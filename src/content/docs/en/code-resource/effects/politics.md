@@ -124,3 +124,99 @@ set_temp_variable = { protest_radicalisation_change = -10 }
 modify_protest_radicalisation_effect = yes
 ```
 
+<a id="vanilla-political-effects"></a>
+## Vanilla Effects
+
+Unlike the MDC effects above, these are standard base-game effects. They apply directly, without a `set_temp_variable` wrapper.
+
+<a id="political-power"></a>
+### Political Power
+
+```
+add_political_power = 100
+```
+
+Adds the given amount of political power. A negative value subtracts.
+
+<a id="stability"></a>
+### Stability
+
+```
+add_stability = 0.05
+```
+
+Changes national stability. Given as a decimal (0.05 = +5%). A negative value lowers it.
+
+<a id="war-support"></a>
+### War Support
+
+```
+add_war_support = 0.05
+```
+
+Changes war support. Given as a decimal (0.05 = +5%).
+
+<a id="ideology-popularity"></a>
+### Ideology Popularity
+
+```
+add_popularity = {
+    ideology = democratic
+    popularity = 0.05
+}
+```
+
+Changes the popularity of the specified ideology by the given amount (decimal, 0.05 = +5%). `ideology` takes the ideology tag. MDC reflavors the 5 vanilla-style groups as follows:
+
+| Tag | MDC Ideology |
+|---|---|
+| `democratic` | Westernizers |
+| `communism` | Reactionaries |
+| `fascism` | Salafists |
+| `nationalist` | Nationalists |
+| `neutrality` | Neutrals |
+
+An example for each ideology:
+
+```
+add_popularity = {
+    ideology = democratic
+    popularity = 0.05
+}
+```
+Increases the Westernizers' popularity by 5%.
+
+```
+add_popularity = {
+    ideology = communism
+    popularity = 0.05
+}
+```
+Increases the Reactionaries' popularity by 5%.
+
+```
+add_popularity = {
+    ideology = fascism
+    popularity = 0.05
+}
+```
+Increases the Salafists' popularity by 5%.
+
+```
+add_popularity = {
+    ideology = nationalist
+    popularity = 0.05
+}
+```
+Increases the Nationalists' popularity by 5%.
+
+```
+add_popularity = {
+    ideology = neutrality
+    popularity = 0.05
+}
+```
+Increases the Neutrals' popularity by 5%.
+
+A negative `popularity` value decreases support for the ideology. To change the popularity of a specific party/subideology within a group (rather than the whole ideology), use [`add_relative_party_popularity`](#code-snippet-to-add-party-popularity-to-subideologies) above.
+
