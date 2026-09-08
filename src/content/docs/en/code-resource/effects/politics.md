@@ -65,6 +65,8 @@ set_temp_variable = { temp_outlook_increase = 0.10 }
 add_relative_party_popularity = yes
 ```
 
+📋 [List of all parties](../../systems/politics/#subideologies) — full table of `party_index` values (0–23) with all subideologies.
+
 _**Modify Ruling Outlook Popularity:**_
 
 Purpose: Modifies the ruling outlook only by `arg_popularity`

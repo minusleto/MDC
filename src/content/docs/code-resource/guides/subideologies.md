@@ -17,53 +17,9 @@ description: "Добавление партий и субидеологий"
 
 Всё довольно просто, но нужно точно следовать тегам, как они написаны.
 
-Список слотов субидеологий:
-
-_ЭТИ СЛОТЫ НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ В КОНСОЛЬНЫХ КОМАНДАХ_
-
-<a id="western"></a>
-### Западные
-
-- Western_Autocracy - Прозападные автократы
-- conservatism - Консерваторы
-- liberalism - Либералы
-- socialism - Социал-демократы
-
-<a id="emerging"></a>
-### Формирующиеся
-
-- Communist-State - Формирующиеся коммунисты
-- anarchist_communism - Левый радикализм
-- Conservative - Реакционеры
-- Autocracy - Формирующиеся автократы
-- Mod_Vilayat_e_Faqih - Умеренные шиитские революционеры
-- Vilayat_e_Faqih - Радикальные шиитские революционеры
-
-<a id="salafism"></a>
-### Салафизм
-
-- Kingdom - Ваххабитские монархисты
-- Caliphate - Салафитский джихадизм
-
-<a id="non-aligned"></a>
-### Неприсоединившиеся
-
-- Neutral_Muslim_Brotherhood - Умеренные исламисты
-- Neutral_Autocracy - Неприсоединившиеся автократы
-- Neutral_conservatism - Консерваторы
-- oligarchism - Олигархи
-- Neutral_Libertarian - Либертарианцы
-- Neutral_green - Зелёные
-- neutral_Social - Социал-демократы
-- Neutral_Communism - Коммунисты
-
-<a id="nationalist"></a>
-### Националисты
-
-- Nat_Populism - Правые популисты
-- Nat_Fascism - Фашисты
-- Nat_Autocracy - Военная хунта
-- Monarchist - Абсолютные монархисты
+:::tip
+Полный список слотов субидеологий (индексы `party_index` 0–23, теги, названия) перенесён в справочник — см. [Системы → Политика → Субидеологии](../../systems/politics/#subideologies).
+:::
 
 _**КАК ЭТО СДЕЛАТЬ**_
 

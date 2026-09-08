@@ -17,53 +17,9 @@ There are several files you need to edit to get the parties to show up in Millen
 
 It is fairly straightforward, but you will need to follow the tags exactly as they are written.
 
-List of Subideology Slots:
-
-_THESE CANNOT BE USED FOR CONSOLE COMMANDS_
-
-<a id="western"></a>
-### Western
-
-- Western_Autocracy - Pro-Western Autocrats
-- conservatism - Conservatives
-- liberalism - Liberals
-- socialism - Social Democrats
-
-<a id="emerging"></a>
-### Emerging
-
-- Communist-State - Emerging Communists
-- anarchist_communism - Left-Wing Radicalism
-- Conservative - Reactionaries
-- Autocracy - Emerging Autocrats
-- Mod_Vilayat_e_Faqih - Moderate Shiite Revolutionaries
-- Vilayat_e_Faqih - Hardline Shiite Revolutionaries
-
-<a id="salafism"></a>
-### Salafism
-
-- Kingdom - Wahhabi Monarchist
-- Caliphate - Saafi Jihadism
-
-<a id="non-aligned"></a>
-### Non-Aligned
-
-- Neutral_Muslim_Brotherhood - Moderate Islamist
-- Neutral_Autocracy - Non-Aligned Autocrats
-- Neutral_conservatism - Conservatives
-- oligarchism - Oligarchs
-- Neutral_Libertarian - Libertarians
-- Neutral_green - Greens
-- neutral_Social - Socialist Democrats
-- Neutral_Communism - Communists
-
-<a id="nationalist"></a>
-### Nationalist
-
-- Nat_Populism - Right Wing Popluists
-- Nat_Fascism - Fascists
-- Nat_Autocracy - Military Junta
-- Monarchist - Absolutist Monarchist
+:::tip
+The full list of subideology slots (`party_index` 0–23, tags, names) has moved to the reference — see [Systems → Politics → Subideologies](../../systems/politics/#subideologies).
+:::
 
 _**THE HOW TO**_
 
