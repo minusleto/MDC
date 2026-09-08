@@ -43,24 +43,25 @@ Changes the popularity of the specified ideology by the given amount (decimal, 0
 | `nationalist` | Nationalists |
 | `fascism` | Salafists |
 
-To change the popularity of a specific party/subideology within a group (rather than the whole ideology), use [`add_relative_party_popularity`](#code-snippet-to-add-party-popularity-to-subideologies) below.
+To change the popularity of a specific party/subideology within a group (rather than the whole ideology), use [`add_relative_party_popularity`](#party-popularity) below.
 
 <a id="mdc-political-effects"></a>
 ## MDC Effects
 
-<a id="code-snippet-to-add-party-popularity-to-subideologies"></a>
-### Code Snippet to Add Party Popularity to Subideologies
+<a id="party-popularity"></a>
+### Changing Party Popularity
 
-- set_temp_variable = { party_index = X } #Index of party to be changed 0-23
-- set_party_index_to_ruling_party = yes -- automatically sets index to ruling party
-- set_temp_variable = { party_popularity_increase = Y } #How much party popularity is changed, must be in decimals so 2% is 0.02
-- set_temp_variable = { temp_outlook_increase = Z } #OPTIONAL PARAMETER -- Must be in decimals so 2% is 0.02
-- add_relative_party_popularity = yes
+Purpose: increases the popularity of a specific party (subideology) by the given amount.
+
+Parameters:
+- `party_index` — index of the party to change, 0-23. Instead of a number, you can set `set_party_index_to_ruling_party = yes` to automatically take the ruling party's index.
+- `party_popularity_increase` — how much party popularity changes, decimal (2% is 0.02)
+- `temp_outlook_increase` — optional, decimal (2% is 0.02)
 
 ```
 set_temp_variable = { party_index = 2 }
 set_temp_variable = { party_popularity_increase = 0.10 }
-set_temp_variable = { temp_outlook_increase = 0.10 } -- OPTIONAL
+set_temp_variable = { temp_outlook_increase = 0.10 }
 add_relative_party_popularity = yes
 ```
 
@@ -93,16 +94,16 @@ remove_coalition_members_effect = yes
 
 _**Set the Ruling Party Via Effect**_
 
-Purpose: Set the ruling party via scripted effect to some subideology. You need to still do the set_politics as I cannot parameterize it.
+Purpose: set the ruling party to some subideology via scripted effect. You still need to write `set_politics` separately, since that parameter cannot be set via a variable.
+
+Parameters:
+- `rul_party_temp` — index of the new ruling party, 0-23
+- `col_one`, `col_two`, `col_three` — optional, set the first/second/third coalition member, 0-23
+- `change_leader_temp = 1` — optional, set this if you do NOT want to change the ruling leader
+
+Important: `set_politics` must come second — otherwise `set_party_name` won't update correctly.
 
 ```
-# set_temp_variable = { rul_party_temp = 0-23 }
-# set_temp_variable = { col_one = 0 - 23 }  -- Optional: This sets the first coalition member
-# set_temp_variable = { col_two = 0 - 23 }  -- Optional: This sets the second coalition member
-# set_temp_variable = { col_three = 0 - 23 }  -- Optional: This sets the third coalition member
-# set_temp_variable = { change_leader_temp = 0-1 } -- Optional: If you do not want to change the ruling leader then set this value to 1
-# It's imperative you put the set_politics second! Else it doesn't properly update the set_party_name
-
 set_temp_variable = { rul_party_temp = 20 }
 change_ruling_party_effect = yes
 set_politics = {

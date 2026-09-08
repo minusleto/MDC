@@ -43,24 +43,25 @@ add_popularity = {
 | `nationalist` | Националисты |
 | `fascism` | Салафиты |
 
-Чтобы изменить популярность конкретной партии/субидеологии внутри группы (а не всей идеологии целиком), используйте [`add_relative_party_popularity`](#code-snippet-to-add-party-popularity-to-subideologies) ниже.
+Чтобы изменить популярность конкретной партии/субидеологии внутри группы (а не всей идеологии целиком), используйте [`add_relative_party_popularity`](#party-popularity) ниже.
 
 <a id="mdc-political-effects"></a>
 ## Модовые эффекты MDC
 
-<a id="code-snippet-to-add-party-popularity-to-subideologies"></a>
-### Фрагмент кода для добавления популярности партии к субидеологиям
+<a id="party-popularity"></a>
+### Изменение популярности партии
 
-- set_temp_variable = { party_index = X } #Индекс изменяемой партии, 0-23
-- set_party_index_to_ruling_party = yes -- автоматически устанавливает индекс правящей партии
-- set_temp_variable = { party_popularity_increase = Y } #Насколько изменится популярность партии; указывается десятичной дробью, т.е. 2% = 0.02
-- set_temp_variable = { temp_outlook_increase = Z } #НЕОБЯЗАТЕЛЬНЫЙ ПАРАМЕТР -- указывается десятичной дробью, т.е. 2% = 0.02
-- add_relative_party_popularity = yes
+Назначение: увеличивает популярность конкретной партии (субидеологии) на заданную величину.
+
+Параметры:
+- `party_index` — индекс изменяемой партии, 0-23. Вместо номера можно указать `set_party_index_to_ruling_party = yes`, чтобы взять индекс правящей партии автоматически.
+- `party_popularity_increase` — на сколько меняется популярность партии, десятичная дробь (2% = 0.02)
+- `temp_outlook_increase` — опционально, десятичная дробь (2% = 0.02)
 
 ```
 set_temp_variable = { party_index = 2 }
 set_temp_variable = { party_popularity_increase = 0.10 }
-set_temp_variable = { temp_outlook_increase = 0.10 } -- НЕОБЯЗАТЕЛЬНО
+set_temp_variable = { temp_outlook_increase = 0.10 }
 add_relative_party_popularity = yes
 ```
 
@@ -93,16 +94,16 @@ remove_coalition_members_effect = yes
 
 _**Установить правящую партию через эффект**_
 
-Назначение: устанавливает правящую партию на определённую субидеологию через скриптовый эффект. Вам всё равно нужно отдельно прописать set_politics, так как этот параметр нельзя задать через переменную.
+Назначение: устанавливает правящую партию на определённую субидеологию через скриптовый эффект. Отдельно нужно прописать `set_politics`, так как этот параметр нельзя задать через переменную.
+
+Параметры:
+- `rul_party_temp` — индекс новой правящей партии, 0-23
+- `col_one`, `col_two`, `col_three` — опционально, задают первого/второго/третьего участника коалиции, 0-23
+- `change_leader_temp = 1` — опционально, если НЕ нужно менять правящего лидера
+
+Важно: `set_politics` должен идти вторым эффектом — иначе `set_party_name` не обновится корректно.
 
 ```
-# set_temp_variable = { rul_party_temp = 0-23 }
-# set_temp_variable = { col_one = 0 - 23 }  -- Необязательно: задаёт первого участника коалиции
-# set_temp_variable = { col_two = 0 - 23 }  -- Необязательно: задаёт второго участника коалиции
-# set_temp_variable = { col_three = 0 - 23 }  -- Необязательно: задаёт третьего участника коалиции
-# set_temp_variable = { change_leader_temp = 0-1 } -- Необязательно: если вы не хотите менять правящего лидера, задайте это значение = 1
-# Обязательно поставьте set_politics вторым! Иначе set_party_name не обновится корректно
-
 set_temp_variable = { rul_party_temp = 20 }
 change_ruling_party_effect = yes
 set_politics = {
