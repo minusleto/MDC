@@ -16,9 +16,11 @@ Modifiers that apply at the level of a specific state rather than the whole coun
 | `local_building_slots_factor` | Same, as a percentage | N/A |
 | `resistance_growth` | Changes the speed of resistance growth in the state | N/A |
 | `recruitable_population_factor` | Changes the share of the state's population available for recruitment | N/A |
-| `local_resources_<resource>` | Changes the output of a specific resource in the state (e.g. `local_resources_steel`) | Set on a building |
 | `air_defence` | Changes the state's anti-air strength | Set by the AA building |
 | `attrition` | Changes troop attrition | Usually country-scoped, but also works in state/province scope |
+| `state_resource_<resource>` | Changes the output of a specific resource in the state (e.g. `state_resource_steel`) | Confirmed via Paradox's official modifiers documentation |
+| `state_resources_factor` | Same, but for all of the state's resources, as a percentage | N/A |
+| `temporary_state_resource_<resource>` | Temporarily changes resource output in the state | Removed separately, not permanent |
 
 <a id="economic"></a>
 ### Economic
