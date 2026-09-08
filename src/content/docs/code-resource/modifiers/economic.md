@@ -63,13 +63,6 @@ description: "Модификаторы роста экономики, инфля
 | `social_cost_multiplier_modifier` | Меняет расходы на соцобеспечение | Н/Д |
 | `border_control_multiplier_modifier` | Меняет расходы на контроль миграции | Н/Д |
 
-<a id="state-level-modifiers"></a>
-### Модификаторы уровня региона (state)
-
-| Модификатор | Описание | Примечание |
-|---|---|---|
-| `state_productivity_growth_modifier` | Рост производительности на уровне региона | Н/Д |
-
 <a id="inflation"></a>
 ### Инфляция
 

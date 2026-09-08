@@ -51,7 +51,6 @@ Govern energy production and consumption.
 | Modifier | Description | Note |
 |---|---|---|
 | `hydroelectric_energy_storage` | Used for basic static energy use/storage for hydroelectric modifiers in a particular state | N/A |
-| `state_renewable_energy_generation_modifier` | Modifies the amount of State Renewable Energy Generation | N/A |
 
 <a id="battery-storage"></a>
 ### Battery & Storage

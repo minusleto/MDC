@@ -12,3 +12,4 @@ description: "Reference for MDC modifiers."
 - [Energy Modifiers](./energy/)
 - [Political Modifiers](./political/)
 - [Military Modifiers](./military/)
+- [Regional Modifiers](./regional/)

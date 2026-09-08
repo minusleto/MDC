@@ -63,13 +63,6 @@ Multipliers on the country's ongoing spending (not to be confused with the PP co
 | `social_cost_multiplier_modifier` | Modifies the country's welfare spending cost | N/A |
 | `border_control_multiplier_modifier` | Modifies the country's migration control spending cost | N/A |
 
-<a id="state-level-modifiers"></a>
-### State-level Modifiers
-
-| Modifier | Description | Note |
-|---|---|---|
-| `state_productivity_growth_modifier` | State level modifier to increase/decrease the productivity growth of a state | N/A |
-
 <a id="inflation"></a>
 ### Inflation
 

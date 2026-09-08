@@ -53,6 +53,7 @@ export default defineConfig({
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/modifiers/energy' },
 						{ label: 'Политика', translations: { en: 'Political' }, slug: 'code-resource/modifiers/political' },
 						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/modifiers/military' },
+						{ label: 'Региональные', translations: { en: 'Regional' }, slug: 'code-resource/modifiers/regional' },
 					] },
 					{ label: 'Системы MDC', translations: { en: 'MDC Systems' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/systems' },
