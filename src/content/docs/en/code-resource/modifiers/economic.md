@@ -102,6 +102,42 @@ All values are percentages: 1 = +100%.
 | `dockyard_prodctivity` | Modifier to increase/decrease the productivity generate from dockyards | N/A |
 | `offices_productivity` | Modifier to increase/decrease the productivity generated from offices | N/A |
 
+<a id="production-speed-buildings"></a>
+### Building-specific Construction Speed
+
+Same effect as `production_speed_buildings_factor`, but scoped to one building type only.
+
+| Modifier | Description | Note |
+|---|---|---|
+| `production_speed_agriculture_district_factor` | Changes construction speed of agriculture districts | N/A |
+| `production_speed_air_base_factor` | Changes construction speed of air bases | N/A |
+| `production_speed_air_facility_factor` | Changes construction speed of air facilities | N/A |
+| `production_speed_anti_air_building_factor` | Changes construction speed of anti-air buildings | N/A |
+| `production_speed_arms_factory_factor` | Changes construction speed of arms factories | N/A |
+| `production_speed_bunker_factor` | Changes construction speed of bunkers | N/A |
+| `production_speed_coastal_bunker_factor` | Changes construction speed of coastal bunkers | N/A |
+| `production_speed_dockyard_factor` | Changes construction speed of dockyards | N/A |
+| `production_speed_fossil_powerplant_factor` | Changes construction speed of fossil powerplants | N/A |
+| `production_speed_fuel_silo_factor` | Changes construction speed of fuel silos | N/A |
+| `production_speed_industrial_complex_factor` | Changes construction speed of civilian factories | N/A |
+| `production_speed_infrastructure_factor` | Changes construction speed of infrastructure | N/A |
+| `production_speed_internet_station_factor` | Changes construction speed of internet stations | N/A |
+| `production_speed_land_facility_factor` | Changes construction speed of land facilities | N/A |
+| `production_speed_naval_base_factor` | Changes construction speed of naval bases | N/A |
+| `production_speed_naval_facility_factor` | Changes construction speed of naval facilities | N/A |
+| `production_speed_naval_headquarters_factor` | Changes construction speed of naval headquarters | N/A |
+| `production_speed_naval_supply_hub_factor` | Changes construction speed of naval supply hubs | N/A |
+| `production_speed_nuclear_facility_factor` | Changes construction speed of nuclear facilities | N/A |
+| `production_speed_nuclear_reactor_factor` | Changes construction speed of nuclear reactors | N/A |
+| `production_speed_offices_factor` | Changes construction speed of office parks | N/A |
+| `production_speed_radar_station_factor` | Changes construction speed of radar stations | N/A |
+| `production_speed_rail_way_factor` | Changes construction speed of railways | N/A |
+| `production_speed_rocket_site_factor` | Changes construction speed of rocket sites | N/A |
+| `production_speed_rubber_refinery_factor` | Changes construction speed of rubber refineries | N/A |
+| `production_speed_stronghold_network_factor` | Changes construction speed of stronghold networks | N/A |
+| `production_speed_supply_node_factor` | Changes construction speed of supply nodes | N/A |
+| `production_speed_synthetic_refinery_factor` | Changes construction speed of synthetic refineries | N/A |
+
 <a id="industry-income-taxes"></a>
 ### Industry Income Taxes
 

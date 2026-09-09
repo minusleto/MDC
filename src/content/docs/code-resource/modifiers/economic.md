@@ -102,6 +102,42 @@ description: "Модификаторы роста экономики, инфля
 | `dockyard_prodctivity` | Меняет производительность верфей | Н/Д |
 | `offices_productivity` | Меняет производительность офисов | Н/Д |
 
+<a id="production-speed-buildings"></a>
+### Скорость строительства по типу здания
+
+Аналог `production_speed_buildings_factor`, но действует только на конкретный тип постройки.
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `production_speed_agriculture_district_factor` | Меняет скорость строительства с/х районов | Н/Д |
+| `production_speed_air_base_factor` | Меняет скорость строительства аэродромов | Н/Д |
+| `production_speed_air_facility_factor` | Меняет скорость строительства авиазаводов | Н/Д |
+| `production_speed_anti_air_building_factor` | Меняет скорость строительства построек ПВО | Н/Д |
+| `production_speed_arms_factory_factor` | Меняет скорость строительства военных фабрик | Н/Д |
+| `production_speed_bunker_factor` | Меняет скорость строительства бункеров | Н/Д |
+| `production_speed_coastal_bunker_factor` | Меняет скорость строительства береговых бункеров | Н/Д |
+| `production_speed_dockyard_factor` | Меняет скорость строительства верфей | Н/Д |
+| `production_speed_fossil_powerplant_factor` | Меняет скорость строительства топливных электростанций | Н/Д |
+| `production_speed_fuel_silo_factor` | Меняет скорость строительства топливных хранилищ | Н/Д |
+| `production_speed_industrial_complex_factor` | Меняет скорость строительства гражданских фабрик | Н/Д |
+| `production_speed_infrastructure_factor` | Меняет скорость строительства инфраструктуры | Н/Д |
+| `production_speed_internet_station_factor` | Меняет скорость строительства интернет-станций | Н/Д |
+| `production_speed_land_facility_factor` | Меняет скорость строительства земельных пром. объектов | Н/Д |
+| `production_speed_naval_base_factor` | Меняет скорость строительства военно-морских баз | Н/Д |
+| `production_speed_naval_facility_factor` | Меняет скорость строительства военно-морских объектов | Н/Д |
+| `production_speed_naval_headquarters_factor` | Меняет скорость строительства штабов флота | Н/Д |
+| `production_speed_naval_supply_hub_factor` | Меняет скорость строительства узлов снабжения флота | Н/Д |
+| `production_speed_nuclear_facility_factor` | Меняет скорость строительства ядерных объектов | Н/Д |
+| `production_speed_nuclear_reactor_factor` | Меняет скорость строительства ядерных реакторов | Н/Д |
+| `production_speed_offices_factor` | Меняет скорость строительства офисных комплексов | Н/Д |
+| `production_speed_radar_station_factor` | Меняет скорость строительства радарных станций | Н/Д |
+| `production_speed_rail_way_factor` | Меняет скорость строительства железных дорог | Н/Д |
+| `production_speed_rocket_site_factor` | Меняет скорость строительства ракетных площадок | Н/Д |
+| `production_speed_rubber_refinery_factor` | Меняет скорость строительства резиновых заводов | Н/Д |
+| `production_speed_stronghold_network_factor` | Меняет скорость строительства сети укреплений | Н/Д |
+| `production_speed_supply_node_factor` | Меняет скорость строительства узлов снабжения | Н/Д |
+| `production_speed_synthetic_refinery_factor` | Меняет скорость строительства синтетических НПЗ | Н/Д |
+
 <a id="industry-income-taxes"></a>
 ### Налоги на доходы промышленности
 
