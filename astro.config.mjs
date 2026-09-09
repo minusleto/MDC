@@ -14,7 +14,6 @@ export default defineConfig({
 				root: { label: 'Русский', lang: 'ru' },
 				en: { label: 'English', lang: 'en' },
 			},
-			customCss: ['./src/custom.css'],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/minusleto/MDC' },
 			],
