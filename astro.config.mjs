@@ -34,6 +34,7 @@ export default defineConfig({
 						{ label: 'Обзор', slug: 'code-resource/effects' },
 						{ label: 'Постройки', translations: { en: 'Buildings' }, slug: 'code-resource/effects/buildings' },
 						{ label: 'Экономика', translations: { en: 'Economy' }, slug: 'code-resource/effects/economy' },
+						{ label: 'Технологии', translations: { en: 'Technology' }, slug: 'code-resource/effects/technology' },
 						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/effects/internal-factions' },
 						{ label: 'Иностранное влияние', translations: { en: 'Foreign Influence' }, slug: 'code-resource/effects/influence' },
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/effects/politics' },
