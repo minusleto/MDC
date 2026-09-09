@@ -1,0 +1,14 @@
+/* Narrower right table-of-contents column */
+@media (min-width: 72rem) {
+  .right-sidebar-container {
+    width: 18rem !important;
+    margin-left: auto;
+  }
+
+  [data-has-sidebar][data-has-toc] .main-pane {
+    width: min(
+      calc(100% - 18rem),
+      calc(50rem + (100% - 50rem - 18rem) / 2)
+    );
+  }
+}
