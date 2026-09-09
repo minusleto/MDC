@@ -17,10 +17,8 @@ export default defineConfig({
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/minusleto/MDC' },
 			],
-			editLink: {
-				baseUrl: 'https://github.com/minusleto/MDC/edit/main/',
-			},
-			lastUpdated: true,
+			editLink: false,
+			lastUpdated: false,
 			routeMiddleware: './src/route-middleware.ts',
 			sidebar: [
 				{ label: 'Code Resource', translations: { en: 'Code Resource' }, items: [
