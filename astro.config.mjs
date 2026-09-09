@@ -61,7 +61,7 @@ export default defineConfig({
 						{ label: 'Контртерроризм', translations: { en: 'Counter-Terrorism' }, slug: 'code-resource/systems/terrorism' },
 					] },
 					{ label: 'Гайды', translations: { en: 'Guides' }, items: [
-						{ label: 'Обзор', translations: { en: 'Overview' }, slug: 'code-resource/guides' },
+						{ label: 'Обзор', slug: 'code-resource/guides' },
 						{ label: 'Субидеологии и партии', translations: { en: 'Subideologies & Parties' }, slug: 'code-resource/guides/subideologies' },
 						{ label: 'Исторические события', translations: { en: 'Historical Events' }, slug: 'code-resource/guides/historical-events' },
 						{ label: 'Terrain-фото', translations: { en: 'Terrain Photos' }, slug: 'code-resource/guides/terrain-photos' },
