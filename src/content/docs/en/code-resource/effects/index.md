@@ -16,3 +16,4 @@ description: "Reference for MDC scripted effects."
 - [European Union](./european-union/) — EU and Euroscepticism effects
 - [Energy](./energy/) — Energy scripted effects
 - [Departments & Companies](./companies/) — Tooltips for new departments, companies, and branches
+- [Unique](./unique/) — Effects that only work for specific countries (Britain, Russia, etc.)
