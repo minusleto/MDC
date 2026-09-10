@@ -5,7 +5,7 @@ description: "Effects that only actually work for specific countries — tied to
 
 ## Unique Effects
 
-Effects that can technically be written anywhere, but only actually fire for specific countries — because they're tied to a mechanic that only exists there. The general list of corresponding modifiers is in [Unique Modifiers](../../modifiers/unique/).
+Effects that can technically be written anywhere, but only actually fire for specific countries — because they're tied to a mechanic that exists only there. The general list of corresponding modifiers is in [Unique Modifiers](../../modifiers/unique/).
 
 <a id="britain"></a>
 ## Britain
@@ -42,3 +42,23 @@ Change Russia's (SOV) economic recovery. The variable value is the change (+/-),
 set_temp_variable = { modify_economic = 1 }
 modify_economic_support = yes
 ```
+
+<a id="cartels"></a>
+## Cartels
+
+An effect from the cartel system used to change cartel strength and political influence.
+
+Before calling the effect, set temporary variables:
+
+- `cart_strength_change` — change to cartel strength.
+- `cart_influence_change` — change to cartel political influence.
+
+Values can be positive or negative.
+
+```text
+set_temp_variable = { cart_strength_change = 2 }
+set_temp_variable = { cart_influence_change = 2 }
+modify_cartel_variables_effect = yes
+```
+
+`modify_cartel_variables_effect` applies the changes stored in these variables.
