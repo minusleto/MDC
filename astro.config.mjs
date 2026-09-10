@@ -45,6 +45,7 @@ export default defineConfig({
 					] },
 					{ label: 'Триггеры', translations: { en: 'Triggers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/triggers' },
+						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/triggers/political' },
 					] },
 					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/modifiers' },
