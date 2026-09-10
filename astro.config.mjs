@@ -17,7 +17,6 @@ export default defineConfig({
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/minusleto/MDC' },
 			],
-			editLink: false,
 			lastUpdated: false,
 			routeMiddleware: './src/route-middleware.ts',
 			sidebar: [
