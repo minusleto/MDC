@@ -55,6 +55,9 @@ export default defineConfig({
 						{ label: 'Политика', translations: { en: 'Political' }, slug: 'code-resource/modifiers/political' },
 						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/modifiers/military' },
 						{ label: 'Региональные', translations: { en: 'Regional' }, slug: 'code-resource/modifiers/regional' },
+						{ label: 'Терроризм', translations: { en: 'Terrorism' }, slug: 'code-resource/modifiers/terrorism' },
+						{ label: 'Космос', translations: { en: 'Space' }, slug: 'code-resource/modifiers/space' },
+						{ label: 'Уникальные', translations: { en: 'Unique' }, slug: 'code-resource/modifiers/unique' },
 					] },
 					{ label: 'Системы MDC', translations: { en: 'MDC Systems' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/systems' },

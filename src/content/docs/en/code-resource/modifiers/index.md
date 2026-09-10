@@ -13,3 +13,6 @@ description: "Reference for MDC modifiers."
 - [Political Modifiers](./political/)
 - [Military Modifiers](./military/)
 - [Regional Modifiers](./regional/)
+- [Terrorism Modifiers](./terrorism/)
+- [Space Modifiers](./space/)
+- [Unique Modifiers](./unique/)
