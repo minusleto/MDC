@@ -1,28 +1,30 @@
 ---
 title: Military
-description: "Military scripted effects: divisions, commanders, equipment, and military industrial organizations."
+description: "Reference for effects related to armies, commanders, equipment, and military industrial organizations."
 ---
 
 # Military Effects
 
-Effects used to modify armies, commanders, military equipment, and military industrial organizations.
+Effects that control land forces, commanders, military equipment, and military industrial organizations.
 
-## Armies and Divisions
+## Divisions
 
-### `create_unit`
+### Create a division
 
-Creates one or more divisions from an existing division template.
+`create_unit` creates one or more divisions from an **existing division template**.
 
-| Parameter | Purpose |
+> **Important:** a division template (`division_template`) is required to create a division. If the specified template does not exist, the division **will not be created**.
+
+| Parameter | What it does |
 |---|---|
-| `division` | Description of the division to create: name, template, and starting experience. |
-| `owner` | Country that owns the created division. |
+| `division` | Describes the division to create: name, template, and starting experience. |
+| `owner` | Country that will own the division. |
 | `count` | Number of divisions to create. |
-| `start_experience_base` | Base starting experience of the created division. |
-| `start_experience_factor` | Starting-experience multiplier of the created division. |
-| `prioritize_location` | Controls the priority used when selecting the spawn location. |
+| `start_experience_base` | Sets the division's base starting experience. |
+| `start_experience_factor` | Multiplies the division's starting experience. |
+| `prioritize_location` | Sets the priority when choosing the spawn location. |
 
-Example from MDC:
+Example:
 
 ```text
 create_unit = {
@@ -31,44 +33,46 @@ create_unit = {
 }
 ```
 
-Multiple divisions can be created at once:
+Here, `division_template = "Russian Revolutionaries"` points to an existing division template. A division cannot be created without one.
 
-```text
-create_unit = {
-    division = "name = \"6th. Gardekorps Division\" division_template = \"Gardekorps Division\" start_experience_factor = 1.0"
-    owner = ROOT
-    count = 1
-}
-```
+## Military experience
 
-### Military Experience
+### Add army experience
 
-| Effect | Purpose |
-|---|---|
-| `army_experience` | Adds army experience. |
-| `air_experience` | Adds air experience. |
-| `navy_experience` | Adds navy experience. |
-
-Example:
+`army_experience` adds experience to the army.
 
 ```text
 army_experience = 25
+```
+
+### Add air experience
+
+`air_experience` adds experience to the air force.
+
+```text
 air_experience = 25
+```
+
+### Add navy experience
+
+`navy_experience` adds experience to the navy.
+
+```text
 navy_experience = 25
 ```
 
 ## Commanders
 
-### `create_corps_commander`
+### Create a general
 
-Creates a new general and allows its main parameters to be set immediately.
+`create_corps_commander` creates a new general and allows their main parameters to be set immediately.
 
-| Parameter | Purpose |
+| Parameter | What it does |
 |---|---|
-| `name` | Commander name. |
+| `name` | Commander's name. |
 | `portrait_path` | Path to the commander's portrait. |
 | `traits` | Traits assigned to the commander on creation. |
-| `skill` | Starting commander skill level. |
+| `skill` | Commander's starting skill level. |
 
 Example:
 
@@ -81,22 +85,20 @@ create_corps_commander = {
 }
 ```
 
-This allows a unique general to be created directly from an effect: name, portrait, skill level, and starting traits are defined in one block.
+## Military equipment
 
-## Equipment
+### Add equipment to the stockpile
 
-### `add_equipment_to_stockpile`
+`add_equipment_to_stockpile` adds equipment to a country's stockpile or removes it from the stockpile.
 
-Adds or removes equipment from a country's stockpile. A specific equipment variant and producer can also be specified.
-
-| Parameter | Purpose |
+| Parameter | What it does |
 |---|---|
 | `type` | Equipment type. |
 | `amount` | Quantity. A positive value adds equipment; a negative value removes it. |
 | `variant_name` | Specific equipment variant. |
 | `producer` | Country that produced the equipment. |
 
-Example with a specific variant:
+Example:
 
 ```text
 add_equipment_to_stockpile = {
@@ -106,28 +108,18 @@ add_equipment_to_stockpile = {
 }
 ```
 
-Example with a producer:
+### Create an equipment variant
 
-```text
-add_equipment_to_stockpile = {
-    type = infantry_weapons2
-    amount = 6000
-    producer = SOV
-}
-```
+`create_equipment_variant` creates a new equipment variant based on the specified type and parent version.
 
-### `create_equipment_variant`
-
-Creates a new equipment variant from the specified equipment type and parent version.
-
-| Parameter | Purpose |
+| Parameter | What it does |
 |---|---|
 | `name` | Name of the new variant. |
 | `type` | Equipment type for which the variant is created. |
-| `name_group` | Name group used for naming. |
+| `name_group` | Name group used for the equipment name. |
 | `parent_version` | Parent equipment version. |
 
-Example from MDC:
+Example:
 
 ```text
 create_equipment_variant = {
@@ -138,13 +130,13 @@ create_equipment_variant = {
 }
 ```
 
-## Military Industrial Organizations (MIO)
+## Military industrial organizations
 
-MIO effects modify a specific military industrial organization or its general parameters.
+These effects change the parameters of a specific military industrial organization (MIO).
 
-### `add_mio_funds`
+### Add organization funds
 
-Adds funds to a specific MIO.
+`add_mio_funds` adds funds to an MIO.
 
 ```text
 mio:GER_rheinmetall_man = {
@@ -152,17 +144,17 @@ mio:GER_rheinmetall_man = {
 }
 ```
 
-### `add_mio_funds_gain_factor`
+### Change fund gain
 
-Changes the multiplier for MIO fund gain.
+`add_mio_funds_gain_factor` changes the multiplier for MIO fund gain.
 
 ```text
 add_mio_funds_gain_factor = 0.1
 ```
 
-### `add_mio_size`
+### Change organization size
 
-Changes the size/level of an MIO.
+`add_mio_size` changes the size/level of an MIO.
 
 ```text
 mio:GER_artec = {
@@ -170,9 +162,9 @@ mio:GER_artec = {
 }
 ```
 
-### `add_mio_size_up_requirement_factor`
+### Change the level-up requirement
 
-Changes the requirement multiplier for increasing MIO size. A negative value reduces the requirement.
+`add_mio_size_up_requirement_factor` changes the requirement multiplier for increasing MIO size. A negative value reduces the requirement.
 
 ```text
 mio:GER_rheinmetall_man = {
@@ -180,9 +172,9 @@ mio:GER_rheinmetall_man = {
 }
 ```
 
-### `add_mio_research_bonus`
+### Add a research bonus
 
-Adds a research bonus associated with an MIO.
+`add_mio_research_bonus` adds a research bonus associated with an MIO.
 
 ```text
 mio:GER_rheinmetall_man = {
@@ -190,7 +182,7 @@ mio:GER_rheinmetall_man = {
 }
 ```
 
-MIO parameters can be combined in the same block:
+Several MIO parameters can be used in the same block:
 
 ```text
 mio:GER_rheinmetall_man = {
