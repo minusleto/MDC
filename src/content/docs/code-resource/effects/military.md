@@ -35,6 +35,41 @@ create_unit = {
 
 В этом примере `division_template = "Russian Revolutionaries"` указывает на уже существующий шаблон. Без него создать дивизию нельзя.
 
+### Создать шаблон дивизии
+
+`division_template` создаёт шаблон, который затем можно использовать при создании дивизий.
+
+Шаблон определяет, из каких боевых батальонов и рот поддержки состоит дивизия. Название шаблона в `name` должно совпадать с названием, которое указывается в `division_template` внутри `create_unit`.
+
+```text
+division_template = {
+    name = "Infantry Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+    support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+    }
+}
+```
+
+Здесь `name = "Infantry Division"` — имя шаблона. После его создания его можно использовать так:
+
+```text
+create_unit = {
+    division = "name = \"My Infantry Division\" division_template = \"Infantry Division\""
+    owner = ROOT
+}
+```
+
+`regiments` задаёт боевые батальоны, а `support` — роты поддержки. Координаты `x` и `y` определяют положение подразделения в шаблоне.
+
 ## Военный опыт
 
 ### Опыт армии
