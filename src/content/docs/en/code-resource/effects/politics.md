@@ -169,3 +169,31 @@ Changes protest radicalisation. The maximum value of the variable is 10. Values 
 set_temp_variable = { protest_radicalisation_change = -10 }
 modify_protest_radicalisation_effect = yes
 ```
+
+<a id="britain-parliament-support"></a>
+## Britain — Parliament Support
+
+Britain-only (ENG) effects, changing its unique parliament support modifiers — see [Unique Modifiers → Britain](../../modifiers/unique/#britain).
+
+```
+set_temp_variable = { eng_backbenchers_sup_change = -15 }
+ENG_backbenchers_support_change = yes
+```
+
+```
+set_temp_variable = { eng_house_of_commons_sup_change = -15 }
+ENG_house_of_commons_support_change = yes
+```
+
+```
+set_temp_variable = { eng_house_of_lords_sup_change = -15 }
+ENG_lords_support_change = yes
+```
+
+The variable value is the change (+/-), not the final number. When the effect fires, the game automatically shows a tooltip with the change, using these loc keys (icons omitted here):
+
+```yaml
+lords_support_change_tt: "Peers Support: [?eng_house_of_lords_sup_change|+2]"
+lords_house_of_commons_change_tt: "Opposition Support: [?eng_house_of_commons_sup_change|+2]"
+backbenchers_support_change_tt: "Backbenchers Support: [?eng_backbenchers_sup_change|+2]"
+```

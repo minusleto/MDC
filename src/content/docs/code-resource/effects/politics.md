@@ -169,3 +169,31 @@ modify_protest_effect = yes
 set_temp_variable = { protest_radicalisation_change = -10 }
 modify_protest_radicalisation_effect = yes
 ```
+
+<a id="britain-parliament-support"></a>
+## Британия — поддержка парламента
+
+Уникальные эффекты только для Британии (ENG), меняют её уникальные модификаторы поддержки парламента — см. [Уникальные модификаторы → Британия](../../modifiers/unique/#britain).
+
+```
+set_temp_variable = { eng_backbenchers_sup_change = -15 }
+ENG_backbenchers_support_change = yes
+```
+
+```
+set_temp_variable = { eng_house_of_commons_sup_change = -15 }
+ENG_house_of_commons_support_change = yes
+```
+
+```
+set_temp_variable = { eng_house_of_lords_sup_change = -15 }
+ENG_lords_support_change = yes
+```
+
+Значение переменной — это изменение (+/-), а не итоговая цифра. При срабатывании эффекта игра сама показывает тултип с изменением, используя эти лок-ключи (иконки в оригинале опущены):
+
+```yaml
+lords_support_change_tt: "Поддержка лордов: [?eng_house_of_lords_sup_change|+2]"
+lords_house_of_commons_change_tt: "Поддержка оппозиции: [?eng_house_of_commons_sup_change|+2]"
+backbenchers_support_change_tt: "Поддержка заднескамеечников: [?eng_backbenchers_sup_change|+2]"
+```
