@@ -38,7 +38,6 @@ export default defineConfig({
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/effects/politics' },
 						{ label: 'Смена законов', translations: { en: 'Law Changes' }, slug: 'code-resource/effects/law-changes' },
 						{ label: 'Терроризм', translations: { en: 'Terrorism' }, slug: 'code-resource/effects/terrorism' },
-						{ label: 'Картели', translations: { en: 'Cartels' }, slug: 'code-resource/effects/cartels' },
 						{ label: 'Европейский союз', translations: { en: 'European Union' }, slug: 'code-resource/effects/european-union' },
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/effects/energy' },
 						{ label: 'Департаменты и компании', translations: { en: 'Departments & Companies' }, slug: 'code-resource/effects/companies' },
