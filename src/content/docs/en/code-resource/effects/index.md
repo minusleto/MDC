@@ -7,6 +7,8 @@ description: "Reference for MDC scripted effects."
 
 - [Buildings](./buildings/) — Building costs and scripted building effects
 - [Economy](./economy/) — Economic scripted effects
+- [Technology](./technology/) — Technology-related effects
+- [Military](./military/) — Military scripted effects: divisions, commanders, equipment, and MIO
 - [Internal Factions](./internal-factions/) — Internal faction effects and commands
 - [Foreign Influence](./influence/) — Foreign Influence system effects
 - [Politics](./politics/) — Political effects and party management
