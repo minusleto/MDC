@@ -58,5 +58,6 @@ Govern energy production and consumption.
 | Modifier | Description | Note |
 |---|---|---|
 | `battery_park_construction_cost` | Modifies the cost of building a battery park | N/A |
+| `battery_park_storage_size_modifier` | Modifies the storage capacity of a battery park | N/A |
 
 <a id="political-modifiers"></a>

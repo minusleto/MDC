@@ -33,6 +33,8 @@ Affect the economy, taxes, trade and productivity.
 | Modifier | Description | Note |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Modifies the country's interest rate | This is whole number ( i.e. -1 ) |
+| `central_bank_rate_change_multiplier_modifier` | Modifies how often/fast the central bank rate can change | N/A |
+| `literacy_rate_education_modifier` | Modifies literacy rate growth from education | N/A |
 | `tax_rate_change_multiplier_modifier` | Modifies the tax rate law change pp cost | N/A |
 | `projects_cost_modifier` | Modifies the economic projects (the project section in the Economic Preview tab) | N/A |
 | `tax_gain_multiplier_modifier` | Modifies the amount of money gained from all taxes (Population and Corporate) | N/A |
@@ -146,6 +148,7 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `office_park_income_tax_modifier` | Modifies the amount of money gained from Office Parks | N/A |
 | `agriculture_district_income_tax_modifier` | Modifies the amount of money gained from Commercialized Agriculture Districts | N/A |
 | `dockyard_income_tax_modifier` | Modifies the amount of money gained from Naval Yards | N/A |
+| `rub_ref_income_tax_modifier` | Modifies the amount of money gained from Rubber Refineries | N/A |
 | `military_industry_tax_modifier` | Modifies the amount of money gained from Military Industry | N/A |
 | `civilian_industry_tax_modifier` | Modifies the amount of money gained from Civilian Industry | N/A |
 | `agriculture_tax_modifier` | Modifies the amount of money gained from Agriculture | N/A |
@@ -212,6 +215,7 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `resource_sector_workers_modifier` | Modifies the number of workers required by the resource sectors | N/A |
 | `civ_facs_worker_requirement_modifier` | Modifies the number of workers required by a Civilian Factory | N/A |
 | `mil_facs_worker_requirement_modifier` | Modifies the number of workers required by a Military Factory and Dockyard | N/A |
+| `rub_ref_worker_requirement_modifier` | Modifies the number of workers required by a Rubber Refinery | N/A |
 | `offices_worker_requirement_modifier` | Modifies the number of workers required by an Office Park | N/A |
 | `agriculture_district_worker_requirement_modifier` | Modifies the number of workers required by Commercialized Agriculture Districts | N/A |
 | `buildings_worker_requirement_modifier` | Modifies the number of workers required by all buildings | N/A |

@@ -33,6 +33,8 @@ description: "Модификаторы роста экономики, инфля
 | Модификатор | Описание | Примечание |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Меняет процентную ставку страны | Целое число (например, -1) |
+| `central_bank_rate_change_multiplier_modifier` | Меняет частоту/скорость изменения ставки ЦБ | Н/Д |
+| `literacy_rate_education_modifier` | Меняет прирост грамотности населения от образования | Н/Д |
 | `tax_rate_change_multiplier_modifier` | Меняет цену смены налоговой ставки в PP | Н/Д |
 | `projects_cost_modifier` | Меняет стоимость экономических проектов | Н/Д |
 | `tax_gain_multiplier_modifier` | Меняет доход от всех налогов | Н/Д |
@@ -146,6 +148,7 @@ description: "Модификаторы роста экономики, инфля
 | `office_park_income_tax_modifier` | Меняет доход от офисных комплексов | Н/Д |
 | `agriculture_district_income_tax_modifier` | Меняет доход от с/х районов | Н/Д |
 | `dockyard_income_tax_modifier` | Меняет доход от верфей | Н/Д |
+| `rub_ref_income_tax_modifier` | Меняет доход от резиновых заводов | Н/Д |
 | `military_industry_tax_modifier` | Меняет доход от военной промышленности | Н/Д |
 | `civilian_industry_tax_modifier` | Меняет доход от гражданской промышленности | Н/Д |
 | `agriculture_tax_modifier` | Меняет доход от сельского хозяйства | Н/Д |
@@ -212,6 +215,7 @@ description: "Модификаторы роста экономики, инфля
 | `resource_sector_workers_modifier` | Меняет число работников для ресурсных секторов | Н/Д |
 | `civ_facs_worker_requirement_modifier` | Меняет число работников для гражд. фабрики | Н/Д |
 | `mil_facs_worker_requirement_modifier` | Меняет число работников для воен. фабрики/верфи | Н/Д |
+| `rub_ref_worker_requirement_modifier` | Меняет число работников для резинового завода | Н/Д |
 | `offices_worker_requirement_modifier` | Меняет число работников для офисного комплекса | Н/Д |
 | `agriculture_district_worker_requirement_modifier` | Меняет число работников для с/х районов | Н/Д |
 | `buildings_worker_requirement_modifier` | Меняет число работников для всех построек | Н/Д |

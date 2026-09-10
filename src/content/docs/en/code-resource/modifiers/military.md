@@ -22,6 +22,7 @@ Basics. Unit/combat-specific modifiers are separate, coming later.
 | `weekly_convoys_war_support` | War support from sunk convoys | N/A |
 | `weekly_bombing_war_support` | War support from enemy bombing of our states | N/A |
 | `surrender_limit` | Modifies the % of capitals/VPs that must be lost to force surrender | N/A |
+| `ammo_consumption_modifier` | Modifies ammo consumption of troops | N/A |
 
 <a id="military-bases"></a>
 ### Military Bases

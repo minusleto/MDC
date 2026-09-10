@@ -10,3 +10,4 @@ Related to the terrorism and Counter Terror mechanics. Scripted effects for this
 | Modifier | Description | Note |
 |---|---|---|
 | `ct_effectiveness_modifier` | Modifies the effectiveness of Counter Terror operations | N/A |
+| `cyber_cost_multiplier_modifier` | Modifies the cost of cyber operations | N/A |
