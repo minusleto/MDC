@@ -33,7 +33,7 @@ Affect the economy, taxes, trade and productivity.
 | Modifier | Description | Note |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Modifies the country's interest rate | This is whole number ( i.e. -1 ) |
-| `central_bank_rate_change_multiplier_modifier` | Modifies how often/fast the central bank rate can change | N/A |
+| `central_bank_rate_change_multiplier_modifier` | Multiplier for the PP cost of changing the central bank rate | N/A |
 | `tax_rate_change_multiplier_modifier` | Modifies the tax rate law change pp cost | N/A |
 | `projects_cost_modifier` | Modifies the economic projects (the project section in the Economic Preview tab) | N/A |
 | `tax_gain_multiplier_modifier` | Modifies the amount of money gained from all taxes (Population and Corporate) | N/A |

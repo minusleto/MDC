@@ -33,7 +33,7 @@ description: "Модификаторы роста экономики, инфля
 | Модификатор | Описание | Примечание |
 |---|---|---|
 | `interest_rate_multiplier_modifier` | Меняет процентную ставку страны | Целое число (например, -1) |
-| `central_bank_rate_change_multiplier_modifier` | Меняет частоту/скорость изменения ставки ЦБ | Н/Д |
+| `central_bank_rate_change_multiplier_modifier` | Множитель стоимости изменения ставки ЦБ в ПП | Н/Д |
 | `tax_rate_change_multiplier_modifier` | Меняет цену смены налоговой ставки в PP | Н/Д |
 | `projects_cost_modifier` | Меняет стоимость экономических проектов | Н/Д |
 | `tax_gain_multiplier_modifier` | Меняет доход от всех налогов | Н/Д |
