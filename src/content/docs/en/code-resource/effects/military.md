@@ -35,6 +35,41 @@ create_unit = {
 
 Here, `division_template = "Russian Revolutionaries"` points to an existing division template. A division cannot be created without one.
 
+### Create a division template
+
+`division_template` creates a template that can then be used when creating divisions.
+
+A template defines which combat battalions and support companies make up the division. The template name in `name` must match the name used in `division_template` inside `create_unit`.
+
+```text
+division_template = {
+    name = "Infantry Division"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+    support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+    }
+}
+```
+
+Here, `name = "Infantry Division"` is the template's name. It can then be used like this:
+
+```text
+create_unit = {
+    division = "name = \"My Infantry Division\" division_template = \"Infantry Division\""
+    owner = ROOT
+}
+```
+
+`regiments` defines the combat battalions, while `support` defines support companies. The `x` and `y` coordinates determine where each unit is placed in the template.
+
 ## Military experience
 
 ### Add army experience
