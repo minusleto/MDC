@@ -42,3 +42,23 @@ ENG_lords_support_change = yes
 set_temp_variable = { modify_economic = 1 }
 modify_economic_support = yes
 ```
+
+<a id="cartels"></a>
+## Картели
+
+Эффект системы картелей, используемый для изменения силы картеля и его политического влияния.
+
+Перед вызовом эффекта задаются временные переменные:
+
+- `cart_strength_change` — изменение силы картеля.
+- `cart_influence_change` — изменение политического влияния картеля.
+
+Значения могут быть положительными или отрицательными.
+
+```text
+set_temp_variable = { cart_strength_change = 2 }
+set_temp_variable = { cart_influence_change = 2 }
+modify_cartel_variables_effect = yes
+```
+
+`modify_cartel_variables_effect` применяет изменения, заданные в этих переменных.
