@@ -170,10 +170,15 @@ set_temp_variable = { protest_radicalisation_change = -10 }
 modify_protest_radicalisation_effect = yes
 ```
 
-<a id="britain-parliament-support"></a>
-## Britain — Parliament Support
+<a id="unique"></a>
+## Unique
 
-Britain-only (ENG) effects, changing its unique parliament support modifiers — see [Unique Modifiers → Britain](../../modifiers/unique/#britain).
+Effects that only actually work for specific countries — tied to a unique mechanic that only exists there. The general list of such modifiers is in [Unique Modifiers](../../modifiers/unique/).
+
+<a id="unique-britain"></a>
+### Britain
+
+Change Britain's (ENG) unique parliament support modifiers — see [Unique Modifiers → Britain](../../modifiers/unique/#britain).
 
 ```
 set_temp_variable = { eng_backbenchers_sup_change = -15 }
@@ -196,4 +201,20 @@ The variable value is the change (+/-), not the final number. When the effect fi
 lords_support_change_tt: "Peers Support: [?eng_house_of_lords_sup_change|+2]"
 lords_house_of_commons_change_tt: "Opposition Support: [?eng_house_of_commons_sup_change|+2]"
 backbenchers_support_change_tt: "Backbenchers Support: [?eng_backbenchers_sup_change|+2]"
+```
+
+<a id="unique-russia"></a>
+### Russia
+
+Changes Russia's (SOV) economic recovery.
+
+```
+set_temp_variable = { modify_economic = 1 }
+modify_economic_support = yes
+```
+
+The variable value is the change (+/-), not the final number. The tooltip on trigger shows the change and the current value:
+
+```yaml
+SOV_economic_tt: "Economic Recovery will increase by [?modify_economic] (Current Economic Recovery value: [?SOV.economic])"
 ```

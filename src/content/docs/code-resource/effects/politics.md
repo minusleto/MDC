@@ -170,10 +170,15 @@ set_temp_variable = { protest_radicalisation_change = -10 }
 modify_protest_radicalisation_effect = yes
 ```
 
-<a id="britain-parliament-support"></a>
-## Британия — поддержка парламента
+<a id="unique"></a>
+## Уникальные
 
-Уникальные эффекты только для Британии (ENG), меняют её уникальные модификаторы поддержки парламента — см. [Уникальные модификаторы → Британия](../../modifiers/unique/#britain).
+Эффекты, которые реально работают только для конкретных стран — завязаны на уникальную механику, которая есть только там. Общий список таких модификаторов — в [Уникальные модификаторы](../../modifiers/unique/).
+
+<a id="unique-britain"></a>
+### Британия
+
+Меняют уникальные модификаторы поддержки парламента Британии (ENG) — см. [Уникальные модификаторы → Британия](../../modifiers/unique/#britain).
 
 ```
 set_temp_variable = { eng_backbenchers_sup_change = -15 }
@@ -196,4 +201,20 @@ ENG_lords_support_change = yes
 lords_support_change_tt: "Поддержка лордов: [?eng_house_of_lords_sup_change|+2]"
 lords_house_of_commons_change_tt: "Поддержка оппозиции: [?eng_house_of_commons_sup_change|+2]"
 backbenchers_support_change_tt: "Поддержка заднескамеечников: [?eng_backbenchers_sup_change|+2]"
+```
+
+<a id="unique-russia"></a>
+### Россия
+
+Меняет экономическое восстановление РФ (SOV).
+
+```
+set_temp_variable = { modify_economic = 1 }
+modify_economic_support = yes
+```
+
+Значение переменной — это изменение (+/-), а не итоговая цифра. Тултип при срабатывании эффекта показывает изменение и текущее значение:
+
+```yaml
+SOV_economic_tt: "Экономическое восстановление увеличится на [?modify_economic] (Текущее значение Экономического восстановления: [?SOV.economic])"
 ```
