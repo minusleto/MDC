@@ -61,6 +61,14 @@ export default defineConfig({
 						{ label: 'Космос', translations: { en: 'Space' }, slug: 'code-resource/modifiers/space' },
 						{ label: 'Уникальные', translations: { en: 'Unique' }, slug: 'code-resource/modifiers/unique' },
 					] },
+					{ label: 'Юниты и техника', translations: { en: 'Units & Equipment' }, items: [
+						{ label: 'Обзор', slug: 'code-resource/units' },
+						{ label: 'Батальоны и роты', translations: { en: 'Battalions & Companies' }, slug: 'code-resource/units/battalions' },
+						{ label: 'Оборудование', translations: { en: 'Equipment' }, slug: 'code-resource/units/equipment' },
+						{ label: 'Авиакаркасы', translations: { en: 'Airframes' }, slug: 'code-resource/units/airframes' },
+						{ label: 'Шасси техники', translations: { en: 'Vehicle Chassis' }, slug: 'code-resource/units/chassis' },
+						{ label: 'Корабли', translations: { en: 'Ships' }, slug: 'code-resource/units/ships' },
+					] },
 					{ label: 'Системы MDC', translations: { en: 'MDC Systems' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/systems' },
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/systems/politics' },
