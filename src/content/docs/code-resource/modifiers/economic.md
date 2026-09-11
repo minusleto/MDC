@@ -100,7 +100,8 @@ description: "Модификаторы роста экономики, инфля
 | `agricolture_productivity_modifier` | Меняет производительность сельского хозяйства | Н/Д |
 | `civilian_factories_productivity` | Меняет производительность гражд. фабрик | Н/Д |
 | `military_factories_productivity` | Меняет производительность военных фабрик | Н/Д |
-| `dockyard_prodctivity` | Меняет производительность верфей | Н/Д |
+| `dockyard_productivity` | Меняет производительность верфей | Н/Д |
+| `rub_ref_productivity` | Меняет производительность резиновых заводов | Н/Д |
 | `offices_productivity` | Меняет производительность офисов | Н/Д |
 
 <a id="production-speed-buildings"></a>

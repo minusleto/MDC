@@ -8,6 +8,7 @@ description: "Reference for equipment and weapon archetypes"
 | Token | Meaning |
 |---|---|
 | `Inf_equipment` | Infantry small arms |
+| `infantry_weapons` | Base infantry small arms archetype |
 | `AA_Equipment` | Anti-air weapons |
 | `H_AT_Equipment` | Heavy anti-tank weapons (ATGMs, recoilless rifles) |
 | `L_AT_Equipment` | Light anti-tank weapons (RPGs) |

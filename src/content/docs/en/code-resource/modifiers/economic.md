@@ -100,7 +100,8 @@ All values are percentages: 1 = +100%.
 | `agricolture_productivity_modifier` | Modifier to increase/decrease the productivity generate from agriculture | N/A |
 | `civilian_factories_productivity` | Modifier to increase/decrease the productivity generate from civilian factories | N/A |
 | `military_factories_productivity` | Modifier to increase/decrease the productivity generate from mil factories | N/A |
-| `dockyard_prodctivity` | Modifier to increase/decrease the productivity generate from dockyards | N/A |
+| `dockyard_productivity` | Modifier to increase/decrease the productivity generate from dockyards | N/A |
+| `rub_ref_productivity` | Modifier to increase/decrease the productivity generate from rubber refineries | N/A |
 | `offices_productivity` | Modifier to increase/decrease the productivity generated from offices | N/A |
 
 <a id="production-speed-buildings"></a>

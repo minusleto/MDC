@@ -59,6 +59,7 @@ description: "Модификаторы энергопотребления, до�
 | `nuclear_fuel_consumption` | Меняет потребление ядерного топлива | Н/Д |
 | `nuclear_energy_generation_modifier` | Меняет энергию с ядерного реактора | Н/Д |
 | `nuclear_fuel_consumption_modifier` | Меняет потребление топлива НОУ реакторами | Н/Д |
+| `nuclear_reactor_fuel_production` | Меняет производство топлива на ядерном реакторе | Н/Д |
 | `leu_fuel_production_modifier` | Меняет производство топлива НОУ в неделю | Н/Д |
 | `heu_fuel_production_modifier` | Меняет производство топлива ВОУ в неделю | Н/Д |
 
