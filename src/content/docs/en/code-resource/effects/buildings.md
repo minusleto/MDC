@@ -11,36 +11,36 @@ For buildings that consume a building slot, the listed cost already includes the
 
 | Building | ID | Cost |
 |---|---|---:|
-| Civilian Industry | `industrial_complex` | $7.50 |
-| Military Industry | `arms_factory` | **$3.75** |
-| Dockyard | `dockyard` | $7.50 |
-| Offices | `offices` | $12.00 |
+| Civilian Industry | `industrial_complex` | $3.75 |
+| Military Industry | `arms_factory` | $3.75 |
+| Dockyard | `dockyard` | $3.75 |
+| Offices | `offices` | $6.00 |
 | Commercialized Agriculture District | `agriculture_district` | $3.75 |
 
 ### Infrastructure & Communications
 
 | Building | ID | Cost |
 |---|---|---:|
-| Infrastructure | `infrastructure` | $3.50 |
-| Air Base | `air_base` | $2.50 |
-| Network Infrastructure | `internet_station` | $3.00 |
+| Infrastructure | `infrastructure` | $1.75 |
+| Air Base | `air_base` | $1.25 |
+| Network Infrastructure | `internet_station` | $1.50 |
 | Railways | `rail_way` | $0.01 per province |
 
 ### Energy & Fuel
 
 | Building | ID | Cost |
 |---|---|---:|
-| Renewable Energy Infrastructure | `synthetic_refinery` | $8.50 |
+| Renewable Energy Infrastructure | `synthetic_refinery` | $4.25 |
 | Fuel Silo | `fuel_silo` | $3.00 |
 | Fossil Fuel Powerplant | `fossil_powerplant` | $2.25 |
-| Nuclear Reactor | `nuclear_reactor` | $9.00 |
+| Nuclear Reactor | `nuclear_reactor` | $4.50 |
 
 ### Defense
 
 | Building | ID | Cost |
 |---|---|---:|
 | SAM Site | `anti_air_building` | $3.25 |
-| Radar Station | `radar_station` | $1.75 |
+| Radar Station | `radar_station` | $0.50 |
 | State-Wide Defensive Network | `stronghold_network` | $8.00 |
 | Land Fort | `bunker` | $0.50 per level |
 | Coastal Bunker | `coastal_bunker` | $0.50 per level |
@@ -87,15 +87,61 @@ There are two main options:
 
 `one_state_*` and other `*_state_*` effects must be used inside the scope of the target state.
 
-Example:
+### Free building construction
+
+To add a building directly without charging the treasury through an MDC scripted effect, use `add_building_construction`. The `instant_build = yes` parameter completes the construction immediately.
+
+Template:
 
 ```text
-117 = {
-    one_state_industrial_complex = yes
+add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
 }
 ```
 
-If the building cannot be added to the specified state, the effect falls back to a random state owned by the country where the building can be added.
+The `type` parameter specifies the building ID. Available building types documented in this script are:
+
+| Type | ID |
+|---|---|
+| Civilian Industry | `industrial_complex` |
+| Military Industry | `arms_factory` |
+| Dockyard | `dockyard` |
+| Offices | `offices` |
+| Commercialized Agriculture District | `agriculture_district` |
+| Infrastructure | `infrastructure` |
+| Air Base | `air_base` |
+| Network Infrastructure | `internet_station` |
+| Railway | `rail_way` |
+| Renewable Energy Infrastructure | `synthetic_refinery` |
+| Fuel Silo | `fuel_silo` |
+| Fossil Fuel Powerplant | `fossil_powerplant` |
+| Nuclear Reactor | `nuclear_reactor` |
+| SAM Site | `anti_air_building` |
+| Radar Station | `radar_station` |
+| State-Wide Defensive Network | `stronghold_network` |
+| Land Fort | `bunker` |
+| Coastal Bunker | `coastal_bunker` |
+| Missile Launch Site | `rocket_site` |
+| Naval Engineering Facility | `naval_facility` |
+| Land Warfare Facility | `land_facility` |
+| Aerodynamics & Avionics Facility | `air_facility` |
+| Civilian R&D Facility | `nuclear_facility` |
+| Naval Base | `naval_base` |
+| Supply Hub | `supply_node` |
+
+Example with multiple levels:
+
+```text
+add_building_construction = {
+    type = arms_factory
+    level = 3
+    instant_build = yes
+}
+```
+
+This method does not use `treasury_change`: the costs in the table above apply to the paid MDC scripted effects, while `add_building_construction` in this form is used for free direct construction.
 
 ### Civilian Factory
 
