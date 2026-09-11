@@ -159,12 +159,7 @@ NOT = { western_liberals_are_in_power = yes }
 Проверяет не правящую партию, а общий уровень поддержки идеологического блока (`party_popularity@<тег>`), даже если у власти другая партия:
 
 ```
-democratic_outlook_larger_than_0 = {
-	custom_trigger_tooltip = {
-		tooltip = democratic_outlook_greater_than_0_tt
-		check_variable = { party_popularity@democratic > 0 }
-	}
-}
+democratic_outlook_larger_than_0 = yes
 ```
 
 | Триггер | Тег идеологии |
@@ -178,25 +173,7 @@ democratic_outlook_larger_than_0 = {
 ## Фракции влияния
 
 ```
-has_economic_faction = {
-	custom_trigger_tooltip = {
-		tooltip = has_economic_faction_TT
-		OR = {
-			has_idea = small_medium_business_owners
-			has_idea = international_bankers
-			has_idea = fossil_fuel_industry
-			has_idea = industrial_conglomerates
-			has_idea = oligarchs
-			has_idea = landowners
-			has_idea = maritime_industry
-			has_idea = defense_industry
-			# Nation Specific
-			has_idea = wall_street
-			has_idea = chaebols
-			has_idea = the_donju
-		}
-	}
-}
+has_economic_faction = yes
 ```
 
 | Триггер | Проверяет наличие идеи |
@@ -234,12 +211,7 @@ has_economic_faction = {
 `party_N_is_not_maxed` (N = 0–23) — проверяет, что популярность конкретной партии **не равна** суммарной популярности всего её идеологического блока, т.е. внутри блока есть ещё другие партии с ненулевой поддержкой (партия не «съела» весь блок целиком):
 
 ```
-party_2_is_not_maxed = {
-	custom_trigger_tooltip = {
-		tooltip = party_2_is_not_maxed
-		NOT = { check_variable = { party_pop_array^2 = party_popularity@democratic } }
-	}
-}
+party_2_is_not_maxed = yes
 ```
 
 Индекс N — тот же party_index (0–23), тег идеологии в проверке подставляется автоматически под нужный блок (democratic/communism/neutrality/nationalist/fascism) в зависимости от N.
@@ -252,5 +224,3 @@ party_2_is_not_maxed = {
 - **`outlook_larger_than_0_by_index`** — параметризованная версия блока «Общественное настроение по группе»: сама определяет идеологический блок по диапазону `party_index` (0–3 / 4–9 / 10–11 / 12–19 / 20–23) и вызывает нужный `*_outlook_larger_than_0`.
 - **`bigger_than_ruling_elect_zero` … `bigger_than_ruling_elect_twenty_three`** (24 блока) — сравнивает `party_pop_elect_array^N` конкретной партии N с массивом текущей правящей партии; внутренняя логика подсчёта результатов выборов.
 - **`calculate_pp_cost_banned_amount`** — на самом деле **эффект**, а не триггер (несмотря на расположение в этом файле): считает стоимость PP за снятие банов со всех незапрещённых партий, кроме правящей.
-
-Если нужно разобрать конкретно один из них — спрашивай, распишу подробнее с примером использования.

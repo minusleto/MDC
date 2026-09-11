@@ -159,12 +159,7 @@ Matches the index boundaries of the groups from [Systems → Politics](../system
 Checks the overall support level of an ideological bloc (`party_popularity@<tag>`) rather than the ruling party — works even if a different party is currently in power:
 
 ```
-democratic_outlook_larger_than_0 = {
-	custom_trigger_tooltip = {
-		tooltip = democratic_outlook_greater_than_0_tt
-		check_variable = { party_popularity@democratic > 0 }
-	}
-}
+democratic_outlook_larger_than_0 = yes
 ```
 
 | Trigger | Ideology tag |
@@ -178,25 +173,7 @@ democratic_outlook_larger_than_0 = {
 ## Influence factions
 
 ```
-has_economic_faction = {
-	custom_trigger_tooltip = {
-		tooltip = has_economic_faction_TT
-		OR = {
-			has_idea = small_medium_business_owners
-			has_idea = international_bankers
-			has_idea = fossil_fuel_industry
-			has_idea = industrial_conglomerates
-			has_idea = oligarchs
-			has_idea = landowners
-			has_idea = maritime_industry
-			has_idea = defense_industry
-			# Nation Specific
-			has_idea = wall_street
-			has_idea = chaebols
-			has_idea = the_donju
-		}
-	}
-}
+has_economic_faction = yes
 ```
 
 | Trigger | Checks for idea |
@@ -234,12 +211,7 @@ has_economic_faction = {
 `party_N_is_not_maxed` (N = 0–23) — checks that a specific party's popularity is **not equal** to the total popularity of its whole ideological bloc, i.e. other parties within the bloc still hold some non-zero support (this party hasn't "eaten" the entire bloc):
 
 ```
-party_2_is_not_maxed = {
-	custom_trigger_tooltip = {
-		tooltip = party_2_is_not_maxed
-		NOT = { check_variable = { party_pop_array^2 = party_popularity@democratic } }
-	}
-}
+party_2_is_not_maxed = yes
 ```
 
 Index N is the same party_index (0–23); the ideology tag in the check is swapped automatically for the matching bloc (democratic/communism/neutrality/nationalist/fascism) based on N.
@@ -252,5 +224,3 @@ These blocks aren't meant to be copied directly into mod content — they take i
 - **`outlook_larger_than_0_by_index`** — a parameterized version of the "Public mood by group" block: determines the ideological bloc itself from the `party_index` range (0–3 / 4–9 / 10–11 / 12–19 / 20–23) and calls the matching `*_outlook_larger_than_0`.
 - **`bigger_than_ruling_elect_zero` … `bigger_than_ruling_elect_twenty_three`** (24 blocks) — compares a specific party N's `party_pop_elect_array^N` against the current ruling party's array value; internal election-result tallying logic.
 - **`calculate_pp_cost_banned_amount`** — actually an **effect**, not a trigger (despite living in this file): calculates the PP cost of unbanning every non-ruling party that isn't already banned.
-
-If you need one of these broken down in more detail with a usage example, just ask.
