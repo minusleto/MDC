@@ -87,15 +87,61 @@ modify_treasury_effect = yes
 
 Эффекты `one_state_*` и другие `*_state_*` должны использоваться внутри scope нужного региона.
 
-Пример:
+### Бесплатное добавление здания
+
+Если нужно добавить здание напрямую, без списания стоимости через scripted effect MDC, используйте `add_building_construction`. Параметр `instant_build = yes` завершает строительство сразу.
+
+Шаблон:
 
 ```text
-117 = {
-    one_state_industrial_complex = yes
+add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
 }
 ```
 
-Если в указанном регионе постройку добавить нельзя, эффект использует случайный принадлежащий стране регион, где добавление возможно.
+В `type` указывается ID здания. Основные типы:
+
+| Тип | ID |
+|---|---|
+| Гражданская промышленность | `industrial_complex` |
+| Военная промышленность | `arms_factory` |
+| Верфь | `dockyard` |
+| Офисы | `offices` |
+| Коммерческий сельскохозяйственный район | `agriculture_district` |
+| Инфраструктура | `infrastructure` |
+| Авиабаза | `air_base` |
+| Сетевая инфраструктура | `internet_station` |
+| Железная дорога | `rail_way` |
+| Инфраструктура возобновляемой энергетики | `synthetic_refinery` |
+| Топливное хранилище | `fuel_silo` |
+| Электростанция на ископаемом топливе | `fossil_powerplant` |
+| Ядерный реактор | `nuclear_reactor` |
+| ЗРК | `anti_air_building` |
+| Радарная станция | `radar_station` |
+| Региональная оборонительная сеть | `stronghold_network` |
+| Сухопутный форт | `bunker` |
+| Береговой бункер | `coastal_bunker` |
+| Пусковая площадка ракет | `rocket_site` |
+| Объект военно-морских исследований | `naval_facility` |
+| Объект сухопутных исследований | `land_facility` |
+| Объект аэродинамики и авионики | `air_facility` |
+| Гражданский научно-исследовательский объект | `nuclear_facility` |
+| Военно-морская база | `naval_base` |
+| Узел снабжения | `supply_node` |
+
+Пример для нескольких уровней:
+
+```text
+add_building_construction = {
+    type = arms_factory
+    level = 3
+    instant_build = yes
+}
+```
+
+Этот способ не использует `treasury_change`: стоимость из таблицы выше относится к платным MDC scripted effects, а `add_building_construction` в таком виде используется для бесплатного прямого добавления.
 
 ### Гражданская фабрика
 
