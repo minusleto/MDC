@@ -7,6 +7,7 @@ Triggers are conditions that check the game's state (as opposed to effects, whic
 
 ## Sections
 
+- [Basics](./basic/) — vanilla HOI4 triggers for beginners (NOT/AND/OR, comparison operators, has_stability, etc.)
 - [Political](./political/) — ruling/coalition parties, ideological blocs, popularity thresholds
 
 <!--
