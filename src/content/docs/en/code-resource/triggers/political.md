@@ -25,13 +25,13 @@ Besides the raw `is_in_array = { ruling_party = N }` index check, every one of t
 western_liberals_are_in_power = yes
 ```
 
-To check the **opposite** ("party is not in power"), there is no separate `_not_in_power` trigger — wrap it in `NOT`:
+To check the **opposite** ("party is not in power"), the mod has a dedicated named trigger for that — no need to wrap it in `NOT` manually:
 
 ```
-NOT = { western_liberals_are_in_power = yes }
+western_liberals_are_not_in_power = yes
 ```
 
-The same applies to any trigger further down this page.
+The full table of these is right below the main one, in the [Party not in power / not in coalition](#party-not-in-power--not-in-coalition) section further down. The only case with no ready-made trigger, requiring a `NOT` wrapper, is "not in coalition" on its own (regardless of ruling status) — see the footnote on that table.
 
 <div style="overflow:auto; max-height:70vh; border:1px solid #444">
 <table style="width:100%; border-collapse:collapse; font-size:0.82em; line-height:1.25">
