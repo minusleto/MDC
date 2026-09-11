@@ -7,11 +7,11 @@ description: "Adding parties and subideologies"
 
 Adding political parties is a great way to add new flavor to nations without a lot of work!
 
-There are several files you need to edit to get the parties to show up in Millennium Dawn.
+There are several files you need to edit to get the parties to show up in the game.
 
 - `common/scripted_lozalition/subideology_scripted_localization.txt`
-- `localisation/english/MD_subideology_parties_l_english.yml`
-- `interface/MD_parties_icons.gfx`
+- the party localization file
+- the party interface file
 - Party icons are stored in `gfx/texticons/parties_icons/nation_name`
 - Custom Leaders are stored in `common/scripted_effects/[TAG]_political_leaders.txt`
 
@@ -23,9 +23,9 @@ The full list of subideology slots (`party_index` 0–23, tags, names) has moved
 
 _**THE HOW TO**_
 
-To start you need to define the political party in the MD_subideology_parties_l_english.yml. Here we are using Armenia as our example. Please keep the same stylization here, where you only replace conservatism with the given ideologies.
+To start you need to define the political party in the party localization file. Here we are using Armenia as our example. Please keep the same stylization here, where you only replace conservatism with the given ideologies.
 
-The next place is to implement the icons in `interface/MD_parties_icons.gfx`. You must first save your party icons in .dds format in `gfx/texticons/parties_icons/{tag}`. This is where the image of the icon is stored. You then move onto `interface/MD_parties_icons.gfx` and implement them following the thousands of other spriteType examples.
+The next place is to implement the icons in the party interface file. You must first save your party icons in .dds format in `gfx/texticons/parties_icons/{tag}`. This is where the image of the icon is stored. You then move onto the interface file and implement them following the other spriteType examples.
 
 Once you have completed that portion it is now time to move on to the implementation of the localization keys. From here, we move to the file `common/scripted_localisation/subideology_scripted_localisation.txt`. There are three places you need to add for the individual localization keys. The first is {subideology}_L which is the party's title with its icon. The second is {subideology}_L_desc where the description is stored, and finally, {subideology}_L_icon where the icon is stored.
 
