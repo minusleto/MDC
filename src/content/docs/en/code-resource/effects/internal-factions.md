@@ -18,6 +18,88 @@ set_temp_variable = { temp_opinion = 5 }
 change_industrial_conglomerates_opinion = yes
 ```
 
+<a id="how-to-change-factions"></a>
+## How to Properly Change Factions
+
+When changing the main faction, do not simply use `add_idea` or an unconditional `swap_ideas`. A law or another action may run while different factions are currently active, so first check which faction is present and only then replace it with the target faction.
+
+A practical pattern is an `if` / `else_if` chain using `has_idea` and `swap_ideas`:
+
+```hoi4
+if = {
+    limit = { has_idea = labour_unions }
+    swap_ideas = {
+        remove_idea = labour_unions
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = farmers }
+    swap_ideas = {
+        remove_idea = farmers
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = industrial_conglomerates }
+    swap_ideas = {
+        remove_idea = industrial_conglomerates
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = landowners }
+    swap_ideas = {
+        remove_idea = landowners
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = oligarchs }
+    swap_ideas = {
+        remove_idea = oligarchs
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = international_bankers }
+    swap_ideas = {
+        remove_idea = international_bankers
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = maritime_industry }
+    swap_ideas = {
+        remove_idea = maritime_industry
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = the_clergy }
+    swap_ideas = {
+        remove_idea = the_clergy
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = intelligence_community }
+    swap_ideas = {
+        remove_idea = intelligence_community
+        add_idea = the_military
+    }
+}
+else_if = {
+    limit = { has_idea = small_medium_business_owners }
+    swap_ideas = {
+        remove_idea = small_medium_business_owners
+        add_idea = the_military
+    }
+}
+```
+
+**You do not need to list every possible faction.** In a law, it is enough to handle the factions that can realistically be present under its conditions. The example above lists the most logical candidates for a transition to `the_military`; unique or country-specific factions should only be added when the law can actually encounter them.
+
 <a id="internal-faction-breakdown"></a>
 ### Internal Faction Breakdown
 
