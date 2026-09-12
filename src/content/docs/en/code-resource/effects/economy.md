@@ -227,3 +227,16 @@ modifiers = {
 }
 
 ```
+
+<a id="corruption"></a>
+## Corruption
+
+Roll one random corruption event (`corruption.1`–`corruption.14`) — not a value change, just an event roll:
+
+```txt
+roll_corruption_event = yes
+```
+
+There's an internal cooldown — a 60-day country flag so the event can't pop up more than once every 2 months. Event weights depend on the country's ideas:
+- Event `corruption.13` (international bankers) has double weight with the `international_bankers` idea.
+- Event `corruption.14` can't roll at all without the `oligarchs` idea.
