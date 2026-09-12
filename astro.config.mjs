@@ -50,6 +50,7 @@ export default defineConfig({
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/triggers/political' },
 						{ label: 'Экономика', translations: { en: 'Economy' }, slug: 'code-resource/triggers/economic' },
 						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/triggers/military' },
+						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/triggers/influence' },
 					] },
 					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/modifiers' },
