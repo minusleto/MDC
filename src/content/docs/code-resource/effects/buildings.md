@@ -1,6 +1,9 @@
 ---
 title: Постройки
 description: "Стоимость и скриптовые эффекты для зданий"
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 4
 ---
 
 ## Стоимость построек MDC
@@ -239,6 +242,24 @@ one_random_agriculture_district = yes
 one_state_agriculture_district = yes
 ```
 
+#### Резиновый завод
+
+**Случайный регион**
+
+```text
+one_random_rubber_refinery = yes
+two_random_rubber_refinery = yes
+three_random_rubber_refinery = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_rubber_refinery = yes
+two_state_rubber_refinery = yes
+three_state_rubber_refinery = yes
+```
+
 ### Инфраструктура и связь
 
 #### Инфраструктура
@@ -259,22 +280,6 @@ two_state_infrastructure = yes
 three_state_infrastructure = yes
 ```
 
-#### Авиабазы
-
-**Случайный регион**
-
-```text
-one_air_base = yes
-two_air_base = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_air_base = yes
-two_state_air_base = yes
-```
-
 #### Сетевая инфраструктура
 
 **Случайный регион**
@@ -289,6 +294,22 @@ two_random_network_infrastructure = yes
 ```text
 one_state_network_infrastructure = yes
 two_state_network_infrastructure = yes
+```
+
+#### Авиабазы
+
+**Случайный регион**
+
+```text
+one_air_base = yes
+two_air_base = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_air_base = yes
+two_state_air_base = yes
 ```
 
 ### Энергетика и топливо
@@ -309,24 +330,6 @@ three_random_synthetic_refinery = yes
 one_state_synthetic_refinery = yes
 two_state_synthetic_refinery = yes
 three_state_synthetic_refinery = yes
-```
-
-#### Резиновый завод
-
-**Случайный регион**
-
-```text
-one_random_rubber_refinery = yes
-two_random_rubber_refinery = yes
-three_random_rubber_refinery = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_rubber_refinery = yes
-two_state_rubber_refinery = yes
-three_state_rubber_refinery = yes
 ```
 
 #### Топливное хранилище

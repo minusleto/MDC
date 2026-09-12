@@ -1,6 +1,9 @@
 ---
 title: Buildings
 description: "Building costs and scripted building effects"
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 4
 ---
 
 ## MDC Building Costs
@@ -239,6 +242,24 @@ one_random_agriculture_district = yes
 one_state_agriculture_district = yes
 ```
 
+#### Rubber Refinery
+
+**Random state**
+
+```text
+one_random_rubber_refinery = yes
+two_random_rubber_refinery = yes
+three_random_rubber_refinery = yes
+```
+
+**Specific state**
+
+```text
+one_state_rubber_refinery = yes
+two_state_rubber_refinery = yes
+three_state_rubber_refinery = yes
+```
+
 ### Infrastructure & Communications
 
 #### Infrastructure
@@ -259,22 +280,6 @@ two_state_infrastructure = yes
 three_state_infrastructure = yes
 ```
 
-#### Air Bases
-
-**Random state**
-
-```text
-one_air_base = yes
-two_air_base = yes
-```
-
-**Specific state**
-
-```text
-one_state_air_base = yes
-two_state_air_base = yes
-```
-
 #### Network Infrastructure
 
 **Random state**
@@ -289,6 +294,22 @@ two_random_network_infrastructure = yes
 ```text
 one_state_network_infrastructure = yes
 two_state_network_infrastructure = yes
+```
+
+#### Air Bases
+
+**Random state**
+
+```text
+one_air_base = yes
+two_air_base = yes
+```
+
+**Specific state**
+
+```text
+one_state_air_base = yes
+two_state_air_base = yes
 ```
 
 ### Energy & Fuel
@@ -309,24 +330,6 @@ three_random_synthetic_refinery = yes
 one_state_synthetic_refinery = yes
 two_state_synthetic_refinery = yes
 three_state_synthetic_refinery = yes
-```
-
-#### Rubber Refinery
-
-**Random state**
-
-```text
-one_random_rubber_refinery = yes
-two_random_rubber_refinery = yes
-three_random_rubber_refinery = yes
-```
-
-**Specific state**
-
-```text
-one_state_rubber_refinery = yes
-two_state_rubber_refinery = yes
-three_state_rubber_refinery = yes
 ```
 
 #### Fuel Silo
