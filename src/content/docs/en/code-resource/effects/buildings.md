@@ -32,7 +32,7 @@ Cost below is what's actually deducted via the ready-made MDC scripted effects (
 
 | Building | ID | Cost |
 |---|---|---:|
-| Synthetic Refinery | `synthetic_refinery` | $4.25 |
+| Renewable Energy Infrastructure | `synthetic_refinery` | $4.25 |
 | Rubber Refinery | `rubber_refinery` | $1.75 |
 | Fuel Silo | `fuel_silo` | $1.50 |
 | Fossil Fuel Powerplant | `fossil_powerplant` | $1.625 |
@@ -319,7 +319,7 @@ one_state_radar_station = yes
 two_state_radar_station = yes
 ```
 
-### Synthetic Refinery
+### Renewable Energy Infrastructure
 
 **Random state**
 

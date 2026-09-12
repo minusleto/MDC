@@ -138,7 +138,7 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `production_speed_rubber_refinery_factor` | Changes construction speed of rubber refineries | N/A |
 | `production_speed_stronghold_network_factor` | Changes construction speed of stronghold networks | N/A |
 | `production_speed_supply_node_factor` | Changes construction speed of supply nodes | N/A |
-| `production_speed_synthetic_refinery_factor` | Changes construction speed of synthetic refineries | N/A |
+| `production_speed_synthetic_refinery_factor` | Changes construction speed of renewable energy infrastructure | N/A |
 
 <a id="industry-income-taxes"></a>
 ### Industry Income Taxes

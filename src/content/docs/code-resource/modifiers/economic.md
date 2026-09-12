@@ -138,7 +138,7 @@ description: "Модификаторы роста экономики, инфля
 | `production_speed_rubber_refinery_factor` | Меняет скорость строительства резиновых заводов | Н/Д |
 | `production_speed_stronghold_network_factor` | Меняет скорость строительства сети укреплений | Н/Д |
 | `production_speed_supply_node_factor` | Меняет скорость строительства узлов снабжения | Н/Д |
-| `production_speed_synthetic_refinery_factor` | Меняет скорость строительства синтетических НПЗ | Н/Д |
+| `production_speed_synthetic_refinery_factor` | Меняет скорость строительства инфраструктуры возобновляемых источников энергии | Н/Д |
 
 <a id="industry-income-taxes"></a>
 ### Налоги на доходы промышленности
