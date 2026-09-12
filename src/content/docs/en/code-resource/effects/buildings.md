@@ -306,6 +306,10 @@ two_state_anti_air = yes
 
 ### Radar Station
 
+:::caution
+`two_radar_station` and `two_state_radar_station` really do build 2 stations, but only charge `$0.75` instead of the expected `$1.00` (2 × `$0.50`) — looks like a bug in the mod itself (same nature as `two_state_network_infrastructure` below).
+:::
+
 **Random state**
 
 ```text

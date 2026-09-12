@@ -306,6 +306,10 @@ two_state_anti_air = yes
 
 ### Радарная станция
 
+:::caution
+`two_radar_station` и `two_state_radar_station` реально строят 2 станции, но списывают `$0.75` вместо ожидаемых `$1.00` (2 × `$0.50`) — похоже на баг в самом моде (та же природа, что у `two_state_network_infrastructure` ниже).
+:::
+
 **Случайный регион**
 
 ```text
