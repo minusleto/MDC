@@ -52,6 +52,7 @@ export default defineConfig({
 						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/triggers/military' },
 						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/triggers/influence' },
 						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/triggers/internal-factions' },
+						{ label: 'Евросоюз', translations: { en: 'European Union' }, slug: 'code-resource/triggers/eu' },
 					] },
 					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/modifiers' },
