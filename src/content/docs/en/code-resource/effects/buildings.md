@@ -33,12 +33,11 @@ Cost below is what's actually deducted via the ready-made MDC scripted effects (
 | Building | ID | Cost |
 |---|---|---:|
 | Synthetic Refinery | `synthetic_refinery` | $4.25 |
-| Rubber Refinery* | `rubber_refinery` | $1.75 (specific state) / $4.25 (random state) |
+| Rubber Refinery | `rubber_refinery` | $1.75 |
 | Fuel Silo | `fuel_silo` | $1.50 |
 | Fossil Fuel Powerplant | `fossil_powerplant` | $1.625 |
 | Nuclear Reactor | `nuclear_reactor` | $4.50 |
 
-\* Cost genuinely differs by a factor of 2.4 depending on whether you build in a random or a specific state — looks like a bug in the mod itself, but documented as-is.
 
 ### Defense
 
@@ -306,10 +305,6 @@ two_state_anti_air = yes
 
 ### Radar Station
 
-:::caution
-`two_radar_station` and `two_state_radar_station` really do build 2 stations, but only charge `$0.75` instead of the expected `$1.00` (2 × `$0.50`) — looks like a bug in the mod itself (same nature as `two_state_network_infrastructure` below).
-:::
-
 **Random state**
 
 ```text
@@ -393,10 +388,6 @@ two_state_fossil_fuel_powerplant = yes
 ```
 
 ### Rubber Refinery
-
-:::caution
-The cost of the `_random_` and `_state_` variants for this building differs by a factor of 2.4 (see the cost table above) — looks like a bug in the mod itself.
-:::
 
 **Random state**
 
