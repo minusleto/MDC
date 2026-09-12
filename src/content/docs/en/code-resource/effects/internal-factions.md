@@ -21,7 +21,7 @@ The value is the change (+/-), not the final number. A few important quirks:
 
 - **Autocrats get double effect** — if the ruling party belongs to an autocratic archetype (pro-Western autocrats, emerging autocrats, non-aligned autocrats, fascists, military junta) and the change is positive, it's doubled.
 - **The floor isn't always 50** — some countries have unique ideas that shift a specific faction's minimum/maximum (e.g. an agricultural-subsidies idea raises the floor for farmers, a banking-reform idea lowers the ceiling for labour unions). This is baked in per-country, not in the general logic.
-- **Opinion drifts back toward its minimum every month** (usually back to 50, unless shifted by a country-specific idea) — so if left untouched, it settles back down over time.
+- **Opinion drifts down toward its minimum every month, but only if it's currently above the minimum** — if you push it up and leave it alone, it settles back down toward the minimum (usually 50) over time. If opinion is below the minimum, it just stays there — there's no automatic pull back up, only a manual `change_*_opinion` can raise it.
 - **Opinion directly drives in-game stats** — every faction has a "dynamic modifier" that's continuously recalculated from opinion: `(opinion − 50) × coefficient`. You don't set these stats directly — they're a consequence of opinion, not an independent knob.
 
 ### How to Properly Change Factions
@@ -129,7 +129,7 @@ else_if = {
 | Religious | `wahabi_ulema` | `change_the_wahabi_ulema_opinion` | Stability, population, political power, fascism drift, education cost |
 | Nation-specific | `the_donju` (North Korea) | `change_the_donju_opinion` | Civilian factory/infrastructure speed, stability, consumer goods cost |
 | Nation-specific | `saudi_royal_family` (Gulf states) | `change_saudi_royal_family_opinion` | Political power, ideology-drift defense, stability |
-| Nation-specific | `iranian_quds_force` (Iran) | `change_iranian_quds_force_opinion` | Communism drift, offense influence |
+| Nation-specific | `iranian_quds_force` (Iran, includes IRGC) | `change_iranian_quds_force_opinion` | Communism drift, offense influence |
 | Nation-specific | `foreign_jihadis` | `change_foreign_jihadis_opinion` | Fascism drift, non-core manpower, special forces cap |
 | Nation-specific | `chaebols` (South Korea) | `change_chaebols_opinion` | Political power, infrastructure, local resources |
 | Nation-specific | `wall_street` (USA) | `change_wall_street_opinion` | Local resources, trade opinion, political power, office park tax, investment cost/duration; also moves the `USA_strength_of_wall_street_var` variable |
@@ -161,8 +161,8 @@ reset_all_internal_faction_opinions = yes
 <a id="election-funding"></a>
 ### Election Impact
 
-Faction opinion directly feeds into MD's election system: each active faction adds between **-2 and +2** to the `campaign_funding_count` variable depending on how hostile/favorable it is (hostile/negative/indifferent/positive/enthusiastic). This is calculated automatically by the `display_election_campaign_status` effect — you don't need to call it manually.
+Faction opinion directly feeds into MD's election system: the `campaign_funding_count` variable starts at a base of **10**, and each active faction additionally adds between **-2 and +2** depending on how hostile/favorable it is (hostile/negative/indifferent/positive/enthusiastic). This is calculated automatically by the `display_election_campaign_status` effect — you don't need to call it manually.
 
 :::note
-The old command list included `change_isi_pakistan_opinion`, `change_vevak_opinion`, `change_the_bazaar_opinion`, `change_irgc_opinion` — none of these appear in the core system file (`00_internal_faction_effects.txt`). They're either country-specific add-ons in other files, or outdated/renamed. Unconfirmed for now, so not included in the table above.
+The old command list included `change_isi_pakistan_opinion`, `change_vevak_opinion`, `change_the_bazaar_opinion`, `change_irgc_opinion`. The first three don't appear anywhere in the current system file (`00_internal_faction_effects.txt`) except in an outdated header comment — they appear to have been cut. `IRGC` wasn't cut, but it doesn't have its own effect either: it's merged into `iranian_quds_force`, sharing one opinion variable and one dynamic modifier (`apply_irgc_iranian_quds_force_dynamic_effect_DYNMOD`) — you can't change IRGC separately, only via `change_iranian_quds_force_opinion`.
 :::
