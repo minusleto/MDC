@@ -5,7 +5,7 @@ description: "Building costs and scripted building effects"
 
 ## MDC Building Costs
 
-For buildings that consume a building slot, the listed cost already includes the cost of the building slot itself.
+Cost below is what's actually deducted via the ready-made MDC scripted effects (`one_random_*` / `one_state_*` etc.) in `common\\scripted_effects\\00_scripted_effects.txt`. For buildings that consume a building slot, the listed cost already includes the cost of the building slot itself.
 
 ### Industry
 
@@ -14,8 +14,10 @@ For buildings that consume a building slot, the listed cost already includes the
 | Civilian Industry | `industrial_complex` | $3.75 |
 | Military Industry | `arms_factory` | $3.75 |
 | Dockyard | `dockyard` | $3.75 |
-| Offices | `offices` | $6.00 |
-| Commercialized Agriculture District | `agriculture_district` | $3.75 |
+| Offices* | `offices` | $6.00 |
+| Commercialized Agriculture District | `agriculture_district` | $1.875 |
+
+\* Office effects always come bundled with a fossil fuel powerplant — $6.00 is the cost of the bundle, not offices alone.
 
 ### Infrastructure & Communications
 
@@ -30,16 +32,19 @@ For buildings that consume a building slot, the listed cost already includes the
 
 | Building | ID | Cost |
 |---|---|---:|
-| Renewable Energy Infrastructure | `synthetic_refinery` | $4.25 |
-| Fuel Silo | `fuel_silo` | $3.00 |
-| Fossil Fuel Powerplant | `fossil_powerplant` | $2.25 |
+| Synthetic Refinery | `synthetic_refinery` | $4.25 |
+| Rubber Refinery* | `rubber_refinery` | $1.75 (specific state) / $4.25 (random state) |
+| Fuel Silo | `fuel_silo` | $1.50 |
+| Fossil Fuel Powerplant | `fossil_powerplant` | $1.625 |
 | Nuclear Reactor | `nuclear_reactor` | $4.50 |
+
+\* Cost genuinely differs by a factor of 2.4 depending on whether you build in a random or a specific state — looks like a bug in the mod itself, but documented as-is.
 
 ### Defense
 
 | Building | ID | Cost |
 |---|---|---:|
-| SAM Site | `anti_air_building` | $3.25 |
+| SAM Site | `anti_air_building` | $1.625 |
 | Radar Station | `radar_station` | $0.50 |
 | State-Wide Defensive Network | `stronghold_network` | $8.00 |
 | Land Fort | `bunker` | $0.50 per level |
@@ -50,10 +55,10 @@ For buildings that consume a building slot, the listed cost already includes the
 | Building | ID | Cost |
 |---|---|---:|
 | Missile Launch Site | `rocket_site` | $3.00 |
-| Naval Engineering Facility | `naval_facility` | $15.00 |
-| Land Warfare Facility | `land_facility` | $15.00 |
-| Aerodynamics & Avionics Facility | `air_facility` | $15.00 |
-| Civilian R&D Facility | `nuclear_facility` | $15.00 |
+| Naval Engineering Facility | `naval_facility` | $7.50 |
+| Land Warfare Facility | `land_facility` | $7.50 |
+| Aerodynamics & Avionics Facility | `air_facility` | $7.50 |
+| Civilian R&D Facility | `nuclear_facility` | $7.50 |
 | Naval Base | `naval_base` | $0.50 per level |
 | Supply Hub | `supply_node` | $2.50 |
 
@@ -214,7 +219,7 @@ two_random_dockyards = yes
 
 ```text
 one_state_dockyard = yes
-two_state_dockyard = yes
+two_state_dockyards = yes
 ```
 
 ### Offices
@@ -347,4 +352,71 @@ two_random_nuclear_reactor = yes
 ```text
 one_state_nuclear_reactor = yes
 two_state_nuclear_reactor = yes
+```
+
+### Fuel Silo
+
+**Random state**
+
+```text
+one_fuel_reserve = yes
+two_fuel_reserve = yes
+```
+
+**Specific state**
+
+```text
+one_state_fuel_reserve = yes
+two_state_fuel_reserve = yes
+```
+
+### Fossil Fuel Powerplant
+
+Standalone from offices — for when you only need the powerplant.
+
+**Random state**
+
+```text
+one_random_fossil_fuel_powerplant = yes
+two_random_fossil_fuel_powerplant = yes
+```
+
+**Specific state**
+
+```text
+one_state_fossil_fuel_powerplant = yes
+two_state_fossil_fuel_powerplant = yes
+```
+
+### Rubber Refinery
+
+:::caution
+The cost of the `_random_` and `_state_` variants for this building differs by a factor of 2.4 (see the cost table above) — looks like a bug in the mod itself.
+:::
+
+**Random state**
+
+```text
+one_random_rubber_refinery = yes
+two_random_rubber_refinery = yes
+three_random_rubber_refinery = yes
+```
+
+**Specific state**
+
+```text
+one_state_rubber_refinery = yes
+two_state_rubber_refinery = yes
+three_state_rubber_refinery = yes
+```
+
+### Research Facilities
+
+Always placed in a random province of the current state (no "specific state" variant):
+
+```text
+one_random_land_facility = yes    # Land Warfare Facility
+one_random_naval_facility = yes   # Naval Engineering Facility
+one_random_air_facility = yes     # Aerodynamics & Avionics Facility
+one_random_nuclear_facility = yes # Civilian R&D Facility
 ```
