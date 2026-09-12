@@ -23,5 +23,5 @@ modify_terror_threat_effect = yes
 ```
 
 :::note
-These are effects for Counter Terror countries responding to the threat. Effects for countries that support terrorism are described in [Terrorism](../../effects/terrorism/).
+These are effects for Counter Terror countries responding to the threat. Effects for countries that support terrorism are described in [Terrorism](../effects/terrorism/).
 :::

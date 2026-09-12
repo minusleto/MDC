@@ -35,5 +35,5 @@ clamp_variable = {
 ```
 
 :::note
-These are effects for countries that support terrorism. The opposite mechanic, covering the response of Counter Terror countries, is described in [Counter-Terrorism](../../systems/terrorism/).
+These are effects for countries that support terrorism. The opposite mechanic, covering the response of Counter Terror countries, is described in [Counter-Terrorism](../systems/terrorism/).
 :::

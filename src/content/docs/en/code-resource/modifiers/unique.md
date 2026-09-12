@@ -5,7 +5,7 @@ description: "Modifiers that only actually work for specific countries or contin
 
 ## Unique Modifiers
 
-These modifiers can technically be written anywhere, but only actually do anything for specific countries/continents — because they're tied to a mechanic that only exists there. For example, `literacy_rate_education_modifier` only works for African countries, since that's the only place the literacy mechanic exists; `eng_lords_support_modifier` and similar only work for Britain, which has the parliament mechanic (Lords / Commons / backbenchers). Related effects are in [Unique (effects)](../../effects/unique/).
+These modifiers can technically be written anywhere, but only actually do anything for specific countries/continents — because they're tied to a mechanic that only exists there. For example, `literacy_rate_education_modifier` only works for African countries, since that's the only place the literacy mechanic exists; `eng_lords_support_modifier` and similar only work for Britain, which has the parliament mechanic (Lords / Commons / backbenchers). Related effects are in [Unique (effects)](../effects/unique/).
 
 <a id="britain"></a>
 ### Britain

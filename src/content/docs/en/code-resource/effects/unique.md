@@ -5,12 +5,12 @@ description: "Effects that only actually work for specific countries — tied to
 
 ## Unique Effects
 
-Effects that can technically be written anywhere, but only actually fire for specific countries — because they're tied to a mechanic that exists only there. The general list of corresponding modifiers is in [Unique Modifiers](../../modifiers/unique/).
+Effects that can technically be written anywhere, but only actually fire for specific countries — because they're tied to a mechanic that exists only there. The general list of corresponding modifiers is in [Unique Modifiers](../modifiers/unique/).
 
 <a id="britain"></a>
 ## Britain
 
-Change Britain's (ENG) unique parliament support modifiers — see [Unique Modifiers → Britain](../../modifiers/unique/#britain). The variable value is the change (+/-), not the final number.
+Change Britain's (ENG) unique parliament support modifiers — see [Unique Modifiers → Britain](../modifiers/unique/#britain). The variable value is the change (+/-), not the final number.
 
 Change backbenchers support:
 

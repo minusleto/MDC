@@ -5,7 +5,7 @@ description: "Modifiers for Counter Terror effectiveness"
 
 ## Terrorism Modifiers
 
-Related to the terrorism and Counter Terror mechanics. Scripted effects for this system are covered in [Terrorism](../../effects/terrorism/) and [Counter Terrorism](../../systems/terrorism/).
+Related to the terrorism and Counter Terror mechanics. Scripted effects for this system are covered in [Terrorism](../effects/terrorism/) and [Counter Terrorism](../systems/terrorism/).
 
 | Modifier | Description | Note |
 |---|---|---|

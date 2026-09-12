@@ -46,7 +46,7 @@ ai_has_low_interest = yes
 
 ## Taxes (depend on the ruling ideology)
 
-Thresholds depend on which of the 4 ideological blocs [from Politics](../political/#ideological-blocs-by-political-stance) is in power (nationalism/salafism aren't covered — there are no thresholds for them in the source).
+Thresholds depend on which of the 4 ideological blocs [from Politics](./political/#ideological-blocs-by-political-stance) is in power (nationalism/salafism aren't covered — there are no thresholds for them in the source).
 
 ### Income tax (`population_tax_rate`)
 
