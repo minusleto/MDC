@@ -53,6 +53,7 @@ export default defineConfig({
 						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/triggers/influence' },
 						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/triggers/internal-factions' },
 						{ label: 'Евросоюз', translations: { en: 'European Union' }, slug: 'code-resource/triggers/eu' },
+						{ label: 'Регионы и провинции', translations: { en: 'Regions & States' }, slug: 'code-resource/triggers/regions' },
 					] },
 					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/modifiers' },
