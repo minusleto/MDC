@@ -147,7 +147,9 @@ add_building_construction = {
 
 Этот способ не использует `treasury_change`: стоимость из таблицы выше относится к платным MDC scripted effects, а `add_building_construction` в таком виде используется для бесплатного прямого добавления.
 
-### Гражданская фабрика
+### Промышленность
+
+#### Гражданская фабрика
 
 **Случайный регион**
 
@@ -167,7 +169,7 @@ three_state_industrial_complex = yes
 four_state_industrial_complex = yes
 ```
 
-### Военная фабрика
+#### Военная фабрика
 
 **Случайный регион**
 
@@ -187,25 +189,7 @@ three_state_arms_factory = yes
 four_state_arms_factory = yes
 ```
 
-### Инфраструктура
-
-**Случайный регион**
-
-```text
-one_random_infrastructure = yes
-two_random_infrastructure = yes
-three_random_infrastructure = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_infrastructure = yes
-two_state_infrastructure = yes
-three_state_infrastructure = yes
-```
-
-### Верфь
+#### Верфь
 
 **Случайный регион**
 
@@ -221,7 +205,7 @@ one_state_dockyard = yes
 two_state_dockyards = yes
 ```
 
-### Офисы
+#### Офисы
 
 Следующие эффекты также дают электростанцию на ископаемом топливе.
 
@@ -241,7 +225,7 @@ two_state_office_construction = yes
 three_state_office_construction = yes
 ```
 
-### Коммерческий сельскохозяйственный район
+#### Коммерческий сельскохозяйственный район
 
 **Случайный регион**
 
@@ -255,7 +239,27 @@ one_random_agriculture_district = yes
 one_state_agriculture_district = yes
 ```
 
-### Авиабазы
+### Инфраструктура и связь
+
+#### Инфраструктура
+
+**Случайный регион**
+
+```text
+one_random_infrastructure = yes
+two_random_infrastructure = yes
+three_random_infrastructure = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_infrastructure = yes
+two_state_infrastructure = yes
+three_state_infrastructure = yes
+```
+
+#### Авиабазы
 
 **Случайный регион**
 
@@ -271,7 +275,7 @@ one_state_air_base = yes
 two_state_air_base = yes
 ```
 
-### Сетевая инфраструктура
+#### Сетевая инфраструктура
 
 **Случайный регион**
 
@@ -287,39 +291,9 @@ one_state_network_infrastructure = yes
 two_state_network_infrastructure = yes
 ```
 
-### ПВО / ЗРК
+### Энергетика и топливо
 
-**Случайный регион**
-
-```text
-one_anti_air = yes
-two_anti_air = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_anti_air = yes
-two_state_anti_air = yes
-```
-
-### Радарная станция
-
-**Случайный регион**
-
-```text
-one_radar_station = yes
-two_radar_station = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_radar_station = yes
-two_state_radar_station = yes
-```
-
-### Инфраструктура возобновляемых источников энергии
+#### Инфраструктура возобновляемых источников энергии
 
 **Случайный регион**
 
@@ -337,57 +311,7 @@ two_state_synthetic_refinery = yes
 three_state_synthetic_refinery = yes
 ```
 
-### Ядерный реактор
-
-**Случайный регион**
-
-```text
-one_random_nuclear_reactor = yes
-two_random_nuclear_reactor = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_nuclear_reactor = yes
-two_state_nuclear_reactor = yes
-```
-
-### Топливное хранилище
-
-**Случайный регион**
-
-```text
-one_fuel_reserve = yes
-two_fuel_reserve = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_fuel_reserve = yes
-two_state_fuel_reserve = yes
-```
-
-### Электростанция на ископаемом топливе
-
-Отдельно от офисов — если нужна только электростанция.
-
-**Случайный регион**
-
-```text
-one_random_fossil_fuel_powerplant = yes
-two_random_fossil_fuel_powerplant = yes
-```
-
-**Конкретный регион**
-
-```text
-one_state_fossil_fuel_powerplant = yes
-two_state_fossil_fuel_powerplant = yes
-```
-
-### Резиновый завод
+#### Резиновый завод
 
 **Случайный регион**
 
@@ -405,7 +329,93 @@ two_state_rubber_refinery = yes
 three_state_rubber_refinery = yes
 ```
 
-### Научно-исследовательские объекты
+#### Топливное хранилище
+
+**Случайный регион**
+
+```text
+one_fuel_reserve = yes
+two_fuel_reserve = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_fuel_reserve = yes
+two_state_fuel_reserve = yes
+```
+
+#### Электростанция на ископаемом топливе
+
+Отдельно от офисов — если нужна только электростанция.
+
+**Случайный регион**
+
+```text
+one_random_fossil_fuel_powerplant = yes
+two_random_fossil_fuel_powerplant = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_fossil_fuel_powerplant = yes
+two_state_fossil_fuel_powerplant = yes
+```
+
+#### Ядерный реактор
+
+**Случайный регион**
+
+```text
+one_random_nuclear_reactor = yes
+two_random_nuclear_reactor = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_nuclear_reactor = yes
+two_state_nuclear_reactor = yes
+```
+
+### Оборона
+
+#### ПВО / ЗРК
+
+**Случайный регион**
+
+```text
+one_anti_air = yes
+two_anti_air = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_anti_air = yes
+two_state_anti_air = yes
+```
+
+#### Радарная станция
+
+**Случайный регион**
+
+```text
+one_radar_station = yes
+two_radar_station = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_radar_station = yes
+two_state_radar_station = yes
+```
+
+### Специальные и провинциальные постройки
+
+#### Научно-исследовательские объекты
 
 Всегда добавляются в случайную провинцию текущего региона (без варианта "конкретный регион"):
 

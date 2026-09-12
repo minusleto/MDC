@@ -147,7 +147,9 @@ add_building_construction = {
 
 This method does not use `treasury_change`: the costs in the table above apply to the paid MDC scripted effects, while `add_building_construction` in this form is used for free direct construction.
 
-### Civilian Factory
+### Industry
+
+#### Civilian Factory
 
 **Random state**
 
@@ -167,7 +169,7 @@ three_state_industrial_complex = yes
 four_state_industrial_complex = yes
 ```
 
-### Military Factory
+#### Military Factory
 
 **Random state**
 
@@ -187,25 +189,7 @@ three_state_arms_factory = yes
 four_state_arms_factory = yes
 ```
 
-### Infrastructure
-
-**Random state**
-
-```text
-one_random_infrastructure = yes
-two_random_infrastructure = yes
-three_random_infrastructure = yes
-```
-
-**Specific state**
-
-```text
-one_state_infrastructure = yes
-two_state_infrastructure = yes
-three_state_infrastructure = yes
-```
-
-### Dockyard
+#### Dockyard
 
 **Random state**
 
@@ -221,7 +205,7 @@ one_state_dockyard = yes
 two_state_dockyards = yes
 ```
 
-### Offices
+#### Offices
 
 The following effects also provide a fossil fuel powerplant.
 
@@ -241,7 +225,7 @@ two_state_office_construction = yes
 three_state_office_construction = yes
 ```
 
-### Commercialized Agriculture District
+#### Commercialized Agriculture District
 
 **Random state**
 
@@ -255,7 +239,27 @@ one_random_agriculture_district = yes
 one_state_agriculture_district = yes
 ```
 
-### Air Bases
+### Infrastructure & Communications
+
+#### Infrastructure
+
+**Random state**
+
+```text
+one_random_infrastructure = yes
+two_random_infrastructure = yes
+three_random_infrastructure = yes
+```
+
+**Specific state**
+
+```text
+one_state_infrastructure = yes
+two_state_infrastructure = yes
+three_state_infrastructure = yes
+```
+
+#### Air Bases
 
 **Random state**
 
@@ -271,7 +275,7 @@ one_state_air_base = yes
 two_state_air_base = yes
 ```
 
-### Network Infrastructure
+#### Network Infrastructure
 
 **Random state**
 
@@ -287,39 +291,9 @@ one_state_network_infrastructure = yes
 two_state_network_infrastructure = yes
 ```
 
-### Anti-Air / SAM Site
+### Energy & Fuel
 
-**Random state**
-
-```text
-one_anti_air = yes
-two_anti_air = yes
-```
-
-**Specific state**
-
-```text
-one_state_anti_air = yes
-two_state_anti_air = yes
-```
-
-### Radar Station
-
-**Random state**
-
-```text
-one_radar_station = yes
-two_radar_station = yes
-```
-
-**Specific state**
-
-```text
-one_state_radar_station = yes
-two_state_radar_station = yes
-```
-
-### Renewable Energy Infrastructure
+#### Renewable Energy Infrastructure
 
 **Random state**
 
@@ -337,57 +311,7 @@ two_state_synthetic_refinery = yes
 three_state_synthetic_refinery = yes
 ```
 
-### Nuclear Reactor
-
-**Random state**
-
-```text
-one_random_nuclear_reactor = yes
-two_random_nuclear_reactor = yes
-```
-
-**Specific state**
-
-```text
-one_state_nuclear_reactor = yes
-two_state_nuclear_reactor = yes
-```
-
-### Fuel Silo
-
-**Random state**
-
-```text
-one_fuel_reserve = yes
-two_fuel_reserve = yes
-```
-
-**Specific state**
-
-```text
-one_state_fuel_reserve = yes
-two_state_fuel_reserve = yes
-```
-
-### Fossil Fuel Powerplant
-
-Standalone from offices — for when you only need the powerplant.
-
-**Random state**
-
-```text
-one_random_fossil_fuel_powerplant = yes
-two_random_fossil_fuel_powerplant = yes
-```
-
-**Specific state**
-
-```text
-one_state_fossil_fuel_powerplant = yes
-two_state_fossil_fuel_powerplant = yes
-```
-
-### Rubber Refinery
+#### Rubber Refinery
 
 **Random state**
 
@@ -405,7 +329,93 @@ two_state_rubber_refinery = yes
 three_state_rubber_refinery = yes
 ```
 
-### Research Facilities
+#### Fuel Silo
+
+**Random state**
+
+```text
+one_fuel_reserve = yes
+two_fuel_reserve = yes
+```
+
+**Specific state**
+
+```text
+one_state_fuel_reserve = yes
+two_state_fuel_reserve = yes
+```
+
+#### Fossil Fuel Powerplant
+
+Standalone from offices — for when you only need the powerplant.
+
+**Random state**
+
+```text
+one_random_fossil_fuel_powerplant = yes
+two_random_fossil_fuel_powerplant = yes
+```
+
+**Specific state**
+
+```text
+one_state_fossil_fuel_powerplant = yes
+two_state_fossil_fuel_powerplant = yes
+```
+
+#### Nuclear Reactor
+
+**Random state**
+
+```text
+one_random_nuclear_reactor = yes
+two_random_nuclear_reactor = yes
+```
+
+**Specific state**
+
+```text
+one_state_nuclear_reactor = yes
+two_state_nuclear_reactor = yes
+```
+
+### Defense
+
+#### Anti-Air / SAM Site
+
+**Random state**
+
+```text
+one_anti_air = yes
+two_anti_air = yes
+```
+
+**Specific state**
+
+```text
+one_state_anti_air = yes
+two_state_anti_air = yes
+```
+
+#### Radar Station
+
+**Random state**
+
+```text
+one_radar_station = yes
+two_radar_station = yes
+```
+
+**Specific state**
+
+```text
+one_state_radar_station = yes
+two_state_radar_station = yes
+```
+
+### Special & Provincial Buildings
+
+#### Research Facilities
 
 Always placed in a random province of the current state (no "specific state" variant):
 
