@@ -88,6 +88,7 @@ export default defineConfig({
 						{ label: 'Исторические события', translations: { en: 'Historical Events' }, slug: 'code-resource/guides/historical-events' },
 						{ label: 'Terrain-фото', translations: { en: 'Terrain Photos' }, slug: 'code-resource/guides/terrain-photos' },
 						{ label: 'Гидро/гео/ВИЭ энергетика', translations: { en: 'Hydro/Geo/Renewable Energy' }, slug: 'code-resource/guides/renewable-energy' },
+						{ label: 'НАТО', translations: { en: 'NATO' }, slug: 'code-resource/guides/nato' },
 					] },
 					{ label: 'Справочник', translations: { en: 'Reference' }, slug: 'code-resource/reference' },
 				] },
