@@ -1,11 +1,14 @@
 ---
 title: Buildings
 description: "Building costs and scripted building effects"
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 4
 ---
 
 ## MDC Building Costs
 
-For buildings that consume a building slot, the listed cost already includes the cost of the building slot itself.
+Cost below is what's actually deducted via the ready-made MDC scripted effects (`one_random_*` / `one_state_*` etc.) in `common\\scripted_effects\\00_scripted_effects.txt`. For buildings that consume a building slot, the listed cost already includes the cost of the building slot itself.
 
 ### Industry
 
@@ -14,8 +17,10 @@ For buildings that consume a building slot, the listed cost already includes the
 | Civilian Industry | `industrial_complex` | $3.75 |
 | Military Industry | `arms_factory` | $3.75 |
 | Dockyard | `dockyard` | $3.75 |
-| Offices | `offices` | $6.00 |
-| Commercialized Agriculture District | `agriculture_district` | $3.75 |
+| Offices* | `offices` | $6.00 |
+| Commercialized Agriculture District | `agriculture_district` | $1.875 |
+
+\* Office effects always come bundled with a fossil fuel powerplant — $6.00 is the cost of the bundle, not offices alone.
 
 ### Infrastructure & Communications
 
@@ -31,15 +36,17 @@ For buildings that consume a building slot, the listed cost already includes the
 | Building | ID | Cost |
 |---|---|---:|
 | Renewable Energy Infrastructure | `synthetic_refinery` | $4.25 |
-| Fuel Silo | `fuel_silo` | $3.00 |
-| Fossil Fuel Powerplant | `fossil_powerplant` | $2.25 |
+| Rubber Refinery | `rubber_refinery` | $1.75 |
+| Fuel Silo | `fuel_silo` | $1.50 |
+| Fossil Fuel Powerplant | `fossil_powerplant` | $1.625 |
 | Nuclear Reactor | `nuclear_reactor` | $4.50 |
+
 
 ### Defense
 
 | Building | ID | Cost |
 |---|---|---:|
-| SAM Site | `anti_air_building` | $3.25 |
+| SAM Site | `anti_air_building` | $1.625 |
 | Radar Station | `radar_station` | $0.50 |
 | State-Wide Defensive Network | `stronghold_network` | $8.00 |
 | Land Fort | `bunker` | $0.50 per level |
@@ -50,10 +57,10 @@ For buildings that consume a building slot, the listed cost already includes the
 | Building | ID | Cost |
 |---|---|---:|
 | Missile Launch Site | `rocket_site` | $3.00 |
-| Naval Engineering Facility | `naval_facility` | $15.00 |
-| Land Warfare Facility | `land_facility` | $15.00 |
-| Aerodynamics & Avionics Facility | `air_facility` | $15.00 |
-| Civilian R&D Facility | `nuclear_facility` | $15.00 |
+| Naval Engineering Facility | `naval_facility` | $7.50 |
+| Land Warfare Facility | `land_facility` | $7.50 |
+| Aerodynamics & Avionics Facility | `air_facility` | $7.50 |
+| Civilian R&D Facility | `nuclear_facility` | $7.50 |
 | Naval Base | `naval_base` | $0.50 per level |
 | Supply Hub | `supply_node` | $2.50 |
 
@@ -143,7 +150,9 @@ add_building_construction = {
 
 This method does not use `treasury_change`: the costs in the table above apply to the paid MDC scripted effects, while `add_building_construction` in this form is used for free direct construction.
 
-### Civilian Factory
+### Industry
+
+#### Civilian Factory
 
 **Random state**
 
@@ -163,7 +172,7 @@ three_state_industrial_complex = yes
 four_state_industrial_complex = yes
 ```
 
-### Military Factory
+#### Military Factory
 
 **Random state**
 
@@ -183,25 +192,7 @@ three_state_arms_factory = yes
 four_state_arms_factory = yes
 ```
 
-### Infrastructure
-
-**Random state**
-
-```text
-one_random_infrastructure = yes
-two_random_infrastructure = yes
-three_random_infrastructure = yes
-```
-
-**Specific state**
-
-```text
-one_state_infrastructure = yes
-two_state_infrastructure = yes
-three_state_infrastructure = yes
-```
-
-### Dockyard
+#### Dockyard
 
 **Random state**
 
@@ -214,10 +205,10 @@ two_random_dockyards = yes
 
 ```text
 one_state_dockyard = yes
-two_state_dockyard = yes
+two_state_dockyards = yes
 ```
 
-### Offices
+#### Offices
 
 The following effects also provide a fossil fuel powerplant.
 
@@ -237,7 +228,7 @@ two_state_office_construction = yes
 three_state_office_construction = yes
 ```
 
-### Commercialized Agriculture District
+#### Commercialized Agriculture District
 
 **Random state**
 
@@ -251,23 +242,45 @@ one_random_agriculture_district = yes
 one_state_agriculture_district = yes
 ```
 
-### Air Bases
+#### Rubber Refinery
 
 **Random state**
 
 ```text
-one_air_base = yes
-two_air_base = yes
+one_random_rubber_refinery = yes
+two_random_rubber_refinery = yes
+three_random_rubber_refinery = yes
 ```
 
 **Specific state**
 
 ```text
-one_state_air_base = yes
-two_state_air_base = yes
+one_state_rubber_refinery = yes
+two_state_rubber_refinery = yes
+three_state_rubber_refinery = yes
 ```
 
-### Network Infrastructure
+### Infrastructure & Communications
+
+#### Infrastructure
+
+**Random state**
+
+```text
+one_random_infrastructure = yes
+two_random_infrastructure = yes
+three_random_infrastructure = yes
+```
+
+**Specific state**
+
+```text
+one_state_infrastructure = yes
+two_state_infrastructure = yes
+three_state_infrastructure = yes
+```
+
+#### Network Infrastructure
 
 **Random state**
 
@@ -283,39 +296,25 @@ one_state_network_infrastructure = yes
 two_state_network_infrastructure = yes
 ```
 
-### Anti-Air / SAM Site
+#### Air Bases
 
 **Random state**
 
 ```text
-one_anti_air = yes
-two_anti_air = yes
+one_air_base = yes
+two_air_base = yes
 ```
 
 **Specific state**
 
 ```text
-one_state_anti_air = yes
-two_state_anti_air = yes
+one_state_air_base = yes
+two_state_air_base = yes
 ```
 
-### Radar Station
+### Energy & Fuel
 
-**Random state**
-
-```text
-one_radar_station = yes
-two_radar_station = yes
-```
-
-**Specific state**
-
-```text
-one_state_radar_station = yes
-two_state_radar_station = yes
-```
-
-### Synthetic Refinery
+#### Renewable Energy Infrastructure
 
 **Random state**
 
@@ -333,7 +332,41 @@ two_state_synthetic_refinery = yes
 three_state_synthetic_refinery = yes
 ```
 
-### Nuclear Reactor
+#### Fuel Silo
+
+**Random state**
+
+```text
+one_fuel_reserve = yes
+two_fuel_reserve = yes
+```
+
+**Specific state**
+
+```text
+one_state_fuel_reserve = yes
+two_state_fuel_reserve = yes
+```
+
+#### Fossil Fuel Powerplant
+
+Standalone from offices — for when you only need the powerplant.
+
+**Random state**
+
+```text
+one_random_fossil_fuel_powerplant = yes
+two_random_fossil_fuel_powerplant = yes
+```
+
+**Specific state**
+
+```text
+one_state_fossil_fuel_powerplant = yes
+two_state_fossil_fuel_powerplant = yes
+```
+
+#### Nuclear Reactor
 
 **Random state**
 
@@ -347,4 +380,51 @@ two_random_nuclear_reactor = yes
 ```text
 one_state_nuclear_reactor = yes
 two_state_nuclear_reactor = yes
+```
+
+### Defense
+
+#### Anti-Air / SAM Site
+
+**Random state**
+
+```text
+one_anti_air = yes
+two_anti_air = yes
+```
+
+**Specific state**
+
+```text
+one_state_anti_air = yes
+two_state_anti_air = yes
+```
+
+#### Radar Station
+
+**Random state**
+
+```text
+one_radar_station = yes
+two_radar_station = yes
+```
+
+**Specific state**
+
+```text
+one_state_radar_station = yes
+two_state_radar_station = yes
+```
+
+### Special & Provincial Buildings
+
+#### Research Facilities
+
+Always placed in a random province of the current state (no "specific state" variant):
+
+```text
+one_random_land_facility = yes    # Land Warfare Facility
+one_random_naval_facility = yes   # Naval Engineering Facility
+one_random_air_facility = yes     # Aerodynamics & Avionics Facility
+one_random_nuclear_facility = yes # Civilian R&D Facility
 ```

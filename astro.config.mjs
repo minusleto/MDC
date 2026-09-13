@@ -52,6 +52,8 @@ export default defineConfig({
 						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/triggers/military' },
 						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/triggers/influence' },
 						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/triggers/internal-factions' },
+						{ label: 'Евросоюз', translations: { en: 'European Union' }, slug: 'code-resource/triggers/eu' },
+						{ label: 'Регионы и провинции', translations: { en: 'Regions & States' }, slug: 'code-resource/triggers/regions' },
 					] },
 					{ label: 'Модификаторы', translations: { en: 'Modifiers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/modifiers' },
@@ -85,6 +87,7 @@ export default defineConfig({
 						{ label: 'Субидеологии и партии', translations: { en: 'Subideologies & Parties' }, slug: 'code-resource/guides/subideologies' },
 						{ label: 'Исторические события', translations: { en: 'Historical Events' }, slug: 'code-resource/guides/historical-events' },
 						{ label: 'Terrain-фото', translations: { en: 'Terrain Photos' }, slug: 'code-resource/guides/terrain-photos' },
+						{ label: 'Гидро/гео/ВИЭ энергетика', translations: { en: 'Hydro/Geo/Renewable Energy' }, slug: 'code-resource/guides/renewable-energy' },
 					] },
 					{ label: 'Справочник', translations: { en: 'Reference' }, slug: 'code-resource/reference' },
 				] },

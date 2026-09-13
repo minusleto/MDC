@@ -5,6 +5,67 @@ description: "Scripted triggers for the MDC economic system: treasury, taxes, de
 
 Most triggers on this page start with `ai_`/`AI_` — these are triggers the AI uses to evaluate its own economic health (does it need debt, should it raise taxes, etc.). Technically they're ordinary triggers you can use anywhere (focuses, decisions, effects) — the `ai_` prefix carries no restriction, it's just a naming convention from the source files.
 
+## GDP and GDP per capita
+
+For focus checks, `gdp_total` and `gdp_per_capita` can be compared directly with `check_variable`. The ready-made tooltips below are meant to show the player a readable requirement together with the current value.
+
+### GDP per capita
+
+These tooltips show a requirement of "more than N thousand GDP per capita" and the current `[?ROOT.gdp_per_capita]` value:
+
+| Tooltip | Threshold |
+|---|---:|
+| `2_per_capita_or_more_tt` | > 2k |
+| `5_per_capita_or_more_tt` | > 5k |
+| `10_per_capita_or_more_tt` | > 10k |
+| `15_per_capita_or_more_tt` | > 15k |
+| `20_per_capita_or_more_tt` | > 20k |
+| `25_per_capita_or_more_tt` | > 25k |
+| `30_per_capita_or_more_tt` | > 30k |
+| `40_per_capita_or_more_tt` | > 40k |
+
+Example in `available`:
+
+```hoi4
+available = {
+    custom_trigger_tooltip = {
+        tooltip = 2_per_capita_or_more_tt
+        check_variable = { gdp_per_capita > 1.999 }
+    }
+}
+```
+
+For these checks, the source uses a value slightly below the whole-number threshold (for example, `1.999` for 2k), so the condition corresponds to reaching the displayed level.
+
+### Total GDP
+
+These tooltips show a requirement of "more than N billion Total GDP" and the current `[?ROOT.gdp_total|3]` value:
+
+| Tooltip | Threshold |
+|---|---:|
+| `50_total_gdp_tt` | > 50b |
+| `100_total_gdp_tt` | > 100b |
+| `200_total_gdp_tt` | > 200b |
+| `300_total_gdp_tt` | > 300b |
+| `500_total_gdp_tt` | > 500b |
+| `1000_total_gdp_tt` | > 1000b |
+| `2000_total_gdp_tt` | > 2000b |
+| `4000_total_gdp_tt` | > 4000b |
+| `7000_total_gdp_tt` | > 7000b |
+
+Example:
+
+```hoi4
+available = {
+    custom_trigger_tooltip = {
+        tooltip = 200_total_gdp_tt
+        check_variable = { gdp_total > 200 }
+    }
+}
+```
+
+Here `gdp_total` is checked directly in billions, while the tooltip separately shows the required threshold and current value.
+
 ## Treasury
 
 ```
@@ -46,7 +107,7 @@ ai_has_low_interest = yes
 
 ## Taxes (depend on the ruling ideology)
 
-Thresholds depend on which of the 4 ideological blocs [from Politics](../political/#ideological-blocs-by-political-stance) is in power (nationalism/salafism aren't covered — there are no thresholds for them in the source).
+Thresholds depend on which of the 4 ideological blocs [from Politics](./political/#ideological-blocs-by-political-stance) is in power (nationalism/salafism aren't covered — there are no thresholds for them in the source).
 
 ### Income tax (`population_tax_rate`)
 

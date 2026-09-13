@@ -3,7 +3,7 @@ title: Basics
 description: "Vanilla HOI4 triggers for beginners: NOT/AND/OR, comparison operators, has_stability and other common checks."
 ---
 
-This page isn't about MDC-specific triggers (see the sections below for those, e.g. [Politics](../political/)) — it's about how triggers work in the HOI4 engine (Clausewitz) in general. If you've modded before, feel free to skip it.
+This page isn't about MDC-specific triggers (see the sections below for those, e.g. [Politics](./political/)) — it's about how triggers work in the HOI4 engine (Clausewitz) in general. If you've modded before, feel free to skip it.
 
 ## What a trigger block is
 
@@ -74,7 +74,7 @@ For the full list of vanilla triggers, see the official [HOI4 modding wiki](http
 
 ## custom_trigger_tooltip
 
-Almost every MDC trigger (see [Politics](../political/) and other sections) is wrapped in `custom_trigger_tooltip` — this isn't logic, it's just a way to show the player a readable tooltip instead of grey technical text:
+Almost every MDC trigger (see [Politics](./political/) and other sections) is wrapped in `custom_trigger_tooltip` — this isn't logic, it's just a way to show the player a readable tooltip instead of grey technical text:
 
 ```
 custom_trigger_tooltip = {
