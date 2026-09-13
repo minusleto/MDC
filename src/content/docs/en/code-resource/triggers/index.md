@@ -15,6 +15,7 @@ Triggers are conditions that check the game's state (as opposed to effects, whic
 - [Internal Factions](./internal-factions/) — faction opinion thresholds (oligarchs, military, clergy, etc.)
 - [European Union](./eu/) — influence, leadership offices, euroscepticism, voting
 - [Regions & States](./regions/) — historical regions, continents, country groups, Arctic
+- [Laws](./laws/) — law-change blocking, per-party desired policy direction
 
 <!--
 - [Economic](./economic/) — ...
