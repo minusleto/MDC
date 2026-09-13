@@ -15,3 +15,4 @@ Triggers are conditions that check the game's state (as opposed to effects, whic
 - [Internal Factions](./internal-factions/) — opinion levels (enthusiastic/hostile) for each influence group
 - [European Union](./eu/) — influence, leadership offices, euroscepticism, voting
 - [Regions & States](./regions/) — historical regions, continents, country groups, Arctic
+- [Cartels](./cartels/) — the cartel penalty modifier and the list of countries where the system applies
