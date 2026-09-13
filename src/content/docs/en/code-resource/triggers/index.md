@@ -12,6 +12,7 @@ Triggers are conditions that check the game's state (as opposed to effects, whic
 - [Economic](./economic/) — treasury, taxes, deficit/surplus, debt-to-GDP, economic blocs
 - [Military](./military/) — border conflicts, doctrines, resistance, nuclear weapons, medals, NATO
 - [Influence](./influence/) — top influencers, influence percentage thresholds, trade agreements
+- [Internal Factions](./internal-factions/) — opinion levels (enthusiastic/hostile) for each influence group
 
 <!--
 - [Economic](./economic/) — ...
