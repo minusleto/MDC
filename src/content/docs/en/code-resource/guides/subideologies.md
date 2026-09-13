@@ -81,9 +81,54 @@ This is actually two different questions — "rename the party permanently, for 
 
 Just edit the localisation itself. In this mod, the party's display name (shown in the UI with its icon) comes from the `{subideology}_L` key in `common/scripted_localisation/subideology_scripted_localisation.txt` — change the text of that key and the party is renamed everywhere that `party_index` is used.
 
-### For a single country only
+### Permanently (for every country)
 
-The base HOI4 engine supports country-specific localisation overrides via a tag prefix — e.g. `TAG_conservatism_desc` will show its own description only for the country tagged `TAG`, while everyone else keeps the shared `conservatism_desc`. It hasn't been verified whether this mod's custom `{subideology}_L` system supports the same prefix pattern for the name itself (as opposed to just the description) — if not, you'll have to add the tag to the key by hand, following one of the existing examples: ARM, SPR, and FRA already have dynamic party-localisation implementations via triggers (see above) — use one of those as a template.
+Just edit the localisation itself. Here's the actual mechanism: every time a party is refreshed (`update_party_name` in `00_subideology_scripted_effects.txt`), the engine calls the native `set_party_name` effect, where both the short and long name come from the `[show_ruling_party]` scripted localisation:
+
+```
+set_party_name = {
+	ideology = democratic  # or communism / fascism / neutrality / nationalist, depending on the government type
+	name = "[SUBIDEOLOGY_NAME]"
+	long_name = "[SUBIDEOLOGY_NAME]"
+}
+SUBIDEOLOGY_NAME = "[show_ruling_party]"
+```
+
+So the party's actual in-game name is whatever the `show_ruling_party` function returns (it's defined in `common/scripted_localisation/`, not in this file). By default it appears to just return `{subideology}_L` for the current ruling subideology — so for a general rename you still just change the `{subideology}_L` key.
+
+### For a single country only — example: the "Chega" party in Portugal
+
+Since the actual party name comes from the `show_ruling_party` function rather than hard-coded text, it can be extended to return a different name for one specific country. The general pattern:
+
+1. Somewhere a country flag gets set to mark that this particular party is currently "Chega" rather than the generic "Conservative" — e.g. in a Portugal focus/event where the right-wing conservatives specifically rebrand as Chega:
+
+```
+set_country_flag = POR_chega_party
+```
+
+2. The `show_ruling_party` function (or a country-specific branch inside it) checks that flag before the general case and returns its own name just for Portugal:
+
+```
+show_ruling_party = {
+	...
+	text = {
+		trigger = {
+			tag = POR
+			has_country_flag = POR_chega_party
+		}
+		localization_key = chega_L
+	}
+	text = {
+		trigger = { always = yes }
+		localization_key = conservatism_L   # the shared name for every other country
+	}
+	...
+}
+```
+
+With that in place, Portugal shows "Chega" in the UI whenever the condition holds, while every other country with the same subideology (11 — Conservatives) keeps the shared name. Clearing the flag (`clr_country_flag = POR_chega_party`) reverts to the shared name the next time `update_party_name` runs.
+
+The exact syntax of `show_ruling_party` isn't in this file (it lives under `common/scripted_localisation/`) — the example above shows the general HOI4 scripted-localisation pattern (an ordered list of `text` entries with a `trigger`, first match wins). ARM, SPR, and FRA already do something similar in the mod — check their implementation if you need the exact field structure.
 
 ### Dynamically, mid-playthrough (via an effect in a focus/event/decision)
 
