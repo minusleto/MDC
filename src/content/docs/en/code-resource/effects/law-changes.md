@@ -220,3 +220,47 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 |---|---|
 | `increase_migration_law = yes` | Loosen migration law |
 | `decrease_migration_law = yes` | Tighten migration law |
+
+<a id="law-change-blocking"></a>
+### Blocking law changes
+
+Every `block_<category>_increase` / `block_<category>_decrease` sets a country flag for **365 days** (`set_country_flag` with `days = 365`), which stops the matching decision/focus from moving the law in that direction again until the flag expires. `block_<category>_change` is just both effects at once (blocks both raising and lowering).
+
+| Category | Has `_increase` | Has `_decrease` | Has `_change` |
+|---|---|---|---|
+| `bureau` (bureaucracy) | ✅ | ✅ | ✅ |
+| `defence` (defense spending) | ✅ | ✅ | ✅ |
+| `police` | ✅ | ✅ | ✅ |
+| `edu` (education) | ✅ | ✅ | ✅ |
+| `health` (healthcare) | ✅ | ✅ | ✅ |
+| `social` (welfare) | ✅ | ✅ | ✅ |
+| `trade` | ✅ | ✅ | ✅ |
+| `conscription` | ✅ | ✅ | ✅ |
+| `women_conscription` | ✅ | ✅ | ✅ |
+| `intervention` (interventionism) | ✅ | ✅ | ✅ |
+| `officer_training` | ✅ | ✅ | ✅ |
+| `migration_law` | ✅ | ✅ | ✅ |
+| `wage` (wages) | ✅ | ✅ | — |
+| `business` (business regulation) | ✅ | ✅ | — |
+| `it_subs` (IT subsidies) | ✅ | ✅ | — |
+| `salary` | — | ✅ | — |
+
+⚠️ For `salary`, only `block_salary_decrease` exists — there's no `block_salary_increase` in the source (and consequently no `block_salary_change` either). This is an asymmetry in the source, not a typo on our part.
+
+**Example: blocking the "rollback" when changing a law**
+
+When a focus/event pushes a law in one direction, it's usually sensible to immediately block the opposite direction for a while — otherwise the player (or the AI on its very next decision) could just undo the change right away:
+
+```
+# Raising centralization — makes sense to block rolling it back for a while
+increase_centralization = yes
+block_bureau_decrease = yes
+```
+
+```
+# And the reverse: lowering centralization — block an immediate raise
+decrease_centralization = yes
+block_bureau_increase = yes
+```
+
+Blocking the *opposite* direction isn't the only option — sometimes it makes more sense to block the *same* direction (to stop the law from being pushed several tiers in a row through a chain of events), or both at once (`block_bureau_change = yes`) if the focus's lore implies the law should be locked in place for a year. Which one to use depends on the specific focus/event context — there's no single rule.

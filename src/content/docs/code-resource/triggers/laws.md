@@ -1,30 +1,7 @@
 ---
 title: Законы
-description: "Триггеры блокировки изменения законов и желаемого направления политики по партиям"
+description: "Триггеры желаемого направления политики по партиям"
 ---
-
-## Блокировка изменения законов (12 категорий)
-
-Для каждой из 12 категорий политики есть флаг «эта категория временно заблокирована для изменения в эту сторону» — обычно ставится решением/фокусом на ограниченный срок (например, после недавнего изменения — «откат» запрещён N дней):
-
-| Категория | `_increase_blocked` | `_decrease_blocked` | `_change_blocked` |
-|---|---|---|---|
-| Бюрократия | `bureau_increase_blocked` | `bureau_decrease_blocked` | `bureau_change_blocked` |
-| Оборонные расходы | `defence_increase_blocked` | `defence_decrease_blocked` | `defence_change_blocked` |
-| Полиция | `police_increase_blocked` | `police_decrease_blocked` | `police_change_blocked` |
-| Образование | `edu_increase_blocked` | `edu_decrease_blocked` | `edu_change_blocked` |
-| Здравоохранение | `health_increase_blocked` | `health_decrease_blocked` | `health_change_blocked` |
-| Соцзащита | `social_increase_blocked` | `social_decrease_blocked` | `social_change_blocked` |
-| Торговая политика | `trade_increase_blocked` | `trade_decrease_blocked` | `trade_change_blocked` |
-| Призыв | `conscription_increase_blocked` | `conscription_decrease_blocked` | `conscription_change_blocked` |
-| Призыв женщин | `women_conscription_increase_blocked` | `women_conscription_decrease_blocked` | `women_conscription_change_blocked` |
-| Интервенционизм | `intervention_increase_blocked` | `intervention_decrease_blocked` | `intervention_change_blocked` |
-| Подготовка офицеров | `officer_training_increase_blocked` | `officer_training_decrease_blocked` | `officer_training_change_blocked` |
-| Миграционная политика | `migration_law_increase_blocked` | `migration_law_decrease_blocked` | `migration_law_change_blocked` |
-
-Все `_increase_blocked` / `_decrease_blocked` — это просто `has_country_flag = <тоже самое имя>`, обёрнутые в `custom_trigger_tooltip` для показа причины в интерфейсе.
-
-⚠️ **Стоит перепроверить**: `_change_blocked` требует **одновременно** `_increase_blocked = yes` **И** `_decrease_blocked = yes` (не `OR`). То есть «изменение вообще заблокировано» технически верно только если оба флага стоят одновременно — в отличие от more очевидной логики «если хоть одно из направлений на откате, значит менять нельзя». Если где-то в коде выставляется только один из двух флагов (например, только `increase_blocked` после недавнего повышения), `_change_blocked` этого не заметит.
 
 <a id="desired-law"></a>
 ## Желаемое направление политики (по партиям)
@@ -66,3 +43,5 @@ description: "Триггеры блокировки изменения зако�
 |---|---|
 | `ruling_party_in_favor_of_higher_military_spending` | Правящая партия поддерживает увеличение военных расходов |
 | `has_bureau_idea_law_desired` / `has_police_idea_law_desired` / `has_education_law_desired` / `has_health_law_desired` / `has_social_law_desired` | Проверяет, совпадает ли **текущий** активный закон (идея `<категория>_0X`) с тем, что страна «хочет» (флаг `wants_<категория>_0X`) — то есть страна удовлетворена текущим уровнем этой категории и не будет пытаться его менять |
+
+> Отдельные триггеры вида `<категория>_increase_blocked` тоже существуют в исходнике, но нигде не используются как самостоятельная проверка — реальный флаг блокировки ставится и снимается через эффекты. См. [«Блокировка изменения закона»](../../effects/law-changes/#law-change-blocking) в разделе эффектов.
