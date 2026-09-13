@@ -7,7 +7,6 @@ description: "Unique MDC gameplay systems"
 
 This section covers MDC gameplay mechanics that don't have a dedicated scripting API — just the system's own logic.
 
-- [Counter-Terrorism](./terrorism/) — radicalization and threat level for Counter Terror countries
 - [Politics](./politics/) — ideologies, coalitions, elections, and the subideology slot list
 - [NATO](./nato/) — statuses, accession path, decisions, events and alliance ideas
 

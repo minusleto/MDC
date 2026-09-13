@@ -81,7 +81,6 @@ export default defineConfig({
 					{ label: 'Системы MDC', translations: { en: 'MDC Systems' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/systems' },
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/systems/politics' },
-						{ label: 'Контртерроризм', translations: { en: 'Counter-Terrorism' }, slug: 'code-resource/systems/terrorism' },
 						{ label: 'НАТО', translations: { en: 'NATO' }, slug: 'code-resource/systems/nato' },
 					] },
 					{ label: 'Гайды', translations: { en: 'Guides' }, items: [
