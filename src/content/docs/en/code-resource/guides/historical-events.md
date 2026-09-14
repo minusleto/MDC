@@ -7,7 +7,7 @@ description: "Exact-date event triggers"
 
 File Path: `common/scripted_effects/00_yearly_efffects`
 
-Historical events for MD should be triggered using the new system in common/scripted_effects/00_yearly_effects.txt
+Historical events for MDC should be triggered using the new system in common/scripted_effects/00_yearly_effects.txt
 
 These are "container" effects triggered once a year by one country to trigger all historical scripted content for each country. You can put an event in two places, either in a "year" effect or in the on_startup effect at the top of the file. If you wish to have the event fire in 2000 (or 2017 if you still want content support for that start date). Add the event in the on-startup with the days until it should fire in the game's first year. Outside of that, if you wish to fire an event in a specific year, find the event and then add the day counters as you otherwise would for a normal event.
 

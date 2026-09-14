@@ -68,7 +68,7 @@ Cost below is what's actually deducted via the ready-made MDC scripted effects (
 
 ### Resources
 
-In MD, 8 resource units correspond to one civilian factory. Therefore, adding 1 unit of steel costs the nation $0.938 billion under the MD standard. The example below shows the intended way to balance resource costs through the treasury.
+In MDC, 8 resource units correspond to one civilian factory. Therefore, adding 1 unit of steel costs the nation $0.938 billion under the MDC standard. The example below shows the intended way to balance resource costs through the treasury.
 
 ```text
 capital_scope = {
