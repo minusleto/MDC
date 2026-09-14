@@ -9,9 +9,9 @@ Adding political parties is a great way to add new flavor to nations without a l
 
 There are several files you need to edit to get the parties to show up in the game.
 
-- `common/scripted_lozalition/subideology_scripted_localization.txt`
-- the party localization file
-- the party interface file
+- `common/scripted_localisation/subideology_scripted_localisation.txt`
+- `localisation/english/[name]_parties_l_english.yml` (and `..._l_russian.yml` for the Russian version)
+- `interface/parties_icons.gfx`
 - Party icons are stored in `gfx/texticons/parties_icons/nation_name`
 - Custom Leaders are stored in `common/scripted_effects/[TAG]_political_leaders.txt`
 
@@ -23,13 +23,59 @@ The full list of subideology slots (`party_index` 0–23, tags, names) has moved
 
 _**THE HOW TO**_
 
-To start you need to define the political party in the party localization file. Here we are using Armenia as our example. Please keep the same stylization here, where you only replace conservatism with the given ideologies.
+:::caution
+The description below has been corrected after checking it against the real `subideology_scripted_localisation.txt`. It used to say you "add three separate localisation keys" — that's **inaccurate** and could mislead. In reality, each subideology (`conservatism`, `Nat_Autocracy`, etc.) already has **one shared** `defined_text` block covering all ~190 countries in the game — you don't create a new block, you **add one line** to it for your tag.
+:::
 
-The next place is to implement the icons in the party interface file. You must first save your party icons in .dds format in `gfx/texticons/parties_icons/{tag}`. This is where the image of the icon is stored. You then move onto the interface file and implement them following the other spriteType examples.
+For each subideology, `subideology_scripted_localisation.txt` has **three** such shared blocks: `{subideology}_L` (name + icon in one UI line), `{subideology}_L_desc` (description), and `{subideology}_L_icon` (icon alone). Each contains a list of `text = { trigger = {...} localization_key = ... }` lines — one (or several) per country — ending with a generic default (`generic.<subideology>`) used when nothing else matches. The block is read **top to bottom, and the first matching condition wins** — so add your country's line anywhere **before** the generic default (conventionally, alphabetically by tag next to its neighbors).
 
-Once you have completed that portion it is now time to move on to the implementation of the localization keys. From here, we move to the file `common/scripted_localisation/subideology_scripted_localisation.txt`. There are three places you need to add for the individual localization keys. The first is {subideology}_L which is the party's title with its icon. The second is {subideology}_L_desc where the description is stored, and finally, {subideology}_L_icon where the icon is stored.
+**Example: USSR/Russia (tag `SOV`, subideology `conservatism`):**
 
-If you have done these steps correctly your parties should now be correctly displayed in the game. You can give these any kind of conditional if you want dynamics. ARM, SPR, and FRA all have examples of doing this dynamically using other triggers.
+```
+# inside defined_text { name = conservatism_L ... }
+text = { trigger = { original_tag = SOV } localization_key = SOV.conservatism }
+
+# inside defined_text { name = conservatism_L_desc ... }
+text = { trigger = { original_tag = SOV } localization_key = SOV.conservatism_desc }
+
+# inside defined_text { name = conservatism_L_icon ... }
+text = { trigger = { original_tag = SOV } localization_key = SOV.conservatism_icon }
+```
+
+The actual text (`SOV.conservatism`, `SOV.conservatism_desc`, `SOV.conservatism_icon`) is then defined as a normal string in the `.yml` localisation:
+
+```yaml
+SOV.conservatism: "£SOV_western_conservative (СПС) Union of Right Forces"
+SOV.conservatism_icon: "£SOV_western_conservative"
+SOV.conservatism_desc: "(Free-market liberalism) Union of Right Forces...\n\nParty description."
+```
+
+`£SOV_western_conservative` isn't the icon file itself — it's the name of the `spriteType` registered in `interface/parties_icons.gfx` (that's where you add a new `spriteType` pointing at the `.dds` file under `gfx/texticons/parties_icons/{tag}`). The `£` marker embeds that icon directly inside the text string.
+
+### Multiple name variants for one country (by date/flag/cosmetic tag)
+
+A single country can have **several** `text` lines for the same subideology in the shared block — the `trigger` decides which one fires. A real example from Armenia (three mutually exclusive `conservatism` variants):
+
+```
+text = { trigger = { original_tag = ARM has_country_flag = ARM_cons_first } localization_key = ARM.conservatism_alt }
+text = { trigger = { original_tag = ARM has_country_flag = ARM_cons_second } localization_key = ARM.conservatism_alty }
+text = { trigger = { original_tag = ARM NOT = { OR = { has_country_flag = ARM_cons_first has_country_flag = ARM_cons_second } } } localization_key = ARM.conservatism }
+```
+
+Besides `has_country_flag` and `date <`/`date >` (the most common), you'll also see **`has_cosmetic_tag`** — for example, the USSR's `socialism` party changes name when the country's "USSR restoration" cosmetic tag is active:
+
+```
+text = { trigger = { original_tag = SOV has_cosmetic_tag = SOV_USSR_AUTH_S } localization_key = SOV.socialism_dem }
+text = { trigger = { original_tag = SOV NOT = { has_cosmetic_tag = SOV_USSR_AUTH_S } } localization_key = SOV.socialism }
+```
+
+In other words, whatever focus/effect sets `set_cosmetic_tag = SOV_USSR_AUTH_S` will typically also call `update_party_name = yes` right after — this forces the currently displayed party name in the UI to refresh immediately, instead of waiting for the game to naturally re-read `defined_text` (e.g. at the next election).
+
+This same principle (several lines + a condition) is the **main, most common** way this mod handles "the party changes name over the course of the game". The built-in `set_party_name` (see below) also works, but is used less often — it doesn't require pre-written variants in the localisation, but it also can't be neatly tied to scenario conditions without manually firing the effect at the right moment.
+
+Next, implement the icons in the party interface file. You must first save your party icons in .dds format in `gfx/texticons/parties_icons/{tag}`. Then move to `interface/parties_icons.gfx` and add a new `spriteType` following the other examples — its name (without the `GFX_` prefix) is exactly what the `£` marker above refers to.
+
+If you have done these steps correctly your parties should now be correctly displayed in the game.
 
 New political leaders are a bit more complicated and require some more details to ensure they are correctly configured in-game. To begin, you must have stored your portraits in `gfx/leaders/{tag}` in .dds format or .tga format. Once that is complete we then move on to `common/scripted_effects/{tag}_political_leaders.txt`.
 
@@ -77,17 +123,23 @@ if = { limit = { has_country_flag = set_Nat_Autocracy }
 
 This is actually two different questions — "rename the party permanently, for everyone" and "rename it just for one country, or only during a specific focus/event, while playing".
 
-### Permanently (for every country)
+### Permanently (for every country that doesn't have its own variant)
 
-Just edit the localisation itself. In this mod, the party's display name (shown in the UI with its icon) comes from the `{subideology}_L` key in `common/scripted_localisation/subideology_scripted_localisation.txt` — change the text of that key and the party is renamed everywhere that `party_index` is used.
+Inside the shared `defined_text { name = {subideology}_L ... }` block (see above), the very last line has no `trigger` — it looks like `text = { localization_key = generic.{subideology} }`. That's the one shown to any country without its own tag-specific line. Change the text at the `generic.{subideology}` key in the `.yml` localisation, and the shared name changes everywhere no country override exists.
+
+To permanently rename one specific country's existing party instead, edit its own `.yml` string (`SOV.conservatism`, etc.) — that's what's already being pulled in via `text = { trigger = { original_tag = SOV } ... }` in the shared block.
 
 ### For a single country only
 
-The base HOI4 engine supports country-specific localisation overrides via a tag prefix — e.g. `TAG_conservatism_desc` will show its own description only for the country tagged `TAG`, while everyone else keeps the shared `conservatism_desc`. It hasn't been verified whether this mod's custom `{subideology}_L` system supports the same prefix pattern for the name itself (as opposed to just the description) — if not, you'll have to add the tag to the key by hand, following one of the existing examples: ARM, SPR, and FRA already have dynamic party-localisation implementations via triggers (see above) — use one of those as a template.
+This is exactly the mechanism shown in the Armenia example above — your own `text = { trigger = { original_tag = TAG ... } localization_key = TAG.{subideology} }` line in the shared block, plus your own entry in the `.yml`. If the country doesn't have such a line yet (it's just showing `generic.{subideology}`), add a new line for its tag, following neighboring examples (ARM, SOV, SPR, FRA, and others).
 
-### Dynamically, mid-playthrough (via an effect in a focus/event/decision)
+### Dynamically, mid-playthrough (by condition or via an effect)
 
-If the party needs to change name **during gameplay itself** (a party split, a rebrand after a coup, etc.) — there's a native HOI4 engine effect for that, `set_party_name` (available since 1.9, works in any mod including MDC):
+Two approaches, both used in practice:
+
+**1. Pre-written variants + a condition** (see the USSR/`has_cosmetic_tag` and Armenia/`has_country_flag` section above) — this is the mod's main approach. You pre-write every name variant in the `.yml`, and switching happens automatically as `date`/a flag/a cosmetic tag changes. If the switch needs to happen immediately (rather than waiting for the next election), call `update_party_name = yes` right after setting the condition (flag, cosmetic tag, etc.).
+
+**2. The native `set_party_name` effect** (available since HOI4 1.9, works in any mod including MDC) — doesn't need pre-written variants in the shared `defined_text` block; the name is set on the spot:
 
 ```
 set_party_name = {
@@ -101,4 +153,4 @@ set_party_name = {
 - `name` / `long_name` — localisation keys (short and full name); define them as plain text in any `.yml` localisation file
 - Persists through save games, and works for any player in multiplayer
 - For the new name to show up in the UI, close and reopen the Politics tab
-- No vanilla or mod files get overwritten — the effect just temporarily overrides the name on top of whatever the localisation defines
+- No vanilla or mod files get overwritten — the effect just temporarily overrides the name on top of whatever `defined_text` provides
