@@ -108,35 +108,7 @@ add_building_construction = {
 }
 ```
 
-The `type` parameter specifies the building ID. Available building types documented in this script are:
-
-| Type | ID |
-|---|---|
-| Civilian Industry | `industrial_complex` |
-| Military Industry | `arms_factory` |
-| Dockyard | `dockyard` |
-| Offices | `offices` |
-| Commercialized Agriculture District | `agriculture_district` |
-| Infrastructure | `infrastructure` |
-| Air Base | `air_base` |
-| Network Infrastructure | `internet_station` |
-| Railway | `rail_way` |
-| Renewable Energy Infrastructure | `synthetic_refinery` |
-| Fuel Silo | `fuel_silo` |
-| Fossil Fuel Powerplant | `fossil_powerplant` |
-| Nuclear Reactor | `nuclear_reactor` |
-| SAM Site | `anti_air_building` |
-| Radar Station | `radar_station` |
-| State-Wide Defensive Network | `stronghold_network` |
-| Land Fort | `bunker` |
-| Coastal Bunker | `coastal_bunker` |
-| Missile Launch Site | `rocket_site` |
-| Naval Engineering Facility | `naval_facility` |
-| Land Warfare Facility | `land_facility` |
-| Aerodynamics & Avionics Facility | `air_facility` |
-| Civilian R&D Facility | `nuclear_facility` |
-| Naval Base | `naval_base` |
-| Supply Hub | `supply_node` |
+The `type` parameter uses the same building ID as the cost tables at the top of the page (`industrial_complex`, `arms_factory`, `dockyard`, etc.) — no need to repeat the list, the IDs are identical everywhere.
 
 Example with multiple levels:
 
