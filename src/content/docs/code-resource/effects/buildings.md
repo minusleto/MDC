@@ -122,7 +122,7 @@ add_building_construction = {
 
 Этот способ не использует `treasury_change`: стоимость из таблицы выше относится к платным MDC scripted effects, а `add_building_construction` в таком виде используется для бесплатного прямого добавления.
 
-#### Гражданская фабрика
+### Гражданская фабрика
 
 **Случайный регион**
 
@@ -142,7 +142,7 @@ three_state_industrial_complex = yes
 four_state_industrial_complex = yes
 ```
 
-#### Военная фабрика
+### Военная фабрика
 
 **Случайный регион**
 
@@ -162,7 +162,7 @@ three_state_arms_factory = yes
 four_state_arms_factory = yes
 ```
 
-#### Верфь
+### Верфь
 
 **Случайный регион**
 
@@ -178,7 +178,7 @@ one_state_dockyard = yes
 two_state_dockyards = yes
 ```
 
-#### Офисы
+### Офисы
 
 Следующие эффекты также дают электростанцию на ископаемом топливе.
 
@@ -198,7 +198,7 @@ two_state_office_construction = yes
 three_state_office_construction = yes
 ```
 
-#### Коммерческий сельскохозяйственный район
+### Коммерческий сельскохозяйственный район
 
 **Случайный регион**
 
@@ -212,7 +212,7 @@ one_random_agriculture_district = yes
 one_state_agriculture_district = yes
 ```
 
-#### Резиновый завод
+### Резиновый завод
 
 **Случайный регион**
 
@@ -230,7 +230,7 @@ two_state_rubber_refinery = yes
 three_state_rubber_refinery = yes
 ```
 
-#### Инфраструктура
+### Инфраструктура
 
 **Случайный регион**
 
@@ -248,7 +248,7 @@ two_state_infrastructure = yes
 three_state_infrastructure = yes
 ```
 
-#### Сетевая инфраструктура
+### Сетевая инфраструктура
 
 **Случайный регион**
 
@@ -264,7 +264,7 @@ one_state_network_infrastructure = yes
 two_state_network_infrastructure = yes
 ```
 
-#### Авиабазы
+### Авиабазы
 
 **Случайный регион**
 
@@ -280,7 +280,7 @@ one_state_air_base = yes
 two_state_air_base = yes
 ```
 
-#### Инфраструктура возобновляемых источников энергии
+### Инфраструктура возобновляемых источников энергии
 
 **Случайный регион**
 
@@ -298,7 +298,7 @@ two_state_synthetic_refinery = yes
 three_state_synthetic_refinery = yes
 ```
 
-#### Топливное хранилище
+### Топливное хранилище
 
 **Случайный регион**
 
@@ -314,7 +314,7 @@ one_state_fuel_reserve = yes
 two_state_fuel_reserve = yes
 ```
 
-#### Электростанция на ископаемом топливе
+### Электростанция на ископаемом топливе
 
 Отдельно от офисов — если нужна только электростанция.
 
@@ -332,7 +332,7 @@ one_state_fossil_fuel_powerplant = yes
 two_state_fossil_fuel_powerplant = yes
 ```
 
-#### Ядерный реактор
+### Ядерный реактор
 
 **Случайный регион**
 
@@ -348,7 +348,7 @@ one_state_nuclear_reactor = yes
 two_state_nuclear_reactor = yes
 ```
 
-#### ЗРК
+### ЗРК
 
 **Случайный регион**
 
@@ -364,7 +364,7 @@ one_state_anti_air = yes
 two_state_anti_air = yes
 ```
 
-#### Радарная станция
+### Радарная станция
 
 **Случайный регион**
 
@@ -380,7 +380,7 @@ one_state_radar_station = yes
 two_state_radar_station = yes
 ```
 
-#### Научно-исследовательские объекты
+### Научно-исследовательские объекты
 
 Всегда добавляются в случайную провинцию текущего региона (без варианта "конкретный регион"):
 
