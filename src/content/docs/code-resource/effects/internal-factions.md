@@ -106,33 +106,33 @@ else_if = {
 **Не обязательно перечислять здесь абсолютно все фракции.** В законе достаточно обработать те варианты, которые реально могут встретиться в его условиях. В примере выше сначала перечислены наиболее логичные варианты для перехода на `the_military`; уникальные или зависящие от конкретной страны фракции лучше добавлять только там, где закон действительно может их затронуть.
 
 <a id="faction-list"></a>
-### Список фракций
+### Название и смена мнения фракций
 
-| Категория | Идея (тег) | Эффект смены мнения | Что меняет динамик-модификатор |
-|---|---|---|---|
-| Экономические | `small_medium_business_owners` | `change_small_medium_business_owners_opinion` | Стабильность, цена потребтоваров, производительность гражд. фабрик, налог на прибыль |
-| Экономические | `international_bankers` | `change_international_bankers_opinion` | Очки полит. власти, местные ресурсы, торговое мнение, приемлемость/дрейф демократии, стоимость и срок инвестиций, налог офисов |
-| Экономические | `fossil_fuel_industry` | `change_fossil_fuel_industry_opinion` | Местные ресурсы, прирост топлива, время джастификации войны, экспорт нефти, скорость строительства топливных хранилищ |
-| Экономические | `industrial_conglomerates` | `change_industrial_conglomerates_opinion` | Местные ресурсы, приемлемость/дрейф коммунизма, налог гражд. промышленности |
-| Экономические | `oligarchs` | `change_oligarchs_opinion` | Местные ресурсы, приемлемость/дрейф коммунизма |
-| Милитаристские | `maritime_industry` | `change_maritime_industry_opinion` | Скорость и производительность верфей, макс. дальность флота, налог верфей |
-| Милитаристские | `defense_industry` | `change_defense_industry_opinion` | Скорость и производительность воен. фабрик, эффективность фабрик, налог воен. промышленности |
-| Милитаристские | `the_military` | `change_the_military_opinion` | Организация и мораль армии, время обучения, скорость строительства авиабаз, стоимость персонала |
-| Милитаристские | `intelligence_community` | `change_intelligence_community_opinion` | Расшифровка/шифрование (без DLC La Resistance) либо разведка по родам войск (с DLC), радар, иностранное влияние |
-| Особые интересы | `labour_unions` | `change_labour_unions_opinion` | Эффективность фабрик, очки полит. власти, здравоохранение, соц. расходы |
-| Особые интересы | `landowners` | `change_landowners_opinion` | Местные ресурсы, призыв, очки полит. власти, налог офисов |
-| Особые интересы | `farmers` | `change_farmers_opinion` | Призыв, цена потребтоваров, месячный прирост населения, производительность, налог, скорость с/х районов |
-| Особые интересы | `communist_cadres` | `change_communist_cadres_opinion` | Восстановление орг. армии, цена потребтоваров, защита ядра армии, скорость мобилизации, стоимость бюрократии |
-| Религиозные | `the_priesthood` | `change_the_priesthood_opinion` | Стабильность, месячный прирост населения, полит. власть, стоимость образования |
-| Религиозные | `the_ulema` | `change_the_ulema_opinion` | Стабильность, месячный прирост населения, полит. власть, стоимость образования |
-| Религиозные | `the_clergy` | `change_the_clergy_opinion` | Стабильность, месячный прирост населения, полит. власть, стоимость образования |
-| Религиозные | `wahabi_ulema` | `change_the_wahabi_ulema_opinion` | Стабильность, население, полит. власть, дрейф фашизма, стоимость образования |
-| Страновые | `the_donju` (Сев. Корея) | `change_the_donju_opinion` | Скорость гражд. фабрик и инфраструктуры, стабильность, цена потребтоваров |
-| Страновые | `saudi_royal_family` (страны Залива) | `change_saudi_royal_family_opinion` | Полит. власть, защита от дрейфа идеологии, стабильность |
-| Страновые | `iranian_quds_force` (Иран, включает IRGC) | `change_iranian_quds_force_opinion` | Дрейф коммунизма, влияние на наступление |
-| Страновые | `foreign_jihadis` | `change_foreign_jihadis_opinion` | Дрейф фашизма, неманповер, лимит спецназа |
-| Страновые | `chaebols` (Юж. Корея) | `change_chaebols_opinion` | Полит. власть, инфраструктура, местные ресурсы |
-| Страновые | `wall_street` (США) | `change_wall_street_opinion` | Местные ресурсы, торговое мнение, полит. власть, налог офисов, стоимость и срок инвестиций; дополнительно двигает переменную `USA_strength_of_wall_street_var` |
+| Категория | Название (идея) | Смена мнения |
+|---|---|---|
+| Экономические | `small_medium_business_owners` | `change_small_medium_business_owners_opinion` |
+| Экономические | `international_bankers` | `change_international_bankers_opinion` |
+| Экономические | `fossil_fuel_industry` | `change_fossil_fuel_industry_opinion` |
+| Экономические | `industrial_conglomerates` | `change_industrial_conglomerates_opinion` |
+| Экономические | `oligarchs` | `change_oligarchs_opinion` |
+| Милитаристские | `maritime_industry` | `change_maritime_industry_opinion` |
+| Милитаристские | `defense_industry` | `change_defense_industry_opinion` |
+| Милитаристские | `the_military` | `change_the_military_opinion` |
+| Милитаристские | `intelligence_community` | `change_intelligence_community_opinion` |
+| Особые интересы | `labour_unions` | `change_labour_unions_opinion` |
+| Особые интересы | `landowners` | `change_landowners_opinion` |
+| Особые интересы | `farmers` | `change_farmers_opinion` |
+| Особые интересы | `communist_cadres` | `change_communist_cadres_opinion` |
+| Религиозные | `the_priesthood` | `change_the_priesthood_opinion` |
+| Религиозные | `the_ulema` | `change_the_ulema_opinion` |
+| Религиозные | `the_clergy` | `change_the_clergy_opinion` |
+| Религиозные | `wahabi_ulema` | `change_the_wahabi_ulema_opinion` |
+| Страновые | `the_donju` (Сев. Корея) | `change_the_donju_opinion` |
+| Страновые | `saudi_royal_family` (страны Залива) | `change_saudi_royal_family_opinion` |
+| Страновые | `iranian_quds_force` (Иран, включает IRGC) | `change_iranian_quds_force_opinion` |
+| Страновые | `foreign_jihadis` | `change_foreign_jihadis_opinion` |
+| Страновые | `chaebols` (Юж. Корея) | `change_chaebols_opinion` |
+| Страновые | `wall_street` (США) | `change_wall_street_opinion` |
 
 <a id="bulk-and-utility-effects"></a>
 ### Служебные эффекты
@@ -142,13 +142,6 @@ else_if = {
 ```
 set_temp_variable = { temp_all_opinion = 5 }
 change_all_internal_faction_opinion = yes
-```
-
-Скопировать набор фракций от одной страны другой (используется при освобождении/формировании новой страны — берёт `var:nation_to_copy_from`, у части фракций есть доп. условия вроде правящей партии):
-
-```
-var:nation_to_copy_from = { ... }
-copy_internal_factions = yes
 ```
 
 Дебаг/чит-команды (выставить все фракции в максимум/сбросить в нейтральные 50):
