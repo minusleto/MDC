@@ -10,3 +10,4 @@ description: "Practical MDC modding guides."
 - [Variables](../getting-started/variables/) — Basic variable usage in scripts (see the Getting Started section)
 - [Unique Terrain Photos](./terrain-photos/) — Adding unique city and province terrain photos
 - [Hydro/Geo/Renewable Energy](./renewable-energy/) — Setting hydroelectric/geothermal capacity and a region's capacity factor
+- [How Elections & Coalitions Work](./elections/) — Party popularity totals, election threshold, party bans, AI coalitions, political distance matrix

@@ -133,6 +133,10 @@ To permanently rename one specific country's existing party instead, edit its ow
 
 This is exactly the mechanism shown in the Armenia example above — your own `text = { trigger = { original_tag = TAG ... } localization_key = TAG.{subideology} }` line in the shared block, plus your own entry in the `.yml`. If the country doesn't have such a line yet (it's just showing `generic.{subideology}`), add a new line for its tag, following neighboring examples (ARM, SOV, SPR, FRA, and others).
 
+:::note
+How the chosen text actually reaches the UI: the `update_party_name` effect (in `00_subideology_scripted_effects.txt`) calls the native `set_party_name` effect, where `name`/`long_name` come from the `[show_ruling_party]` scripted localisation — meaning the `defined_text` blocks described above (`{subideology}_L`, etc.) aren't shown directly, they're first resolved through `show_ruling_party` and only then assigned to the party via `set_party_name`. This doesn't change anything about how you edit the party's text — you still edit the `{subideology}_L`/`.yml` strings as described above, just be aware there's this intermediate step between your localisation line and what the player actually sees.
+:::
+
 ### Dynamically, mid-playthrough (by condition or via an effect)
 
 Two approaches, both used in practice:
