@@ -37,7 +37,6 @@ export default defineConfig({
 						{ label: 'Иностранное влияние', translations: { en: 'Foreign Influence' }, slug: 'code-resource/effects/influence' },
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/effects/politics' },
 						{ label: 'Смена законов', translations: { en: 'Law Changes' }, slug: 'code-resource/effects/law-changes' },
-						{ label: 'Военные законы', translations: { en: 'Military Laws' }, slug: 'code-resource/effects/military-laws' },
 						{ label: 'Терроризм', translations: { en: 'Terrorism' }, slug: 'code-resource/effects/terrorism' },
 						{ label: 'Сепаратизм', translations: { en: 'Separatism' }, slug: 'code-resource/effects/separatism' },
 						{ label: 'Европейский союз', translations: { en: 'European Union' }, slug: 'code-resource/effects/european-union' },
