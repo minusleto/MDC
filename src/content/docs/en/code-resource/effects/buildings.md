@@ -14,11 +14,11 @@ Cost below is what's actually deducted via the ready-made MDC scripted effects (
 
 | Building | ID | Cost |
 |---|---|---:|
-| Civilian Industry | `industrial_complex` | $3.75 |
-| Military Industry | `arms_factory` | $3.75 |
-| Dockyard | `dockyard` | $3.75 |
-| Offices* | `offices` | $6.00 |
-| Commercialized Agriculture District | `agriculture_district` | $1.875 |
+| [Civilian Industry](#civilian-factory) | `industrial_complex` | $3.75 |
+| [Military Industry](#military-factory) | `arms_factory` | $3.75 |
+| [Dockyard](#dockyard) | `dockyard` | $3.75 |
+| [Offices](#offices)* | `offices` | $6.00 |
+| [Commercialized Agriculture District](#commercialized-agriculture-district) | `agriculture_district` | $1.875 |
 
 \* Office effects always come bundled with a fossil fuel powerplant — $6.00 is the cost of the bundle, not offices alone.
 
@@ -26,28 +26,28 @@ Cost below is what's actually deducted via the ready-made MDC scripted effects (
 
 | Building | ID | Cost |
 |---|---|---:|
-| Infrastructure | `infrastructure` | $1.75 |
-| Air Base | `air_base` | $1.25 |
-| Network Infrastructure | `internet_station` | $1.50 |
+| [Infrastructure](#infrastructure) | `infrastructure` | $1.75 |
+| [Air Base](#air-bases) | `air_base` | $1.25 |
+| [Network Infrastructure](#network-infrastructure) | `internet_station` | $1.50 |
 | Railways | `rail_way` | $0.01 per province |
 
 ### Energy & Fuel
 
 | Building | ID | Cost |
 |---|---|---:|
-| Renewable Energy Infrastructure | `synthetic_refinery` | $4.25 |
-| Rubber Refinery | `rubber_refinery` | $1.75 |
-| Fuel Silo | `fuel_silo` | $1.50 |
-| Fossil Fuel Powerplant | `fossil_powerplant` | $1.625 |
-| Nuclear Reactor | `nuclear_reactor` | $4.50 |
+| [Renewable Energy Infrastructure](#renewable-energy-infrastructure) | `synthetic_refinery` | $4.25 |
+| [Rubber Refinery](#rubber-refinery) | `rubber_refinery` | $1.75 |
+| [Fuel Silo](#fuel-silo) | `fuel_silo` | $1.50 |
+| [Fossil Fuel Powerplant](#fossil-fuel-powerplant) | `fossil_powerplant` | $1.625 |
+| [Nuclear Reactor](#nuclear-reactor) | `nuclear_reactor` | $4.50 |
 
 
 ### Defense
 
 | Building | ID | Cost |
 |---|---|---:|
-| SAM Site | `anti_air_building` | $1.625 |
-| Radar Station | `radar_station` | $0.50 |
+| [SAM Site](#sam-site) | `anti_air_building` | $1.625 |
+| [Radar Station](#radar-station) | `radar_station` | $0.50 |
 | State-Wide Defensive Network | `stronghold_network` | $8.00 |
 | Land Fort | `bunker` | $0.50 per level |
 | Coastal Bunker | `coastal_bunker` | $0.50 per level |
@@ -57,10 +57,10 @@ Cost below is what's actually deducted via the ready-made MDC scripted effects (
 | Building | ID | Cost |
 |---|---|---:|
 | Missile Launch Site | `rocket_site` | $3.00 |
-| Naval Engineering Facility | `naval_facility` | $7.50 |
-| Land Warfare Facility | `land_facility` | $7.50 |
-| Aerodynamics & Avionics Facility | `air_facility` | $7.50 |
-| Civilian R&D Facility | `nuclear_facility` | $7.50 |
+| [Naval Engineering Facility](#research-facilities) | `naval_facility` | $7.50 |
+| [Land Warfare Facility](#research-facilities) | `land_facility` | $7.50 |
+| [Aerodynamics & Avionics Facility](#research-facilities) | `air_facility` | $7.50 |
+| [Civilian R&D Facility](#research-facilities) | `nuclear_facility` | $7.50 |
 | Naval Base | `naval_base` | $0.50 per level |
 | Supply Hub | `supply_node` | $2.50 |
 
@@ -121,8 +121,6 @@ add_building_construction = {
 ```
 
 This method does not use `treasury_change`: the costs in the table above apply to the paid MDC scripted effects, while `add_building_construction` in this form is used for free direct construction.
-
-### Industry
 
 #### Civilian Factory
 
@@ -232,8 +230,6 @@ two_state_rubber_refinery = yes
 three_state_rubber_refinery = yes
 ```
 
-### Infrastructure & Communications
-
 #### Infrastructure
 
 **Random state**
@@ -283,8 +279,6 @@ two_air_base = yes
 one_state_air_base = yes
 two_state_air_base = yes
 ```
-
-### Energy & Fuel
 
 #### Renewable Energy Infrastructure
 
@@ -354,9 +348,7 @@ one_state_nuclear_reactor = yes
 two_state_nuclear_reactor = yes
 ```
 
-### Defense
-
-#### Anti-Air / SAM Site
+#### SAM Site
 
 **Random state**
 
@@ -387,8 +379,6 @@ two_radar_station = yes
 one_state_radar_station = yes
 two_state_radar_station = yes
 ```
-
-### Special & Provincial Buildings
 
 #### Research Facilities
 
