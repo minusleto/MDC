@@ -108,7 +108,7 @@ add_building_construction = {
 }
 ```
 
-The `type` parameter uses the same building ID as the cost tables at the top of the page (`industrial_complex`, `arms_factory`, `dockyard`, etc.) — no need to repeat the list, the IDs are identical everywhere.
+The `type` parameter uses the same building ID as the cost tables at the top of the page (`industrial_complex`, `arms_factory`, `dockyard`, etc.).
 
 Example with multiple levels:
 
