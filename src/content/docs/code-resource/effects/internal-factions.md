@@ -108,31 +108,43 @@ else_if = {
 <a id="faction-list"></a>
 ### Название и смена мнения фракций
 
-| Категория | Название (идея) | Смена мнения |
-|---|---|---|
-| Экономические | `small_medium_business_owners` | `change_small_medium_business_owners_opinion` |
-| Экономические | `international_bankers` | `change_international_bankers_opinion` |
-| Экономические | `fossil_fuel_industry` | `change_fossil_fuel_industry_opinion` |
-| Экономические | `industrial_conglomerates` | `change_industrial_conglomerates_opinion` |
-| Экономические | `oligarchs` | `change_oligarchs_opinion` |
-| Милитаристские | `maritime_industry` | `change_maritime_industry_opinion` |
-| Милитаристские | `defense_industry` | `change_defense_industry_opinion` |
-| Милитаристские | `the_military` | `change_the_military_opinion` |
-| Милитаристские | `intelligence_community` | `change_intelligence_community_opinion` |
-| Особые интересы | `labour_unions` | `change_labour_unions_opinion` |
-| Особые интересы | `landowners` | `change_landowners_opinion` |
-| Особые интересы | `farmers` | `change_farmers_opinion` |
-| Особые интересы | `communist_cadres` | `change_communist_cadres_opinion` |
-| Религиозные | `the_priesthood` | `change_the_priesthood_opinion` |
-| Религиозные | `the_ulema` | `change_the_ulema_opinion` |
-| Религиозные | `the_clergy` | `change_the_clergy_opinion` |
-| Религиозные | `wahabi_ulema` | `change_the_wahabi_ulema_opinion` |
-| Страновые | `the_donju` (Сев. Корея) | `change_the_donju_opinion` |
-| Страновые | `saudi_royal_family` (страны Залива) | `change_saudi_royal_family_opinion` |
-| Страновые | `iranian_quds_force` (Иран, включает IRGC) | `change_iranian_quds_force_opinion` |
-| Страновые | `foreign_jihadis` | `change_foreign_jihadis_opinion` |
-| Страновые | `chaebols` (Юж. Корея) | `change_chaebols_opinion` |
-| Страновые | `wall_street` (США) | `change_wall_street_opinion` |
+<div style="overflow:auto; max-height:70vh; border:1px solid #444">
+<table style="width:100%; border-collapse:collapse; font-size:0.82em; line-height:1.25">
+<thead>
+<tr style="background:#2d2d2d; color:#fff; position:sticky; top:0"><th style="padding:3px 8px; text-align:left; width:2.5em">#</th><th style="padding:3px 8px; text-align:left">Фракция</th><th style="padding:3px 8px; text-align:left">Идея (тег)</th><th style="padding:3px 8px; text-align:left">Эффект смены мнения</th></tr>
+</thead>
+<tbody>
+<tr><td colspan="4" style="padding:3px 8px; background:#5B9BD5; color:#000; font-weight:600">Экономические</td></tr>
+<tr style="background:#5B9BD5; color:#000"><td style="padding:2px 8px">1</td><td style="padding:2px 8px">Малый и средний бизнес</td><td style="padding:2px 8px"><code>small_medium_business_owners</code></td><td style="padding:2px 8px"><code>change_small_medium_business_owners_opinion</code></td></tr>
+<tr style="background:#5B9BD5; color:#000"><td style="padding:2px 8px">2</td><td style="padding:2px 8px">Международные банкиры</td><td style="padding:2px 8px"><code>international_bankers</code></td><td style="padding:2px 8px"><code>change_international_bankers_opinion</code></td></tr>
+<tr style="background:#5B9BD5; color:#000"><td style="padding:2px 8px">3</td><td style="padding:2px 8px">Нефтегазовая промышленность</td><td style="padding:2px 8px"><code>fossil_fuel_industry</code></td><td style="padding:2px 8px"><code>change_fossil_fuel_industry_opinion</code></td></tr>
+<tr style="background:#5B9BD5; color:#000"><td style="padding:2px 8px">4</td><td style="padding:2px 8px">Промышленные конгломераты</td><td style="padding:2px 8px"><code>industrial_conglomerates</code></td><td style="padding:2px 8px"><code>change_industrial_conglomerates_opinion</code></td></tr>
+<tr style="background:#5B9BD5; color:#000"><td style="padding:2px 8px">5</td><td style="padding:2px 8px">Олигархи</td><td style="padding:2px 8px"><code>oligarchs</code></td><td style="padding:2px 8px"><code>change_oligarchs_opinion</code></td></tr>
+<tr><td colspan="4" style="padding:3px 8px; background:#70AD47; color:#000; font-weight:600">Милитаристские</td></tr>
+<tr style="background:#70AD47; color:#000"><td style="padding:2px 8px">6</td><td style="padding:2px 8px">Морская промышленность</td><td style="padding:2px 8px"><code>maritime_industry</code></td><td style="padding:2px 8px"><code>change_maritime_industry_opinion</code></td></tr>
+<tr style="background:#70AD47; color:#000"><td style="padding:2px 8px">7</td><td style="padding:2px 8px">Оборонная промышленность</td><td style="padding:2px 8px"><code>defense_industry</code></td><td style="padding:2px 8px"><code>change_defense_industry_opinion</code></td></tr>
+<tr style="background:#70AD47; color:#000"><td style="padding:2px 8px">8</td><td style="padding:2px 8px">Военные</td><td style="padding:2px 8px"><code>the_military</code></td><td style="padding:2px 8px"><code>change_the_military_opinion</code></td></tr>
+<tr style="background:#70AD47; color:#000"><td style="padding:2px 8px">9</td><td style="padding:2px 8px">Разведывательное сообщество</td><td style="padding:2px 8px"><code>intelligence_community</code></td><td style="padding:2px 8px"><code>change_intelligence_community_opinion</code></td></tr>
+<tr><td colspan="4" style="padding:3px 8px; background:#FFC000; color:#000; font-weight:600">Особые интересы</td></tr>
+<tr style="background:#FFC000; color:#000"><td style="padding:2px 8px">10</td><td style="padding:2px 8px">Профсоюзы</td><td style="padding:2px 8px"><code>labour_unions</code></td><td style="padding:2px 8px"><code>change_labour_unions_opinion</code></td></tr>
+<tr style="background:#FFC000; color:#000"><td style="padding:2px 8px">11</td><td style="padding:2px 8px">Землевладельцы</td><td style="padding:2px 8px"><code>landowners</code></td><td style="padding:2px 8px"><code>change_landowners_opinion</code></td></tr>
+<tr style="background:#FFC000; color:#000"><td style="padding:2px 8px">12</td><td style="padding:2px 8px">Фермеры</td><td style="padding:2px 8px"><code>farmers</code></td><td style="padding:2px 8px"><code>change_farmers_opinion</code></td></tr>
+<tr style="background:#FFC000; color:#000"><td style="padding:2px 8px">13</td><td style="padding:2px 8px">Коммунистические кадры</td><td style="padding:2px 8px"><code>communist_cadres</code></td><td style="padding:2px 8px"><code>change_communist_cadres_opinion</code></td></tr>
+<tr><td colspan="4" style="padding:3px 8px; background:#A9D18E; color:#000; font-weight:600">Религиозные</td></tr>
+<tr style="background:#A9D18E; color:#000"><td style="padding:2px 8px">14</td><td style="padding:2px 8px">Священство</td><td style="padding:2px 8px"><code>the_priesthood</code></td><td style="padding:2px 8px"><code>change_the_priesthood_opinion</code></td></tr>
+<tr style="background:#A9D18E; color:#000"><td style="padding:2px 8px">15</td><td style="padding:2px 8px">Улемы</td><td style="padding:2px 8px"><code>the_ulema</code></td><td style="padding:2px 8px"><code>change_the_ulema_opinion</code></td></tr>
+<tr style="background:#A9D18E; color:#000"><td style="padding:2px 8px">16</td><td style="padding:2px 8px">Духовенство</td><td style="padding:2px 8px"><code>the_clergy</code></td><td style="padding:2px 8px"><code>change_the_clergy_opinion</code></td></tr>
+<tr style="background:#A9D18E; color:#000"><td style="padding:2px 8px">17</td><td style="padding:2px 8px">Ваххабитские улемы</td><td style="padding:2px 8px"><code>wahabi_ulema</code></td><td style="padding:2px 8px"><code>change_the_wahabi_ulema_opinion</code></td></tr>
+<tr><td colspan="4" style="padding:3px 8px; background:#D9E1F2; color:#000; font-weight:600">Страновые</td></tr>
+<tr style="background:#D9E1F2; color:#000"><td style="padding:2px 8px">18</td><td style="padding:2px 8px">Донжу (Северная Корея)</td><td style="padding:2px 8px"><code>the_donju</code></td><td style="padding:2px 8px"><code>change_the_donju_opinion</code></td></tr>
+<tr style="background:#D9E1F2; color:#000"><td style="padding:2px 8px">19</td><td style="padding:2px 8px">Саудовская королевская семья (страны Залива)</td><td style="padding:2px 8px"><code>saudi_royal_family</code></td><td style="padding:2px 8px"><code>change_saudi_royal_family_opinion</code></td></tr>
+<tr style="background:#D9E1F2; color:#000"><td style="padding:2px 8px">20</td><td style="padding:2px 8px">Иранские силы Кудс (Иран, включает IRGC)</td><td style="padding:2px 8px"><code>iranian_quds_force</code></td><td style="padding:2px 8px"><code>change_iranian_quds_force_opinion</code></td></tr>
+<tr style="background:#D9E1F2; color:#000"><td style="padding:2px 8px">21</td><td style="padding:2px 8px">Иностранные джихадисты</td><td style="padding:2px 8px"><code>foreign_jihadis</code></td><td style="padding:2px 8px"><code>change_foreign_jihadis_opinion</code></td></tr>
+<tr style="background:#D9E1F2; color:#000"><td style="padding:2px 8px">22</td><td style="padding:2px 8px">Чеболи (Южная Корея)</td><td style="padding:2px 8px"><code>chaebols</code></td><td style="padding:2px 8px"><code>change_chaebols_opinion</code></td></tr>
+<tr style="background:#D9E1F2; color:#000"><td style="padding:2px 8px">23</td><td style="padding:2px 8px">Уолл-стрит (США)</td><td style="padding:2px 8px"><code>wall_street</code></td><td style="padding:2px 8px"><code>change_wall_street_opinion</code></td></tr>
+</tbody>
+</table>
+</div>
 
 <a id="bulk-and-utility-effects"></a>
 ### Служебные эффекты
