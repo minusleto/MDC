@@ -19,7 +19,7 @@ change_small_medium_business_owners_opinion = yes
 
 The value is the change (+/-), not the final number. A few important quirks:
 
-- **Autocrats get double effect** — if the ruling party belongs to an autocratic archetype (pro-Western autocrats, emerging autocrats, non-aligned autocrats, fascists, military junta) and the change is positive, it's doubled.
+- **Autocrats get double effect** — positive changes are doubled if the ruling party is an autocratic archetype (pro-Western, emerging, or non-aligned autocrats, fascists, military junta).
 - **The floor isn't always 50** — some countries have unique ideas that shift a specific faction's minimum/maximum (e.g. an agricultural-subsidies idea raises the floor for farmers, a banking-reform idea lowers the ceiling for labour unions). This is baked in per-country, not in the general logic.
 - **Opinion drifts down toward its minimum every month, but only if it's currently above the minimum** — if you push it up and leave it alone, it settles back down toward the minimum (usually 50) over time. If opinion is below the minimum, it just stays there — there's no automatic pull back up, only a manual `change_*_opinion` can raise it.
 - **Opinion directly drives in-game stats** — every faction has a "dynamic modifier" that's continuously recalculated from opinion: `(opinion − 50) × coefficient`. You don't set these stats directly — they're a consequence of opinion, not an independent knob.
@@ -52,58 +52,10 @@ else_if = {
         add_idea = the_military
     }
 }
-else_if = {
-    limit = { has_idea = landowners }
-    swap_ideas = {
-        remove_idea = landowners
-        add_idea = the_military
-    }
-}
-else_if = {
-    limit = { has_idea = oligarchs }
-    swap_ideas = {
-        remove_idea = oligarchs
-        add_idea = the_military
-    }
-}
-else_if = {
-    limit = { has_idea = international_bankers }
-    swap_ideas = {
-        remove_idea = international_bankers
-        add_idea = the_military
-    }
-}
-else_if = {
-    limit = { has_idea = maritime_industry }
-    swap_ideas = {
-        remove_idea = maritime_industry
-        add_idea = the_military
-    }
-}
-else_if = {
-    limit = { has_idea = the_clergy }
-    swap_ideas = {
-        remove_idea = the_clergy
-        add_idea = the_military
-    }
-}
-else_if = {
-    limit = { has_idea = intelligence_community }
-    swap_ideas = {
-        remove_idea = intelligence_community
-        add_idea = the_military
-    }
-}
-else_if = {
-    limit = { has_idea = small_medium_business_owners }
-    swap_ideas = {
-        remove_idea = small_medium_business_owners
-        add_idea = the_military
-    }
-}
+# ...repeat the same block for every other faction the law could realistically encounter
 ```
 
-**You do not need to list every possible faction.** In a law, it is enough to handle the factions that can realistically be present under its conditions. The example above lists the most logical candidates for a transition to `the_military`; unique or country-specific factions should only be added when the law can actually encounter them.
+**You do not need to list every possible faction.** In a law, it is enough to handle the factions that can realistically be present under its conditions — see the [full faction list](#faction-list) below for all the idea tags. Unique or country-specific factions should only be added when the law can actually encounter them.
 
 <a id="faction-list"></a>
 ### Faction List
