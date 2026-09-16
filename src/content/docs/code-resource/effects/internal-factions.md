@@ -6,7 +6,7 @@ description: "Эффекты и команды внутренних фракци
 ## Эффекты внутренних фракций MDC
 
 <a id="faction-list"></a>
-### 1. Название и смена мнения фракций
+### Название и смена мнения фракций
 
 <div style="overflow-x:auto">
 <table style="width:100%; border-collapse:collapse; font-size:0.82em; line-height:1.25; table-layout:auto; border:1px solid #444">
@@ -36,22 +36,17 @@ description: "Эффекты и команды внутренних фракци
 <tr style="background:#8064A2; color:#000"><td style="padding:2px 8px; white-space:nowrap">Улемы</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">the_ulema</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_the_ulema_opinion</code></td></tr>
 <tr style="background:#8064A2; color:#000"><td style="padding:2px 8px; white-space:nowrap">Духовенство</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">the_clergy</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_the_clergy_opinion</code></td></tr>
 <tr style="background:#8064A2; color:#000"><td style="padding:2px 8px; white-space:nowrap">Ваххабитские улемы</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">wahabi_ulema</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_the_wahabi_ulema_opinion</code></td></tr>
-<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Донжу[^1]</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">the_donju</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_the_donju_opinion</code></td></tr>
-<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Саудовская королевская семья[^2]</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">saudi_royal_family</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_saudi_royal_family_opinion</code></td></tr>
-<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Иранские силы Кудс[^3]</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">iranian_quds_force</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_iranian_quds_force_opinion</code></td></tr>
-<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Чеболи[^4]</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">chaebols</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_chaebols_opinion</code></td></tr>
+<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Донжу</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">the_donju</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_the_donju_opinion</code></td></tr>
+<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Саудовская королевская семья</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">saudi_royal_family</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_saudi_royal_family_opinion</code></td></tr>
+<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Иранские силы Кудс</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">iranian_quds_force</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_iranian_quds_force_opinion</code></td></tr>
+<tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Чеболи</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">chaebols</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_chaebols_opinion</code></td></tr>
 <tr style="background:#C0504D; color:#000"><td style="padding:2px 8px; white-space:nowrap">Уолл-стрит</td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">wall_street</code></td><td style="padding:2px 8px; white-space:nowrap"><code style="background:transparent; color:inherit; padding:1px 5px">change_wall_street_opinion</code></td></tr>
 </tbody>
 </table>
 </div>
 
-[^1]: Северная Корея.
-[^2]: Страны Залива.
-[^3]: Иран; включает IRGC.
-[^4]: Южная Корея.
-
 <a id="how-to-change-factions"></a>
-### 2. Как правильно менять фракции
+### Как правильно менять фракции
 
 При смене основной фракции сначала проверь, какая идея уже установлена, и только потом меняй её через `swap_ideas`. Так закон не сломается, если у страны изначально другая фракция.
 
@@ -73,7 +68,7 @@ else_if = {
 ```
 
 <a id="how-it-works"></a>
-### 3. Как это работает
+### Как это работает
 
 1. У каждой активной фракции есть мнение **0–100**, обычно стартующее с **50**.
 2. `change_*_opinion` меняет мнение на указанное значение, а не задаёт итоговое число. Для массового изменения используется `change_all_internal_faction_opinion`.
