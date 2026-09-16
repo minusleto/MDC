@@ -98,7 +98,3 @@ reset_all_internal_faction_opinions = yes
 ### Влияние на выборы
 
 Мнение фракций участвует в системе выборов MDC: базовое значение `campaign_funding_count` — **10**, а активные фракции добавляют от **-2 до +2** в зависимости от своего отношения. Это считается автоматически эффектом `display_election_campaign_status`.
-
-:::note
-В старом списке встречались `change_isi_pakistan_opinion`, `change_vevak_opinion`, `change_the_bazaar_opinion`, `change_irgc_opinion`. Первые три не определены в актуальном `00_internal_faction_effects.txt`; отдельного `change_irgc_opinion` тоже нет — IRGC слит с `iranian_quds_force`.
-:::

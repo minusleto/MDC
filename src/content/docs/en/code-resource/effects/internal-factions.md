@@ -114,7 +114,3 @@ reset_all_internal_faction_opinions = yes
 ### Election Impact
 
 Faction opinion directly feeds into MDC's election system: the `campaign_funding_count` variable starts at a base of **10**, and each active faction additionally adds between **-2 and +2** depending on how hostile/favorable it is (hostile/negative/indifferent/positive/enthusiastic). This is calculated automatically by the `display_election_campaign_status` effect — you don't need to call it manually.
-
-:::note
-The old command list included `change_isi_pakistan_opinion`, `change_vevak_opinion`, `change_the_bazaar_opinion`, `change_irgc_opinion`. The first three don't appear anywhere in the current system file (`00_internal_faction_effects.txt`) except in an outdated header comment — they appear to have been cut. `IRGC` wasn't cut, but it doesn't have its own effect either: it's merged into `iranian_quds_force`, sharing one opinion variable and one dynamic modifier (`apply_irgc_iranian_quds_force_dynamic_effect_DYNMOD`) — you can't change IRGC separately, only via `change_iranian_quds_force_opinion`.
-:::
