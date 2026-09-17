@@ -42,25 +42,58 @@ Vanilla HOI4 modifiers.
 
 Vanilla HOI4 modifiers.
 
+<a id="military-aid"></a>
+### Military Aid (Volunteers & Lend-Lease)
+
 | Modifier | Description | Note |
 |---|---|---|
-| `generate_wargoal_tension` | Changes the world tension required to generate a wargoal | N/A |
-| `join_faction_tension` | Changes the world tension required to join a faction | N/A |
 | `lend_lease_tension` | Changes the world tension required for lend-lease | N/A |
 | `send_volunteers_tension` | Changes the world tension required for sending volunteers | N/A |
 | `send_volunteer_divisions_required` | Changes the number of divisions required to send volunteers | N/A |
 | `send_volunteer_size` | Increases the max number of volunteer divisions that can be sent | N/A |
+
+<a id="guarantees"></a>
+### Guarantees of Independence
+
+| Modifier | Description | Note |
+|---|---|---|
 | `guarantee_tension` | Changes the world tension required to guarantee independence | N/A |
 | `guarantee_cost` | Changes the cost of guaranteeing independence | N/A |
-| `justify_war_goal_time` | Changes the time to justify a war goal | N/A |
-| `justify_war_goal_when_in_major_war_time` | Changes justification time while in a major war | N/A |
-| `enemy_justify_war_goal_time` | Changes how long it takes other countries to justify a war goal against us | N/A |
+
+<a id="relations-opinion"></a>
+### Relations & Opinion
+
+| Modifier | Description | Note |
+|---|---|---|
 | `improve_relations_maintain_cost_factor` | Changes the upkeep cost of "Improve Relations" | N/A |
 | `opinion_gain_monthly_factor` | Changes opinion gain from improving relations | N/A |
 | `opinion_gain_monthly_same_ideology_factor` | Changes monthly opinion gain for sharing an ideology | N/A |
-| `autonomy_gain` | Increases daily autonomy gain | N/A |
+
+<a id="war-justification"></a>
+### War Justification & Tension
+
+| Modifier | Description | Note |
+|---|---|---|
+| `generate_wargoal_tension` | Changes the world tension required to generate a wargoal | N/A |
+| `join_faction_tension` | Changes the world tension required to join a faction | N/A |
+| `justify_war_goal_time` | Changes the time to justify a war goal | N/A |
+| `justify_war_goal_when_in_major_war_time` | Changes justification time while in a major war | N/A |
+| `enemy_justify_war_goal_time` | Changes how long it takes other countries to justify a war goal against us | N/A |
+
+<a id="subversive-activity"></a>
+### Subversive Activity
+
+| Modifier | Description | Note |
+|---|---|---|
 | `foreign_subversive_activites` | Changes the effectiveness of other countries' subversive activity against us | N/A |
 | `subversive_activites_upkeep` | Changes the upkeep cost of our own subversive activity abroad | N/A |
+
+<a id="autonomy"></a>
+### Autonomy
+
+| Modifier | Description | Note |
+|---|---|---|
+| `autonomy_gain` | Increases daily autonomy gain | N/A |
 
 <a id="ai-diplomacy"></a>
 ## AI (Diplomatic Behavior)
