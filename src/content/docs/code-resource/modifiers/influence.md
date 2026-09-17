@@ -11,6 +11,7 @@ description: "Модификаторы эффективности иностра
 |---|---|---|
 | `foreign_influence_modifier` | Меняет эффективность действий влияния | Н/Д |
 | `foreign_influence_defense_modifier` | Снижает эффективность влияния на нас | Н/Д |
+| `sanctions_defence_modifier` | Снижает эффект санкций, наложенных на нас | Н/Д |
 | `foreign_influence_auto_influence_cap_modifier` | Увеличивает слоты авто-влияния | Н/Д |
 | `influence_coup_modifier` | Меняет вероятность успеха переворота | Н/Д |
 | `foreign_influence_continent_modifier` | Меняет эффективность влияния на других континентах | Модификатор отрицательный |
