@@ -5,6 +5,8 @@ description: "Internal faction effects and commands"
 
 ## MDC Internal Faction Effects
 
+These effects **change** faction opinion. To **check** the current opinion level (hostile/negative/indifferent/positive/enthusiastic) instead — see [Triggers → Internal Factions](../../triggers/internal-factions/).
+
 <a id="how-it-works"></a>
 ### How It Works
 
