@@ -1,14 +1,61 @@
 ---
 title: Military Modifiers
-description: "Modifiers for military bases and their effect on leaders"
+description: "Military modifiers: combat (speed, attack/defence, recon, planning), intelligence and decryption, general (war support, stability), military bases"
 ---
 
 ## Military Modifiers
 
-Basics. Unit/combat-specific modifiers are separate, coming later.
+<a id="combat"></a>
+### Combat (land)
+
+Vanilla HOI4 modifiers, apply to the country's divisions.
+
+| Modifier | Description |
+|---|---|
+| `army_speed_factor` | Division movement speed |
+| `army_attack_speed_factor` | The speed at which the land army attacks |
+| `army_org_factor` | Maximum troop organization (%) |
+| `army_org` | Maximum troop organization (flat) |
+| `army_org_regain` | Organization recovery speed |
+| `army_morale_factor` | Division organization recovery speed after combat |
+| `army_defence_factor` | Division defence |
+| `army_defence_against_major_factor` | Defence against major powers |
+| `army_defence_against_minor_factor` | Defence against non-major countries |
+| `army_core_defence_factor` | Defence on own core territory |
+| `army_claim_defence_factor` | Defence on claimed territory |
+| `army_attack_factor` | Division attack |
+| `breakthrough_factor` | Breakthrough strength |
+| `army_breakthrough_against_major_factor` | Breakthrough against major powers |
+| `army_breakthrough_against_minor_factor` | Breakthrough against non-major countries |
+| `recon_factor` | Division reconnaissance |
+| `recon_factor_while_entrenched` | Reconnaissance while entrenched |
+| `coordination_bonus` | Troop coordination bonus |
+| `combat_width_factor` | Division combat width |
+| `max_planning_factor` | Maximum planning level |
+| `planning_speed` | Planning speed gain |
+| `dig_in_speed` / `dig_in_speed_factor` | Entrenchment speed (flat / %) |
+| `terrain_penalty_reduction` | Reduces terrain penalties |
+| `pocket_penalty` | Penalty for encircled troops |
+| `cas_damage_reduction` | Reduces damage from close air support (CAS) |
+| `special_forces_cap` | Maximum share of special forces in the army |
+| `special_forces_min` | Minimum number of special forces excluded from the cap |
+| `training_time_army_factor` / `training_time_factor` | Time to train new divisions (the first is army-only, the second is general) |
+| `non_core_manpower` | Share of manpower available on non-core territory |
+
+<a id="intelligence"></a>
+### Intelligence and decryption
+
+| Modifier | Description |
+|---|---|
+| `decryption_power` | Decryption power (flat) |
+| `decryption_power_factor` | Decryption power (%) |
+| `defense_impact_on_blueprint_stealing` | Defence against equipment blueprint theft |
+| `intel_from_combat_factor` | Intel gain from combat |
+| `intel_from_operatives_factor` | Intel gain from operatives |
+| `intel_network_gain` | Intel network gain in a region |
 
 <a id="vanilla"></a>
-### Vanilla
+### General
 
 | Modifier | Description | Note |
 |---|---|---|
