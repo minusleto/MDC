@@ -61,7 +61,7 @@ export default defineConfig({
 						{ label: 'Экономические', translations: { en: 'Economic' }, slug: 'code-resource/modifiers/economic' },
 						{ label: 'Модификаторы законов', translations: { en: 'Law Modifiers' }, slug: 'code-resource/modifiers/laws' },
 						{ label: 'Миграция', translations: { en: 'Migration' }, slug: 'code-resource/modifiers/migration' },
-						{ label: 'Влияние', translations: { en: 'Influence' }, slug: 'code-resource/modifiers/influence' },
+						{ label: 'Дипломатия', translations: { en: 'Diplomacy' }, slug: 'code-resource/modifiers/diplomacy' },
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/modifiers/energy' },
 						{ label: 'Политика', translations: { en: 'Political' }, slug: 'code-resource/modifiers/political' },
 						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/modifiers/military' },

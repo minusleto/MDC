@@ -8,7 +8,7 @@ description: "Reference for MDC modifiers."
 - [Economic Modifiers](./economic/)
 - [Law Modifiers](./laws/)
 - [Migration Modifiers](./migration/)
-- [Influence Modifiers](./influence/)
+- [Diplomacy](./diplomacy/)
 - [Energy Modifiers](./energy/)
 - [Political Modifiers](./political/)
 - [Military Modifiers](./military/)
