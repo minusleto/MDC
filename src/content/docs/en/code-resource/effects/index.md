@@ -19,3 +19,4 @@ description: "Reference for MDC scripted effects."
 - [Energy](./energy/) — Energy scripted effects
 - [Departments & Companies](./companies/) — Tooltips for new departments, companies, and branches
 - [Unique](./unique/) — Effects that only work for specific countries (Britain, Russia, cartels, etc.)
+- [Misc](./misc/) — Base-engine effects without a themed page of their own

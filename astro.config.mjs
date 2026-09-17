@@ -43,6 +43,7 @@ export default defineConfig({
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/effects/energy' },
 						{ label: 'Департаменты и компании', translations: { en: 'Departments & Companies' }, slug: 'code-resource/effects/companies' },
 						{ label: 'Уникальные', translations: { en: 'Unique' }, slug: 'code-resource/effects/unique' },
+						{ label: 'Разное', translations: { en: 'Misc' }, slug: 'code-resource/effects/misc' },
 					] },
 					{ label: 'Триггеры', translations: { en: 'Triggers' }, items: [
 						{ label: 'Обзор', slug: 'code-resource/triggers' },
