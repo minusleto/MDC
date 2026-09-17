@@ -85,3 +85,47 @@ has_dynamic_modifier = {
 | `division_template` | Adds a division template to the country |
 | `has_civil_war` | Checks whether the country is involved in a civil war — either as the revolter or as the target |
 | `original_tag` | Returns the country's original tag — relevant in civil-war contexts where the current scope's tag differs from the original one |
+
+### State ownership and control
+
+| Trigger | Description |
+|---|---|
+| `controls_state` | Checks the state's **actual controller** (who currently militarily holds the territory) |
+| `owns_state` | Checks the state's **de jure owner** (who the state legally belongs to, regardless of occupation) |
+
+The difference matters: an occupied state has `controls_state` pointing to the occupier while `owns_state` still points to the original owner. This is exactly why the `set_state_name` warning above calls for `controls_state`, not `owns_state` — you should only rename what you actually run right now.
+
+### Government and ideology
+
+| Trigger | Description |
+|---|---|
+| `has_government` | Checks whether the country's ruling party belongs to a base **ideology group** (democratic/communism/fascism/neutrality/nationalist), not a specific MDC subideology — for a specific subideology check, use `ruling_party`/`is_in_array` instead, see [How Elections & Coalitions Work](../guides/elections/) |
+| `has_elections` | Checks whether the country allows elections: `has_elections = yes` |
+| `has_start_date` | Compares the **current campaign's** start date (not today's in-game date) — useful for events that depend on which year the playthrough itself began |
+
+### Leaders and officers
+
+| Effect/trigger | Description |
+|---|---|
+| `create_country_leader` | Creates a leader and adds them to the appropriate party in the country (full syntax and examples in the [Subideologies guide](../guides/subideologies/)) |
+| `kill_country_leader` | Kills a country leader and removes them entirely — the next person in line for that party becomes the new leader |
+| `create_corps_commander` | Creates a corps commander for the country |
+| `has_country_leader_with_trait` | Checks whether the country's current leader has the given trait: `has_country_leader_with_trait = big_fat_idiot` |
+
+### States, units, and troops
+
+| Effect/trigger | Description |
+|---|---|
+| `every_owned_state` | Runs nested effects on every state you own that satisfies `limit` |
+| `add_province_modifier` | Adds static modifiers to a specific province. Pick a province explicitly (`province = 500`) or via a filter: `all_provinces`, `limit_to_coastal`, `limit_to_border`, `limit_to_naval_base`, `limit_to_victory_point` |
+| `create_unit` | Spawns a unit outside the OOB file (like a normal starting deployment) — you can set a province, prioritize province selection via `country_score`, forbid spawning on enemy territory, and give it an `id` for later removal |
+| `num_of_factories` | Checks the total factory count (civilian + military + dockyards) |
+| `add_tech_bonus` | Adds a technology bonus with a limited number of uses |
+
+### Diplomatic status
+
+| Trigger | Description |
+|---|---|
+| `is_in_faction` | Checks whether the country is in any (military) faction |
+| `is_puppet` | Checks whether the country is anyone's puppet |
+| `is_subject` | Checks whether the country is anyone's subject (a broader category than puppet — covers other kinds of subordination too) |
