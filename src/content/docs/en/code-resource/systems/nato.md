@@ -437,17 +437,6 @@ NOT = { has_government = fascism }
 
 In other words, the country has suspended elections but hasn't gone fascist (fascist governments presumably fall under separate, harsher expulsion logic not shown in this file). `NATO.17` firing immediately triggers `NATO_leave = yes` and hidden-broadcasts the `NATO.16` news to everyone else.
 
-## NATO and CSTO: military limits
-
-`NATO_CSTO_calculate_number_of_batallions` counts infantry and tank battalions for European NATO/CSTO countries.
-
-Each side has these thresholds:
-
-- **more than 1000** counted infantry battalions;
-- **more than 400** tank battalions.
-
-When exceeded, European countries receive `NATO_CSTO_agreement_breach_warning`, and the corresponding organization's leader receives `NATO_CSTO_breach_mission`.
-
 ## Important geographic limitation
 
 Full membership and its related procedures use this geography:
