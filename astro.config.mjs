@@ -34,7 +34,7 @@ export default defineConfig({
 						{ label: 'Технологии', translations: { en: 'Technology' }, slug: 'code-resource/effects/technology' },
 						{ label: 'Военные', translations: { en: 'Military' }, slug: 'code-resource/effects/military' },
 						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/effects/internal-factions' },
-						{ label: 'Иностранное влияние', translations: { en: 'Foreign Influence' }, slug: 'code-resource/effects/influence' },
+						{ label: 'Дипломатия', translations: { en: 'Diplomacy' }, slug: 'code-resource/effects/diplomacy' },
 						{ label: 'Политика', translations: { en: 'Politics' }, slug: 'code-resource/effects/politics' },
 						{ label: 'Смена законов', translations: { en: 'Law Changes' }, slug: 'code-resource/effects/law-changes' },
 						{ label: 'Сепаратизм и терроризм', translations: { en: 'Separatism & Terrorism' }, slug: 'code-resource/effects/terrorism' },
