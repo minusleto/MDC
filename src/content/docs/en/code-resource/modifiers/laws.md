@@ -44,6 +44,17 @@ Modify the cost (in political power, PP) of changing national laws.
 | `lgbt_laws_cost_factor` | Modifies the political power cost of changing LGBT Law | N/A |
 | `freedom_trade_unions_cost_factor` | Modifies the political power cost of changing Freedom of Trade Unions Law | N/A |
 
+### Cost of Changing Freedom Laws
+
+| Modifier | Description | Note |
+|---|---|---|
+| `censorship_laws_cost_factor` | Changes the PP cost of changing the censorship/free speech law | N/A |
+| `right_assembly_cost_factor` | Changes the PP cost of changing the freedom of assembly law | N/A |
+| `internet_law_cost_factor` | Changes the PP cost of changing the internet freedom law | N/A |
+| `lgbt_laws_cost_factor` | Changes the PP cost of changing the LGBT rights law | N/A |
+| `freedom_trade_unions_cost_factor` | Changes the PP cost of changing the trade union freedom law | N/A |
+| `salary_law_cost_factor` | Changes the PP cost of changing the minimum wage law | N/A |
+
 <a id="manufacturer-change-costs"></a>
 ### Manufacturer Change Costs
 

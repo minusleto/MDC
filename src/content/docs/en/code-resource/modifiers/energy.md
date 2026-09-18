@@ -20,6 +20,18 @@ Govern energy production and consumption.
 | `renewable_energy_gain_multiplier` | Modifies energy gain from renewable as a modifier | N/A |
 
 <a id="population-energy"></a>
+### Energy Consumption by Sector
+
+These modifiers change energy consumption by specific sectors of the economy.
+
+| Modifier | Description | Note |
+|---|---|---|
+| `energy_use_modifier_agriculture_district` | Changes energy consumption by agriculture districts | N/A |
+| `energy_use_modifier_civs` | Changes energy consumption by civilian industry | N/A |
+| `energy_use_modifier_mils` | Changes energy consumption by military industry | N/A |
+| `energy_use_modifier_offices` | Changes energy consumption by offices | N/A |
+| `energy_use_modifier_rub_ref` | Changes energy consumption by rubber refineries | N/A |
+
 ### Population Energy
 
 | Modifier | Description | Note |
