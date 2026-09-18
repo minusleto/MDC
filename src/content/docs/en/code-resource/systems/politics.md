@@ -26,10 +26,9 @@ The election threshold is the minimum popularity a party needs to be counted tow
 Parties can be individually allowed or banned for a given country — for example, if a subideology shouldn't be able to participate in a nation's political life for narrative reasons.
 
 :::note
-This page covers the system's own logic. The scripted effects that drive it (changing the ruling party, coalitions, popularity, banning parties, etc.) are documented in [Effects → Politics](../../effects/politics/).
+This page covers the system's own logic. The scripted effects that drive it (changing the ruling party, coalitions, popularity, banning parties, etc.) are documented in [Effects → Politics](../effects/politics/).
 :::
 
-<a id="subideologies"></a>
 ## Subideologies
 
 List of subideology slots (`party_index`, 0–23), grouped by ideology. The index is the value used in `party_index`, `rul_party_temp`, `col_one`/`col_two`/`col_three`, and similar variables.
@@ -85,4 +84,4 @@ These slots cannot be used directly in console commands.
 </table>
 </div>
 
-For adding a new party/leader to the game (editing files, icons, localization), see the [Subideologies & Parties](../../guides/subideologies/) guide.
+For adding a new party/leader to the game (editing files, icons, localization), see the [Subideologies & Parties](../guides/subideologies/) guide.

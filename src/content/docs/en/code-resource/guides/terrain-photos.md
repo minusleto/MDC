@@ -5,7 +5,6 @@ description: "Adding unique city and province terrain photos"
 
 ## Unique Terrain Photos Guide
 
-<a id="step-one-create-a-suitable-image-size-put-it-in-a-folder"></a>
 ### Step One: Create a Suitable Image Size & Put it in a Folder
 
 Terrain photos need to be 413x70px in size. After selecting your image and sizing it, save the image as DDS. Then drop your photos in the mod's `gfx/interface/terrain` folder.
@@ -22,7 +21,6 @@ spriteType = {
 }
 ```
 
-<a id="step-three-edit-countrystateviewgui-code"></a>
 ### Step Three: Edit countrystateview.gui Code
 
 File Path: `countrystateview.gui`

@@ -9,10 +9,8 @@ head:
       }
 ---
 
-<a id="basic-effects"></a>
 ## Basic Effects
 
-<a id="treasury"></a>
 ### Treasury
 
 Change the treasury by a custom amount:
@@ -37,7 +35,6 @@ medium_expenditure = yes
 large_expenditure = yes
 ```
 
-<a id="debt"></a>
 ### Debt
 
 ```
@@ -45,7 +42,6 @@ set_temp_variable = { debt_change = 1.0 }
 modify_debt_effect = yes
 ```
 
-<a id="investments"></a>
 ### Investments
 
 ```
@@ -53,7 +49,6 @@ set_temp_variable = { int_investment_change = 1.0 }
 modify_international_investment_effect = yes
 ```
 
-<a id="taxes"></a>
 ### Taxes
 
 **Corporate Tax**
@@ -68,7 +63,6 @@ set_temp_variable = { pop_change = 2 }
 modify_population_tax_rate_effect = yes
 ```
 
-<a id="productivity"></a>
 ### Productivity
 
 ```
@@ -76,7 +70,6 @@ set_temp_variable = { temp_productivity_change = 25.0 }
 flat_productivity_change_effect = yes
 ```
 
-<a id="capitalization"></a>
 ### Capitalization
 
 Changes the country's capitalization:
@@ -87,7 +80,6 @@ modify_capitalization_support = yes
 ```
 
 
-<a id="base-inflation"></a>
 ### Base Inflation
 
 Changes the country's base inflation:
@@ -116,7 +108,6 @@ fast_growth = yes
 economic_boom = yes
 ```
 
-<a id="economic-agreements"></a>
 ## Economic Agreements
 
 <a id="setremove-trade-agreement"></a>
@@ -184,7 +175,6 @@ change_permanent_investment_target = yes
 
 ```
 
-<a id="other"></a>
 ## Other
 
 <a id="guide-on-how-to-do-additional-incomeadditional-expenses"></a>
@@ -228,7 +218,6 @@ modifiers = {
 
 ```
 
-<a id="corruption"></a>
 ## Corruption
 
 Roll one random corruption event (`corruption.1`–`corruption.14`) — not a value change, just an event roll:

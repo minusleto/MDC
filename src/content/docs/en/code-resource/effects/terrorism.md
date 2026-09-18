@@ -31,7 +31,6 @@ At high values (usually >75) a tag triggers its own separatist rebellion event c
 
 ## Terrorism
 
-<a id="terrorism-support"></a>
 ### Terrorism Support
 
 Available only for the listed tags.

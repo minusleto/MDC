@@ -15,7 +15,7 @@ has_government = nationalist  # Nationalists
 has_government = fascism      # Salafists (also called "totalitarian/caliphate" in the files)
 ```
 
-For the tag-to-group mapping and the full list of subideologies (0–23), see [Systems → Politics](../../systems/politics/#subideologies).
+For the tag-to-group mapping and the full list of subideologies (0–23), see [Systems → Politics](../systems/politics/#subideologies).
 
 ## Party in power / in coalition
 
@@ -146,7 +146,7 @@ Separately: `has_not_environmentalist_government_or_in_coalition` — a ready-ma
 
 ## Whole ideological bloc (5 groups)
 
-Matches the index boundaries of the groups from [Systems → Politics](../../systems/politics/#subideologies):
+Matches the index boundaries of the groups from [Systems → Politics](../systems/politics/#subideologies):
 
 | Trigger | Indices | Inversion |
 |---|---|---|

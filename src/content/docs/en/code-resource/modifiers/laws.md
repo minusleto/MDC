@@ -7,7 +7,6 @@ description: "Modifiers for the cost of changing laws, including freedom laws an
 
 Modify the cost (in political power, PP) of changing national laws.
 
-<a id="expected-spending"></a>
 ### Expected Spending
 
 | Modifier | Description | Note |
@@ -19,7 +18,6 @@ Modify the cost (in political power, PP) of changing national laws.
 | `expected_welfare_modifier` | Modifier that increases/decreases the expected government spending on Social Spending (Law) | N/A |
 | `expected_mil_modifier` | Modifier that increases/decreases the expected government spending on Military (Law) | N/A |
 
-<a id="law-change-costs"></a>
 ### Law Change Costs
 
 | Modifier | Description | Note |
@@ -55,7 +53,6 @@ Modify the cost (in political power, PP) of changing national laws.
 | `freedom_trade_unions_cost_factor` | Changes the PP cost of changing the trade union freedom law | N/A |
 | `salary_law_cost_factor` | Changes the PP cost of changing the minimum wage law | N/A |
 
-<a id="manufacturer-change-costs"></a>
 ### Manufacturer Change Costs
 
 | Modifier | Description | Note |

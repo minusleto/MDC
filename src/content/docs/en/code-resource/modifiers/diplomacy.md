@@ -3,7 +3,6 @@ title: Diplomacy
 description: "Influence, sanctions, trade, and world tension modifiers"
 ---
 
-<a id="influence"></a>
 ## Influence
 
 Affect the Foreign Influence system.
@@ -19,14 +18,12 @@ Affect the Foreign Influence system.
 | `foreign_influence_monthly_domestic_independence_gain_modifier` | Increases monthly independence gain | N/A |
 | `foreign_influence_monthly_domestic_independence_gain_factor` | Factor applied to independence gain | N/A |
 
-<a id="sanctions"></a>
 ## Sanctions
 
 | Modifier | Description | Note |
 |---|---|---|
 | `sanctions_defence_modifier` | Reduces the effect of sanctions imposed on us | N/A |
 
-<a id="trade"></a>
 ## Trade
 
 Vanilla HOI4 modifiers.
@@ -37,7 +34,6 @@ Vanilla HOI4 modifiers.
 | `license_armor_purchase_cost` | Changes the cost of purchasing armor licenses | N/A |
 | `license_air_purchase_cost` | Changes the cost of purchasing air licenses | N/A |
 
-<a id="world-tension-diplomacy"></a>
 ## World Tension & Diplomacy
 
 Vanilla HOI4 modifiers.
@@ -60,7 +56,6 @@ Vanilla HOI4 modifiers.
 | `guarantee_tension` | Changes the world tension required to guarantee independence | N/A |
 | `guarantee_cost` | Changes the cost of guaranteeing independence | N/A |
 
-<a id="relations-opinion"></a>
 ### Relations & Opinion
 
 | Modifier | Description | Note |
@@ -80,7 +75,6 @@ Vanilla HOI4 modifiers.
 | `justify_war_goal_when_in_major_war_time` | Changes justification time while in a major war | N/A |
 | `enemy_justify_war_goal_time` | Changes how long it takes other countries to justify a war goal against us | N/A |
 
-<a id="subversive-activity"></a>
 ### Subversive Activity
 
 | Modifier | Description | Note |
@@ -88,7 +82,6 @@ Vanilla HOI4 modifiers.
 | `foreign_subversive_activites` | Changes the effectiveness of other countries' subversive activity against us | N/A |
 | `subversive_activites_upkeep` | Changes the upkeep cost of our own subversive activity abroad | N/A |
 
-<a id="autonomy"></a>
 ### Autonomy
 
 | Modifier | Description | Note |

@@ -42,7 +42,6 @@ description: "Модификаторы стабильности, идеолог�
 | `neutrality_acceptance` | Принятие курса нейтралов |
 | `nationalist_acceptance` | Принятие курса националистов |
 
-<a id="mdc"></a>
 ## MDC
 
 <a id="party-popularity"></a>

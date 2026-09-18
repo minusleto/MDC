@@ -22,7 +22,6 @@ Modifiers that apply at the level of a specific state rather than the whole coun
 | `state_resources_factor` | Same, but for all of the state's resources, as a percentage | N/A |
 | `temporary_state_resource_<resource>` | Temporarily changes resource output in the state | Removed separately, not permanent |
 
-<a id="economic"></a>
 ### Economic
 
 | Modifier | Description | Note |
@@ -30,7 +29,6 @@ Modifiers that apply at the level of a specific state rather than the whole coun
 | `state_productivity_growth_modifier` | State level modifier to increase/decrease the productivity growth of a state | N/A |
 | `state_monthly_population` | Monthly population growth in a specific state | N/A |
 
-<a id="energy"></a>
 ### Energy
 
 | Modifier | Description | Note |

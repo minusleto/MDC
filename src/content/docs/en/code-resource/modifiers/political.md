@@ -3,10 +3,8 @@ title: Political Modifiers
 description: "Modifiers for stability, ideology, political power, and protests"
 ---
 
-<a id="vanilla"></a>
 ## Vanilla
 
-<a id="political-power"></a>
 ### Political Power
 
 | Modifier | Description |
@@ -15,7 +13,6 @@ description: "Modifiers for stability, ideology, political power, and protests"
 | `political_power_factor` | Daily political power gain (%) |
 | `political_power_cost` | Daily political power cost |
 
-<a id="stability"></a>
 ### Stability
 
 | Modifier | Description |
@@ -25,7 +22,6 @@ description: "Modifiers for stability, ideology, political power, and protests"
 | `stability_weekly_factor` | Weekly stability gain (%) |
 | `party_popularity_stability_factor` | Stability gained from ruling party's popularity |
 
-<a id="ideology"></a>
 ### Ideology
 
 | Modifier | Description |
@@ -42,10 +38,8 @@ description: "Modifiers for stability, ideology, political power, and protests"
 | `neutrality_acceptance` | AI acceptance of the non-aligned outlook |
 | `nationalist_acceptance` | AI acceptance of the nationalist outlook |
 
-<a id="mdc"></a>
 ## MDC
 
-<a id="party-popularity"></a>
 ### Party Popularity
 
 | Modifier | Description |
@@ -53,7 +47,6 @@ description: "Modifiers for stability, ideology, political power, and protests"
 | `popularity_attack_modifier` | Modifier that increases the effectiveness of attacking political parties in the political GUI |
 | `popularity_boost_modifier` | Modifier that increases the effectiveness of boosting political parties in the political GUI |
 
-<a id="protests"></a>
 ### Protests
 
 | Modifier | Description |

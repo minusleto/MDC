@@ -18,7 +18,7 @@ There are several files you need to edit to get the parties to show up in the ga
 It is fairly straightforward, but you will need to follow the tags exactly as they are written.
 
 :::tip
-The full list of subideology slots (`party_index` 0–23, tags, names) has moved to the reference — see [Systems → Politics → Subideologies](../../systems/politics/#subideologies).
+The full list of subideology slots (`party_index` 0–23, tags, names) has moved to the reference — see [Systems → Politics → Subideologies](../systems/politics/#subideologies).
 :::
 
 _**THE HOW TO**_

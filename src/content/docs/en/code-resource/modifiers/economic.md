@@ -7,7 +7,6 @@ description: "Modifiers for economic growth, inflation, taxes, exports, company 
 
 Affect the economy, taxes, trade and productivity.
 
-<a id="vanilla"></a>
 ### Vanilla
 
 | Modifier | Description | Note |
@@ -27,7 +26,6 @@ Affect the economy, taxes, trade and productivity.
 | `production_oil_factor` | Modifies synthetic oil gain | N/A |
 | `nuclear_production_factor` | Modifies nuclear weapon production speed | N/A |
 
-<a id="general-economic"></a>
 ### General Economic
 
 | Modifier | Description | Note |
@@ -45,7 +43,6 @@ Affect the economy, taxes, trade and productivity.
 | `international_market_purchase_modifier` | Modifier to increase/decrease the cost of buying equipment from the international market | N/A |
 | `production_speed_civil_bunker_factor` | Modifies civilian bunker construction speed | Percentage |
 
-<a id="spending-cost-multipliers"></a>
 ### Spending Cost Multipliers
 
 Multipliers on the country's ongoing spending (not to be confused with the PP cost of changing a law — see `laws.md`).
@@ -64,7 +61,6 @@ Multipliers on the country's ongoing spending (not to be confused with the PP co
 | `social_cost_multiplier_modifier` | Modifies the country's welfare spending cost | N/A |
 | `border_control_multiplier_modifier` | Modifies the country's migration control spending cost | N/A |
 
-<a id="inflation"></a>
 ### Inflation
 
 All values are percentages: 1 = +100%.
@@ -78,7 +74,6 @@ All values are percentages: 1 = +100%.
 | `treasury_to_gdp_inflation_multiplier_modifier` | Effect of treasury on inflation | 1 = +100% |
 | `base_inflation_percent_modifier` | Base inflation modifier | 1 = +100% |
 
-<a id="exports-resources"></a>
 ### Exports & Resources
 
 | Modifier | Description | Note |
@@ -92,7 +87,6 @@ All values are percentages: 1 = +100%.
 | `rubber_export_multiplier_modifier` | Modifies the amount of money gained from Rubber Exports | N/A |
 | `gdp_from_resource_sector_modifier` | Modifier to increase/decrease the gdp from the resource sector | N/A |
 
-<a id="industry-productivity"></a>
 ### Industry Productivity
 
 | Modifier | Description | Note |
@@ -140,7 +134,6 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `production_speed_supply_node_factor` | Changes construction speed of supply nodes | N/A |
 | `production_speed_synthetic_refinery_factor` | Changes construction speed of renewable energy infrastructure | N/A |
 
-<a id="industry-income-taxes"></a>
 ### Industry Income Taxes
 
 | Modifier | Description | Note |
@@ -153,7 +146,6 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `civilian_industry_tax_modifier` | Modifies the amount of money gained from Civilian Industry | N/A |
 | `agriculture_tax_modifier` | Modifies the amount of money gained from Agriculture | N/A |
 
-<a id="small-businesses"></a>
 ### Small Businesses
 
 | Modifier | Description | Note |
@@ -162,7 +154,6 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `small_businesses_productivity_modifier` | Adds to the GDP small businesses can generate | N/A |
 | `small_businesses_workers_modifier` | Adds to the % of small business workers | N/A |
 
-<a id="companies-branches"></a>
 ### Companies & Branches
 
 | Modifier | Description | Note |
@@ -178,7 +169,6 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `companies_tax_gain_multiplier_modifier` | Modifies tax income from companies | + or − percentage |
 | `branches_tax_gain_multiplier_modifier` | Modifies tax income from branches | + or − percentage |
 
-<a id="campaign-costs"></a>
 ### Campaign Costs
 
 | Modifier | Description | Note |
@@ -190,7 +180,6 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `nationalist_outlook_campaign_cost_modifier` | Modifies the Nationalist Outlook campaign decision monetary cost | N/A |
 | `propaganda_campaign_cost_modifier` | Modifies all propaganda campaign decision monetary cost | N/A |
 
-<a id="investment-modifiers"></a>
 ### Investment Modifiers
 
 | Modifier | Description | Note |
@@ -203,7 +192,6 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `internal_investments_money_cost_modifier` | MModifier to increase/decrease the amount of money spent on Internal Investments | N/A |
 | `return_on_investment_modifier` | Modifies the return rate on International Investment | 0.02 will add 2% to your ROI rate |
 
-<a id="workforce-labor"></a>
 ### Workforce & Labor
 
 | Modifier | Description | Note |
@@ -220,7 +208,6 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `agriculture_district_worker_requirement_modifier` | Modifies the number of workers required by Commercialized Agriculture Districts | N/A |
 | `buildings_worker_requirement_modifier` | Modifies the number of workers required by all buildings | N/A |
 
-<a id="upgrade-special-costs"></a>
 ### Upgrade & Special Costs
 
 | Modifier | Description | Note |

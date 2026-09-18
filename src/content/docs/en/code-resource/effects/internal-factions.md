@@ -5,9 +5,8 @@ description: "Internal faction effects and commands"
 
 ## MDC Internal Faction Effects
 
-These effects **change** faction opinion. To **check** the current opinion level (hostile/negative/indifferent/positive/enthusiastic) instead — see [Triggers → Internal Factions](../../triggers/internal-factions/).
+These effects **change** faction opinion. To **check** the current opinion level (hostile/negative/indifferent/positive/enthusiastic) instead — see [Triggers → Internal Factions](../triggers/internal-factions/).
 
-<a id="how-it-works"></a>
 ### How It Works
 
 Every faction has a hidden **opinion** variable (`<faction>_opinion`) on a **0–100** scale, defaulting to **50** (neutral). It's set up automatically as soon as the country has the matching national idea — without the idea, the country doesn't have that faction at all.
@@ -59,7 +58,6 @@ else_if = {
 
 **You do not need to list every possible faction.** In a law, it is enough to handle the factions that can realistically be present under its conditions — see the [full faction list](#faction-list) below for all the idea tags. Unique or country-specific factions should only be added when the law can actually encounter them.
 
-<a id="faction-list"></a>
 ### Faction List
 
 | Category | Idea (tag) | Opinion-change effect | What the dynamic modifier affects |

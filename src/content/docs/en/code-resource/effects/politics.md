@@ -23,7 +23,6 @@ add_war_support = 0.05
 ```
 Add war support (decimal, 0.05 = +5%; negative value subtracts).
 
-<a id="ideology-popularity"></a>
 ### Ideology Popularity
 
 ```
@@ -65,7 +64,7 @@ set_temp_variable = { temp_outlook_increase = 0.10 }
 add_relative_party_popularity = yes
 ```
 
-📋 [List of all parties](../../systems/politics/#subideologies) — full table of `party_index` values (0–23) with all subideologies.
+📋 [List of all parties](../systems/politics/#subideologies) — full table of `party_index` values (0–23) with all subideologies.
 
 _**Modify Ruling Outlook Popularity:**_
 
@@ -149,7 +148,6 @@ set_country_flag = free_ban_parties # Set this if you don't want a PP cost
 set_partyall_banned = yes # Bans all the parties
 ```
 
-<a id="protests"></a>
 ## Protests
 
 ### Protest Strength

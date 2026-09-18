@@ -173,7 +173,6 @@ Each of the 85 historical/geographic regions has a matching pair of triggers:
 
 ⚠️ Two mismatches between the lists: `is_caribbean_island_states` has no `_owned` counterpart (the Caribbean is split among too many owners for that to be meaningful), and the USA has an extra `is_usa_state_mainland_owned` — a variant covering only the continental US, excluding overseas territories (Alaska, Puerto Rico, etc. don't count).
 
-<a id="continents"></a>
 ## Continents
 
 | Trigger | Condition |
@@ -188,7 +187,6 @@ Each of the 85 historical/geographic regions has a matching pair of triggers:
 
 ⚠️ **Possible inconsistency**: `is_in_oceania` uses the `oceania` continent, but `PREV_is_on_same_continent`/`PREV_is_not_on_same_continent` instead compare the `australia` continent — meaning these two triggers effectively don't know Oceania exists as its own continent, and may misjudge "same continent" for Pacific island nations. This might be worth unifying under one continent name.
 
-<a id="country-groups"></a>
 ## Country groups
 
 A mixed bag — geographic, linguistic, and thematic/lore groups.
@@ -240,7 +238,6 @@ A mixed bag — geographic, linguistic, and thematic/lore groups.
 | `mediterranean_tags` | Not really a trigger in the usual sense — a list of Mediterranean tags used for AI purposes |
 | `ROOT_and_THIS_are_in_the_same_group` | ROOT and THIS belong to the same named country group (used as a generic check) |
 
-<a id="arctic"></a>
 ## Arctic
 
 The Arctic system divides the map into ~19 numbered zones (0–18) with its own adjacency table (which zone borders which) and global arrays `global.arctic_controllers` (who controls the zone), `global.arctic_military` (whether there's a military base), `global.arctic_unit_strngth`/`global.arctic_unit_org` (troops present in the zone).

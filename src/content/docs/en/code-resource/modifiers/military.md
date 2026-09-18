@@ -67,7 +67,6 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `amphibious_invasion` | Naval invasion execution speed |
 | `invasion_preparation` | Naval invasion preparation time |
 
-<a id="carriers"></a>
 ### Carriers
 
 | Modifier | Description |
@@ -129,7 +128,6 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `surrender_limit` | Modifies the % of capitals/VPs that must be lost to force surrender | N/A |
 | `ammo_consumption_modifier` | Modifies ammo consumption of troops | N/A |
 
-<a id="military-bases"></a>
 ### Military Bases
 
 | Modifier | Description | Note |

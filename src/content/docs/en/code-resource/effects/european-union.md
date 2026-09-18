@@ -5,7 +5,6 @@ description: "EU and Euroscepticism effects"
 
 ## MDC European Union Effects
 
-<a id="euroscepticism-effects"></a>
 ### Euroscepticism Effects
 
 To add/remove Euroscepticism all you need to do is:

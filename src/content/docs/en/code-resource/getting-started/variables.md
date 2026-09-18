@@ -7,7 +7,6 @@ description: "Basic variable usage"
 
 There are a ton interesting and fun things you can accomplish using simple variables and other forms of variables that arent entirely possible using only in-game values. Variables open up a whole new world in terms of gameplay and design that is normally undervalued in a game that its primary focus is the military aspect.
 
-<a id="basic-commands-for-variables"></a>
 #### Basic Commands for Variables
 
 #set_variable = { var = example value = 1 } - Sets the Variable (can be used anywhere executing a script) to a value and also sets a variable with a name. Creates the variable if it doesnt exist before, OR sets it to a new value if already present somewhere.
@@ -16,7 +15,6 @@ There are a ton interesting and fun things you can accomplish using simple varia
 
 You can also multiple, divide, round, and a few other functions depending on the situation you are using the variables.
 
-<a id="basic-setting-example"></a>
 #### Basic Setting Example:
 
 Example:

@@ -3,7 +3,7 @@ title: Cartels
 description: "Scripted triggers for the MDC drug cartel system."
 ---
 
-Just 2 triggers — the cartel system itself (strength, influence) is covered in [Effects → Cartels](../../effects/unique/#cartels).
+Just 2 triggers — the cartel system itself (strength, influence) is covered in [Effects → Cartels](../effects/unique/#cartels).
 
 ```
 has_cartels_penalties = yes

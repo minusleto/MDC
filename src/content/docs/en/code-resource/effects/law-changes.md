@@ -16,7 +16,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 
 <hr/>
 
-<a id="civil-freedom-laws"></a>
 ## Civil Freedom Laws
 
 <a id="censorship-laws"></a>
@@ -84,7 +83,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 <a id="demographics-and-birth"></a>
 ## Demographics
 
-<a id="demographics"></a>
 ### Population Pyramid
 
 | Effect | Tier |
@@ -93,7 +91,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 | `set_population_pyramid_2 = yes` | Stable Population Pyramid |
 | `set_population_pyramid_3 = yes` | Shrinking Population Pyramid |
 
-<a id="birth-policy"></a>
 ### Birth Policy
 
 | Effect | Tier |
@@ -102,7 +99,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 | `set_no_birth_control = yes` | No Birth Control |
 | `set_discourage_birth = yes` | Discourage Birth |
 
-<a id="abortion-policy"></a>
 ### Abortion Policy
 
 | Effect | Tier |
@@ -113,7 +109,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 
 <hr/>
 
-<a id="military-laws"></a>
 ## Military Laws
 
 <a id="weapons"></a>
@@ -125,7 +120,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 | `set_allow_weapons = yes` | Allow Private Ownership |
 | `set_regulate_weapons = yes` | Regulate Weapons |
 
-<a id="conscription-law"></a>
 ### Conscription Law
 
 | Effect | Tier |
@@ -146,7 +140,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 | `set_volunteer_women_effect` | Volunteer Women |
 | `set_drafted_women_effect` | Drafted Women |
 
-<a id="interventionism"></a>
 ### Interventionism
 
 | Effect | Action |
@@ -158,7 +151,6 @@ Each category below is an idea group with several tiers. The matching `set_*` ef
 
 Full source-idea scale: `intervention_isolation` → `intervention_local_security` → `intervention_limited_interventionism` → `intervention_regional_interventionism` → `intervention_global_interventionism` → `intervention_neo_imperialism`.
 
-<a id="officer-training"></a>
 ### Officer Training
 
 | Effect | Action |
@@ -172,7 +164,6 @@ When increasing to international education, the transition is available if the c
 
 <hr/>
 
-<a id="economic-laws"></a>
 ## Economic Laws
 
 Laws that govern government spending (bureaucracy, social spending, education, healthcare, policing budgets), plus the trade, military spending, and migration laws.
@@ -216,7 +207,6 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `decrease_healthcare_budget_2 = yes` | Decrease healthcare spending (level 2) |
 | `max_healthcare_budget = yes` | Maximise healthcare spending |
 
-<a id="social-spending"></a>
 ### Social Spending
 
 | Effect | Application |
