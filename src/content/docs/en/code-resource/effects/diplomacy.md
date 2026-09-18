@@ -20,7 +20,7 @@ add_opinion_modifier = {
 }
 ```
 
-`target` — the country whose opinion is changed. `modifier` — имя модификатора мнения из `common/opinion_modifiers`.
+`target` — the country whose opinion is changed. `modifier` — the opinion modifier's name from `common/opinion_modifiers`.
 
 ### Remove an opinion modifier
 
@@ -80,7 +80,7 @@ diplomatic_relation = {
 }
 ```
 
-Чтобы отменить отношение, используется тот же эффект с `active = no`:
+To cancel a relation, use the same effect with `active = no`:
 
 ```txt
 diplomatic_relation = {
@@ -92,7 +92,7 @@ diplomatic_relation = {
 
 ## Influence
 
-Процентное изменение задаётся целым числом: например, `10` = +10%, `-10` = -10%.
+The percentage change is given as a whole number: e.g. `10` = +10%, `-10` = -10%.
 
 ### Domestic Influence
 
@@ -112,7 +112,7 @@ set_temp_variable = { percent_change = -10 }
 change_domestic_influence_percentage = yes
 ```
 
-Эффект использует временную переменную `percent_change`. Значение задаётся непосредственно числом без знаков-заполнителей.
+The effect uses the `percent_change` temp variable. The value is set directly as a number, with no placeholder signs.
 
 ### Foreign-Side Influence
 
@@ -120,15 +120,15 @@ This group controls **foreign influence**: it can change a specific side's influ
 
 #### Change the foreign influence percentage
 
-Для `change_influence_percentage` задаются три временные переменные:
+`change_influence_percentage` takes three temp variables:
 
 - `percent_change` — influence change in percent;
 - `tag_index` — index of the influencing side;
 - `influence_target` — country being influenced.
 
-Поддерживаемые скоупы для `tag_index` и `influence_target`: `FROM`, `ROOT`, `PREV`, `TAG` и другие стандартные скоупы, когда они указывают на нужный тег/страну.
+Supported scopes for `tag_index` and `influence_target`: `FROM`, `ROOT`, `PREV`, `TAG`, and other standard scopes, as long as they point to the right tag/country.
 
-#### Пример: increase FROM's influence on ROOT by 10%
+#### Example: increase FROM's influence on ROOT by 10%
 
 ```txt
 set_temp_variable = { percent_change = 10 }
@@ -137,7 +137,7 @@ set_temp_variable = { influence_target = ROOT }
 change_influence_percentage = yes
 ```
 
-#### Пример: decrease FROM's influence on ROOT by 10%
+#### Example: decrease FROM's influence on ROOT by 10%
 
 ```txt
 set_temp_variable = { percent_change = -10 }
@@ -147,7 +147,7 @@ change_influence_percentage = yes
 ```
 
 :::caution
-Если у 7-й влияющей стороны уже больше влияния, чем величина вашего `percent_change`, целевая страна может получить прирост внутреннего влияния вместо прироста влияния вашей стороны. Например, если у 7-й стороны 5%, а изменение составляет 3%, вместо прироста вашего влияния целевая страна получает внутреннее влияние.
+If the 7th influencing side already has more influence than your `percent_change` amount, the target country may gain domestic influence instead of your side gaining influence. For example, if the 7th side has 5% and the change is 3%, the target country gains domestic influence instead of your influence increasing.
 :::
 
 ### Change the current influencer index
@@ -160,10 +160,10 @@ set_temp_variable = { influencer_index = 3 }
 change_current_influencer_index_percentage = yes
 ```
 
-`influencer_index` принимает индекс влияющей стороны в диапазоне `0`–`6`.
+`influencer_index` takes the influencing side's index, in the range `0`–`6`.
 
 :::note
-Индекс `0`–`6` выбирает конкретную позицию в списке влияющих сторон. Если тебе нужно изменить именно процент влияния между двумя странами, используй `change_influence_percentage`.
+The `0`–`6` index picks a specific position in the list of influencing sides. If you need to change the influence percentage between two specific countries instead, use `change_influence_percentage`.
 :::
 
 ## Sanctions and Embargoes
@@ -185,8 +185,26 @@ break_embargo = ROOT
 ```
 
 :::note
-`break_embargo` должен выполняться со стороны страны, которая наложила эмбарго.
+`break_embargo` must be executed by the country that imposed the embargo.
 :::
+
+### Preparing sanctions (per target)
+
+Before actually applying sanctions, a country sets itself a temporary marker flag — "sanctions against this specific target are prepared" — using a dynamic flag name with the target's tag via `@`:
+
+```
+FRA = {
+	set_country_flag = {
+		flag = sanctions_prepared@NIG
+		value = 1
+		days = 365
+	}
+}
+```
+
+Here France gets the `sanctions_prepared@NIG` flag — "sanctions against Nigeria are prepared" — lasting 365 days (`value = 1` just marks the flag as set). Swap in the target's tag instead of `NIG` so the flag is specific to that country — the `@TAG` suffix makes it unique per sanctioning-country/target pair rather than a single flag for the whole country.
+
+Checked with a plain `has_country_flag = sanctions_prepared@NIG` (see [Basics](../../triggers/basic/) for flag syntax).
 
 ## Diplomatic Restrictions
 
