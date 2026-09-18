@@ -33,7 +33,3 @@ clamp_variable = {
     max = 100
 }
 ```
-
-:::note
-These are effects for countries that support terrorism.
-:::
