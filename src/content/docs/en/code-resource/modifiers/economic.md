@@ -214,6 +214,7 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Modifies the economic cycle upgrade cost | N/A |
 | `leased_civilian_factories_cost_modifier` | Modifies the cost of leased civilian factories | + or − percentage |
+| `leased_civilian_factories_income_modifier` | Modifies the income from leased-out civilian factories | + or − percentage |
 | `leased_military_factories_cost_modifier` | Modifies the cost of leased military factories | + or − percentage |
 | `leased_dockyards_cost_modifier` | Modifies the cost of leased dockyards | + or − percentage |
 

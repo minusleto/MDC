@@ -227,5 +227,6 @@ description: "Модификаторы роста экономики, инфля
 |---|---|---|
 | `econ_cycle_upg_cost_multiplier_modifier` | Меняет стоимость улучшения экон. цикла | Н/Д |
 | `leased_civilian_factories_cost_modifier` | Меняет стоимость аренды гражданских фабрик | + или − в процентах |
+| `leased_civilian_factories_income_modifier` | Меняет доход от сданных в аренду гражданских фабрик | + или − в процентах |
 | `leased_military_factories_cost_modifier` | Меняет стоимость аренды военных фабрик | + или − в процентах |
 | `leased_dockyards_cost_modifier` | Меняет стоимость аренды верфей | + или − в процентах |
