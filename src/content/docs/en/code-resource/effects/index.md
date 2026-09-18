@@ -10,7 +10,7 @@ description: "Reference for MDC scripted effects."
 - [Technology](./technology/) — Technology-related effects
 - [Military](./military/) — Military scripted effects: divisions, commanders, equipment, and MIO
 - [Internal Factions](./internal-factions/) — Internal faction effects and commands
-- [Foreign Influence](./influence/) — Foreign Influence system effects
+- [Diplomacy](./diplomacy/) — Diplomatic effects, opinion, influence, and sanctions
 - [Politics](./politics/) — Political effects and party management
 - [Law Changes](./law-changes/) — Civil freedoms (censorship, assembly, internet, religion, LGBT, trade unions), demographics and birth policy, military laws (weapons, conscription, interventionism, officer training), economic laws
 - [Separatism & Terrorism](./terrorism/) — Separatism level by region, radicalization, and terrorist threat effects
