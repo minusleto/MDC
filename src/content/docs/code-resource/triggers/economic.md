@@ -26,7 +26,7 @@ description: "Скриптовые триггеры экономической �
 
 Пример использования в `available`:
 
-```hoi4
+```txt
 available = {
     custom_trigger_tooltip = {
         tooltip = 2_per_capita_or_more_tt
@@ -55,7 +55,7 @@ available = {
 
 Пример использования:
 
-```hoi4
+```txt
 available = {
     custom_trigger_tooltip = {
         tooltip = 200_total_gdp_tt

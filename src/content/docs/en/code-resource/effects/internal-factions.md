@@ -32,7 +32,7 @@ When changing the main faction, do not simply use `add_idea` or an unconditional
 
 A practical pattern is an `if` / `else_if` chain using `has_idea` and `swap_ideas`:
 
-```hoi4
+```txt
 if = {
     limit = { has_idea = labour_unions }
     swap_ideas = {

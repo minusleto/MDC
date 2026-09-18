@@ -26,7 +26,7 @@ These tooltips show a requirement of "more than N thousand GDP per capita" and t
 
 Example in `available`:
 
-```hoi4
+```txt
 available = {
     custom_trigger_tooltip = {
         tooltip = 2_per_capita_or_more_tt
@@ -55,7 +55,7 @@ These tooltips show a requirement of "more than N billion Total GDP" and the cur
 
 Example:
 
-```hoi4
+```txt
 available = {
     custom_trigger_tooltip = {
         tooltip = 200_total_gdp_tt
