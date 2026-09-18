@@ -4,11 +4,11 @@ description: "Technology research effects."
 ---
 
 <a id="add-tech-bonus"></a>
-## `add_tech_bonus`
+## Grant a technology research bonus
 
 Grants the country a **limited-use bonus to technology research**. The bonus can target either specific technologies via `technology`, or a technology category via `category`.
 
-### Parameters
+### Effect parameters
 
 | Parameter | What it does |
 |---|---|
@@ -36,7 +36,7 @@ add_tech_bonus = {
 
 Here the country gets **2 uses of a +50% bonus**, spendable on any two of the listed technologies.
 
-### Bonus for a category
+### Bonus for a technology category
 
 Instead of a list of specific technologies, you can specify `category`:
 
@@ -50,7 +50,7 @@ add_tech_bonus = {
 
 Since `uses` is not specified, this bonus gets **1 use**. It can be spent once on any matching technology in the given category.
 
-### `ahead_reduction`
+### Reducing the ahead-of-time penalty
 
 `ahead_reduction` is not an extra percentage of research speed. It reduces the **penalty for researching a technology ahead of its historical date** by the given number of years.
 
@@ -81,7 +81,7 @@ add_tech_bonus = {
 
 One use can be spent on either **+50% research speed**, or **reducing the ahead-of-time penalty by 1 year**. These are not permanent country modifiers.
 
-### `bonus` and `ahead_reduction` together
+### Research bonus and penalty reduction together
 
 Both parameters can be specified in one `add_tech_bonus`. They describe **two types of benefit for the same research bonus**, not permanent country modifiers.
 
@@ -98,7 +98,7 @@ add_tech_bonus = {
 Here one use gives either **+100% research speed**, or **a 1-year reduction of the ahead-of-time penalty** for a matching technology.
 
 <a id="category-and-technology"></a>
-## `category` and `technology`
+## Bonus scope: category and technology
 
 `category` picks a group of technologies, while `technology` picks specific technologies. Both parameters can be used to restrict what the bonus can be spent on.
 
