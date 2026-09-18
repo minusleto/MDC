@@ -12,8 +12,7 @@ description: "Reference for MDC scripted effects."
 - [Internal Factions](./internal-factions/) — Internal faction effects and commands
 - [Foreign Influence](./influence/) — Foreign Influence system effects
 - [Politics](./politics/) — Political effects and party management
-- [Law Changes](./law-changes/) — Civil freedoms (censorship, assembly, internet, religion, LGBT, trade unions), demographics and birth policy, weapons, economic laws
-- [Military Laws](./military-laws/) — Weapons, conscription, women's conscription, interventionism, officer training
+- [Law Changes](./law-changes/) — Civil freedoms (censorship, assembly, internet, religion, LGBT, trade unions), demographics and birth policy, military laws (weapons, conscription, interventionism, officer training), economic laws
 - [Separatism & Terrorism](./terrorism/) — Separatism level by region, radicalization, and terrorist threat effects
 - [European Union](./european-union/) — EU and Euroscepticism effects
 - [Energy](./energy/) — Energy scripted effects
