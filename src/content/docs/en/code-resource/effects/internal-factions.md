@@ -60,31 +60,31 @@ else_if = {
 
 ### Faction List
 
-| Category | Idea (tag) | Opinion-change effect | What the dynamic modifier affects |
-|---|---|---|---|
-| Economic | `small_medium_business_owners` | `change_small_medium_business_owners_opinion` | Stability, consumer goods cost, civilian factory productivity, income tax |
-| Economic | `international_bankers` | `change_international_bankers_opinion` | Political power gain, local resources, trade opinion, democratic acceptance/drift, investment cost/duration, office park tax |
-| Economic | `fossil_fuel_industry` | `change_fossil_fuel_industry_opinion` | Local resources, fuel gain, war-goal justification time, oil export, fuel silo construction speed |
-| Economic | `industrial_conglomerates` | `change_industrial_conglomerates_opinion` | Local resources, communism acceptance/drift, civilian industry tax |
-| Economic | `oligarchs` | `change_oligarchs_opinion` | Local resources, communism acceptance/drift |
-| Militaristic | `maritime_industry` | `change_maritime_industry_opinion` | Dockyard speed/productivity, navy max range, dockyard tax |
-| Militaristic | `defense_industry` | `change_defense_industry_opinion` | Military factory speed/productivity, factory efficiency, military industry tax |
-| Militaristic | `the_military` | `change_the_military_opinion` | Army org and morale, training time, air base construction speed, personnel cost |
-| Militaristic | `intelligence_community` | `change_intelligence_community_opinion` | Decryption/encryption (without La Resistance DLC) or branch-specific intel (with DLC), radar, foreign influence |
-| Special Interest | `labour_unions` | `change_labour_unions_opinion` | Factory efficiency, political power gain, healthcare, social spending |
-| Special Interest | `landowners` | `change_landowners_opinion` | Local resources, conscription, political power gain, office park tax |
-| Special Interest | `farmers` | `change_farmers_opinion` | Conscription, consumer goods cost, monthly population growth, productivity, tax, agriculture district construction speed |
-| Special Interest | `communist_cadres` | `change_communist_cadres_opinion` | Army org regain, consumer goods cost, core defense, mobilization speed, bureaucracy cost |
-| Religious | `the_priesthood` | `change_the_priesthood_opinion` | Stability, monthly population, political power, education cost |
-| Religious | `the_ulema` | `change_the_ulema_opinion` | Stability, monthly population, political power, education cost |
-| Religious | `the_clergy` | `change_the_clergy_opinion` | Stability, monthly population, political power, education cost |
-| Religious | `wahabi_ulema` | `change_the_wahabi_ulema_opinion` | Stability, population, political power, fascism drift, education cost |
-| Nation-specific | `the_donju` (North Korea) | `change_the_donju_opinion` | Civilian factory/infrastructure speed, stability, consumer goods cost |
-| Nation-specific | `saudi_royal_family` (Gulf states) | `change_saudi_royal_family_opinion` | Political power, ideology-drift defense, stability |
-| Nation-specific | `iranian_quds_force` (Iran, includes IRGC) | `change_iranian_quds_force_opinion` | Communism drift, offense influence |
-| Nation-specific | `foreign_jihadis` | `change_foreign_jihadis_opinion` | Fascism drift, non-core manpower, special forces cap |
-| Nation-specific | `chaebols` (South Korea) | `change_chaebols_opinion` | Political power, infrastructure, local resources |
-| Nation-specific | `wall_street` (USA) | `change_wall_street_opinion` | Local resources, trade opinion, political power, office park tax, investment cost/duration; also moves the `USA_strength_of_wall_street_var` variable |
+| Category | Idea (tag) | Opinion-change effect |
+|---|---|---|
+| Economic | `small_medium_business_owners` | `change_small_medium_business_owners_opinion` |
+| Economic | `international_bankers` | `change_international_bankers_opinion` |
+| Economic | `fossil_fuel_industry` | `change_fossil_fuel_industry_opinion` |
+| Economic | `industrial_conglomerates` | `change_industrial_conglomerates_opinion` |
+| Economic | `oligarchs` | `change_oligarchs_opinion` |
+| Militaristic | `maritime_industry` | `change_maritime_industry_opinion` |
+| Militaristic | `defense_industry` | `change_defense_industry_opinion` |
+| Militaristic | `the_military` | `change_the_military_opinion` |
+| Militaristic | `intelligence_community` | `change_intelligence_community_opinion` |
+| Special Interest | `labour_unions` | `change_labour_unions_opinion` |
+| Special Interest | `landowners` | `change_landowners_opinion` |
+| Special Interest | `farmers` | `change_farmers_opinion` |
+| Special Interest | `communist_cadres` | `change_communist_cadres_opinion` |
+| Religious | `the_priesthood` | `change_the_priesthood_opinion` |
+| Religious | `the_ulema` | `change_the_ulema_opinion` |
+| Religious | `the_clergy` | `change_the_clergy_opinion` |
+| Religious | `wahabi_ulema` | `change_the_wahabi_ulema_opinion` |
+| Nation-specific | `the_donju` (North Korea) | `change_the_donju_opinion` |
+| Nation-specific | `saudi_royal_family` (Gulf states) | `change_saudi_royal_family_opinion` |
+| Nation-specific | `iranian_quds_force` (Iran, includes IRGC) | `change_iranian_quds_force_opinion` |
+| Nation-specific | `foreign_jihadis` | `change_foreign_jihadis_opinion` |
+| Nation-specific | `chaebols` (South Korea) | `change_chaebols_opinion` |
+| Nation-specific | `wall_street` (USA) | `change_wall_street_opinion` |
 
 <a id="bulk-and-utility-effects"></a>
 ### Utility Effects
