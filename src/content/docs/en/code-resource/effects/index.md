@@ -14,8 +14,7 @@ description: "Reference for MDC scripted effects."
 - [Politics](./politics/) — Political effects and party management
 - [Law Changes](./law-changes/) — Civil freedoms (censorship, assembly, internet, religion, LGBT, trade unions), demographics and birth policy, weapons, economic laws
 - [Military Laws](./military-laws/) — Weapons, conscription, women's conscription, interventionism, officer training
-- [Terrorism](./terrorism/) — Radicalization and terrorist threat effects
-- [Separatism](./separatism/) — Separatism level in world regions
+- [Separatism & Terrorism](./terrorism/) — Separatism level by region, radicalization, and terrorist threat effects
 - [European Union](./european-union/) — EU and Euroscepticism effects
 - [Energy](./energy/) — Energy scripted effects
 - [Departments & Companies](./companies/) — Tooltips for new departments, companies, and branches
