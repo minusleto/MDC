@@ -42,6 +42,64 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `training_time_army_factor` / `training_time_factor` | Time to train new divisions (the first is army-only, the second is general) |
 | `non_core_manpower` | Share of manpower available on non-core territory |
 
+<a id="naval-combat"></a>
+### Combat (naval)
+
+| Modifier | Description |
+|---|---|
+| `naval_speed_factor` | Ship speed |
+| `naval_hit_chance` | Chance to hit in combat |
+| `naval_coordination` | Fleet coordination |
+| `naval_morale` / `naval_morale_factor` | Fleet morale (flat / %) |
+| `naval_retreat_chance` / `naval_retreat_speed` | Fleet retreat chance and speed |
+| `ships_at_battle_start` | Number of ships entering combat on first contact |
+| `spotting_chance` | Chance to spot enemy ships |
+| `navy_anti_air_attack` / `navy_anti_air_attack_factor` | Fleet anti-air attack (flat / %) |
+| `navy_capital_ship_attack_factor` / `navy_capital_ship_defence_factor` | Capital ship attack/defence |
+| `navy_screen_attack_factor` / `navy_screen_defence_factor` | Screen ship attack/defence |
+| `navy_submarine_attack_factor` / `navy_submarine_defence_factor` | Submarine attack/defence |
+| `navy_submarine_detection_factor` | Chance to detect enemy submarines |
+| `convoy_raiding_efficiency_factor` | Convoy raiding efficiency |
+| `naval_torpedo_hit_chance_factor` | Torpedo hit chance |
+| `naval_torpedo_cooldown_factor` | Torpedo reload time |
+| `naval_mine_hit_chance` / `naval_mines_damage_factor` | Mine hit chance and damage |
+| `naval_invasion_capacity` / `naval_invasion_penalty` | Naval invasion capacity and penalty |
+| `amphibious_invasion` | Naval invasion execution speed |
+| `invasion_preparation` | Naval invasion preparation time |
+
+<a id="carriers"></a>
+### Carriers
+
+| Modifier | Description |
+|---|---|
+| `navy_carrier_air_attack_factor` | Carrier-based aircraft attack |
+| `navy_carrier_air_agility_factor` | Carrier-based aircraft agility |
+| `navy_carrier_air_targetting_factor` | Carrier-based aircraft targeting |
+| `air_carrier_night_penalty_reduction_factor` | Reduces the night penalty for carrier aircraft |
+| `carrier_capacity_penalty_reduction` | Reduces the overcrowding penalty for carrier aircraft |
+| `carrier_traffic` / `carrier_night_traffic` | Carrier throughput (general / at night) |
+| `sortie_efficiency` / `fighter_sortie_efficiency` | Aircraft refuel/rearm speed on a carrier (general / fighters) |
+
+<a id="air-combat"></a>
+### Combat (air)
+
+| Modifier | Description |
+|---|---|
+| `air_accidents_factor` | Chance of air accidents |
+| `air_night_penalty` | Penalty for night sorties |
+| `air_weather_penalty` | Penalty for bad weather |
+| `army_bonus_air_superiority_factor` | Bonus to land troops from air superiority |
+| `enemy_army_bonus_air_superiority_factor` | Same, for the enemy |
+| `air_interception_attack_factor` / `_defence_factor` / `_agility_factor` | Attack/defence/agility for interception missions |
+| `air_air_superiority_attack_factor` / `_defence_factor` / `_agility_factor` | Same, for air superiority missions |
+| `air_close_air_support_attack_factor` / `_defence_factor` / `_agility_factor` | Same, for close air support (CAS) |
+| `air_strategic_bomber_attack_factor` / `_defence_factor` / `_agility_factor` / `_bombing_factor` | Same, for strategic bombers (including bombing effectiveness) |
+| `air_cas_present_factor` | Tactical bombing effectiveness |
+| `naval_strike_attack_factor` / `_targetting_factor` / `_agility_factor` | Attack/targeting/agility for naval strikes from the air |
+| `air_paradrop_attack_factor` / `_defence_factor` / `_agility_factor` | Same, for paradropped troops |
+| `air_ace_generation_chance_factor` | Chance of aces appearing |
+| `experience_gain_air` / `experience_gain_air_factor` | Air experience gain (flat / %) |
+
 <a id="intelligence"></a>
 ### Intelligence and decryption
 
