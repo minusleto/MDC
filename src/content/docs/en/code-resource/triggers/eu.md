@@ -5,7 +5,7 @@ description: "MDC's EU system triggers: influence, leadership, euroscepticism, v
 
 ## Party voting blocs
 
-Determine which ideological camp a country's ruling party belongs to for EU voting purposes (party numbers match the [subideology table](../systems/politics/#subideologies)):
+Determine which ideological camp a country's ruling party belongs to for EU voting purposes (party numbers match the [subideology table](../../systems/politics/#subideologies)):
 
 | Trigger | Parties (by number) |
 |---|---|

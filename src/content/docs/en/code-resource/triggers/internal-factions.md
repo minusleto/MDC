@@ -5,7 +5,7 @@ description: "Opinion-check triggers for MDC's internal factions"
 
 ## Faction opinion triggers
 
-These triggers **check** faction opinion. To **change** it instead — see [Effects → Internal Factions](../effects/internal-factions/).
+These triggers **check** faction opinion. To **change** it instead — see [Effects → Internal Factions](../../effects/internal-factions/).
 
 Each of MDC's 23 internal factions has a `<faction>_opinion` variable (0–100) and a ready-made set of 6 triggers to check it without a manual `check_variable`:
 
