@@ -13,7 +13,13 @@ Affect the economy, taxes, trade and productivity.
 |---|---|---|
 | `monthly_population` | Modifies monthly population growth in states | N/A |
 | `consumer_goods_factor` | Modifies the share of factories used for consumer goods | Stacks multiplicatively, see HOI4 wiki |
-| `local_resources_factor` | Modifies extraction efficiency of **all** resources at once, as a percentage | For a specific resource, use `state_resource_<resource>` / `state_resources_factor` — see [Regional Modifiers](../regional/#vanilla) |
+| `local_resources_factor` | Modifies extraction efficiency of **all** resources at once, as a percentage | For a specific resource, use `local_resources_<resource>_factor` (country, below) or `state_resource_<resource>` (state) — see [Regional Modifiers](../regional/#vanilla) |
+| `local_resources_oil_factor` | Modifies country-wide oil extraction efficiency, as a percentage | Country-scope, not regional |
+| `local_resources_aluminium_factor` | Modifies country-wide aluminium extraction efficiency, as a percentage | Country-scope, not regional |
+| `local_resources_rubber_factor` | Modifies country-wide rubber extraction efficiency, as a percentage | Country-scope, not regional |
+| `local_resources_tungsten_factor` | Modifies country-wide tungsten extraction efficiency, as a percentage | Country-scope, not regional |
+| `local_resources_steel_factor` | Modifies country-wide steel extraction efficiency, as a percentage | Country-scope, not regional |
+| `local_resources_chromium_factor` | Modifies country-wide chromium extraction efficiency, as a percentage | Country-scope, not regional |
 | `country_resource_<resource>` | Adds a flat amount of a specific resource to the country's stockpile (e.g. `country_resource_steel`) | Confirmed by official Paradox modifier documentation |
 | `research_speed_factor` | Modifies research speed | N/A |
 | `industrial_capacity_factory` | Modifies military factory output | N/A |
