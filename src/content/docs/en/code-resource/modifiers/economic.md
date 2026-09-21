@@ -13,7 +13,8 @@ Affect the economy, taxes, trade and productivity.
 |---|---|---|
 | `monthly_population` | Modifies monthly population growth in states | N/A |
 | `consumer_goods_factor` | Modifies the share of factories used for consumer goods | Stacks multiplicatively, see HOI4 wiki |
-| `local_resources_factor` | Modifies the efficiency of local resource gathering | N/A |
+| `local_resources_factor` | Modifies extraction efficiency of **all** resources at once, as a percentage | For a specific resource, use `state_resource_<resource>` / `state_resources_factor` — see [Regional Modifiers](../regional/#vanilla) |
+| `country_resource_<resource>` | Adds a flat amount of a specific resource to the country's stockpile (e.g. `country_resource_steel`) | Confirmed by official Paradox modifier documentation |
 | `research_speed_factor` | Modifies research speed | N/A |
 | `industrial_capacity_factory` | Modifies military factory output | N/A |
 | `industrial_capacity_dockyard` | Modifies dockyard output | N/A |
