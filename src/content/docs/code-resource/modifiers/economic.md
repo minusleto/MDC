@@ -140,6 +140,34 @@ description: "Модификаторы роста экономики, инфля
 | `production_speed_supply_node_factor` | Меняет скорость строительства узлов снабжения | Н/Д |
 | `production_speed_synthetic_refinery_factor` | Меняет скорость строительства инфраструктуры возобновляемых источников энергии | Н/Д |
 
+<a id="production-cost-buildings"></a>
+### Стоимость строительства по типу здания
+
+В отличие от скорости, эти модификаторы меняют саму IC-стоимость постройки конкретного типа (сколько "молотков" нужно потратить), а не то, как быстро она строится.
+
+| Модификатор | Описание | Примечание |
+|---|---|---|
+| `production_cost_agriculture_district_factor` | Меняет стоимость строительства с/х районов | Н/Д |
+| `production_cost_air_base_factor` | Меняет стоимость строительства аэродромов | Н/Д |
+| `production_cost_anti_air_building_factor` | Меняет стоимость строительства построек ПВО | Н/Д |
+| `production_cost_arms_factory_factor` | Меняет стоимость строительства военных фабрик | Н/Д |
+| `production_cost_bunker_factor` | Меняет стоимость строительства бункеров | Н/Д |
+| `production_cost_coastal_bunker_factor` | Меняет стоимость строительства береговых бункеров | Н/Д |
+| `production_cost_dockyard_factor` | Меняет стоимость строительства верфей | Н/Д |
+| `production_cost_fossil_powerplant_factor` | Меняет стоимость строительства топливных электростанций | Н/Д |
+| `production_cost_fuel_silo_factor` | Меняет стоимость строительства топливных хранилищ | Н/Д |
+| `production_cost_industrial_complex_factor` | Меняет стоимость строительства гражданских фабрик | Н/Д |
+| `production_cost_infrastructure_factor` | Меняет стоимость строительства инфраструктуры | Н/Д |
+| `production_cost_internet_station_factor` | Меняет стоимость строительства сетевой инфраструктуры | Н/Д |
+| `production_cost_naval_base_factor` | Меняет стоимость строительства военно-морских баз | Н/Д |
+| `production_cost_nuclear_reactor_factor` | Меняет стоимость строительства ядерных реакторов | Н/Д |
+| `production_cost_offices_factor` | Меняет стоимость строительства офисных комплексов | Н/Д |
+| `production_cost_radar_station_factor` | Меняет стоимость строительства радарных станций | Н/Д |
+| `production_cost_rail_way_factor` | Меняет стоимость строительства железных дорог | Н/Д |
+| `production_cost_rocket_site_factor` | Меняет стоимость строительства ракетных площадок | Н/Д |
+| `production_cost_supply_node_factor` | Меняет стоимость строительства узлов снабжения | Н/Д |
+| `production_cost_synthetic_refinery_factor` | Меняет стоимость строительства инфраструктуры возобновляемых источников энергии | Н/Д |
+
 <a id="industry-income-taxes"></a>
 ### Налоги на доходы промышленности
 

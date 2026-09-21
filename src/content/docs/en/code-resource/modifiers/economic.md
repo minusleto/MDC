@@ -134,6 +134,34 @@ Same effect as `production_speed_buildings_factor`, but scoped to one building t
 | `production_speed_supply_node_factor` | Changes construction speed of supply nodes | N/A |
 | `production_speed_synthetic_refinery_factor` | Changes construction speed of renewable energy infrastructure | N/A |
 
+<a id="production-cost-buildings"></a>
+### Building-specific Construction Cost
+
+Unlike speed, these modifiers change the actual IC cost of building a given type — how many "hammers" it takes — not how fast it's built.
+
+| Modifier | Description | Note |
+|---|---|---|
+| `production_cost_agriculture_district_factor` | Changes the cost of building agriculture districts | N/A |
+| `production_cost_air_base_factor` | Changes the cost of building air bases | N/A |
+| `production_cost_anti_air_building_factor` | Changes the cost of building anti-air buildings | N/A |
+| `production_cost_arms_factory_factor` | Changes the cost of building arms factories | N/A |
+| `production_cost_bunker_factor` | Changes the cost of building bunkers | N/A |
+| `production_cost_coastal_bunker_factor` | Changes the cost of building coastal bunkers | N/A |
+| `production_cost_dockyard_factor` | Changes the cost of building dockyards | N/A |
+| `production_cost_fossil_powerplant_factor` | Changes the cost of building fossil powerplants | N/A |
+| `production_cost_fuel_silo_factor` | Changes the cost of building fuel silos | N/A |
+| `production_cost_industrial_complex_factor` | Changes the cost of building civilian factories | N/A |
+| `production_cost_infrastructure_factor` | Changes the cost of building infrastructure | N/A |
+| `production_cost_internet_station_factor` | Changes the cost of building network infrastructure | N/A |
+| `production_cost_naval_base_factor` | Changes the cost of building naval bases | N/A |
+| `production_cost_nuclear_reactor_factor` | Changes the cost of building nuclear reactors | N/A |
+| `production_cost_offices_factor` | Changes the cost of building office parks | N/A |
+| `production_cost_radar_station_factor` | Changes the cost of building radar stations | N/A |
+| `production_cost_rail_way_factor` | Changes the cost of building railways | N/A |
+| `production_cost_rocket_site_factor` | Changes the cost of building rocket sites | N/A |
+| `production_cost_supply_node_factor` | Changes the cost of building supply nodes | N/A |
+| `production_cost_synthetic_refinery_factor` | Changes the cost of building renewable energy infrastructure | N/A |
+
 ### Industry Income Taxes
 
 | Modifier | Description | Note |
