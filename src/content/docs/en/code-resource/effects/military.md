@@ -96,6 +96,65 @@ air_experience = 25
 navy_experience = 25
 ```
 
+## Doctrines and mastery
+
+### Bonus to doctrine mastery gain
+
+`add_mastery_bonus` temporarily increases **doctrine mastery** gain. The effect works in **COUNTRY scope** and lasts for the specified number of days. The `bonus` value is a factor: `0.1` = +10%, `0.25` = +25%, `1.0` = +100%.
+
+You can filter which doctrine paths receive the bonus. If a filter is omitted, it counts as passed, so without filters the effect can affect all matching active tracks.
+
+| Parameter | What it does |
+|---|---|
+| `bonus` | Bonus factor for mastery gain. `0.1` = +10%. |
+| `days` | Number of days the bonus lasts. |
+| `name` | Localization key shown as the source of the bonus. |
+| `folder` | Limits the bonus to a doctrine folder, such as `land`. |
+| `grand_doctrine` | Limits the bonus to a grand doctrine, such as `mobile_warfare`. |
+| `sub_doctrine` | Limits the bonus to a specific sub-doctrine. |
+| `track` | Limits the bonus to a specific track, such as `infantry`. |
+| `index` | Track index within the folder, starting at `0`. |
+
+**Example: bonus to all land tracks:**
+
+```text
+add_mastery_bonus = {
+    bonus = 0.10
+    days = 90
+    name = MDC_land_mastery_bonus
+    folder = land
+}
+```
+
+**Example: bonus to the infantry track:**
+
+```text
+add_mastery_bonus = {
+    bonus = 0.25
+    days = 365
+    name = MDC_infantry_mastery_bonus
+    track = infantry
+}
+```
+
+**Example: precise filtering by folder, grand doctrine, sub-doctrine, and track:**
+
+```text
+add_mastery_bonus = {
+    bonus = 0.50
+    days = 180
+    name = MDC_mobile_infantry_mastery_bonus
+    folder = land
+    grand_doctrine = mobile_warfare
+    sub_doctrine = mobile_infantry
+    track = infantry
+}
+```
+
+You can add `index` when you need to select a specific position within a track, for example `index = 1`. The index starts at `0`.
+
+> **Do not confuse this with `add_mastery` and `add_daily_mastery`:** `add_mastery` immediately adds a fixed amount of mastery, `add_daily_mastery` adds a fixed amount of mastery each day for a limited number of days, while `add_mastery_bonus` temporarily increases mastery gain by a percentage.
+
 ## Commanders
 
 ### Create a general
