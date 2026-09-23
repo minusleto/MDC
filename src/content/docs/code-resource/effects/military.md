@@ -70,6 +70,35 @@ create_unit = {
 
 `regiments` задаёт боевые батальоны, а `support` — роты поддержки. Координаты `x` и `y` определяют положение подразделения в шаблоне.
 
+### Изменить шаблон существующей дивизии
+
+`change_division_template` меняет шаблон **текущей дивизии**. Работает в **DIVISION scope**.
+
+```text
+change_division_template = {
+    division_template = "Infantry Division"
+}
+```
+
+### Добавить случайную допустимую черту командиру дивизии
+
+`add_random_valid_trait_from_unit` выбирает случайную допустимую черту для unit leader.
+
+```text
+add_random_valid_trait_from_unit = FROM
+```
+
+> DIVISION scope должен совпадать с ROOT scope.
+
+### Добавить опыт командиру дивизии
+
+`add_divisional_commander_xp` добавляет опыт командиру текущей дивизии.
+
+```text
+add_divisional_commander_xp = 10
+```
+
+
 ## Военный опыт
 
 ### Опыт армии
@@ -155,6 +184,240 @@ add_mastery_bonus = {
 
 > **Не путай с `add_mastery` и `add_daily_mastery`:** `add_mastery` сразу добавляет фиксированное количество мастерства, `add_daily_mastery` добавляет фиксированное количество мастерства ежедневно ограниченное число дней, а `add_mastery_bonus` временно увеличивает сам прирост мастерства на процент.
 
+## Доктрины: мастерство и выбор ветки
+
+### Немедленно добавить мастерство
+
+`add_mastery` сразу добавляет указанное количество **mastery** выбранным трекам доктрины. Работает в **COUNTRY scope**. Фильтры можно комбинировать; отсутствующий фильтр считается пройденным.
+
+| Параметр | Назначение |
+|---|---|
+| `amount` | Сколько мастерства добавить. |
+| `folder` | Папка доктрины, например `land`. |
+| `grand_doctrine` | Великая доктрина, например `mobile_warfare`. |
+| `sub_doctrine` | Конкретная поддоктрина. |
+| `track` | Конкретный трек, например `infantry`. |
+| `index` | Индекс трека внутри папки, начиная с `0`. |
+
+```text
+add_mastery = {
+    amount = 100
+    folder = land
+}
+```
+
+### Ежедневно добавлять мастерство
+
+`add_daily_mastery` добавляет фиксированное количество мастерства **каждый день** в течение заданного срока.
+
+| Параметр | Назначение |
+|---|---|
+| `amount` | Мастерство в день. |
+| `days` | Длительность в днях. |
+| `name` | Ключ локализации источника прироста. |
+| `folder` | Фильтр папки. |
+| `grand_doctrine` | Фильтр великой доктрины. |
+| `sub_doctrine` | Фильтр поддоктрины. |
+| `track` | Фильтр трека. |
+| `index` | Индекс трека, начиная с `0`. |
+
+```text
+add_daily_mastery = {
+    amount = 0.5
+    days = 90
+    name = MDC_daily_land_mastery
+    folder = land
+    track = infantry
+}
+```
+
+### Установить великую доктрину
+
+`set_grand_doctrine` активирует и назначает стране указанную великую доктрину.
+
+```text
+set_grand_doctrine = mobile_warfare
+```
+
+### Установить поддоктрину
+
+`set_sub_doctrine` активирует и назначает указанную поддоктрину. По умолчанию выбирается первый подходящий трек; `folder` и `track` позволяют указать точное место.
+
+```text
+set_sub_doctrine = mobile_infantry
+```
+
+```text
+set_sub_doctrine = {
+    sub_doctrine = mobile_infantry
+    folder = land
+    track = 1
+}
+```
+
+> `track` здесь — индекс трека внутри папки, начиная с `0`.
+
+## Командиры: навыки, опыт и черты
+
+Эти эффекты применяются к **CHARACTER scope** командира. Для массового выбора удобно использовать `every_unit_leader`, `every_army_leader` или `every_navy_leader`.
+
+### Навыки
+
+`add_skill_level` повышает общий уровень навыка.
+
+```text
+every_unit_leader = {
+    add_skill_level = 1
+}
+```
+
+Отдельные навыки:
+- `add_attack` — атака;
+- `add_defense` — оборона;
+- `add_planning` — планирование;
+- `add_logistics` — логистика;
+- `add_coordination` — координация;
+- `add_maneuver` — манёвр.
+
+```text
+every_army_leader = {
+    add_attack = 1
+    add_defense = 1
+    add_planning = 2
+    add_logistics = 1
+}
+```
+
+Для адмиралов:
+
+```text
+every_navy_leader = {
+    add_coordination = 1
+    add_maneuver = 2
+}
+```
+
+### Опыт
+
+`gain_xp` добавляет опыт командиру. Отрицательные значения не поддерживаются; при достаточном опыте командир получает следующий уровень.
+
+```text
+every_unit_leader = {
+    gain_xp = 5
+}
+```
+
+### Слоты черт
+
+`add_max_trait` добавляет слоты для назначаемых черт.
+
+```text
+every_army_leader = {
+    add_max_trait = 1
+}
+```
+
+### Черты
+
+Добавить конкретную черту:
+
+```text
+add_unit_leader_trait = old_guard
+```
+
+Удалить черту:
+
+```text
+remove_unit_leader_trait = old_guard
+```
+
+Случайная черта из списка:
+
+```text
+add_random_trait = {
+    old_guard
+    brilliant_strategist
+    inflexible_strategist
+}
+```
+
+Временная черта:
+
+```text
+add_timed_unit_leader_trait = {
+    trait = wounded
+    days = 90
+}
+```
+
+`replace_unit_leader_trait` существует, но считается нестабильным. Надёжнее удалить старую и добавить новую:
+
+```text
+remove_unit_leader_trait = old_guard
+add_unit_leader_trait = brilliant_strategist
+```
+
+### Повышение и понижение
+
+`promote_leader` повышает генерала до фельдмаршала:
+
+`promote_leader = yes`
+
+`demote_leader` понижает фельдмаршала до генерала:
+
+`demote_leader = yes`
+
+### Снабжение и временный боевой бафф
+
+`supply_units` выдаёт войскам текущего лидера указанное количество часов снабжения.
+
+```text
+supply_units = 24
+```
+
+`add_temporary_buff_to_units` временно меняет боевые параметры войск командира.
+
+| Параметр | Назначение |
+|---|---|
+| `combat_offense` | Бонус к атаке. |
+| `combat_breakthrough` | Бонус к прорыву. |
+| `combat_defense` | Бонус к обороне. |
+| `combat_entrenchment` | Бонус к окопанности. |
+| `org_damage_multiplier` | Множитель урона по организации. |
+| `str_damage_multiplier` | Множитель урона по прочности. |
+| `war_support_reduction_on_damage` | Изменение потерь поддержки войны от урона. |
+| `cannot_retreat_while_attacking` | Запрет отступления во время атаки. |
+| `cannot_retreat_while_defending` | Запрет отступления во время обороны. |
+| `days` | Длительность. |
+| `tooltip` | Ключ подсказки. |
+
+```text
+add_temporary_buff_to_units = {
+    combat_offense = 0.25
+    combat_breakthrough = 0.25
+    org_damage_multiplier = -1.0
+    str_damage_multiplier = 0.25
+    war_support_reduction_on_damage = 0.2
+    cannot_retreat_while_attacking = 1.0
+    days = 7
+    tooltip = ABILITY_FORCE_ATTACK_TOOLTIP
+}
+```
+
+### Изгнание и удаление
+
+`remove_exile_tag` снимает статус изгнанного лидера:
+
+`remove_exile_tag = yes`
+
+`remove_unit_leader` удаляет текущего unit leader:
+
+`remove_unit_leader = yes`
+
+`remove_unit_leader_role` снимает с персонажа все роли unit leader:
+
+`remove_unit_leader_role = yes`
+
 ## Командиры
 
 ### Создать генерала
@@ -178,6 +441,25 @@ create_corps_commander = {
     skill = 1
 }
 ```
+
+### Бонусы для подразделений
+
+`add_unit_bonus` добавляет стране постоянные бонусы для типов подразделений и их категорий.
+
+```text
+add_unit_bonus = {
+    category_light_infantry = {
+        soft_attack = 0.05
+        name = MDC_light_infantry_bonus
+    }
+    cavalry = {
+        soft_attack = 0.05
+        hard_attack = 0.05
+        name = MDC_cavalry_bonus
+    }
+}
+```
+
 
 ## Военная техника
 
