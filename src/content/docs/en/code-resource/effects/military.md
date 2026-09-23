@@ -70,6 +70,35 @@ create_unit = {
 
 `regiments` defines the combat battalions, while `support` defines support companies. The `x` and `y` coordinates determine where each unit is placed in the template.
 
+### Change the template of an existing division
+
+`change_division_template` changes the template of the **current division**. It works in **DIVISION scope**.
+
+```text
+change_division_template = {
+    division_template = "Infantry Division"
+}
+```
+
+### Add a random valid trait to the division commander
+
+`add_random_valid_trait_from_unit` selects a random valid trait for the unit leader.
+
+```text
+add_random_valid_trait_from_unit = FROM
+```
+
+> The DIVISION scope must be the same as ROOT scope.
+
+### Add experience to the division commander
+
+`add_divisional_commander_xp` adds experience to the commander of the current division.
+
+```text
+add_divisional_commander_xp = 10
+```
+
+
 ## Military experience
 
 ### Add army experience
@@ -155,6 +184,240 @@ You can add `index` when you need to select a specific position within a track, 
 
 > **Do not confuse this with `add_mastery` and `add_daily_mastery`:** `add_mastery` immediately adds a fixed amount of mastery, `add_daily_mastery` adds a fixed amount of mastery each day for a limited number of days, while `add_mastery_bonus` temporarily increases mastery gain by a percentage.
 
+## Doctrines: mastery and branch selection
+
+### Add mastery immediately
+
+`add_mastery` immediately adds the specified amount of **mastery** to matching doctrine tracks. It works in **COUNTRY scope**. Filters can be combined; omitted filters count as passed.
+
+| Parameter | Purpose |
+|---|---|
+| `amount` | Amount of mastery to add.. |
+| `folder` | Doctrine folder, such as `land`. |
+| `grand_doctrine` | Grand doctrine, such as `mobile_warfare`. |
+| `sub_doctrine` | Specific sub-doctrine. |
+| `track` | Specific track, such as `infantry`. |
+| `index` | Track index inside the folder, starting at `0`. |
+
+```text
+add_mastery = {
+    amount = 100
+    folder = land
+}
+```
+
+### Add mastery daily
+
+`add_daily_mastery` adds a fixed amount of mastery **every day** for the specified duration.
+
+| Parameter | Purpose |
+|---|---|
+| `amount` | Mastery per day. |
+| `days` | Duration in days. |
+| `name` | Localization key for the source. |
+| `folder` | Folder filter. |
+| `grand_doctrine` | Grand doctrine filter. |
+| `sub_doctrine` | Sub-doctrine filter. |
+| `track` | Track filter. |
+| `index` | Track index, starting at `0`. |
+
+```text
+add_daily_mastery = {
+    amount = 0.5
+    days = 90
+    name = MDC_daily_land_mastery
+    folder = land
+    track = infantry
+}
+```
+
+### Set the grand doctrine
+
+`set_grand_doctrine` activates and assigns the specified grand doctrine to the country.
+
+```text
+set_grand_doctrine = mobile_warfare
+```
+
+### Set a sub-doctrine
+
+`set_sub_doctrine` activates and assigns the specified sub-doctrine. By default the first matching track is used; `folder` and `track` can select an exact location.
+
+```text
+set_sub_doctrine = mobile_infantry
+```
+
+```text
+set_sub_doctrine = {
+    sub_doctrine = mobile_infantry
+    folder = land
+    track = 1
+}
+```
+
+> `track` here is the track index inside the folder, starting at `0`.
+
+## Commanders: skills, experience, and traits
+
+These effects apply to a commander's **CHARACTER scope**. For bulk selection, use `every_unit_leader`, `every_army_leader`, or `every_navy_leader`.
+
+### Skills
+
+`add_skill_level` increases the general skill level.
+
+```text
+every_unit_leader = {
+    add_skill_level = 1
+}
+```
+
+Individual skills:
+- `add_attack` — attack;
+- `add_defense` — defense;
+- `add_planning` — planning;
+- `add_logistics` — logistics;
+- `add_coordination` — coordination;
+- `add_maneuver` — maneuver.
+
+```text
+every_army_leader = {
+    add_attack = 1
+    add_defense = 1
+    add_planning = 2
+    add_logistics = 1
+}
+```
+
+For admirals:
+
+```text
+every_navy_leader = {
+    add_coordination = 1
+    add_maneuver = 2
+}
+```
+
+### Experience
+
+`gain_xp` adds experience to the commander. Negative values are not supported; enough experience promotes the commander to the next skill level.
+
+```text
+every_unit_leader = {
+    gain_xp = 5
+}
+```
+
+### Trait slots
+
+`add_max_trait` adds assignable trait slots.
+
+```text
+every_army_leader = {
+    add_max_trait = 1
+}
+```
+
+### Traits
+
+Add a specific trait:
+
+```text
+add_unit_leader_trait = old_guard
+```
+
+Remove a trait:
+
+```text
+remove_unit_leader_trait = old_guard
+```
+
+Random trait from a list:
+
+```text
+add_random_trait = {
+    old_guard
+    brilliant_strategist
+    inflexible_strategist
+}
+```
+
+Temporary trait:
+
+```text
+add_timed_unit_leader_trait = {
+    trait = wounded
+    days = 90
+}
+```
+
+`replace_unit_leader_trait` exists but is considered unstable. It is safer to remove the old trait and add the new one:
+
+```text
+remove_unit_leader_trait = old_guard
+add_unit_leader_trait = brilliant_strategist
+```
+
+### Promotion and demotion
+
+`promote_leader` promotes a general to field marshal:
+
+`promote_leader = yes`
+
+`demote_leader` demotes a field marshal to a general:
+
+`demote_leader = yes`
+
+### Supply and temporary combat buff
+
+`supply_units` gives units controlled by the current leader the specified number of hours of supply.
+
+```text
+supply_units = 24
+```
+
+`add_temporary_buff_to_units` temporarily changes combat parameters for the commander's units.
+
+| Параметр | Назначение |
+|---|---|
+| `combat_offense` | Attack bonus. |
+| `combat_breakthrough` | Breakthrough bonus. |
+| `combat_defense` | Defense bonus. |
+| `combat_entrenchment` | Entrenchment bonus. |
+| `org_damage_multiplier` | Organization damage multiplier. |
+| `str_damage_multiplier` | Strength damage multiplier. |
+| `war_support_reduction_on_damage` | Change to war-support loss from damage. |
+| `cannot_retreat_while_attacking` | Prevent retreat while attacking. |
+| `cannot_retreat_while_defending` | Prevent retreat while defending. |
+| `days` | Duration. |
+| `tooltip` | Tooltip key. |
+
+```text
+add_temporary_buff_to_units = {
+    combat_offense = 0.25
+    combat_breakthrough = 0.25
+    org_damage_multiplier = -1.0
+    str_damage_multiplier = 0.25
+    war_support_reduction_on_damage = 0.2
+    cannot_retreat_while_attacking = 1.0
+    days = 7
+    tooltip = ABILITY_FORCE_ATTACK_TOOLTIP
+}
+```
+
+### Exile and removal
+
+`remove_exile_tag` removes the leader's exile status:
+
+`remove_exile_tag = yes`
+
+`remove_unit_leader` removes the current unit leader:
+
+`remove_unit_leader = yes`
+
+`remove_unit_leader_role` removes all unit-leader roles from the character:
+
+`remove_unit_leader_role = yes`
+
 ## Commanders
 
 ### Create a general
@@ -178,6 +441,25 @@ create_corps_commander = {
     skill = 1
 }
 ```
+
+### Permanent unit bonuses
+
+`add_unit_bonus` adds permanent bonuses for subunit types and categories to the country.
+
+```text
+add_unit_bonus = {
+    category_light_infantry = {
+        soft_attack = 0.05
+        name = MDC_light_infantry_bonus
+    }
+    cavalry = {
+        soft_attack = 0.05
+        hard_attack = 0.05
+        name = MDC_cavalry_bonus
+    }
+}
+```
+
 
 ## Military equipment
 
