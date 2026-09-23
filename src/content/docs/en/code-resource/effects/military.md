@@ -99,6 +99,33 @@ add_divisional_commander_xp = 10
 ```
 
 
+### Additional division effects
+
+`destroy_unit` destroys the current division.
+
+```text
+destroy_unit = yes
+```
+
+`reseed_division_commander` re-rolls the division commander using the specified seed.
+
+```text
+reseed_division_commander = 760
+```
+
+`promote_officer_to_general` promotes the current division's officer to a general.
+
+```text
+promote_officer_to_general = yes
+```
+
+`set_unit_organization` sets the current division's organization on a scale from `0` to `1`.
+
+```text
+set_unit_organization = 0.3
+```
+
+
 ## Military experience
 
 ### Add army experience
@@ -505,6 +532,61 @@ create_equipment_variant = {
     parent_version = 0
 }
 ```
+
+### Add equipment stat bonuses
+
+`add_equipment_bonus` adds permanent equipment stat bonuses to the country. Inside `bonus`, specify a stat first and then the equipment types affected by it.
+
+| Parameter | Purpose |
+|---|---|
+| `name` | Localization key for the bonus source. |
+| `project` | Optional special-project scope when the bonus is tied to a special project. |
+| `bonus` | Set of equipment stats and equipment types affected by the bonus. |
+
+Example: armor and attack bonuses for tanks:
+
+```text
+add_equipment_bonus = {
+    name = MDC_armored_design_bonus
+    bonus = {
+        armor = {
+            medium_tank_chassis_1 = 3
+        }
+        soft_attack = {
+            medium_tank_chassis_1 = 3
+        }
+        hard_attack = {
+            medium_tank_chassis_1 = 2
+        }
+    }
+}
+```
+
+### Change the equipment stockpile fraction
+
+`set_equipment_fraction` removes the specified fraction of the overall equipment stockpile.
+
+`0.5` means removing 50% of the current stockpile:
+
+```text
+set_equipment_fraction = 0.5
+```
+
+> Do not use this to simulate civil-war stockpile splitting: `start_civil_war` divides stockpiles automatically.
+
+### Set the equipment version number
+
+`set_equipment_version_number` sets the current maximum version number for a specific equipment type. The next variant created receives the next number.
+
+```text
+set_equipment_version_number = {
+    type = small_plane_airframe_1
+    version = 4
+}
+```
+
+The next variant of this type will use version `5`.
+
 
 ## Military industrial organizations
 
