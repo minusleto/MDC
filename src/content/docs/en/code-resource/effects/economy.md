@@ -9,6 +9,22 @@ head:
       }
 ---
 
+<a id="civilian-transport"></a>
+## Civilian Transport Production
+
+These effects add civilian transport: cars, planes, trains, helicopters, and ships. The amount is a number stored in `stuff_to_add`, for example `100` or `200`.
+
+```text
+set_temp_variable = { stuff_to_add = 1000 }
+add_civilian_auto = yes
+add_civilian_planes = yes
+add_civilian_trains = yes
+add_civilian_helos = yes
+add_civilian_ships = yes
+```
+
+Depending on the scope, transport is added to the country's stockpile or to the relevant state. If the state has reached its placement limit, any excess goes to the country's stockpile.
+
 ## Basic Effects
 
 ### Treasury
