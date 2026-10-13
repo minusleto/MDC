@@ -168,6 +168,28 @@ When increasing to international education, the transition is available if the c
 
 Laws that govern government spending (bureaucracy, social spending, education, healthcare, policing budgets), plus the trade, military spending, and migration laws.
 
+<a id="minimum-wage-law"></a>
+### Minimum Wage (MW)
+
+The minimum wage (MW) is the legally defined minimum pay level. These effects control it: the wage can be raised through five successive levels, lowered, or protected against further decreases.
+
+| Effect | Application |
+|---|---|
+| `increase_minimal_salary = yes` | Increase the minimum wage by one level |
+| `increase_minimal_salary_2 = yes` | Increase the minimum wage (level 2) |
+| `increase_minimal_salary_3 = yes` | Increase the minimum wage (level 3) |
+| `increase_minimal_salary_4 = yes` | Increase the minimum wage (level 4) |
+| `increase_minimal_salary_5 = yes` | Raise the minimum wage to the maximum level |
+| `decrease_minimal_salary = yes` | Decrease the minimum wage |
+| `block_salary_decrease = yes` | Block minimum-wage decreases |
+
+Example: raise the minimum wage to the maximum and prevent it from being lowered:
+
+```text
+increase_minimal_salary_5 = yes
+block_salary_decrease = yes
+```
+
 <a id="bureaucracy-law"></a>
 ### Bureaucracy
 
@@ -258,30 +280,6 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 |---|---|
 | `increase_migration_law = yes` | Loosen migration law |
 | `decrease_migration_law = yes` | Tighten migration law |
-
-<a id="minimum-wage-law"></a>
-### Minimum Wage (MW)
-
-These effects control the minimum-wage law. There are five sequential increase levels, one effect to lower the level, and a separate effect to prevent further decreases.
-
-| Effect | Application |
-|---|---|
-| `increase_minimal_salary = yes` | Increase the minimum wage by one level |
-| `increase_minimal_salary_2 = yes` | Increase the minimum wage (level 2) |
-| `increase_minimal_salary_3 = yes` | Increase the minimum wage (level 3) |
-| `increase_minimal_salary_4 = yes` | Increase the minimum wage (level 4) |
-| `increase_minimal_salary_5 = yes` | Raise the minimum wage to the maximum level |
-| `decrease_minimal_salary = yes` | Decrease the minimum wage |
-| `block_salary_decrease = yes` | Block minimum-wage decreases |
-
-Example: raise the minimum wage to the maximum and prevent it from being lowered:
-
-```text
-increase_minimal_salary_5 = yes
-block_salary_decrease = yes
-```
-
-<hr/>
 
 <a id="law-change-blocking"></a>
 ### Blocking law changes
