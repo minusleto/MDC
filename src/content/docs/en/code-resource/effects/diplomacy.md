@@ -168,6 +168,46 @@ The `0`–`6` index picks a specific position in the list of influencing sides. 
 
 ## Sanctions and Embargoes
 
+### Increase sanctions resistance
+
+`custom_effect_tooltip = sanctions_resistance_tt` displays the tooltip for increasing sanctions resistance, while `add_to_variable` increases the `quarters_since_sanctions` counter.
+
+```txt
+custom_effect_tooltip = sanctions_resistance_tt
+add_to_variable = { quarters_since_sanctions = 5 }
+```
+
+**Important:** sanctions resistance has a maximum value of **75**. Check the current counter and do not increase it beyond this limit.
+
+### Impose sanctions on another country
+
+The `issued_sanctions_prev = yes` effect marks that the country has imposed sanctions on the target country. In the nested scopes, the outer tag is the sanctioning country and the inner tag is the target.
+
+Example: the USA imposes sanctions on Burma (`BRM`):
+
+```txt
+USA = {
+    BRM = {
+        issued_sanctions_prev = yes
+    }
+}
+```
+
+### Revoke sanctions
+
+The `revoke_sanctions = yes` effect removes sanctions from the target country.
+
+Example: the USA removes sanctions from Cuba (`CUB`):
+
+```txt
+USA = {
+    CUB = {
+        revoke_sanctions = yes
+    }
+}
+```
+
+
 ### Send an embargo
 
 `send_embargo` embargoes the specified country.
