@@ -259,6 +259,30 @@ Laws that govern government spending (bureaucracy, social spending, education, h
 | `increase_migration_law = yes` | Loosen migration law |
 | `decrease_migration_law = yes` | Tighten migration law |
 
+<a id="minimum-wage-law"></a>
+### Minimum Wage (MW)
+
+These effects control the minimum-wage law. There are five sequential increase levels, one effect to lower the level, and a separate effect to prevent further decreases.
+
+| Effect | Application |
+|---|---|
+| `increase_minimal_salary = yes` | Increase the minimum wage by one level |
+| `increase_minimal_salary_2 = yes` | Increase the minimum wage (level 2) |
+| `increase_minimal_salary_3 = yes` | Increase the minimum wage (level 3) |
+| `increase_minimal_salary_4 = yes` | Increase the minimum wage (level 4) |
+| `increase_minimal_salary_5 = yes` | Raise the minimum wage to the maximum level |
+| `decrease_minimal_salary = yes` | Decrease the minimum wage |
+| `block_salary_decrease = yes` | Block minimum-wage decreases |
+
+Example: raise the minimum wage to the maximum and prevent it from being lowered:
+
+```text
+increase_minimal_salary_5 = yes
+block_salary_decrease = yes
+```
+
+<hr/>
+
 <a id="law-change-blocking"></a>
 ### Blocking law changes
 
@@ -285,20 +309,20 @@ Every `block_<category>_increase` / `block_<category>_decrease` sets a country f
 
 ⚠️ For `salary`, only `block_salary_decrease` exists — there's no `block_salary_increase` in the source (and consequently no `block_salary_change` either). This is an asymmetry in the source, not a typo on our part.
 
-**Example: blocking the "rollback" when changing a law**
+**Example: blocking a rollback when changing a law**
 
-When a focus/event pushes a law in one direction, it's usually sensible to immediately block the opposite direction for a while — otherwise the player (or the AI on its very next decision) could just undo the change right away:
+When a focus/event moves a law in one direction, it is often sensible to block the opposite direction immediately for a while — otherwise the player (or AI on its very next decision) could simply undo the change:
 
-```
-# Raising centralization — makes sense to block rolling it back for a while
+```text
+# Raise centralization and temporarily block rolling it back
 increase_centralization = yes
 block_bureau_decrease = yes
 ```
 
-```
-# And the reverse: lowering centralization — block an immediate raise
+```text
+# Conversely, lower centralization and block an immediate increase
 decrease_centralization = yes
 block_bureau_increase = yes
 ```
 
-Blocking the *opposite* direction isn't the only option — sometimes it makes more sense to block the *same* direction (to stop the law from being pushed several tiers in a row through a chain of events), or both at once (`block_bureau_change = yes`) if the focus's lore implies the law should be locked in place for a year. Which one to use depends on the specific focus/event context — there's no single rule.
+Blocking the *opposite* direction is not the only option. Sometimes it makes more sense to block the *same* direction (to prevent the law from being pushed several tiers in a row through a chain of events), or both directions at once (`block_bureau_change = yes`) if the focus's context implies that the law should be locked in place for a year. The right choice depends on the specific focus/event; there is no universal rule.
