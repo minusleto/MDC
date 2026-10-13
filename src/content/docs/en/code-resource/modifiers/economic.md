@@ -7,6 +7,22 @@ description: "Modifiers for economic growth, inflation, taxes, exports, company 
 
 Affect the economy, taxes, trade and productivity.
 
+### Civilian Transport Production
+
+| Modifier | Description | Note |
+|---|---|---|
+| `auto_production_modifier` | Modifies monthly production of civilian cars | Numeric value; can be negative |
+| `planes_production_modifier` | Modifies monthly production of civilian planes | Numeric value; can be negative |
+| `trains_production_modifier` | Modifies monthly production of civilian trains | Numeric value; can be negative |
+| `helos_production_modifier` | Modifies monthly production of civilian helicopters | Numeric value; can be negative |
+| `ships_production_modifier` | Modifies monthly production of civilian ships | Numeric value; can be negative |
+
+### Expected Salary
+
+| Modifier | Description | Note |
+|---|---|---|
+| `expected_salary_modifier` | Modifies expected salary | Integer value |
+
 ### Vanilla
 
 | Modifier | Description | Note |
