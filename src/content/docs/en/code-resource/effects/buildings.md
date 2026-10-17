@@ -27,6 +27,8 @@ Cost below is what's actually deducted via the ready-made MDC scripted effects (
 | Building | ID | Cost |
 |---|---|---:|
 | [Infrastructure](#infrastructure) | `infrastructure` | $1.75 |
+| Tourism Infrastructure | `tourism_infrastructure` | $0.600 |
+| Culture Infrastructure | `culture_infrastructure` | $0.600 |
 | [Air Base](#air-bases) | `air_base` | $1.25 |
 | [Network Infrastructure](#network-infrastructure) | `internet_station` | $1.50 |
 | Railways | `rail_way` | $0.01 per province |
