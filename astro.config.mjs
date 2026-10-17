@@ -40,6 +40,7 @@ export default defineConfig({
 						{ label: 'Сепаратизм и терроризм', translations: { en: 'Separatism & Terrorism' }, slug: 'code-resource/effects/terrorism' },
 						{ label: 'Европейский союз', translations: { en: 'European Union' }, slug: 'code-resource/effects/european-union' },
 						{ label: 'Энергетика', translations: { en: 'Energy' }, slug: 'code-resource/effects/energy' },
+						{ label: 'Культура и туризм', translations: { en: 'Culture & Tourism' }, slug: 'code-resource/effects/culture-tourism' },
 						{ label: 'Департаменты и компании', translations: { en: 'Departments & Companies' }, slug: 'code-resource/effects/companies' },
 						{ label: 'Уникальные', translations: { en: 'Unique' }, slug: 'code-resource/effects/unique' },
 						{ label: 'Разное', translations: { en: 'Misc' }, slug: 'code-resource/effects/misc' },
@@ -56,6 +57,7 @@ export default defineConfig({
 						{ label: 'Региональные', translations: { en: 'Regional' }, slug: 'code-resource/modifiers/regional' },
 						{ label: 'Терроризм', translations: { en: 'Terrorism' }, slug: 'code-resource/modifiers/terrorism' },
 						{ label: 'Космос', translations: { en: 'Space' }, slug: 'code-resource/modifiers/space' },
+						{ label: 'Культура и туризм', translations: { en: 'Culture & Tourism' }, slug: 'code-resource/modifiers/culture-tourism' },
 						{ label: 'Уникальные', translations: { en: 'Unique' }, slug: 'code-resource/modifiers/unique' },
 					] },
 					{ label: 'Триггеры', translations: { en: 'Triggers' }, items: [
@@ -68,6 +70,7 @@ export default defineConfig({
 						{ label: 'Внутренние фракции', translations: { en: 'Internal Factions' }, slug: 'code-resource/triggers/internal-factions' },
 						{ label: 'Евросоюз', translations: { en: 'European Union' }, slug: 'code-resource/triggers/eu' },
 						{ label: 'Регионы и провинции', translations: { en: 'Regions & States' }, slug: 'code-resource/triggers/regions' },
+						{ label: 'Культура и туризм', translations: { en: 'Culture & Tourism' }, slug: 'code-resource/triggers/culture-tourism' },
 						{ label: 'Картели', translations: { en: 'Cartels' }, slug: 'code-resource/triggers/cartels' },
 					] },
 					{ label: 'Юниты и техника', translations: { en: 'Units & Equipment' }, items: [
