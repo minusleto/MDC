@@ -248,6 +248,42 @@ two_state_infrastructure = yes
 three_state_infrastructure = yes
 ```
 
+### Tourism Infrastructure
+
+**Random state**
+
+```text
+one_random_tourism_infrastructure = yes
+two_random_tourism_infrastructure = yes
+three_random_tourism_infrastructure = yes
+```
+
+**Specific state**
+
+```text
+one_state_tourism_infrastructure = yes
+two_state_tourism_infrastructure = yes
+three_state_tourism_infrastructure = yes
+```
+
+### Culture Infrastructure
+
+**Random state**
+
+```text
+one_random_culture_infrastructure = yes
+two_random_culture_infrastructure = yes
+three_random_culture_infrastructure = yes
+```
+
+**Specific state**
+
+```text
+one_state_culture_infrastructure = yes
+two_state_culture_infrastructure = yes
+three_state_culture_infrastructure = yes
+```
+
 ### Network Infrastructure
 
 **Random state**
