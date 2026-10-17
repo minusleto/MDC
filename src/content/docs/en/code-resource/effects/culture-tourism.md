@@ -7,9 +7,9 @@ description: "MDC scripted effects for culture and tourism."
 
 ## Culture
 
-### Добавить культуру (`add_culture`)
+### Culture changes
 
-Adds culture. According to the supplied notes, this effect can be used in both a state scope and a country scope.
+The `add_culture` effect adds culture. It can be used in both a state scope and a country scope.
 
 ```text
 add_culture = {
@@ -18,9 +18,9 @@ add_culture = {
 }
 ```
 
-The effect uses the temporary variable `culture_to_add_temp` as the amount of culture to add.
+The amount of culture added is taken from the temporary variable `culture_to_add_temp`.
 
-### Relative culture
+### Related culture
 
 Example for a country identifying as Greek:
 
@@ -33,9 +33,9 @@ The example stores `GRE` in the temporary variable `relative_culture_temp`, then
 
 ## Tourism
 
-### Добавить туризм (`add_tourism`)
+### Tourism changes
 
-Adds tourism. **This effect can only be used in a state scope.**
+The `add_tourism` effect adds tourism. **It can only be used in a state scope.**
 
 ```text
 add_tourism = {
@@ -44,4 +44,4 @@ add_tourism = {
 }
 ```
 
-The effect uses the temporary variable `tourism_to_add_temp` as the amount of tourism to add.
+The amount of tourism added is taken from the temporary variable `tourism_to_add_temp`.
