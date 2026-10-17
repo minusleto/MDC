@@ -41,7 +41,6 @@ tableOfContents:
 | [Электростанция на ископаемом топливе](#электростанция-на-ископаемом-топливе) | `fossil_powerplant` | $1.625 |
 | [Ядерный реактор](#ядерный-реактор) | `nuclear_reactor` | $4.50 |
 
-
 ### Оборона
 
 | Постройка | ID | Стоимость |
@@ -246,6 +245,42 @@ three_random_infrastructure = yes
 one_state_infrastructure = yes
 two_state_infrastructure = yes
 three_state_infrastructure = yes
+```
+
+### Туристическая инфраструктура
+
+**Случайный регион**
+
+```text
+one_random_tourism_infrastructure = yes
+two_random_tourism_infrastructure = yes
+three_random_tourism_infrastructure = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_tourism_infrastructure = yes
+two_state_tourism_infrastructure = yes
+three_state_tourism_infrastructure = yes
+```
+
+### Культурная инфраструктура
+
+**Случайный регион**
+
+```text
+one_random_culture_infrastructure = yes
+two_random_culture_infrastructure = yes
+three_random_culture_infrastructure = yes
+```
+
+**Конкретный регион**
+
+```text
+one_state_culture_infrastructure = yes
+two_state_culture_infrastructure = yes
+three_state_culture_infrastructure = yes
 ```
 
 ### Сетевая инфраструктура
