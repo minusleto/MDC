@@ -93,7 +93,6 @@ export default defineConfig({
 					] },
 					{ label: 'Справочник', translations: { en: 'Reference' }, slug: 'code-resource/reference' },
 				] },
-				{ label: 'GFX', slug: 'gfx' },
 			],
 		})
 	],
