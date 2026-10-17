@@ -33,7 +33,7 @@ The example stores `GRE` in the temporary variable `relative_culture_temp`, then
 
 ## Tourism
 
-### `add_tourism`
+### Добавление туризма (`add_tourism`)
 
 Adds tourism. **This effect can only be used in a state scope.**
 
