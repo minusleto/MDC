@@ -471,21 +471,78 @@ create_corps_commander = {
 
 ### Бонусы для подразделений
 
-`add_unit_bonus` добавляет стране постоянные бонусы для типов подразделений и их категорий.
+`add_unit_bonus` добавляет стране постоянные бонусы к характеристикам отдельных типов подразделений или целых категорий. Эффект работает в **COUNTRY scope**. Значения модификаторов задаются множителем: `0.05` означает +5%, `-0.10` — −10%.
+
+Чтобы проще ориентироваться, категории разделены по назначению.
+
+#### Пехота и мобильная пехота
+
+- `category_all_infantry` — общая категория пехоты, включая моторизованные и механизированные подразделения в стандартной игре.
+- `category_light_infantry` — лёгкая пехота.
+
+#### Бронетехника
+
+- `category_all_armor` — бронетехника в целом.
+- `category_tanks` — танковые подразделения.
+
+#### Артиллерия
+
+- `category_artillery` — артиллерия.
+- `category_line_artillery` — линейная артиллерия.
+
+#### Поддержка и специальные подразделения
+
+- `category_all_support` — роты поддержки.
+- `category_special_forces` — подразделения специального назначения.
+
+Пример: несколько независимых бонусов в одном эффекте.
 
 ```text
 add_unit_bonus = {
-    category_light_infantry = {
+    category_all_infantry = {
         soft_attack = 0.05
+        defense = 0.05
+        name = MDC_all_infantry_bonus
+    }
+    category_light_infantry = {
+        breakthrough = 0.05
         name = MDC_light_infantry_bonus
     }
-    cavalry = {
-        soft_attack = 0.05
+    category_all_armor = {
+        armor = 0.05
         hard_attack = 0.05
-        name = MDC_cavalry_bonus
+        name = MDC_armor_bonus
+    }
+    category_tanks = {
+        breakthrough = 0.05
+        name = MDC_tanks_bonus
+    }
+    category_artillery = {
+        soft_attack = 0.05
+        name = MDC_artillery_bonus
+    }
+    category_line_artillery = {
+        soft_attack = 0.05
+        defense = 0.02
+        name = MDC_line_artillery_bonus
+    }
+    category_all_support = {
+        defense = 0.05
+        name = MDC_support_bonus
+    }
+    category_special_forces = {
+        soft_attack = 0.05
+        max_organisation = 2
+        name = MDC_special_forces_bonus
     }
 }
 ```
+
+**Важно:**
+- В примере намеренно нет кавалерии.
+- Если подразделение входит одновременно в общую и узкую категорию, бонусы могут складываться. Не дублируй одинаковые бонусы без необходимости.
+- Категории зависят от состава игры и мода. Если в моде категория переименована или удалена, используй её фактический идентификатор из файлов `common/unit_tags` и `common/units`.
+- Ключ `name` — это ключ локализации для отображаемого названия бонуса; его нужно определить в файлах локализации своего мода.
 
 
 ## Военная техника
