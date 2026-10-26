@@ -1,6 +1,6 @@
 ---
 title: Военные модификаторы
-description: "Военные модификаторы: боевые (скорость, атака/защита, разведка, планирование), разведка и шифрование, общие (военная поддержка, стабильность), военные базы"
+description: "Справочник ванильных военных модификаторов HOI4: сухопутный бой, флот, авиация, техника и лицензии, снабжение, опыт и командование."
 ---
 
 ## Военные модификаторы
@@ -24,6 +24,13 @@ description: "Военные модификаторы: боевые (скоро�
 | `army_core_defence_factor` | Защита на своих кор-территориях |
 | `army_claim_defence_factor` | Защита на территориях с претензией |
 | `army_attack_factor` | Атака дивизий |
+| `army_attack_against_major_factor` | Бонус атаки против великих держав |
+| `army_attack_against_minor_factor` | Бонус атаки против стран, не являющихся великими державами |
+| `army_claim_attack_factor` | Атака на территориях, на которые есть претензия |
+| `army_non_core_attack_factor` | Атака на не-национальных территориях |
+| `army_strength_factor` | Общая сила сухопутных войск |
+| `army_experience_from_volunteers` | Получение армейского опыта от добровольцев |
+| `air_superiority_bonus_in_combat` | Влияние превосходства в воздухе на наземный бой |
 | `breakthrough_factor` | Пробивная способность (breakthrough) |
 | `army_breakthrough_against_major_factor` | Пробивная способность против великих держав |
 | `army_breakthrough_against_minor_factor` | Пробивная способность против стран, не являющихся великими державами |
@@ -48,8 +55,25 @@ description: "Военные модификаторы: боевые (скоро�
 | Модификатор | Описание |
 |---|---|
 | `naval_speed_factor` | Скорость кораблей |
+| `naval_damage_factor` | Наносимый флотом урон |
+| `naval_defense_factor` | Снижение получаемого кораблями урона |
+| `naval_accidents_chance` | Вероятность морских аварий и случайной потери кораблей |
+| `naval_critical_score_chance_factor` | Шанс нанести критическое повреждение |
+| `naval_critical_effect_factor` | Сила последствий критических повреждений |
+| `critical_receive_chance` | Шанс получить критическое повреждение |
+| `naval_enemy_fleet_size_ratio_penalty_factor` | Снижение штрафа при численном превосходстве вражеского флота |
+| `naval_night_attack` | Урон флота в ночное время |
 | `naval_hit_chance` | Шанс попадания в бою |
 | `naval_coordination` | Координация флота |
+| `convoy_escort_efficiency` | Эффективность эскортирования конвоев |
+| `convoy_retreat_speed` | Скорость отступления конвоев |
+| `naval_retreat_chance_after_initial_combat` | Шанс отступления флота после начальной фазы боя |
+| `naval_mines_effect_reduction` | Снижение урона от вражеских морских мин |
+| `mines_planting_by_fleets_factor` / `mines_sweeping_by_fleets_factor` | Эффективность постановки / траления мин флотом |
+| `experience_gain_navy_unit` | Плоский прирост опыта корабельных подразделений |
+| `naval_has_potf_in_combat_attack` / `naval_has_potf_in_combat_defense` | Атака / защита флота при участии «гордости флота» |
+| `strike_force_movement_org_loss` | Потеря организации при движении в режиме ударного соединения |
+| `sub_retreat_speed` / `submarine_attack` | Скорость отступления / атака подлодок |
 | `naval_morale` / `naval_morale_factor` | Мораль флота (плоский / %) |
 | `naval_retreat_chance` / `naval_retreat_speed` | Шанс и скорость отступления флота |
 | `ships_at_battle_start` | Число кораблей, вступающих в бой в первом контакте |
@@ -86,6 +110,13 @@ description: "Военные модификаторы: боевые (скоро�
 | Модификатор | Описание |
 |---|---|
 | `air_accidents_factor` | Шанс авиакатастроф |
+| `air_cas_efficiency` | Эффективность непосредственной авиационной поддержки |
+| `air_escort_efficiency` | Эффективность сопровождения самолётов |
+| `air_wing_xp_loss_when_killed_factor` | Потеря опыта авиакрыла при уничтожении самолётов |
+| `ground_attack_factor` | Урон авиации по наземным дивизиям |
+| `mines_planting_by_air_factor` / `mines_sweeping_by_air_factor` | Эффективность постановки / траления мин авиацией |
+| `strategic_bomb_visibility` | Заметность стратегических бомбардировщиков для противника |
+| `rocket_attack_factor` | Атака ракет |
 | `air_night_penalty` | Штраф за ночные вылеты |
 | `air_weather_penalty` | Штраф за плохую погоду |
 | `army_bonus_air_superiority_factor` | Бонус наземным войскам от превосходства в воздухе |
@@ -114,17 +145,42 @@ description: "Военные модификаторы: боевые (скоро�
 
 
 <a id="equipment-licensing"></a>
-### Производство техники и лицензии
+### Захват, конверсия и модернизация техники
 
 | Модификатор | Описание |
 |---|---|
+| `equipment_capture` | Базовый (плоский) бонус к доле захваченной у противника техники |
+| `equipment_capture_factor` | Процентный модификатор доли захваченной техники |
 | `equipment_conversion_speed` | Скорость конверсии одного типа техники в другой |
-| `equipment_capture_factor` | Процентный бонус к захвату техники у противника |
-| `equipment_upgrade_xp_cost` | Стоимость армейского опыта для улучшения характеристик техники |
-| `license_purchase_cost` | Стоимость покупки лицензии на производство |
-| `license_purchase_cost_factor` | Модификатор стоимости лицензии |
+| `equipment_upgrade_xp_cost` | Общий модификатор стоимости опыта для улучшения техники |
+| `land_equipment_upgrade_xp_cost` | Стоимость армейского опыта для улучшения сухопутной техники |
+| `naval_equipment_upgrade_xp_cost` | Стоимость морского опыта для улучшения кораблей |
+| `air_equipment_upgrade_xp_cost` | Стоимость воздушного опыта для улучшения самолётов |
+| `refit_ic_cost` | Стоимость промышленной мощности для переоборудования корабля |
+| `refit_speed` | Скорость переоборудования кораблей |
+
+<a id="license-modifiers"></a>
+### Производственные лицензии
+
+| Модификатор | Описание |
+|---|---|
+| `license_purchase_cost` | Изменение стоимости лицензионной техники |
+| `license_purchase_cost_factor` | Модификатор стоимости лицензии; может иметь варианты для категорий техники |
 | `license_production_speed` | Скорость производства техники по лицензии |
-| `license_tech_difference_speed` | Влияние разницы в технологиях на скорость производства лицензионной техники |
+| `license_tech_difference_speed` | Изменение штрафа к производству из-за разницы в технологиях |
+| `license__production_speed_factor` | Вариант модификатора скорости лицензионного производства для отдельных типов техники |
+| `license__tech_difference_speed_factor` | Вариант модификатора штрафа за разницу технологий для отдельных типов техники |
+
+<a id="production-efficiency"></a>
+### Эффективность военного производства
+
+| Модификатор | Описание |
+|---|---|
+| `production_factory_efficiency_gain_factor` | Скорость накопления эффективности военного производства |
+| `production_factory_max_efficiency_factor` | Максимальный уровень эффективности военного производства |
+| `production_factory_start_efficiency_factor` | Начальный уровень эффективности производственной линии |
+| `line_change_production_efficiency_factor` | Сохранение эффективности при смене производимой техники |
+| `production_cost_max_ship_hull_light` / `production_cost_max_ship_hull_heavy` / `production_cost_max_ship_hull_cruiser` / `production_cost_max_ship_hull_carrier` / `production_cost_max_ship_hull_submarine` | Модификаторы максимальной стоимости соответствующих типов кораблей |
 
 <a id="supply-logistics"></a>
 ### Снабжение, топливо и истощение
@@ -133,6 +189,9 @@ description: "Военные модификаторы: боевые (скоро�
 |---|---|
 | `supply_consumption_factor` | Изменяет расход снабжения войсками |
 | `out_of_supply_factor` | Изменяет штрафы войск, оставшихся без снабжения |
+| `army_fuel_capacity_factor` | Модификатор запаса топлива сухопутных войск |
+| `fuel_gain` / `fuel_gain_factor` | Плоский / процентный прирост топлива |
+| `supply_node_range` | Дальность снабжения от узлов снабжения |
 | `army_fuel_consumption_factor` | Расход топлива сухопутными войсками |
 | `air_fuel_consumption_factor` | Расход топлива авиацией |
 | `navy_fuel_consumption_factor` | Расход топлива флотом |
@@ -150,8 +209,22 @@ description: "Военные модификаторы: боевые (скоро�
 | `experience_gain_navy` | Плоский бонус к получаемому опыту флота |
 | `experience_gain_navy_factor` | Процентный бонус к получаемому опыту флота |
 | `experience_gain_navy_unit_factor` | Бонус к получению опыта корабельными подразделениями |
+| `experience_gain_army_unit` / `experience_gain_army_unit_factor` | Плоский / процентный прирост опыта сухопутных подразделений |
 | `land_reinforce_rate` | Скорость поступления подкреплений в сухопутный бой |
 | `max_dig_in` | Максимальный уровень окопанности |
+
+<a id="command-power"></a>
+### Командование и мобилизация
+
+| Модификатор | Описание |
+|---|---|
+| `command_power_gain` | Ежедневный прирост командной мощи (плоский) |
+| `command_power_gain_mult` | Процентный модификатор прироста командной мощи |
+| `max_command_power` | Максимальный запас командной мощи |
+| `max_command_power_mult` | Процентный модификатор максимального запаса командной мощи |
+| `conscription` | Изменение доли населения, доступного для призыва (плоское) |
+| `conscription_factor` | Процентный модификатор доли населения, доступного для призыва |
+| `weekly_manpower` | Дополнительная еженедельная людская сила |
 
 <a id="unit-type-bonuses"></a>
 ### Бонусы отдельным типам войск
