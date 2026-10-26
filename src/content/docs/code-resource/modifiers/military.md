@@ -112,6 +112,69 @@ description: "Военные модификаторы: боевые (скоро�
 | `intel_from_operatives_factor` | Прирост разведданных от агентов |
 | `intel_network_gain` | Прирост сети разведки в регионе |
 
+
+<a id="equipment-licensing"></a>
+### Производство техники и лицензии
+
+| Модификатор | Описание |
+|---|---|
+| `equipment_conversion_speed` | Скорость конверсии одного типа техники в другой |
+| `equipment_capture_factor` | Процентный бонус к захвату техники у противника |
+| `equipment_upgrade_xp_cost` | Стоимость армейского опыта для улучшения характеристик техники |
+| `license_purchase_cost` | Стоимость покупки лицензии на производство |
+| `license_purchase_cost_factor` | Модификатор стоимости лицензии |
+| `license_production_speed` | Скорость производства техники по лицензии |
+| `license_tech_difference_speed` | Влияние разницы в технологиях на скорость производства лицензионной техники |
+
+<a id="supply-logistics"></a>
+### Снабжение, топливо и истощение
+
+| Модификатор | Описание |
+|---|---|
+| `supply_consumption_factor` | Изменяет расход снабжения войсками |
+| `out_of_supply_factor` | Изменяет штрафы войск, оставшихся без снабжения |
+| `army_fuel_consumption_factor` | Расход топлива сухопутными войсками |
+| `air_fuel_consumption_factor` | Расход топлива авиацией |
+| `navy_fuel_consumption_factor` | Расход топлива флотом |
+| `attrition` | Изменение потерь от истощения |
+| `winter_attrition_factor` | Изменение истощения зимой |
+| `heat_attrition_factor` | Изменение истощения в жарком климате |
+
+<a id="experience-training"></a>
+### Опыт и подготовка
+
+| Модификатор | Описание |
+|---|---|
+| `experience_gain_army` | Плоский бонус к получаемому опыту армии |
+| `experience_gain_army_factor` | Процентный бонус к получаемому опыту армии |
+| `experience_gain_navy` | Плоский бонус к получаемому опыту флота |
+| `experience_gain_navy_factor` | Процентный бонус к получаемому опыту флота |
+| `experience_gain_navy_unit_factor` | Бонус к получению опыта корабельными подразделениями |
+| `land_reinforce_rate` | Скорость поступления подкреплений в сухопутный бой |
+| `max_dig_in` | Максимальный уровень окопанности |
+
+<a id="unit-type-bonuses"></a>
+### Бонусы отдельным типам войск
+
+| Модификатор | Описание |
+|---|---|
+| `special_forces_attack_factor` | Атака дивизий спецназа |
+| `special_forces_defence_factor` | Защита дивизий спецназа |
+| `motorized_attack_factor` | Атака моторизованных войск |
+| `motorized_defence_factor` | Защита моторизованных войск |
+| `army_core_attack_factor` | Атака на национальных территориях |
+
+<a id="air-general"></a>
+### Общие характеристики авиации
+
+| Модификатор | Описание |
+|---|---|
+| `air_attack_factor` | Общий модификатор атаки авиации |
+| `air_defence_factor` | Общий модификатор защиты авиации |
+| `air_agility_factor` | Общий модификатор манёвренности авиации |
+| `ace_effectiveness_factor` | Эффективность бонусов асов |
+| `air_ace_bonuses_factor` | Модификатор бонусов, предоставляемых асами |
+
 <a id="vanilla"></a>
 ### Общие
 
