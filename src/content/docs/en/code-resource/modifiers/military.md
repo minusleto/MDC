@@ -111,6 +111,69 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `intel_from_operatives_factor` | Intel gain from operatives |
 | `intel_network_gain` | Intel network gain in a region |
 
+
+<a id="equipment-licensing"></a>
+### Equipment Production & Licensing
+
+| Modifier | Description |
+|---|---|
+| `equipment_conversion_speed` | Speed of converting one equipment type into another |
+| `equipment_capture_factor` | Percentage modifier to equipment captured from the enemy |
+| `equipment_upgrade_xp_cost` | Army experience cost for upgrading equipment stats |
+| `license_purchase_cost` | Cost of purchasing a production license |
+| `license_purchase_cost_factor` | Modifier to license purchase cost |
+| `license_production_speed` | Production speed for licensed equipment |
+| `license_tech_difference_speed` | Effect of technology difference on licensed equipment production speed |
+
+<a id="supply-logistics"></a>
+### Supply, Fuel & Attrition
+
+| Modifier | Description |
+|---|---|
+| `supply_consumption_factor` | Modifies supply consumed by troops |
+| `out_of_supply_factor` | Modifies penalties for troops without supply |
+| `army_fuel_consumption_factor` | Fuel consumption of land forces |
+| `air_fuel_consumption_factor` | Fuel consumption of aircraft |
+| `navy_fuel_consumption_factor` | Fuel consumption of the navy |
+| `attrition` | Modifies losses from attrition |
+| `winter_attrition_factor` | Modifies attrition in winter |
+| `heat_attrition_factor` | Modifies attrition in hot climates |
+
+<a id="experience-training"></a>
+### Experience & Training
+
+| Modifier | Description |
+|---|---|
+| `experience_gain_army` | Flat bonus to army experience gain |
+| `experience_gain_army_factor` | Percentage bonus to army experience gain |
+| `experience_gain_navy` | Flat bonus to navy experience gain |
+| `experience_gain_navy_factor` | Percentage bonus to navy experience gain |
+| `experience_gain_navy_unit_factor` | Bonus to experience gained by naval units |
+| `land_reinforce_rate` | Rate at which reinforcements enter land combat |
+| `max_dig_in` | Maximum entrenchment level |
+
+<a id="unit-type-bonuses"></a>
+### Unit-Type Bonuses
+
+| Modifier | Description |
+|---|---|
+| `special_forces_attack_factor` | Attack of special forces divisions |
+| `special_forces_defence_factor` | Defence of special forces divisions |
+| `motorized_attack_factor` | Attack of motorized forces |
+| `motorized_defence_factor` | Defence of motorized forces |
+| `army_core_attack_factor` | Attack on core territory |
+
+<a id="air-general"></a>
+### General Aircraft Stats
+
+| Modifier | Description |
+|---|---|
+| `air_attack_factor` | General aircraft attack modifier |
+| `air_defence_factor` | General aircraft defence modifier |
+| `air_agility_factor` | General aircraft agility modifier |
+| `ace_effectiveness_factor` | Effectiveness of ace bonuses |
+| `air_ace_bonuses_factor` | Modifier to bonuses provided by aces |
+
 <a id="vanilla"></a>
 ### General
 
