@@ -1,6 +1,6 @@
 ---
 title: Military Modifiers
-description: "Military modifiers: combat (speed, attack/defence, recon, planning), intelligence and decryption, general (war support, stability), military bases"
+description: "Reference for vanilla HOI4 military modifiers: land combat, navy, air force, equipment and licenses, supply, experience, and command."
 ---
 
 ## Military Modifiers
@@ -24,6 +24,13 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `army_core_defence_factor` | Defence on own core territory |
 | `army_claim_defence_factor` | Defence on claimed territory |
 | `army_attack_factor` | Division attack |
+| `army_attack_against_major_factor` | Attack bonus against major powers |
+| `army_attack_against_minor_factor` | Attack bonus against non-major countries |
+| `army_claim_attack_factor` | Attack on claimed territory |
+| `army_non_core_attack_factor` | Attack on non-core territory |
+| `army_strength_factor` | Overall land army strength |
+| `army_experience_from_volunteers` | Army experience gained from volunteers |
+| `air_superiority_bonus_in_combat` | Effect of air superiority on land combat |
 | `breakthrough_factor` | Breakthrough strength |
 | `army_breakthrough_against_major_factor` | Breakthrough against major powers |
 | `army_breakthrough_against_minor_factor` | Breakthrough against non-major countries |
@@ -48,8 +55,25 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | Modifier | Description |
 |---|---|
 | `naval_speed_factor` | Ship speed |
+| `naval_damage_factor` | Damage dealt by the navy |
+| `naval_defense_factor` | Reduces damage received by ships |
+| `naval_accidents_chance` | Chance of naval accidents and accidental ship losses |
+| `naval_critical_score_chance_factor` | Chance to inflict a critical hit |
+| `naval_critical_effect_factor` | Effect of critical hits received by ships |
+| `critical_receive_chance` | Chance to receive a critical hit |
+| `naval_enemy_fleet_size_ratio_penalty_factor` | Reduces the penalty from an enemy fleet size advantage |
+| `naval_night_attack` | Fleet damage at night |
 | `naval_hit_chance` | Chance to hit in combat |
 | `naval_coordination` | Fleet coordination |
+| `convoy_escort_efficiency` | Convoy escort mission efficiency |
+| `convoy_retreat_speed` | Convoy retreat speed |
+| `naval_retreat_chance_after_initial_combat` | Fleet retreat chance after initial combat |
+| `naval_mines_effect_reduction` | Reduces damage from enemy naval mines |
+| `mines_planting_by_fleets_factor` / `mines_sweeping_by_fleets_factor` | Fleet mine-laying / mine-sweeping efficiency |
+| `experience_gain_navy_unit` | Flat experience gain for naval units |
+| `naval_has_potf_in_combat_attack` / `naval_has_potf_in_combat_defense` | Fleet attack / defence when the pride of the fleet is present |
+| `strike_force_movement_org_loss` | Organization loss while moving on strike-force mission |
+| `sub_retreat_speed` / `submarine_attack` | Submarine retreat speed / attack |
 | `naval_morale` / `naval_morale_factor` | Fleet morale (flat / %) |
 | `naval_retreat_chance` / `naval_retreat_speed` | Fleet retreat chance and speed |
 | `ships_at_battle_start` | Number of ships entering combat on first contact |
@@ -85,6 +109,13 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | Modifier | Description |
 |---|---|
 | `air_accidents_factor` | Chance of air accidents |
+| `air_cas_efficiency` | Close air support efficiency |
+| `air_escort_efficiency` | Efficiency of aircraft escort missions |
+| `air_wing_xp_loss_when_killed_factor` | Air wing experience lost when aircraft are shot down |
+| `ground_attack_factor` | Aircraft damage against land divisions |
+| `mines_planting_by_air_factor` / `mines_sweeping_by_air_factor` | Air mine-laying / mine-sweeping efficiency |
+| `strategic_bomb_visibility` | Strategic bomber visibility to the enemy |
+| `rocket_attack_factor` | Rocket attack |
 | `air_night_penalty` | Penalty for night sorties |
 | `air_weather_penalty` | Penalty for bad weather |
 | `army_bonus_air_superiority_factor` | Bonus to land troops from air superiority |
@@ -113,17 +144,42 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 
 
 <a id="equipment-licensing"></a>
-### Equipment Production & Licensing
+### Equipment Capture, Conversion & Upgrades
 
 | Modifier | Description |
 |---|---|
+| `equipment_capture` | Flat bonus to the share of equipment captured from the enemy |
+| `equipment_capture_factor` | Percentage modifier to the share of captured equipment |
 | `equipment_conversion_speed` | Speed of converting one equipment type into another |
-| `equipment_capture_factor` | Percentage modifier to equipment captured from the enemy |
-| `equipment_upgrade_xp_cost` | Army experience cost for upgrading equipment stats |
-| `license_purchase_cost` | Cost of purchasing a production license |
-| `license_purchase_cost_factor` | Modifier to license purchase cost |
+| `equipment_upgrade_xp_cost` | General modifier to XP cost for equipment upgrades |
+| `land_equipment_upgrade_xp_cost` | Army XP cost for upgrading land equipment |
+| `naval_equipment_upgrade_xp_cost` | Navy XP cost for upgrading ships |
+| `air_equipment_upgrade_xp_cost` | Air XP cost for upgrading aircraft |
+| `refit_ic_cost` | Industrial cost of refitting ships |
+| `refit_speed` | Ship refit speed |
+
+<a id="license-modifiers"></a>
+### Production Licenses
+
+| Modifier | Description |
+|---|---|
+| `license_purchase_cost` | Changes the cost of licensed equipment |
+| `license_purchase_cost_factor` | Modifier to license cost; category-specific variants may be available |
 | `license_production_speed` | Production speed for licensed equipment |
-| `license_tech_difference_speed` | Effect of technology difference on licensed equipment production speed |
+| `license_tech_difference_speed` | Changes the production penalty caused by technology differences |
+| `license__production_speed_factor` | Variant of the licensed production speed modifier for specific equipment types |
+| `license__tech_difference_speed_factor` | Variant of the technology-difference penalty modifier for specific equipment types |
+
+<a id="production-efficiency"></a>
+### Military Production Efficiency
+
+| Modifier | Description |
+|---|---|
+| `production_factory_efficiency_gain_factor` | Rate at which military production efficiency grows |
+| `production_factory_max_efficiency_factor` | Maximum military production efficiency |
+| `production_factory_start_efficiency_factor` | Starting efficiency of a production line |
+| `line_change_production_efficiency_factor` | Efficiency retained when switching a production line to another item |
+| `production_cost_max_ship_hull_light` / `production_cost_max_ship_hull_heavy` / `production_cost_max_ship_hull_cruiser` / `production_cost_max_ship_hull_carrier` / `production_cost_max_ship_hull_submarine` | Maximum cost modifiers for the corresponding ship types |
 
 <a id="supply-logistics"></a>
 ### Supply, Fuel & Attrition
@@ -132,6 +188,9 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 |---|---|
 | `supply_consumption_factor` | Modifies supply consumed by troops |
 | `out_of_supply_factor` | Modifies penalties for troops without supply |
+| `army_fuel_capacity_factor` | Modifier to land forces' fuel capacity |
+| `fuel_gain` / `fuel_gain_factor` | Flat / percentage fuel gain |
+| `supply_node_range` | Supply range from supply hubs |
 | `army_fuel_consumption_factor` | Fuel consumption of land forces |
 | `air_fuel_consumption_factor` | Fuel consumption of aircraft |
 | `navy_fuel_consumption_factor` | Fuel consumption of the navy |
@@ -149,8 +208,22 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `experience_gain_navy` | Flat bonus to navy experience gain |
 | `experience_gain_navy_factor` | Percentage bonus to navy experience gain |
 | `experience_gain_navy_unit_factor` | Bonus to experience gained by naval units |
+| `experience_gain_army_unit` / `experience_gain_army_unit_factor` | Flat / percentage experience gain for land units |
 | `land_reinforce_rate` | Rate at which reinforcements enter land combat |
 | `max_dig_in` | Maximum entrenchment level |
+
+<a id="command-power"></a>
+### Command, Conscription & Manpower
+
+| Modifier | Description |
+|---|---|
+| `command_power_gain` | Daily flat command power gain |
+| `command_power_gain_mult` | Percentage modifier to command power gain |
+| `max_command_power` | Maximum command power |
+| `max_command_power_mult` | Percentage modifier to maximum command power |
+| `conscription` | Flat change to the share of population available for conscription |
+| `conscription_factor` | Percentage modifier to the recruitable population share |
+| `weekly_manpower` | Additional weekly manpower |
 
 <a id="unit-type-bonuses"></a>
 ### Unit-Type Bonuses
