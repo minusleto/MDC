@@ -63,6 +63,14 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `critical_receive_chance` | Chance to receive a critical hit |
 | `naval_enemy_fleet_size_ratio_penalty_factor` | Reduces the penalty from an enemy fleet size advantage |
 | `naval_night_attack` | Fleet damage at night |
+| `naval_defense_factor` | Ship defence |
+| `naval_detection` | Ship detection |
+| `naval_enemy_retreat_chance` | Chance to force an enemy fleet to retreat |
+| `naval_retreat_chance` / `naval_retreat_speed` | Fleet retreat chance / speed |
+| `naval_ship_recovery_chance_factor` | Chance of ship recovery after combat |
+| `naval_torpedo_damage_reduction_factor` / `naval_torpedo_enemy_critical_chance_factor` | Reduces torpedo damage / enemy torpedo critical-hit chance |
+| `naval_torpedo_reveal_chance_factor` | Modifier to torpedo attack reveal chance |
+| `naval_light_gun_hit_chance_factor` / `naval_heavy_gun_hit_chance_factor` | Light / heavy gun hit chance |
 | `naval_hit_chance` | Chance to hit in combat |
 | `naval_coordination` | Fleet coordination |
 | `convoy_escort_efficiency` | Convoy escort mission efficiency |
@@ -163,12 +171,22 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 
 | Modifier | Description |
 |---|---|
-| `license_purchase_cost` | Changes the cost of licensed equipment |
-| `license_purchase_cost_factor` | Modifier to license cost; category-specific variants may be available |
+| `license_purchase_cost` | Cost of purchasing a production license |
 | `license_production_speed` | Production speed for licensed equipment |
-| `license_tech_difference_speed` | Changes the production penalty caused by technology differences |
-| `license__production_speed_factor` | Variant of the licensed production speed modifier for specific equipment types |
-| `license__tech_difference_speed_factor` | Variant of the technology-difference penalty modifier for specific equipment types |
+| `license_tech_difference_speed` | Production penalty caused by technology differences |
+| `license_anti_tank_eq_cost_factor` | License cost for anti-tank equipment |
+| `license_anti_tank_eq_production_speed_factor` | Production speed for licensed anti-tank equipment |
+| `license_anti_tank_eq_tech_difference_speed_factor` | Technology-difference penalty for licensed anti-tank equipment |
+| `license_artillery_eq_cost_factor` | License cost for artillery |
+| `license_artillery_eq_production_speed_factor` | Production speed for licensed artillery |
+| `license_artillery_eq_tech_difference_speed_factor` | Technology-difference penalty for licensed artillery |
+| `license_infantry_eq_cost_factor` | License cost for infantry equipment |
+| `license_infantry_eq_production_speed_factor` | Production speed for licensed infantry equipment |
+| `license_infantry_eq_tech_difference_speed_factor` | Technology-difference penalty for licensed infantry equipment |
+| `license_light_tank_eq_cost_factor` | License cost for light tanks |
+| `license_light_tank_eq_production_speed_factor` | Production speed for licensed light tanks |
+| `license_light_tank_eq_tech_difference_speed_factor` | Technology-difference penalty for licensed light tanks |
+| `license_armor_purchase_cost` / `license_air_purchase_cost` / `license_naval_purchase_cost` | License cost for armor / aircraft / naval equipment |
 
 <a id="production-efficiency"></a>
 ### Military Production Efficiency
@@ -235,6 +253,13 @@ Vanilla HOI4 modifiers, apply to the country's divisions.
 | `motorized_attack_factor` | Attack of motorized forces |
 | `motorized_defence_factor` | Defence of motorized forces |
 | `army_core_attack_factor` | Attack on core territory |
+| `army_core_defence_factor` | Defence on core territory |
+| `army_infantry_attack_factor` / `army_infantry_defence_factor` | Infantry attack / defence |
+| `army_armor_attack_factor` / `army_armor_defence_factor` / `army_armor_speed_factor` | Armor attack / defence / speed |
+| `army_artillery_attack_factor` / `army_artillery_defence_factor` | Artillery attack / defence |
+| `motorized_attack_factor` / `motorized_defence_factor` | Motorized attack / defence |
+| `mechanized_attack_factor` / `mechanized_defence_factor` | Mechanized attack / defence |
+| `cavalry_attack_factor` / `cavalry_defence_factor` | Cavalry attack / defence |
 
 <a id="air-general"></a>
 ### General Aircraft Stats
