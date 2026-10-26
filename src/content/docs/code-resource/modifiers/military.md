@@ -63,6 +63,14 @@ description: "Справочник ванильных военных модиф�
 | `critical_receive_chance` | Шанс получить критическое повреждение |
 | `naval_enemy_fleet_size_ratio_penalty_factor` | Снижение штрафа при численном превосходстве вражеского флота |
 | `naval_night_attack` | Урон флота в ночное время |
+| `naval_defense_factor` | Защита кораблей |
+| `naval_detection` | Обнаружение кораблей |
+| `naval_enemy_retreat_chance` | Шанс вынудить вражеский флот отступить |
+| `naval_retreat_chance` / `naval_retreat_speed` | Шанс / скорость отступления флота |
+| `naval_ship_recovery_chance_factor` | Вероятность спасения корабля после боя |
+| `naval_torpedo_damage_reduction_factor` / `naval_torpedo_enemy_critical_chance_factor` | Снижение урона торпед / снижение шанса критического урона от торпед |
+| `naval_torpedo_reveal_chance_factor` | Модификатор обнаружения торпедной атаки |
+| `naval_light_gun_hit_chance_factor` / `naval_heavy_gun_hit_chance_factor` | Шанс попадания лёгких / тяжёлых орудий |
 | `naval_hit_chance` | Шанс попадания в бою |
 | `naval_coordination` | Координация флота |
 | `convoy_escort_efficiency` | Эффективность эскортирования конвоев |
@@ -164,12 +172,22 @@ description: "Справочник ванильных военных модиф�
 
 | Модификатор | Описание |
 |---|---|
-| `license_purchase_cost` | Изменение стоимости лицензионной техники |
-| `license_purchase_cost_factor` | Модификатор стоимости лицензии; может иметь варианты для категорий техники |
+| `license_purchase_cost` | Стоимость покупки производственной лицензии |
 | `license_production_speed` | Скорость производства техники по лицензии |
 | `license_tech_difference_speed` | Изменение штрафа к производству из-за разницы в технологиях |
-| `license__production_speed_factor` | Вариант модификатора скорости лицензионного производства для отдельных типов техники |
-| `license__tech_difference_speed_factor` | Вариант модификатора штрафа за разницу технологий для отдельных типов техники |
+| `license_anti_tank_eq_cost_factor` | Стоимость лицензии на противотанковое вооружение |
+| `license_anti_tank_eq_production_speed_factor` | Скорость производства лицензионного противотанкового вооружения |
+| `license_anti_tank_eq_tech_difference_speed_factor` | Штраф за разницу технологий для лицензионного противотанкового вооружения |
+| `license_artillery_eq_cost_factor` | Стоимость лицензии на артиллерию |
+| `license_artillery_eq_production_speed_factor` | Скорость производства лицензионной артиллерии |
+| `license_artillery_eq_tech_difference_speed_factor` | Штраф за разницу технологий для лицензионной артиллерии |
+| `license_infantry_eq_cost_factor` | Стоимость лицензии на пехотное снаряжение |
+| `license_infantry_eq_production_speed_factor` | Скорость производства лицензионного пехотного снаряжения |
+| `license_infantry_eq_tech_difference_speed_factor` | Штраф за разницу технологий для лицензионного пехотного снаряжения |
+| `license_light_tank_eq_cost_factor` | Стоимость лицензии на лёгкие танки |
+| `license_light_tank_eq_production_speed_factor` | Скорость производства лицензионных лёгких танков |
+| `license_light_tank_eq_tech_difference_speed_factor` | Штраф за разницу технологий для лицензионных лёгких танков |
+| `license_armor_purchase_cost` / `license_air_purchase_cost` / `license_naval_purchase_cost` | Стоимость лицензии на бронетехнику / авиацию / морскую технику |
 
 <a id="production-efficiency"></a>
 ### Эффективность военного производства
@@ -236,6 +254,13 @@ description: "Справочник ванильных военных модиф�
 | `motorized_attack_factor` | Атака моторизованных войск |
 | `motorized_defence_factor` | Защита моторизованных войск |
 | `army_core_attack_factor` | Атака на национальных территориях |
+| `army_core_defence_factor` | Защита на национальных территориях |
+| `army_infantry_attack_factor` / `army_infantry_defence_factor` | Атака / защита пехоты |
+| `army_armor_attack_factor` / `army_armor_defence_factor` / `army_armor_speed_factor` | Атака / защита / скорость бронетехники |
+| `army_artillery_attack_factor` / `army_artillery_defence_factor` | Атака / защита артиллерии |
+| `motorized_attack_factor` / `motorized_defence_factor` | Атака / защита моторизованных войск |
+| `mechanized_attack_factor` / `mechanized_defence_factor` | Атака / защита механизированных войск |
+| `cavalry_attack_factor` / `cavalry_defence_factor` | Атака / защита кавалерии |
 
 <a id="air-general"></a>
 ### Общие характеристики авиации
