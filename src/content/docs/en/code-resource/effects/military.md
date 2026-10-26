@@ -471,21 +471,78 @@ create_corps_commander = {
 
 ### Permanent unit bonuses
 
-`add_unit_bonus` adds permanent bonuses for subunit types and categories to the country.
+`add_unit_bonus` grants a country permanent stat bonuses for individual subunit types or entire categories. The effect works in **COUNTRY scope**. Modifier values are factors: `0.05` means +5%, while `-0.10` means −10%.
+
+For easier navigation, categories are grouped by role.
+
+#### Infantry and mobile infantry
+
+- `category_all_infantry` — the broad infantry category, including motorized and mechanized units in the base game.
+- `category_light_infantry` — light infantry.
+
+#### Armor
+
+- `category_all_armor` — armor units in general.
+- `category_tanks` — tank units.
+
+#### Artillery
+
+- `category_artillery` — artillery.
+- `category_line_artillery` — line artillery.
+
+#### Support and special forces
+
+- `category_all_support` — support companies.
+- `category_special_forces` — special forces.
+
+Example: several independent bonuses in one effect.
 
 ```text
 add_unit_bonus = {
-    category_light_infantry = {
+    category_all_infantry = {
         soft_attack = 0.05
+        defense = 0.05
+        name = MDC_all_infantry_bonus
+    }
+    category_light_infantry = {
+        breakthrough = 0.05
         name = MDC_light_infantry_bonus
     }
-    cavalry = {
-        soft_attack = 0.05
+    category_all_armor = {
+        armor = 0.05
         hard_attack = 0.05
-        name = MDC_cavalry_bonus
+        name = MDC_armor_bonus
+    }
+    category_tanks = {
+        breakthrough = 0.05
+        name = MDC_tanks_bonus
+    }
+    category_artillery = {
+        soft_attack = 0.05
+        name = MDC_artillery_bonus
+    }
+    category_line_artillery = {
+        soft_attack = 0.05
+        defense = 0.02
+        name = MDC_line_artillery_bonus
+    }
+    category_all_support = {
+        defense = 0.05
+        name = MDC_support_bonus
+    }
+    category_special_forces = {
+        soft_attack = 0.05
+        max_organisation = 2
+        name = MDC_special_forces_bonus
     }
 }
 ```
+
+**Important:**
+- Cavalry is intentionally omitted from this example.
+- If a unit belongs to both a broad and a narrow category, bonuses may stack. Avoid duplicating the same bonus unless that is intended.
+- Available categories depend on the game version and mod. If a category has been renamed or removed, use the actual identifier from `common/unit_tags` and `common/units`.
+- The `name` key is the localization key for the displayed bonus name; define it in your mod's localization files.
 
 
 ## Military equipment
